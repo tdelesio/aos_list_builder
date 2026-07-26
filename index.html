@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age of Sigmar - Premium Regiment Builder & Optimizer</title>
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700;900&family=Outfit:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons for premium visual buttons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- PDF.js library for client-side PDF ingestion & diffing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <link rel="stylesheet" href="index.css?v=13">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="brand">
+                <button id="btnToggleSidebar" class="btn-sidebar-toggle" title="Toggle Sidebar">
+                    <i data-lucide="chevron-left"></i>
+                </button>
+                <div class="brand-crest">⚡</div>
+                <h1 class="brand-title">AETERNUM</h1>
+                <p class="brand-subtitle">AoS List Builder</p>
+            </div>
+            <nav class="nav-menu">
+                <button class="nav-btn active" data-tab="dashboard">
+                    <i data-lucide="list"></i>
+                    <span>Armies</span>
+                </button>
+                <button class="nav-btn" data-tab="collection">
+                    <i data-lucide="shield-check"></i>
+                    <span>My Collection</span>
+                </button>
+                <button class="nav-btn" data-tab="tracker">
+                    <i data-lucide="activity"></i>
+                    <span>Game Tracker</span>
+                </button>
+                <button class="nav-btn" data-tab="updater">
+                    <i data-lucide="refresh-cw"></i>
+                    <span>Rules Updater</span>
+                </button>
+            </nav>
+            <div class="sidebar-footer">
+                <p>Rules Database: <span class="rules-version">June 2026</span></p>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Active Army Stats Summary Bar (only visible when a list is active in the builder) -->
+            <header class="top-bar">
+                <button id="btnBackToArmies" class="btn btn-outline btn-sm hidden" style="margin-right: 16px; display: flex; align-items: center; gap: 8px;">
+                    <i data-lucide="arrow-left"></i> Back to Armies
+                </button>
+                <div class="active-army-summary">
+                    <div id="armyNameContainer" class="army-name-editor-wrapper">
+                        <span id="topBarArmyName">No Active Army</span>
+                        <input type="text" id="topBarArmyNameInput" class="hidden" placeholder="Name your army..." maxlength="45" />
+                        <button id="btnEditArmyName" class="btn-icon-only hidden" title="Edit Army Name">
+                            <i data-lucide="edit-3"></i>
+                        </button>
+                        <button id="btnSaveArmyName" class="btn-icon-only hidden" title="Save Army Name">
+                            <i data-lucide="check"></i>
+                        </button>
+                    </div>
+                    <span id="topBarArmyFaction" class="badge">None</span>
+                </div>
+                <div class="points-indicator">
+                    <span class="points-label">Points Limit:</span>
+                    <select id="armyPointsLimit" disabled>
+                        <option value="500">500 pts (Vanguard)</option>
+                        <option value="1000" selected>1000 pts (Border War)</option>
+                        <option value="1500">1500 pts (Skirmish)</option>
+                        <option value="2000">2000 pts (Battlehost)</option>
+                    </select>
+                    <div class="points-progress-container">
+                        <span id="armyPointsDisplay">0 / 1000</span>
+                        <div class="points-progress-bar">
+                            <div id="pointsProgressBarFill" class="points-fill"></div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="tab-panels">
+                <!-- Dashboard Tab -->
+                <section id="tab-dashboard" class="tab-panel active">
+                    <div class="section-header">
+                        <h2>Saved Armies</h2>
+                        <button class="btn btn-gold" id="btnCreateNewArmy">
+                            <i data-lucide="plus"></i> Create New Army
+                        </button>
+                    </div>
+                    <div id="savedArmiesGrid" class="armies-grid scroller">
+                        <!-- Dynamically filled with saved army cards -->
+                    </div>
+                </section>
+
+                <!-- Regiment Builder Tab -->
+                <section id="tab-builder" class="tab-panel">
+                    <!-- Builder Workspace Split: Regiments and Live Rules Validation -->
+                    <div class="builder-workspace">
+                        <div class="regiments-container scroller" id="regimentsList">
+                            <!-- Dynamically populated regiment cards -->
+                        </div>
+
+                        <!-- Collection Sidebar: Owned models list for selected faction -->
+                        <div class="builder-inventory glass-card" id="builderInventory">
+                            <!-- Populated dynamically via JS -->
+                        </div>
+
+                        <!-- Sidebar recommendations / warnings -->
+                        <aside class="validation-sidebar scroller">
+                            <div class="card glass-card">
+                                <h3><i data-lucide="shield-check" class="gold-icon"></i> Validation</h3>
+                                <div id="validationList" class="validation-list">
+                                    <div class="validation-item success">
+                                        <i data-lucide="check-circle-2"></i>
+                                        <span>Army list is valid.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card glass-card recommendations-card" id="recommendationsCard">
+                                <h3><i data-lucide="sparkles" class="amber-icon"></i> Smart Recommendations</h3>
+                                <p class="recommendation-desc">We search for the best units that can fit perfectly inside your open slots and points limit.</p>
+                                <button class="btn btn-crimson btn-glow" id="btnOptimizeList" style="width: 100%; margin-bottom: 12px; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                                    <i data-lucide="wand-2"></i> Auto-Optimize (Owned)
+                                </button>
+                                <div id="recommendationsList" class="recommendations-list">
+                                    <!-- Recommended Purchases Go Here -->
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </section>
+
+                <!-- Collection Manager Tab -->
+                <section id="tab-collection" class="tab-panel">
+                    <div class="section-header">
+                        <h2>My Model Inventory</h2>
+                        <div class="search-and-filter">
+                            <div class="search-box">
+                                <i data-lucide="search"></i>
+                                <input type="text" id="collectionSearch" placeholder="Search models...">
+                            </div>
+                            <select id="collectionFactionFilter">
+                                <option value="" selected>All Factions</option>
+                                <!-- Dynamically populated core factions -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="collection-workspace scroller">
+                        <div class="factions-accordions" id="collectionAccordionContainer">
+                            <!-- Accordions dynamically populated -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Game Tracker Tab -->
+                <section id="tab-tracker" class="tab-panel">
+                    <div class="section-header tracker-header-row" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-bottom: 20px;">
+                        <div>
+                            <h2>AoS 4th Ed. Game Tracker</h2>
+                            <p class="subtitle" style="margin-top: 4px; color: var(--color-gold);">Offline-first, active turn, phase, and once-per-game battle tactic tracker.</p>
+                        </div>
+                        <div style="display: flex; gap: 12px; align-items: center;">
+                            <button class="btn btn-outline" id="btnShowSetupGuide" style="display: flex; align-items: center; gap: 8px; border-color: var(--color-gold); color: var(--color-gold);">
+                                <i data-lucide="book-open"></i> Battle Setup Guide
+                            </button>
+                            <button class="btn btn-crimson" id="btnResetTracker" style="display: flex; align-items: center; gap: 8px;">
+                                <i data-lucide="rotate-ccw"></i> Reset Game
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Main Tracker Control Panel -->
+                    <div class="tracker-dashboard" style="display: flex; flex-direction: column; height: calc(100vh - 180px); overflow-y: auto; padding-right: 8px;" class="scroller">
+                        <!-- Top State Card: Round and Phase Tracker -->
+                        <div class="card glass-card tracker-round-card" style="margin-bottom: 24px; padding: 20px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 16px;">
+                                <div style="display: flex; align-items: center; gap: 12px;">
+                                    <span style="font-weight: 600; color: var(--color-gold); font-size: 1rem; letter-spacing: 0.05em; text-transform: uppercase;">BATTLE ROUND:</span>
+                                    <div class="round-pills" style="display: flex; gap: 8px;">
+                                        <button class="round-pill-btn active" data-round="1">1</button>
+                                        <button class="round-pill-btn" data-round="2">2</button>
+                                        <button class="round-pill-btn" data-round="3">3</button>
+                                        <button class="round-pill-btn" data-round="4">4</button>
+                                        <button class="round-pill-btn" data-round="5">5</button>
+                                    </div>
+                                </div>
+                                <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
+                                    <div style="display: flex; align-items: center; gap: 12px;">
+                                        <span style="font-weight: 600; color: var(--color-gold); font-size: 1rem; letter-spacing: 0.05em; text-transform: uppercase;">ACTIVE TURN:</span>
+                                        <div class="turn-toggle" style="display: flex; background: rgba(0,0,0,0.3); border-radius: 8px; padding: 3px; border: 1px solid rgba(255,255,255,0.1);">
+                                            <button class="turn-pill-btn active" data-player="p1" id="turnToggleP1">Player 1</button>
+                                            <button class="turn-pill-btn" data-player="p2" id="turnToggleP2">Player 2</button>
+                                        </div>
+                                    </div>
+                                    <div id="doubleTurnWarning" style="display: none; align-items: center; gap: 6px; font-size: 0.72rem; color: #ffc107; background: rgba(255, 193, 7, 0.1); border: 1px dashed rgba(255, 193, 7, 0.3); padding: 4px 8px; border-radius: 6px;">
+                                        <i data-lucide="alert-triangle" style="width: 12px; height: 12px;"></i> Double Turn: Scoring penalties apply!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="phase-selector-container" style="margin-bottom: 16px;">
+                                <span style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; color: #a0a0a0; display: block; margin-bottom: 8px;">Active Phase:</span>
+                                <div class="phase-pills-row" style="display: flex; gap: 6px; flex-wrap: wrap;">
+                                    <button class="phase-pill active" data-phase="start">Start of Turn</button>
+                                    <button class="phase-pill" data-phase="hero">Hero Phase</button>
+                                    <button class="phase-pill" data-phase="movement">Movement</button>
+                                    <button class="phase-pill" data-phase="shooting">Shooting</button>
+                                    <button class="phase-pill" data-phase="charge">Charge Phase</button>
+                                    <button class="phase-pill" data-phase="combat">Combat Phase</button>
+                                    <button class="phase-pill" data-phase="end">End of Turn</button>
+                                </div>
+                            </div>
+
+                            <!-- Automated Underdog CP & Round Controller -->
+                            <div class="round-control-banner" id="roundControlBanner" style="padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <div id="underdogIndicatorDot" style="width: 8px; height: 8px; background: #6c757d; border-radius: 50%; box-shadow: 0 0 6px #6c757d;"></div>
+                                    <span id="underdogStatusText" style="font-size: 0.8rem; color: #aaa; font-weight: 500;">
+                                        Ready to start the match. Roll-off and select roles!
+                                    </span>
+                                </div>
+                                <button class="btn btn-gold btn-sm" id="btnStartRound" style="display: flex; align-items: center; gap: 6px; padding: 6px 12px; font-size: 0.8rem; font-weight: 700; height: 32px; min-height: unset; text-transform: uppercase;">
+                                    <i data-lucide="play" style="width: 14px; height: 14px;"></i> Start Round <span id="btnStartRoundNum">1</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Split Columns for Player 1 & Player 2 -->
+                        <div class="tracker-columns" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;">
+                            <!-- Player 1 Panel -->
+                            <div class="card glass-card player-tracker-panel" id="player1TrackerCard" style="border-top: 3px solid var(--color-gold); padding: 20px;">
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                                    <div style="display: flex; flex-direction: column; gap: 6px; width: 70%;">
+                                        <select id="p1FactionSelect" class="tracker-faction-select" style="font-size: 1.05rem; font-weight: 700; background: transparent; border: none; border-bottom: 1px dashed rgba(255,255,255,0.2); color: #fff; width: 100%; padding: 4px; font-family: 'Outfit', sans-serif; cursor: pointer; outline: none;">
+                                            <!-- populated dynamically -->
+                                        </select>
+                                        <div style="display: flex; gap: 8px; align-items: center; margin-top: 4px;">
+                                            <button id="p1RoleBtn" class="role-toggle-btn" data-player="p1" style="border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.2); color: #aaa; font-size: 0.7rem; font-weight: 700; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; cursor: pointer; display: flex; align-items: center; gap: 4px; transition: all 0.2s;">
+                                                🛡️ Defender
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="player-total-vp" style="font-size: 1.4rem; font-weight: 800; color: var(--color-gold); background: rgba(212, 175, 55, 0.1); padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(212, 175, 55, 0.2); text-align: center; min-width: 70px;">
+                                        <span id="p1TotalVp">0</span> VP
+                                    </div>
+                                </div>
+
+                                <!-- CP Meter -->
+                                <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(0,0,0,0.2); padding: 12px; border-radius: 8px; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.05);">
+                                    <div>
+                                        <h4 style="margin: 0; font-size: 0.85rem; text-transform: uppercase; color: #a0a0a0;">Command Points (CP)</h4>
+                                        <span style="font-size: 0.72rem; color: #ff4d4d; display: flex; align-items: center; gap: 4px;"><i data-lucide="alert-circle" style="width: 10px; height: 10px;"></i> Unspent CP decays at round end</span>
+                                    </div>
+                                    <div style="display: flex; align-items: center; gap: 12px;">
+                                        <button class="btn btn-icon-only btn-outline cp-adjust" data-player="p1" data-dir="minus"><i data-lucide="minus" style="width: 14px; height: 14px;"></i></button>
+                                        <span id="p1CpDisplay" style="font-size: 1.6rem; font-weight: 800; min-width: 28px; text-align: center; font-family: monospace; color: var(--color-gold);">4</span>
+                                        <button class="btn btn-icon-only btn-outline cp-adjust" data-player="p1" data-dir="plus"><i data-lucide="plus" style="width: 14px; height: 14px;"></i></button>
+                                    </div>
+                                </div>
+
+                                <!-- Score Breakdown by Rounds -->
+                                <div style="margin-bottom: 20px;">
+                                    <h4 style="margin-bottom: 12px; font-size: 0.9rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em; color: #aaa;">Round VP Breakdown & Tactics</h4>
+                                    <div class="round-scores-stack" style="display: flex; flex-direction: column; gap: 12px;">
+                                        <!-- Round 1 -->
+                                        <div style="display: grid; grid-template-columns: 65px 1fr auto auto; align-items: center; gap: 8px;">
+                                            <span style="font-size: 0.82rem; font-weight: 700; color: #ccc;">Round 1</span>
+                                            <select class="tactic-dropdown" data-player="p1" data-round="1" style="font-size: 0.72rem; padding: 4px 6px; border-radius: 6px; background: rgba(0,0,0,0.3); color: #fff; border: 1px solid rgba(255,255,255,0.1); width: 100%; outline: none; cursor: pointer; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">
+                                                <option value="">-- No Tactic --</option>
+                                            </select>
+                                            <label style="display: flex; align-items: center; gap: 3px; font-size: 0.7rem; color: #aaa; cursor: pointer; user-select: none;">
+                                                <input type="checkbox" class="tactic-completed-chk" data-player="p1" data-round="1" style="width: 12px; height: 12px;" />
+                                                <span style="white-space: nowrap;">+2 VP</span>
+                                            </label>
+                                            <div style="display: flex; align-items: center; gap: 3px;">
+                                                <button class="btn btn-icon-only btn-outline vp-adjust" data-player="p1" data-round="1" data-dir="minus" style="width: 20px; height: 20px; padding: 0; min-height: unset; border-radius: 4px;"><i data-lucide="minus" style="width: 10px; height: 10px;"></i></button>
+                                                <span id="p1R1Score" style="font-size: 0.9rem; font-weight: 700; width: 16px; text-align: center;">0</span>
+                                                <button class="btn btn-icon-only btn-outline vp-adjust" data-player="p1" data-round="1" data-dir="plus" style="width: 20px; height: 20px; padding: 0; min-height: unset; border-radius: 4px;"><i data-lucide="plus" style="width: 10px; height: 10px;"></i></button>
+                                            </div>
+                                        </div>
+                                        <!-- Round 2 -->
+                                        <div style="display: grid; grid-template-columns: 65px 1fr auto auto; align-items: center; gap: 8px;">
+                                            <span style="font-size: 0.82rem; font-weight: 700; color: #ccc;">Round 2</span>
+                                            <select class="tactic-dropdown" data-player="p1" data-round="2" style="font-size: 0.72rem; padding: 4px 6px; border-radius: 6px; background: rgba(0,0,0,0.3); color: #fff; border: 1px solid rgba(255,255,255,0.1); width: 100%; outline: none; cursor: pointer; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">
+                                                <option value="">-- No Tactic --</option>
+                                            </select>
+                                            <label style="display: flex; align-items: center; gap: 3px; font-size: 0.7rem; color: #aaa; cursor: pointer; user-select: none;">
+                                                <input type="checkbox" class="tactic-completed-chk" data-player="p1" data-round="2" style="width: 12px; height: 12px;" />
+                                                <span style="white-space: nowrap;">+2 VP</span>
+                                            </label>
+                                            <div style="display: flex; align-items: center; gap: 3px;">
+                                                <button class="btn btn-icon-only btn-outline vp-adjust" data-player="p1" data-round="2" data-dir="minus" style="width: 20px; height: 20px; padding: 0; min-height: unset; border-radius: 4px;"><i data-lucide="minus" style="width: 10px; height: 10px;"></i></button>
+                                                <span id="p1R2Score" style="font-size: 0.9rem; font-weight: 700; width: 16px; text-align: center;">0</span>
+                                                <button class="btn btn-icon-only btn-outline vp-adjust" data-player="p1" data-round="2" data-dir="plus" style="width: 20px; height: 20px; padding: 0; min-height: unset; border-radius: 4px;"><i data-lucide="plus" style="width: 10px; height: 10px;"></i></button>
+                                            </div>
+                                        </div>
+                                        <!-- Round 3 -->
+                                        <div style="display: grid; grid-template-columns: 65px 1fr auto auto; align-items: center; gap: 8px;">
+                                            <span style="font-size: 0.82rem; font-weight: 700; color: #ccc;">Round 3</span>
+                                            <select class="tactic-dropdown" data-player="p1" data-round="3" style="font-size: 0.72rem; padding: 4px 6px; border-radius: 6px; background: rgba(0,0,0,0.3); color: #fff; border: 1px solid rgba(255,255,255,0.1); width: 100%; outline: none; cursor: pointer; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">
+                                                <option value="">-- No Tactic --</option>
+                                            </select>
+                                            <label style="display: flex; align-items: center; gap: 3px; font-size: 0.7rem; color: #aaa; cursor: pointer; user-select: none;">
+                                                <input type="checkbox" class="tactic-completed-chk" data-player="p1" data-round="3" style="width: 12px; height: 12px;" />
+                                                <span style="white-space: nowrap;">+2 VP</span>
+                                            </label>
+                                            <div style="display: flex; align-items: center; gap: 3px;">
+                                                <button class="btn btn-icon-only btn-outline vp-adjust" data-player="p1" data-round="3" data-dir="minus" style="width: 20px; height: 20px; padding: 0; min-height: unset; border-radius: 4px;"><i data-lucide="minus" style="width: 10px; height: 10px;"></i></button>
+                                                <span id="p1R3Score" style="font-size: 0.9rem; font-weight: 700; width: 16px; text-align: center;">0</span>
+                                                <button class="btn btn-icon-only btn-outline vp-adjust" data-player="p1" data-round="3" data-dir="plus" style="width: 20px; height: 20px; padding: 0; min-height: unset; border-radius: 4px;"><i data-lucide="plus" style="width: 10px; height: 10px;"></i></button>
+                                            </div>
+                                        </div>
+                                        <!-- Round 4 -->
+                                        <div style="display: grid; grid-template-columns: 65px 1fr auto auto; align-items: center; gap: 8px;">
+                                            <span style="font-size: 0.82rem; font-weight: 700; color: #ccc;">Round 4</span>
+                                            <select class="tactic-dropdown" data-player="p1" data-round="4" style="font-size: 0.72rem; padding: 4px 6px; border-radius: 6px; background: rgba(0,0,0,0.3); color: #fff; border: 1px solid rgba(255,255,255,0.1); width: 100%; outline: none; cursor: pointer; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">
+                                                <option value="">-- No Tactic --</option>
+                                            </select>
+                                            <label style="display: flex; align-items: center; gap: 3px; font-size: 0.7rem; color: #aaa; cursor: pointer; user-select: none;">
+                                                <input type="checkbox" class="tactic-completed-chk" data-player="p1" data-round="4" style="width: 12px; height: 12px;" />
+                                                <span style="white-space: nowrap;">+2 VP</span>
+                                            </label>
+                                            <div style="display: flex; align-items: center; gap: 3px;">
+                                                <button class="btn btn-icon-only btn-outline vp-adjust" data-player="p1" data-round="4" data-dir="minus" style="width: 20px; height: 20px; padding: 0; min-height: unset; border-radius: 4px;"><i data-lucide="minus" style="width: 10px; height: 10px;"></i></button>
+                                                <span id="p1R4Score" style="font-size: 0.9rem; font-weight: 700; width: 16px; text-align: center;">0</span>
+                                                <button class="btn btn-icon-only btn-outline vp-adjust" data-player="p1" data-round="4" data-dir="plus" style="width: 20px; height: 20px; padding: 0; min-height: unset; border-radius: 4px;"><i data-lucide="plus" style="width: 10px; height: 10px;"></i></button>
+                                            </div>
+                                        </div>
+                                        <!-- Round 5 -->
+                                        <div style="display: grid; grid-template-columns: 65px 1fr auto auto; align-items: center; gap: 8px;">
+                                            <span style="font-size: 0.82rem; font-weight: 700; color: #ccc;">Round 5</span>
+                                            <select class="tactic-dropdown" data-player="p1" data-round="5" style="font-size: 0.72rem; padding: 4px 6px; border-radius: 6px; background: rgba(0,0,0,0.3); color: #fff; border: 1px solid rgba(255,255,255,0.1); width: 100%; outline: none; cursor: pointer; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">
+                                                <option value="">-- No Tactic --</option>
+                                            </select>
+                                            <label style="display: flex; align-items: center; gap: 3px; font-size: 0.7rem; color: #aaa; cursor: pointer; user-select: none;">
+                                                <input type="checkbox" class="tactic-completed-chk" data-player="p1" data-round="5" style="width: 12px; height: 12px;" />
+                                                <span style="white-space: nowrap;">+2 VP</span>
+                                            </label>
+                                            <div style="display: flex; align-items: center; gap: 3px;">
+                                                <button class="btn btn-icon-only btn-outline vp-adjust" data-player="p1" data-round="5" data-dir="minus" style="width: 20px; height: 20px; padding: 0; min-height: unset; border-radius: 4px;"><i data-lucide="minus" style="width: 10px; height: 10px;"></i></button>
+                                                <span id="p1R5Score" style="font-size: 0.9rem; font-weight: 700; width: 16px; text-align: center;">0</span>
+                                                <button class="btn btn-icon-only btn-outline vp-adjust" data-player="p1" data-round="5" data-dir="plus" style="width: 20px; height: 20px; padding: 0; min-height: unset; border-radius: 4px;"><i data-lucide="plus" style="width: 10px; height: 10px;"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Player 2 Panel -->
+                            <div class="card glass-card player-tracker-panel" id="player2TrackerCard" style="border-top: 3px solid var(--color-crimson); padding: 20px;">
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                                    <div style="display: flex; flex-direction: column; gap: 6px; width: 70%;">
+                                        <select id="p2FactionSelect" class="tracker-faction-select" style="font-size: 1.05rem; font-weight: 700; background: transparent; border: none; border-bottom: 1px dashed rgba(255,255,255,0.2); color: #fff; width: 100%; padding: 4px; font-family: 'Outfit', sans-serif; cursor: pointer; outline: none;">
+                                            <!-- populated dynamically -->
+                                        </select>
+                                        <div style="display: flex; gap: 8px; align-items: center; margin-top: 4px;">
+                                            <button id="p2RoleBtn" class="role-toggle-btn" data-player="p2" style="border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.2); color: #aaa; font-size: 0.7rem; font-weight: 700; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; cursor: pointer; display: flex; align-items: center; gap: 4px; transition: all 0.2s;">
+                                                🛡️ Defender
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="player-total-vp" style="font-size: 1.4rem; font-weight: 800; color: var(--color-crimson); background: rgba(220, 53, 69, 0.1); padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(220, 53, 69, 0.2); text-align: center; min-width: 70px;">
+                                        <span id="p2TotalVp">0</span> VP
+                                    </div>
+                                </div>
+
+                                <!-- CP Meter -->
+                                <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(0,0,0,0.2); padding: 12px; border-radius: 8px; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.05);">
+                                    <div>
+                                        <h4 style="margin: 0; font-size: 0.85rem; text-transform: uppercase; color: #a0a0a0;">Command Points (CP)</h4>
+                                        <span style="font-size: 0.72rem; color: #ff4d4d; display: flex; align-items: center; gap: 4px;"><i data-lucide="alert-circle" style="width: 10px; height: 10px;"></i> Unspent CP decays at round end</span>
+                                    </div>
+                                    <div style="display: flex; align-items: center; gap: 12px;">
+                                        <button class="btn btn-icon-only btn-outline cp-adjust" data-player="p2" data-dir="minus"><i data-lucide="minus" style="width: 14px; height: 14px;"></i></button>
+                                        <span id="p2CpDisplay" style="font-size: 1.6rem; font-weight: 800; min-width: 28px; text-align: center; font-family: monospace; color: var(--color-crimson);">4</span>
+                                        <button class="btn btn-icon-only btn-outline cp-adjust" data-player="p2" data-dir="plus"><i data-lucide="plus" style="width: 14px; height: 14px;"></i></button>
+                                    </div>
+                                </div>
+
+                                <!-- Score Breakdown by Rounds -->
+                                <div style="margin-bottom: 20px;">
+                                    <h4 style="margin-bottom: 12px; font-size: 0.9rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em; color: #aaa;">Round VP Breakdown & Tactics</h4>
+                                    <div class="round-scores-stack" style="display: flex; flex-direction: column; gap: 12px;">
+                                        <!-- Round 1 -->
+                                        <div style="display: grid; grid-template-columns: 65px 1fr auto auto; align-items: center; gap: 8px;">
+                                            <span style="font-size: 0.82rem; font-weight: 700; color: #ccc;">Round 1</span>
+                                            <select class="tactic-dropdown" data-player="p2" data-round="1" style="font-size: 0.72rem; padding: 4px 6px; border-radius: 6px; background: rgba(0,0,0,0.3); color: #fff; border: 1px solid rgba(255,255,255,0.1); width: 100%; outline: none; cursor: pointer; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">
+                                                <option value="">-- No Tactic --</option>
+                                            </select>
+                                            <label style="display: flex; align-items: center; gap: 3px; font-size: 0.7rem; color: #aaa; cursor: pointer; user-select: none;">
+                                                <input type="checkbox" class="tactic-completed-chk" data-player="p2" data-round="1" style="width: 12px; height: 12px;" />
+                                                <span style="white-space: nowrap;">+2 VP</span>
+                                            </label>
+                                            <div style="display: flex; align-items: center; gap: 3px;">
+                                                <button class="btn btn-icon-only btn-outline vp-adjust" data-player="p2" data-round="1" data-dir="minus" style="width: 20px; height: 20px; padding: 0; min-height: unset; border-radius: 4px;"><i data-lucide="minus" style="width: 10px; height: 10px;"></i></button>
+                                                <span id="p2R1Score" style="font-size: 0.9rem; font-weight: 700; width: 16px; text-align: center;">0</span>
+                                                <button class="btn btn-icon-only btn-outline vp-adjust" data-player="p2" data-round="1" data-dir="plus" style="width: 20px; height: 20px; padding: 0; min-height: unset; border-radius: 4px;"><i data-lucide="plus" style="width: 10px; height: 10px;"></i></button>
+                                            </div>
+                                        </div>
+                                        <!-- Round 2 -->
+                                        <div style="display: grid; grid-template-columns: 65px 1fr auto auto; align-items: center; gap: 8px;">
+                                            <span style="font-size: 0.82rem; font-weight: 700; color: #ccc;">Round 2</span>
+                                            <select class="tactic-dropdown" data-player="p2" data-round="2" style="font-size: 0.72rem; padding: 4px 6px; border-radius: 6px; background: rgba(0,0,0,0.3); color: #fff; border: 1px solid rgba(255,255,255,0.1); width: 100%; outline: none; cursor: pointer; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">
+                                                <option value="">-- No Tactic --</option>
+                                            </select>
+                                            <label style="display: flex; align-items: center; gap: 3px; font-size: 0.7rem; color: #aaa; cursor: pointer; user-select: none;">
+                                                <input type="checkbox" class="tactic-completed-chk" data-player="p2" data-round="2" style="width: 12px; height: 12px;" />
+                                                <span style="white-space: nowrap;">+2 VP</span>
+                                            </label>
+                                            <div style="display: flex; align-items: center; gap: 3px;">
+                                                <button class="btn btn-icon-only btn-outline vp-adjust" data-player="p2" data-round="2" data-dir="minus" style="width: 20px; height: 20px; padding: 0; min-height: unset; border-radius: 4px;"><i data-lucide="minus" style="width: 10px; height: 10px;"></i></button>
+                                                <span id="p2R2Score" style="font-size: 0.9rem; font-weight: 700; width: 16px; text-align: center;">0</span>
+                                                <button class="btn btn-icon-only btn-outline vp-adjust" data-player="p2" data-round="2" data-dir="plus" style="width: 20px; height: 20px; padding: 0; min-height: unset; border-radius: 4px;"><i data-lucide="plus" style="width: 10px; height: 10px;"></i></button>
+                                            </div>
+                                        </div>
+                                        <!-- Round 3 -->
+                                        <div style="display: grid; grid-template-columns: 65px 1fr auto auto; align-items: center; gap: 8px;">
+                                            <span style="font-size: 0.82rem; font-weight: 700; color: #ccc;">Round 3</span>
+                                            <select class="tactic-dropdown" data-player="p2" data-round="3" style="font-size: 0.72rem; padding: 4px 6px; border-radius: 6px; background: rgba(0,0,0,0.3); color: #fff; border: 1px solid rgba(255,255,255,0.1); width: 100%; outline: none; cursor: pointer; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">
+                                                <option value="">-- No Tactic --</option>
+                                            </select>
+                                            <label style="display: flex; align-items: center; gap: 3px; font-size: 0.7rem; color: #aaa; cursor: pointer; user-select: none;">
+                                                <input type="checkbox" class="tactic-completed-chk" data-player="p2" data-round="3" style="width: 12px; height: 12px;" />
+                                                <span style="white-space: nowrap;">+2 VP</span>
+                                            </label>
+                                            <div style="display: flex; align-items: center; gap: 3px;">
+                                                <button class="btn btn-icon-only btn-outline vp-adjust" data-player="p2" data-round="3" data-dir="minus" style="width: 20px; height: 20px; padding: 0; min-height: unset; border-radius: 4px;"><i data-lucide="minus" style="width: 10px; height: 10px;"></i></button>
+                                                <span id="p2R3Score" style="font-size: 0.9rem; font-weight: 700; width: 16px; text-align: center;">0</span>
+                                                <button class="btn btn-icon-only btn-outline vp-adjust" data-player="p2" data-round="3" data-dir="plus" style="width: 20px; height: 20px; padding: 0; min-height: unset; border-radius: 4px;"><i data-lucide="plus" style="width: 10px; height: 10px;"></i></button>
+                                            </div>
+                                        </div>
+                                        <!-- Round 4 -->
+                                        <div style="display: grid; grid-template-columns: 65px 1fr auto auto; align-items: center; gap: 8px;">
+                                            <span style="font-size: 0.82rem; font-weight: 700; color: #ccc;">Round 4</span>
+                                            <select class="tactic-dropdown" data-player="p2" data-round="4" style="font-size: 0.72rem; padding: 4px 6px; border-radius: 6px; background: rgba(0,0,0,0.3); color: #fff; border: 1px solid rgba(255,255,255,0.1); width: 100%; outline: none; cursor: pointer; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">
+                                                <option value="">-- No Tactic --</option>
+                                            </select>
+                                            <label style="display: flex; align-items: center; gap: 3px; font-size: 0.7rem; color: #aaa; cursor: pointer; user-select: none;">
+                                                <input type="checkbox" class="tactic-completed-chk" data-player="p2" data-round="4" style="width: 12px; height: 12px;" />
+                                                <span style="white-space: nowrap;">+2 VP</span>
+                                            </label>
+                                            <div style="display: flex; align-items: center; gap: 3px;">
+                                                <button class="btn btn-icon-only btn-outline vp-adjust" data-player="p2" data-round="4" data-dir="minus" style="width: 20px; height: 20px; padding: 0; min-height: unset; border-radius: 4px;"><i data-lucide="minus" style="width: 10px; height: 10px;"></i></button>
+                                                <span id="p2R4Score" style="font-size: 0.9rem; font-weight: 700; width: 16px; text-align: center;">0</span>
+                                                <button class="btn btn-icon-only btn-outline vp-adjust" data-player="p2" data-round="4" data-dir="plus" style="width: 20px; height: 20px; padding: 0; min-height: unset; border-radius: 4px;"><i data-lucide="plus" style="width: 10px; height: 10px;"></i></button>
+                                            </div>
+                                        </div>
+                                        <!-- Round 5 -->
+                                        <div style="display: grid; grid-template-columns: 65px 1fr auto auto; align-items: center; gap: 8px;">
+                                            <span style="font-size: 0.82rem; font-weight: 700; color: #ccc;">Round 5</span>
+                                            <select class="tactic-dropdown" data-player="p2" data-round="5" style="font-size: 0.72rem; padding: 4px 6px; border-radius: 6px; background: rgba(0,0,0,0.3); color: #fff; border: 1px solid rgba(255,255,255,0.1); width: 100%; outline: none; cursor: pointer; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">
+                                                <option value="">-- No Tactic --</option>
+                                            </select>
+                                            <label style="display: flex; align-items: center; gap: 3px; font-size: 0.7rem; color: #aaa; cursor: pointer; user-select: none;">
+                                                <input type="checkbox" class="tactic-completed-chk" data-player="p2" data-round="5" style="width: 12px; height: 12px;" />
+                                                <span style="white-space: nowrap;">+2 VP</span>
+                                            </label>
+                                            <div style="display: flex; align-items: center; gap: 3px;">
+                                                <button class="btn btn-icon-only btn-outline vp-adjust" data-player="p2" data-round="5" data-dir="minus" style="width: 20px; height: 20px; padding: 0; min-height: unset; border-radius: 4px;"><i data-lucide="minus" style="width: 10px; height: 10px;"></i></button>
+                                                <span id="p2R5Score" style="font-size: 0.9rem; font-weight: 700; width: 16px; text-align: center;">0</span>
+                                                <button class="btn btn-icon-only btn-outline vp-adjust" data-player="p2" data-round="5" data-dir="plus" style="width: 20px; height: 20px; padding: 0; min-height: unset; border-radius: 4px;"><i data-lucide="plus" style="width: 10px; height: 10px;"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Battle Tactics Codex / Info Grid at the bottom -->
+                        <div class="card glass-card battle-tactics-codex" style="margin-top: 8px; padding: 20px; margin-bottom: 40px;">
+                            <h3 style="margin-bottom: 16px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px; font-size: 1.1rem;">
+                                <i data-lucide="book-open" class="gold-icon"></i> AoS 4th Edition Battle Tactics Reference Codex
+                            </h3>
+                            <div class="tactics-reference-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+                                <div class="tactic-reference-card glass-card" data-tactic-id="flanks" style="padding: 16px; border: 1px solid rgba(255,255,255,0.05); position: relative; border-radius: 12px;">
+                                    <div class="tactic-card-header" style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px; gap: 12px;">
+                                        <h4 style="margin: 0; font-size: 0.95rem; color: #fff; font-weight: 600;">Take the Flanks</h4>
+                                        <div class="tactic-badges-row" style="display: flex; gap: 4px; flex-wrap: wrap;"></div>
+                                    </div>
+                                    <p style="font-size: 0.8rem; color: #aaa; margin: 0; line-height: 1.4;">
+                                        You complete this tactic if 2+ friendly units are wholly within 3" of opposing battlefield edges, and both are more than 9" from friendly territory.
+                                    </p>
+                                </div>
+
+                                <div class="tactic-reference-card glass-card" data-tactic-id="centre" style="padding: 16px; border: 1px solid rgba(255,255,255,0.05); position: relative; border-radius: 12px;">
+                                    <div class="tactic-card-header" style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px; gap: 12px;">
+                                        <h4 style="margin: 0; font-size: 0.95rem; color: #fff; font-weight: 600;">Seize the Centre</h4>
+                                        <div class="tactic-badges-row" style="display: flex; gap: 4px; flex-wrap: wrap;"></div>
+                                    </div>
+                                    <p style="font-size: 0.8rem; color: #aaa; margin: 0; line-height: 1.4;">
+                                        You complete this tactic if 1+ friendly units are wholly within 6" of the battlefield's center, and no enemy units are within 6" of the center.
+                                    </p>
+                                </div>
+
+                                <div class="tactic-reference-card glass-card" data-tactic-id="entourage" style="padding: 16px; border: 1px solid rgba(255,255,255,0.05); position: relative; border-radius: 12px;">
+                                    <div class="tactic-card-header" style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px; gap: 12px;">
+                                        <h4 style="margin: 0; font-size: 0.95rem; color: #fff; font-weight: 600;">Slay the Entourage</h4>
+                                        <div class="tactic-badges-row" style="display: flex; gap: 4px; flex-wrap: wrap;"></div>
+                                    </div>
+                                    <p style="font-size: 0.8rem; color: #aaa; margin: 0; line-height: 1.4;">
+                                        Choose 1 enemy unit that was in the enemy General's regiment at start of game. You complete this tactic if that unit is destroyed this turn.
+                                    </p>
+                                </div>
+
+                                <div class="tactic-reference-card glass-card" data-tactic-id="territory" style="padding: 16px; border: 1px solid rgba(255,255,255,0.05); position: relative; border-radius: 12px;">
+                                    <div class="tactic-card-header" style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px; gap: 12px;">
+                                        <h4 style="margin: 0; font-size: 0.95rem; color: #fff; font-weight: 600;">Take the Territory</h4>
+                                        <div class="tactic-badges-row" style="display: flex; gap: 4px; flex-wrap: wrap;"></div>
+                                    </div>
+                                    <p style="font-size: 0.8rem; color: #aaa; margin: 0; line-height: 1.4;">
+                                        You complete this tactic if you control 1+ objectives in enemy territory that were enemy-controlled at the start of the turn.
+                                    </p>
+                                </div>
+
+                                <div class="tactic-reference-card glass-card" data-tactic-id="eye" style="padding: 16px; border: 1px solid rgba(255,255,255,0.05); position: relative; border-radius: 12px;">
+                                    <div class="tactic-card-header" style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px; gap: 12px;">
+                                        <h4 style="margin: 0; font-size: 0.95rem; color: #fff; font-weight: 600;">An Eye for an Eye</h4>
+                                        <div class="tactic-badges-row" style="display: flex; gap: 4px; flex-wrap: wrap;"></div>
+                                    </div>
+                                    <p style="font-size: 0.8rem; color: #aaa; margin: 0; line-height: 1.4;">
+                                        You complete this tactic if 1+ enemy units were destroyed this turn, and 1+ friendly units were also destroyed this turn.
+                                    </p>
+                                </div>
+
+                                <div class="tactic-reference-card glass-card" data-tactic-id="land" style="padding: 16px; border: 1px solid rgba(255,255,255,0.05); position: relative; border-radius: 12px;">
+                                    <div class="tactic-card-header" style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px; gap: 12px;">
+                                        <h4 style="margin: 0; font-size: 0.95rem; color: #fff; font-weight: 600;">Reclaim the Land</h4>
+                                        <div class="tactic-badges-row" style="display: flex; gap: 4px; flex-wrap: wrap;"></div>
+                                    </div>
+                                    <p style="font-size: 0.8rem; color: #aaa; margin: 0; line-height: 1.4;">
+                                        Choose 1 objective marker controlled by your opponent. You complete this tactic if you control that objective at the end of this turn.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Rules Updater Tab -->
+                <section id="tab-updater" class="tab-panel">
+                    <div class="section-header">
+                        <h2>Rules Database Updater</h2>
+                        <p class="subtitle">Upload any future official Age of Sigmar Battle Profiles PDF to scan for points and notes updates, view differences side-by-side, and update your active local rules database.</p>
+                    </div>
+                    <div class="updater-grid">
+                        <div class="card drop-zone-card" id="pdfDropZone">
+                            <i data-lucide="file-up" class="drop-icon"></i>
+                            <h3>Drag & Drop PDF Here</h3>
+                            <p>or click to upload from file manager</p>
+                            <span class="file-limits">Supports Battle Profiles PDF (.pdf)</span>
+                            <input type="file" id="pdfFileInput" accept="application/pdf" style="display: none;">
+                        </div>
+
+                        <!-- Diff Tool View (initially hidden) -->
+                        <div class="card glass-card diff-viewer-card hidden" id="diffViewer">
+                            <div class="diff-header">
+                                <h3><i data-lucide="git-compare" class="amber-icon"></i> Dynamic PDF Diff Checker</h3>
+                                <div class="diff-actions">
+                                    <button class="btn btn-outline btn-sm" id="btnCancelDiff">Discard</button>
+                                    <button class="btn btn-gold btn-sm" id="btnApplyDiff">Apply & Update database</button>
+                                </div>
+                            </div>
+                            <div class="diff-stats">
+                                <span class="stat-added"><span id="diffAddedCount">0</span> Additions</span>
+                                <span class="stat-modified"><span id="diffModifiedCount">0</span> Modifications</span>
+                                <span class="stat-deleted"><span id="diffDeletedCount">0</span> Removals</span>
+                            </div>
+                            <div class="diff-scroller scroller" id="diffResultsContainer">
+                                <!-- Side-by-side Diff entries rendered here -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- === INTERACTIVE MODALS === -->
+
+    <!-- Faction/Points Selection Dialog on creation -->
+    <dialog id="newArmyDialog" closedby="any" aria-labelledby="newArmyTitle">
+        <div class="modal-content">
+            <h2 id="newArmyTitle">Construct New Army</h2>
+            <form id="newArmyForm" method="dialog">
+                <div class="form-group">
+                    <label for="newArmyNameInput">Army Name</label>
+                    <input type="text" id="newArmyNameInput" placeholder="My Epic Vanguard">
+                </div>
+                <div class="form-group">
+                    <label for="newArmyFactionInput">Select Faction</label>
+                    <select id="newArmyFactionInput" required>
+                        <option value="" disabled selected>Select Faction...</option>
+                        <!-- Factions populated dynamically -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="newArmyPointsInput">Points Limit</label>
+                    <select id="newArmyPointsInput" required>
+                        <option value="500">500 pts (Vanguard)</option>
+                        <option value="1000" selected>1000 pts (Border War)</option>
+                        <option value="1500">1500 pts (Skirmish)</option>
+                        <option value="2000">2000 pts (Battlehost)</option>
+                    </select>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-outline" id="btnCancelNewArmy">Cancel</button>
+                    <button type="submit" class="btn btn-gold">Initialize Builder</button>
+                </div>
+            </form>
+        </div>
+    </dialog>
+
+    <!-- Selection Drawer Modal for adding Heroes and Units to a Regiment -->
+    <dialog id="selectionDrawer" closedby="any" aria-labelledby="drawerTitle">
+        <div class="drawer-content">
+            <div class="drawer-header">
+                <h2 id="drawerTitle">Add Unit</h2>
+                <button class="btn-icon" id="btnCloseDrawer" aria-label="Close panel">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <div class="drawer-filters">
+                <div class="search-box">
+                    <i data-lucide="search"></i>
+                    <input type="text" id="drawerSearch" placeholder="Search selection...">
+                </div>
+                <div class="owned-filter-toggle">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="drawerOwnedOnly">
+                        <span class="checkmark"></span>
+                        Show Owned Only
+                    </label>
+                </div>
+            </div>
+            <div class="drawer-scroller scroller" id="drawerItemsList">
+                <!-- Selection cards go here -->
+            </div>
+        </div>
+    </dialog>
+
+    <!-- AoS 4th Edition Battle Setup & Deployment Guide Modal -->
+    <dialog id="setupGuideDialog" style="max-width: 720px; width: 95%;">
+        <div class="modal-content" style="padding: 24px; position: relative;">
+            <button class="btn-icon" id="btnCloseSetupGuide" aria-label="Close guide" style="position: absolute; top: 16px; right: 16px; background: transparent; border: none; cursor: pointer; color: var(--color-text-muted); transition: color 0.2s;">
+                <i data-lucide="x" style="width: 20px; height: 20px;"></i>
+            </button>
+            
+            <h2 style="font-family: 'Cinzel', serif; letter-spacing: 0.05em; color: var(--color-gold); margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 12px; display: flex; align-items: center; gap: 10px; font-size: 1.4rem;">
+                <i data-lucide="book-open"></i> AoS 4th Ed. Battle Setup Guide
+            </h2>
+            
+            <!-- Tab Controls -->
+            <div class="setup-tabs" style="display: flex; border-bottom: 2px solid rgba(255,255,255,0.05); margin-bottom: 20px; gap: 4px;">
+                <button class="setup-tab-btn active" data-target="setup-prebattle" style="flex: 1; text-align: center; padding: 10px 4px; background: transparent; border: none; border-bottom: 3px solid transparent; color: #aaa; font-weight: 600; font-size: 0.85rem; cursor: pointer; transition: all 0.3s; text-transform: uppercase; font-family: 'Outfit', sans-serif;">
+                    1. Pre-Battle Setup
+                </button>
+                <button class="setup-tab-btn" data-target="setup-deployment" style="flex: 1; text-align: center; padding: 10px 4px; background: transparent; border: none; border-bottom: 3px solid transparent; color: #aaa; font-weight: 600; font-size: 0.85rem; cursor: pointer; transition: all 0.3s; text-transform: uppercase; font-family: 'Outfit', sans-serif;">
+                    2. Deployment Phase
+                </button>
+                <button class="setup-tab-btn" data-target="setup-corerules" style="flex: 1; text-align: center; padding: 10px 4px; background: transparent; border: none; border-bottom: 3px solid transparent; color: #aaa; font-weight: 600; font-size: 0.85rem; cursor: pointer; transition: all 0.3s; text-transform: uppercase; font-family: 'Outfit', sans-serif;">
+                    3. Core Game Rules
+                </button>
+            </div>
+            
+            <!-- Tab 1: Pre-Battle Setup -->
+            <div id="setup-prebattle" class="setup-tab-content active-content" style="max-height: 380px; overflow-y: auto; padding-right: 8px;">
+                <div style="display: flex; flex-direction: column; gap: 16px;">
+                    <div class="setup-step-card" style="background: rgba(255,255,255,0.02); border-left: 3px solid var(--color-gold); padding: 12px 16px; border-radius: 0 8px 8px 0; border: 1px solid rgba(255,255,255,0.05); border-left-width: 3px;">
+                        <h4 style="margin: 0 0 6px 0; color: #fff; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;"><span class="step-num" style="background: var(--color-gold); color: #000; width: 18px; height: 18px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 800;">1</span> Roll-Off for Roles</h4>
+                        <p style="margin: 0; font-size: 0.8rem; color: #b0b0b0; line-height: 1.4;">Both players roll off. The winner decides who is the <strong>Attacker</strong> and who is the <strong>Defender</strong>.</p>
+                    </div>
+                    <div class="setup-step-card" style="background: rgba(255,255,255,0.02); border-left: 3px solid var(--color-gold); padding: 12px 16px; border-radius: 0 8px 8px 0; border: 1px solid rgba(255,255,255,0.05); border-left-width: 3px;">
+                        <h4 style="margin: 0 0 6px 0; color: #fff; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;"><span class="step-num" style="background: var(--color-gold); color: #000; width: 18px; height: 18px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 800;">2</span> Pick Regiment Abilities</h4>
+                        <p style="margin: 0; font-size: 0.8rem; color: #b0b0b0; line-height: 1.4;">The <strong>Attacker</strong> selects their Regiment Ability, Enhancements, Spell Lores, Prayer Scriptures, and Manifestation Lores first. The <strong>Defender</strong> then selects theirs.</p>
+                    </div>
+                    <div class="setup-step-card" style="background: rgba(255,255,255,0.02); border-left: 3px solid var(--color-gold); padding: 12px 16px; border-radius: 0 8px 8px 0; border: 1px solid rgba(255,255,255,0.05); border-left-width: 3px;">
+                        <h4 style="margin: 0 0 6px 0; color: #fff; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;"><span class="step-num" style="background: var(--color-gold); color: #000; width: 18px; height: 18px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 800;">3</span> Choose Territory Layout</h4>
+                        <p style="margin: 0; font-size: 0.8rem; color: #b0b0b0; line-height: 1.4;">The <strong>Defender</strong> chooses which half of the battlefield they will use as their territory. The other half becomes the Attacker's territory.</p>
+                    </div>
+                    <div class="setup-step-card" style="background: rgba(255,255,255,0.02); border-left: 3px solid var(--color-gold); padding: 12px 16px; border-radius: 0 8px 8px 0; border: 1px solid rgba(255,255,255,0.05); border-left-width: 3px;">
+                        <h4 style="margin: 0 0 6px 0; color: #fff; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;"><span class="step-num" style="background: var(--color-gold); color: #000; width: 18px; height: 18px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 800;">4</span> Set Up Objectives and Terrain</h4>
+                        <p style="margin: 0; font-size: 0.8rem; color: #b0b0b0; line-height: 1.4;">Set up objective markers as indicated in your chosen Battleplan map. The <strong>Defender</strong> sets up standard terrain features first, followed by the <strong>Attacker</strong>.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tab 2: Deployment Phase -->
+            <div id="setup-deployment" class="setup-tab-content" style="display: none; max-height: 380px; overflow-y: auto; padding-right: 8px;">
+                <div style="display: flex; flex-direction: column; gap: 16px;">
+                    <div class="setup-step-card" style="background: rgba(255,255,255,0.02); border-left: 3px solid var(--color-crimson); padding: 12px 16px; border-radius: 0 8px 8px 0; border: 1px solid rgba(255,255,255,0.05); border-left-width: 3px;">
+                        <h4 style="margin: 0 0 6px 0; color: #fff; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;"><span class="step-num" style="background: var(--color-crimson); color: #fff; width: 18px; height: 18px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 800;">A</span> Deploy Faction Terrain</h4>
+                        <p style="margin: 0; font-size: 0.8rem; color: #b0b0b0; line-height: 1.4;">Players alternate setting up their faction-specific terrain features using their <em>Deploy Faction Terrain</em> abilities, starting with the player who finished setting up their army first (or decided by roll-off/battleplan).</p>
+                    </div>
+                    <div class="setup-step-card" style="background: rgba(255,255,255,0.02); border-left: 3px solid var(--color-crimson); padding: 12px 16px; border-radius: 0 8px 8px 0; border: 1px solid rgba(255,255,255,0.05); border-left-width: 3px;">
+                        <h4 style="margin: 0 0 6px 0; color: #fff; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;"><span class="step-num" style="background: var(--color-crimson); color: #fff; width: 18px; height: 18px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 800;">B</span> Deploy Regiments & Auxiliary Units</h4>
+                        <p style="margin: 0; font-size: 0.8rem; color: #b0b0b0; line-height: 1.4;">Players alternate deploying units onto the battlefield in <strong>entire Regiments</strong> or individual auxiliary units. Deploying an entire regiment counts as a single deployment action, greatly speeding up deployment for low-regiment armies!</p>
+                    </div>
+                    <div class="setup-step-card" style="background: rgba(255,255,255,0.02); border-left: 3px solid var(--color-crimson); padding: 12px 16px; border-radius: 0 8px 8px 0; border: 1px solid rgba(255,255,255,0.05); border-left-width: 3px;">
+                        <h4 style="margin: 0 0 6px 0; color: #fff; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;"><span class="step-num" style="background: var(--color-crimson); color: #fff; width: 18px; height: 18px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 800;">C</span> Deployment Phase Abilities</h4>
+                        <p style="margin: 0; font-size: 0.8rem; color: #b0b0b0; line-height: 1.4;">Use any other specific Deployment Phase abilities that are not placement abilities (such as vanguard moves, scouting, or reserves setups).</p>
+                    </div>
+                    <div class="setup-step-card" style="background: rgba(255,255,255,0.02); border-left: 3px solid var(--color-crimson); padding: 12px 16px; border-radius: 0 8px 8px 0; border: 1px solid rgba(255,255,255,0.05); border-left-width: 3px;">
+                        <h4 style="margin: 0 0 6px 0; color: #fff; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;"><span class="step-num" style="background: var(--color-crimson); color: #fff; width: 18px; height: 18px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 800;">D</span> First Turn Choice</h4>
+                        <p style="margin: 0; font-size: 0.8rem; color: #b0b0b0; line-height: 1.4;">The player who **finished deploying their army first** decides which player takes the first turn in Battle Round 1.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tab 3: Core Game Rules -->
+            <div id="setup-corerules" class="setup-tab-content" style="display: none; max-height: 380px; overflow-y: auto; padding-right: 8px;">
+                <div style="display: flex; flex-direction: column; gap: 14px;">
+                    <div style="background: rgba(212, 175, 55, 0.05); border: 1px solid rgba(212, 175, 55, 0.2); padding: 12px 16px; border-radius: 8px;">
+                        <h4 style="margin: 0 0 4px 0; color: var(--color-gold); font-size: 0.9rem; display: flex; align-items: center; gap: 6px;"><i data-lucide="award" style="width: 16px; height: 16px;"></i> The Underdog Mechanic</h4>
+                        <p style="margin: 0; font-size: 0.78rem; color: #ccc; line-height: 1.4;">At the start of Rounds 2, 3, 4, and 5, the player with the <strong>fewest Victory Points</strong> is designated the Underdog and receives <strong>+1 bonus Command Point</strong> (+5 total instead of +4).</p>
+                    </div>
+                    <div style="background: rgba(220, 53, 69, 0.05); border: 1px solid rgba(220, 53, 69, 0.2); padding: 12px 16px; border-radius: 8px;">
+                        <h4 style="margin: 0 0 4px 0; color: var(--color-crimson); font-size: 0.9rem; display: flex; align-items: center; gap: 6px;"><i data-lucide="rotate-ccw" style="width: 16px; height: 16px;"></i> Command Point (CP) Reset</h4>
+                        <p style="margin: 0; font-size: 0.78rem; color: #ccc; line-height: 1.4;">Players receive <strong>4 CP</strong> at the start of each round (5 if Underdog). However, <strong>all unspent CP are lost</strong> at the end of that battle round. No hoarding across rounds!</p>
+                    </div>
+                    <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); padding: 12px 16px; border-radius: 8px;">
+                        <h4 style="margin: 0 0 4px 0; color: #fff; font-size: 0.95rem; display: flex; align-items: center; gap: 6px;"><i data-lucide="dice-5" style="width: 16px; height: 16px;"></i> Round Priority Roll</h4>
+                        <p style="margin: 0; font-size: 0.78rem; color: #ccc; line-height: 1.4;">At the start of Rounds 2-5, players roll off. The winner decides who takes the first turn.
+                        <br><strong style="color: var(--color-gold);">Tiebreaker:</strong> If the priority roll is tied, the <strong>Underdog</strong> wins the tiebreaker. If VPs are also tied, the player who went <strong>first</strong> in the previous round wins the tiebreaker.</p>
+                    </div>
+                    <div style="background: rgba(255, 193, 7, 0.05); border: 1px solid rgba(255, 193, 7, 0.2); padding: 12px 16px; border-radius: 8px;">
+                        <h4 style="margin: 0 0 4px 0; color: #ffc107; font-size: 0.9rem; display: flex; align-items: center; gap: 6px;"><i data-lucide="alert-triangle" style="width: 16px; height: 16px;"></i> Double Turn Constraints</h4>
+                        <p style="margin: 0; font-size: 0.78rem; color: #ccc; line-height: 1.4;">Choosing to go first in Round $N$ after going second in Round $N-1$ triggers a "double turn". In the official 4th Edition general battlepacks, taking a double turn means certain scoring elements or battle tactic completions may be restricted or provide bonus points to your opponent.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal-actions" style="margin-top: 20px;">
+                <button type="button" class="btn btn-gold" id="btnAckSetupGuide" style="padding: 8px 20px; font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.05em;">Understood</button>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- Preloaded offline rules database -->
+    <script src="database.js?v=5"></script>
+    <!-- Core App logic -->
+    <script src="index.js?v=20"></script>
+</body>
+</html>

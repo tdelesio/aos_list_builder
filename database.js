@@ -1,0 +1,14515 @@
+const DEFAULT_BATTLE_PROFILES = {
+  "factions": {
+    "CITIES OF SIGMAR": {
+      "heroes": [
+        {
+          "name": "Alchemite Warforger",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "0-1 Sigmarite  War Machine,",
+            "Any Sigmarite Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Sigmarite  War Machine, Any Sigmarite Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Amethyst Knellmage",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "0-1 Sigmarite  War Machine,",
+            "Any Sigmarite  Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Sigmarite  War Machine, Any Sigmarite  Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Aqshian Pyrocaster",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "0-1 Sigmarite  War Machine,",
+            "Any Sigmarite Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Sigmarite  War Machine, Any Sigmarite Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Assassin",
+          "unit_size": 1,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Any Aelf Infantry",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Any Aelf Infantry",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Battlemage",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Any Sigmarite Infantry",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Any Sigmarite Infantry",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Battlemage on Celestial Hurricanum",
+          "unit_size": 1,
+          "points": 230,
+          "points_raw": "230",
+          "raw_lines": [
+            "Any Sigmarite Infantry ,",
+            "Any Sigmar ite Cavalry",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Any Sigmarite Infantry , Any Sigmar ite Cavalry",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Battlemage on Griffon",
+          "unit_size": 1,
+          "points": 260,
+          "points_raw": "260",
+          "raw_lines": [
+            "Any Sigmarite Infantry ,",
+            "Any Sigmar ite Cavalry",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Any Sigmarite Infantry , Any Sigmar ite Cavalry",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Battlemage on Luminark of Hysh",
+          "unit_size": 1,
+          "points": 280,
+          "points_raw": "280",
+          "raw_lines": [
+            "Any Sigmarite Infantry ,",
+            "Any Sigmar ite Cavalry",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Any Sigmarite Infantry , Any Sigmar ite Cavalry",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Black Ark Fleetmaster",
+          "unit_size": 1,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "Any Aelf",
+            "This Hero can join a Dreadlord",
+            "on Black Dragon’s, Sorceress’",
+            "or Sorceress on Black Dragon ’s",
+            "regiment. This unit will move",
+            "to Warhammer Legends on",
+            "1 June 2027.",
+            "25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Any Aelf",
+          "notes": "This Hero can join a Dreadlord on Black Dragon’s, Sorceress’ or Sorceress on Black Dragon ’s regiment. This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Callis and Toll",
+          "unit_size": 2,
+          "points": 240,
+          "points_raw": "240",
+          "raw_lines": [
+            "1 Toll’s Companions,",
+            "Any Sigmarite  Infantry 28.5mm"
+          ],
+          "base_size": "5mm",
+          "options_or_keywords": "1 Toll’s Companions, Any Sigmarite  Infantry 28.",
+          "notes": ""
+        },
+        {
+          "name": "Cannonade Cogfort",
+          "unit_size": 1,
+          "points": 530,
+          "points_raw": "530",
+          "raw_lines": [
+            "0-1 Freeguild Veteran , Any Sigmarite ,",
+            "Any Allies of the Free Cities 160mm"
+          ],
+          "base_size": "160mm",
+          "options_or_keywords": "0-1 Freeguild Veteran , Any Sigmarite , Any Allies of the Free Cities",
+          "notes": ""
+        },
+        {
+          "name": "Cogsmith",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Any Duardin",
+            "This Hero can join a",
+            "Warden King’s regiment. This",
+            "unit will move to Warhammer",
+            "Legends on 1 June 2027.",
+            "25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Any Duardin",
+          "notes": "This Hero can join a Warden King’s regiment. This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Conqueror Cogfort",
+          "unit_size": 1,
+          "points": 440,
+          "points_raw": "440",
+          "raw_lines": [
+            "0-1 Freeguild Veteran , Any Sigmarite ,",
+            "Any Allies of the Free Cities 160mm"
+          ],
+          "base_size": "160mm",
+          "options_or_keywords": "0-1 Freeguild Veteran , Any Sigmarite , Any Allies of the Free Cities",
+          "notes": ""
+        },
+        {
+          "name": "Dreadlord on Black Dragon",
+          "unit_size": 1,
+          "points": 260,
+          "points_raw": "260",
+          "raw_lines": [
+            "0-1 Black Ark Fleetmaster , Any Aelf",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "105 × 70mm"
+          ],
+          "base_size": "105 × 70mm",
+          "options_or_keywords": "0-1 Black Ark Fleetmaster , Any Aelf",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Erasmus Zonn, the Enlightened One",
+          "unit_size": 1,
+          "points": 170,
+          "points_raw": "170",
+          "raw_lines": [
+            "Any Sigmarite 75 × 42mm"
+          ],
+          "base_size": "75 × 42mm",
+          "options_or_keywords": "Any Sigmarite",
+          "notes": ""
+        },
+        {
+          "name": "Freeguild Cavalier-Marshal",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "0-1 Freeguild Veteran , Any Sigmarite ,",
+            "Any Allies of the Free Cities",
+            "This Hero can join an eligible",
+            "regiment as a Freeguild Veteran . 75 × 42mm"
+          ],
+          "base_size": "75 × 42mm",
+          "options_or_keywords": "0-1 Freeguild Veteran , Any Sigmarite , Any Allies of the Free Cities",
+          "notes": "This Hero can join an eligible regiment as a Freeguild Veteran ."
+        },
+        {
+          "name": "Freeguild Marshal and Relic Envoy",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "0-1 Freeguild Veteran , Any Sigmarite ,",
+            "Any Allies of the Free Cities",
+            "This Hero can join an eligible",
+            "regiment as a Freeguild Veteran .",
+            "32mm [1],",
+            "28.5mm [1]"
+          ],
+          "base_size": "5mm [1]",
+          "options_or_keywords": "0-1 Freeguild Veteran , Any Sigmarite , Any Allies of the Free Cities",
+          "notes": "This Hero can join an eligible regiment as a Freeguild Veteran . 32mm [1], 28."
+        },
+        {
+          "name": "Freeguild Marshal on Griffon",
+          "unit_size": 1,
+          "points": 230,
+          "points_raw": "230",
+          "raw_lines": [
+            "0-1 Freeguild Veteran , Any Sigmarite",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Freeguild Veteran , Any Sigmarite",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Fusil-Major on Ogor Warhulk",
+          "unit_size": 1,
+          "points": 160,
+          "points_raw": "160",
+          "raw_lines": [
+            "0-1 Freeguild Veteran , Any Sigmarite ,",
+            "Any Allies of the Free Cities",
+            "This Hero can join an eligible",
+            "regiment as a Freeguild Veteran . 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "0-1 Freeguild Veteran , Any Sigmarite , Any Allies of the Free Cities",
+          "notes": "This Hero can join an eligible regiment as a Freeguild Veteran ."
+        },
+        {
+          "name": "Galen and Doralia ven Denst",
+          "unit_size": 2,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "0-1 Ironweld Great Cannon,",
+            "Any Sigmarite Infantry 28.5mm"
+          ],
+          "base_size": "5mm",
+          "options_or_keywords": "0-1 Ironweld Great Cannon, Any Sigmarite Infantry 28.",
+          "notes": ""
+        },
+        {
+          "name": "The Iron March Immolator Cogfort",
+          "unit_size": 1,
+          "points": 510,
+          "points_raw": "510",
+          "raw_lines": [
+            "Any Freeguild Gallants",
+            "This unit can only be taken",
+            "in an Iron March Army of",
+            "Renown.",
+            "160mm"
+          ],
+          "base_size": "160mm",
+          "options_or_keywords": "Any Freeguild Gallants",
+          "notes": "This unit can only be taken in an Iron March Army of Renown."
+        },
+        {
+          "name": "Jorvan Kreel, Heir of the Kraken",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "0-1 Freeguild Veteran ,",
+            "Any Sigmarite",
+            "32mm [1],",
+            "25mm [1]"
+          ],
+          "base_size": "32mm [1], 25mm [1]",
+          "options_or_keywords": "0-1 Freeguild Veteran , Any Sigmarite",
+          "notes": ""
+        },
+        {
+          "name": "The Iron March Linebreaker Cogfort",
+          "unit_size": 1,
+          "points": 450,
+          "points_raw": "450",
+          "raw_lines": [
+            "Any Freeguild Gallants",
+            "This unit can only be taken",
+            "in an Iron March Army of",
+            "Renown.",
+            "160mm"
+          ],
+          "base_size": "160mm",
+          "options_or_keywords": "Any Freeguild Gallants",
+          "notes": "This unit can only be taken in an Iron March Army of Renown."
+        },
+        {
+          "name": "Mallus Forgepriest",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "0-1 Sigmarite  War Machine,",
+            "Any Sigmarite Infantry 28.5mm"
+          ],
+          "base_size": "5mm",
+          "options_or_keywords": "0-1 Sigmarite  War Machine, Any Sigmarite Infantry 28.",
+          "notes": ""
+        },
+        {
+          "name": "Pontifex Zenestra, Matriarch of the Great Wheel",
+          "unit_size": 1,
+          "points": 190,
+          "points_raw": "190",
+          "raw_lines": [
+            "0-1 Freeguild Veteran , Any Sigmarite 90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "0-1 Freeguild Veteran , Any Sigmarite",
+          "notes": ""
+        },
+        {
+          "name": "Runelord",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Any Duardin",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Any Duardin",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Sorceress",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "0-1 Black Ark Fleetmaster , Any Aelf",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "25mm",
+            "3"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Black Ark Fleetmaster , Any Aelf",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027. 25mm 3"
+        },
+        {
+          "name": "Sorceress on Black Dragon",
+          "unit_size": 1,
+          "points": 280,
+          "points_raw": "280",
+          "raw_lines": [
+            "0-1 Black Ark Fleetmaster , Any Aelf",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "105 × 70mm"
+          ],
+          "base_size": "105 × 70mm",
+          "options_or_keywords": "0-1 Black Ark Fleetmaster , Any Aelf",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Steam Tank Commander",
+          "unit_size": 1,
+          "points": 250,
+          "points_raw": "250",
+          "raw_lines": [
+            "Any Steam Tank",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Any Steam Tank",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Tahlia Vedra, Lioness of the Parch",
+          "unit_size": 1,
+          "points": 340,
+          "points_raw": "340",
+          "raw_lines": [
+            "0-1 Freeguild Veteran ,",
+            "Any Sigmarite 100mm"
+          ],
+          "base_size": "100mm",
+          "options_or_keywords": "0-1 Freeguild Veteran , Any Sigmarite",
+          "notes": ""
+        },
+        {
+          "name": "Warden King",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "0-1 Cogsmith, Any Duardin",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "0-1 Cogsmith, Any Duardin",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Maleneth Witchblade",
+          "unit_size": 1,
+          "points": 170,
+          "points_raw": "170",
+          "raw_lines": [
+            "Any Daughters of Khaine Aelf 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Any Daughters of Khaine Aelf",
+          "notes": ""
+        }
+      ],
+      "units": [
+        {
+          "name": "Black Ark Corsairs",
+          "unit_size": 10,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Aelf, Infantry",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Aelf, Infantry",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Black Guard",
+          "unit_size": 10,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Aelf, Infantry",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Aelf, Infantry",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Bleakswords",
+          "unit_size": 10,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Aelf, Infantry",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Aelf, Infantry",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Celestial Hurricanum",
+          "unit_size": 1,
+          "points": 170,
+          "points_raw": "170",
+          "raw_lines": [
+            "Sigmarite, War Machine",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Sigmarite, War Machine",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Dark Riders",
+          "unit_size": 5,
+          "points": 170,
+          "points_raw": "170",
+          "raw_lines": [
+            "Aelf, Cavalry",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Aelf, Cavalry",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Darkshards",
+          "unit_size": 10,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Aelf, Infantry",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Aelf, Infantry",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Allies of the Free Cities Auric Hearthguard",
+          "unit_size": 5,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Duardin, Infantry",
+            "This unit can only be taken",
+            "in an Allies of the Free Cities",
+            "Army of Renown.",
+            "32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Duardin, Infantry",
+          "notes": "This unit can only be taken in an Allies of the Free Cities Army of Renown."
+        },
+        {
+          "name": "Allies of the Free Cities Vanari Auralan Sentinels",
+          "unit_size": 10,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Aelf, Infantry",
+            "This unit can only be taken",
+            "in an Allies of the Free Cities",
+            "Army of Renown.",
+            "32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Aelf, Infantry",
+          "notes": "This unit can only be taken in an Allies of the Free Cities Army of Renown."
+        },
+        {
+          "name": "Allies of the Free Cities Vanari Auralan Wardens",
+          "unit_size": 10,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Aelf, Infantry",
+            "This unit can only be taken",
+            "in an Allies of the Free Cities",
+            "Army of Renown.",
+            "32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Aelf, Infantry",
+          "notes": "This unit can only be taken in an Allies of the Free Cities Army of Renown."
+        },
+        {
+          "name": "Allies of the Free Cities Vulkyn Flameseekers",
+          "unit_size": 9,
+          "points": 160,
+          "points_raw": "160",
+          "raw_lines": [
+            "Duardin, Infantry",
+            "This unit cannot be reinforced.",
+            "This unit can only be taken",
+            "in an Allies of the Free Cities",
+            "Army of Renown.",
+            "32mm [4],",
+            "28.5mm [5]"
+          ],
+          "base_size": "5mm [5]",
+          "options_or_keywords": "Duardin, Infantry",
+          "notes": "This unit cannot be reinforced. This unit can only be taken in an Allies of the Free Cities Army of Renown. 32mm [4], 28."
+        },
+        {
+          "name": "Drakespawn Chariot",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Aelf, War Machine",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Aelf, War Machine",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Drakespawn Knights",
+          "unit_size": 5,
+          "points": 190,
+          "points_raw": "190",
+          "raw_lines": [
+            "Aelf, Cavalry",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Aelf, Cavalry",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Dreadspears",
+          "unit_size": 10,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Aelf, Infantry",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Aelf, Infantry",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Executioners",
+          "unit_size": 10,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Aelf, Infantry",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Aelf, Infantry",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Flagellants",
+          "unit_size": 10,
+          "points": 80,
+          "points_raw": "80",
+          "raw_lines": [
+            "Sigmarite, Infantry",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Sigmarite, Infantry",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Freeguild Cavaliers",
+          "unit_size": 5,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Sigmarite, Cavalry 60 × 35mm",
+            "Freeguild Command Corps"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Sigmarite, Cavalry 60 × 35mm Freeguild Command Corps",
+          "notes": ""
+        },
+        {
+          "name": "Adjutants",
+          "unit_size": 3,
+          "points": 200,
+          "points_raw": "200",
+          "raw_lines": [
+            "Sigmarite, Infantry This unit cannot be reinforced. 32mm [1],",
+            "28.5mm [2]",
+            "Freeguild Command Corps"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Sigmarite, Infantry",
+          "notes": "This unit cannot be reinforced. 32mm [1], 28.5mm [2] Freeguild Command Corps"
+        },
+        {
+          "name": "Auxiliaries",
+          "unit_size": 2,
+          "points": 0,
+          "points_raw": "0",
+          "raw_lines": [
+            "Sigmarite, Infantry",
+            "This unit cannot be reinforced.",
+            "This unit can only be taken",
+            "in a regiment that contains a",
+            "Freeguild Command Corp",
+            "Adjutant unit and no other",
+            "Freeguild Command Corp",
+            "Auxiliaries . This unit does",
+            "not count towards the number",
+            "of friendly units that can",
+            "accompany a Hero.",
+            "40mm [1],",
+            "28.5mm [1]",
+            "Freeguild Command Corps"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Sigmarite, Infantry",
+          "notes": "This unit cannot be reinforced. This unit can only be taken in a regiment that contains a Freeguild Command Corp Adjutant unit and no other Freeguild Command Corp Auxiliaries . This unit does not count towards the number of friendly units that can accompany a Hero. 40mm [1], 28.5mm [1] Freeguild Command Corps"
+        },
+        {
+          "name": "Whisperblade",
+          "unit_size": 1,
+          "points": 0,
+          "points_raw": "0",
+          "raw_lines": [
+            "Sigmarite, Infantry",
+            "This unit can only be taken",
+            "in a regiment that contains a",
+            "Freeguild Command Corp",
+            "Adjutant unit and no other",
+            "Freeguild Command Corp",
+            "Whisperblades . This unit does",
+            "not count towards the number",
+            "of friendly units that can",
+            "accompany a Hero.",
+            "28.5mm"
+          ],
+          "base_size": "5mm",
+          "options_or_keywords": "Sigmarite, Infantry",
+          "notes": "This unit can only be taken in a regiment that contains a Freeguild Command Corp Adjutant unit and no other Freeguild Command Corp Whisperblades . This unit does not count towards the number of friendly units that can accompany a Hero. 28."
+        },
+        {
+          "name": "Freeguild Fusiliers",
+          "unit_size": 10,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Sigmarite, Infantry 28.5mm"
+          ],
+          "base_size": "5mm",
+          "options_or_keywords": "Sigmarite, Infantry 28.",
+          "notes": ""
+        },
+        {
+          "name": "Freeguild Gallants",
+          "unit_size": 5,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Sigmarite, Infantry 28.5mm"
+          ],
+          "base_size": "5mm",
+          "options_or_keywords": "Sigmarite, Infantry 28.",
+          "notes": ""
+        },
+        {
+          "name": "Freeguild Grenadiers",
+          "unit_size": 10,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Sigmarite, Infantry This unit cannot be reinforced. 28.5mm"
+          ],
+          "base_size": "5mm",
+          "options_or_keywords": "Sigmarite, Infantry",
+          "notes": "This unit cannot be reinforced. 28."
+        },
+        {
+          "name": "Freeguild Steelhelms",
+          "unit_size": 10,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "Sigmarite, Infantry 25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Sigmarite, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Gate Gargants",
+          "unit_size": 2,
+          "points": 320,
+          "points_raw": "320",
+          "raw_lines": [
+            "Sigmarite, Monster This unit cannot be reinforced. 80mm"
+          ],
+          "base_size": "80mm",
+          "options_or_keywords": "Sigmarite, Monster",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "Gyrobomber",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Duardin, War Machine",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "Duardin, War Machine",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Gyrocopter",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Duardin, War Machine",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "Duardin, War Machine",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Hammerers",
+          "unit_size": 10,
+          "points": 170,
+          "points_raw": "170",
+          "raw_lines": [
+            "Duardin, Infantry",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Duardin, Infantry",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Ironbreakers",
+          "unit_size": 10,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Duardin, Infantry",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Duardin, Infantry",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Irondrakes",
+          "unit_size": 10,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Duardin, Infantry",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Duardin, Infantry",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Ironweld Great Cannon",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Sigmarite, War Machine 90mm"
+          ],
+          "base_size": "90mm",
+          "options_or_keywords": "Sigmarite, War Machine",
+          "notes": ""
+        },
+        {
+          "name": "Kharibdyss",
+          "unit_size": 1,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Aelf, Monster",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Aelf, Monster",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Longbeards",
+          "unit_size": 10,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Duardin, Infantry",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Duardin, Infantry",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Luminark of Hysh",
+          "unit_size": 1,
+          "points": 230,
+          "points_raw": "230",
+          "raw_lines": [
+            "Sigmarite, War Machine",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Sigmarite, War Machine",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Scourgerunner Chariot",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Aelf, War Machine",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Aelf, War Machine",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Steam Tank",
+          "unit_size": 1,
+          "points": 240,
+          "points_raw": "240",
+          "raw_lines": [
+            "Sigmarite, War Machine",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Sigmarite, War Machine",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Toll’s Companions",
+          "unit_size": 4,
+          "points": 0,
+          "points_raw": "0",
+          "raw_lines": [
+            "Sigmarite, Unique, Infantry This unit can only be taken in",
+            "Callis and Toll ’s regiment.",
+            "40mm [1],",
+            "28.5mm [3]"
+          ],
+          "base_size": "5mm [3]",
+          "options_or_keywords": "Sigmarite, Unique, Infantry",
+          "notes": "This unit can only be taken in Callis and Toll ’s regiment. 40mm [1], 28."
+        },
+        {
+          "name": "War Hydra",
+          "unit_size": 1,
+          "points": 170,
+          "points_raw": "170",
+          "raw_lines": [
+            "Aelf, Monster",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Aelf, Monster",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Wildercorps Hunters",
+          "unit_size": 11,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Sigmarite, Infantry This unit cannot be reinforced.",
+            "40mm [2],",
+            "28.5mm [3],",
+            "25mm [6]",
+            "5"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Sigmarite, Infantry",
+          "notes": "This unit cannot be reinforced. 40mm [2], 28.5mm [3], 25mm [6] 5"
+        }
+      ],
+      "auxiliary": [
+        {
+          "name": "Battle Formation Stalwart Guardians",
+          "points": 0,
+          "notes": "Battletome: Cities of Sigmar"
+        },
+        {
+          "name": "Battle Formation Zealous Hordes",
+          "points": 0,
+          "notes": "Battletome: Cities of Sigmar"
+        },
+        {
+          "name": "Battle Formation Collegiate Exemplars",
+          "points": 0,
+          "notes": "Battletome: Cities of Sigmar"
+        },
+        {
+          "name": "Battle Formation Swift Reinforcements",
+          "points": 0,
+          "notes": "Battletome: Cities of Sigmar"
+        },
+        {
+          "name": "✹  Heroic Trait Pious Veteran",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Heroic Trait Bristling Attitude",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Heroic Trait Cosmopolitan Leader",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Heroic Trait Stentorian General",
+          "points": 0,
+          "notes": "Battletome: Cities of Sigmar"
+        },
+        {
+          "name": "Heroic Trait Grizzled Drillmaster",
+          "points": 0,
+          "notes": "Battletome: Cities of Sigmar"
+        },
+        {
+          "name": "Heroic Trait Beloved Leader",
+          "points": 0,
+          "notes": "Battletome: Cities of Sigmar"
+        },
+        {
+          "name": "✹  Decoration for Valour Twin-tailed Comet of Honour",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Decoration for Valour The Living City Cross",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Decoration for Valour Aqshian Order of Merit",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Artefact of Power The Last Blade of Embergard",
+          "points": 0,
+          "notes": "Battletome: Cities of Sigmar"
+        },
+        {
+          "name": "Artefact of Power Bones of Saint Ignifus",
+          "points": 0,
+          "notes": "Battletome: Cities of Sigmar"
+        },
+        {
+          "name": "Artefact of Power The Sphere Celestial",
+          "points": 0,
+          "notes": "Battletome: Cities of Sigmar"
+        },
+        {
+          "name": "Spell Lore Spells of the Collegiate Arcane",
+          "points": 0,
+          "notes": "Battletome: Cities of Sigmar"
+        },
+        {
+          "name": "Prayer Lore Scriptures of Sigmar",
+          "points": 0,
+          "notes": "Battletome: Cities of Sigmar"
+        },
+        {
+          "name": "Faction Terrain Dawner’s Triumph",
+          "points": 0,
+          "notes": "Battletome: Cities of Sigmar"
+        },
+        {
+          "name": "Uninhibitor",
+          "points": 0,
+          "notes": "Battletome: Cities of Sigmar"
+        },
+        {
+          "name": "Ironweld Innovations Emergency Bellows",
+          "points": 0,
+          "notes": "Battletome: Cities of Sigmar"
+        },
+        {
+          "name": "Ironweld Innovations Grapple-net Launcher",
+          "points": 0,
+          "notes": "Battletome: Cities of Sigmar"
+        }
+      ]
+    },
+    "DAUGHTERS OF KHAINE": {
+      "heroes": [
+        {
+          "name": "Bloodwrack Medusa",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Any non-Aelf 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any non-Aelf",
+          "notes": ""
+        },
+        {
+          "name": "Bloodwrack Shrine",
+          "unit_size": 1,
+          "points": 270,
+          "points_raw": "270 (-10)",
+          "raw_lines": [
+            "0-1 Coven Matriarch , Any non-Aelf 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Coven Matriarch , Any non-Aelf",
+          "notes": ""
+        },
+        {
+          "name": "Hag Queen",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "0-1 Coven Matriarch , Any Aelf 25mm",
+            "✹  Hag Queen on"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Coven Matriarch , Any Aelf 25mm ✹  Hag Queen on",
+          "notes": ""
+        },
+        {
+          "name": "Cauldron of Blood",
+          "unit_size": 1,
+          "points": 290,
+          "points_raw": "290 (+10)",
+          "raw_lines": [
+            "0-1 Coven Matriarch , Any Aelf 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Coven Matriarch , Any Aelf",
+          "notes": ""
+        },
+        {
+          "name": "High Gladiatrix",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Any Aelf This Hero can join an eligible",
+            "regiment as a Coven Matriarch . 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Any Aelf",
+          "notes": "This Hero can join an eligible regiment as a Coven Matriarch ."
+        },
+        {
+          "name": "Krethusa the Croneseer",
+          "unit_size": 1,
+          "points": 220,
+          "points_raw": "220",
+          "raw_lines": [
+            "0-1 Coven Matriarch , Any Aelf 60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "0-1 Coven Matriarch , Any Aelf",
+          "notes": ""
+        },
+        {
+          "name": "Melusai Ironscale",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Any non-Aelf This Hero can join an eligible",
+            "regiment as a Coven Matriarch . 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any non-Aelf",
+          "notes": "This Hero can join an eligible regiment as a Coven Matriarch ."
+        },
+        {
+          "name": "Morathi-Khaine",
+          "unit_size": 1,
+          "points": 750,
+          "points_raw": "750 (+20)",
+          "raw_lines": [
+            "The Shadow Queen (required),",
+            "0-1 Coven Matriarch ,",
+            "Any Daughters of Khaine",
+            "40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "The Shadow Queen (required), 0-1 Coven Matriarch , Any Daughters of Khaine",
+          "notes": ""
+        },
+        {
+          "name": "The Shadow Queen",
+          "unit_size": 1,
+          "points": 0,
+          "points_raw": "0",
+          "raw_lines": [
+            "None This unit can only be taken in",
+            "Morathi‑Khaine ’s regiment. 100mm"
+          ],
+          "base_size": "100mm",
+          "options_or_keywords": "None",
+          "notes": "This unit can only be taken in Morathi‑Khaine ’s regiment."
+        },
+        {
+          "name": "Slaughter Queen",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "0-1 Coven Matriarch , Any Aelf 25mm",
+            "✹  Slaughter Queen on"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Coven Matriarch , Any Aelf 25mm ✹  Slaughter Queen on",
+          "notes": ""
+        },
+        {
+          "name": "Cauldron of Blood",
+          "unit_size": 1,
+          "points": 300,
+          "points_raw": "300 (+20)",
+          "raw_lines": [
+            "0-1 Coven Matriarch , Any Aelf 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Coven Matriarch , Any Aelf",
+          "notes": ""
+        }
+      ],
+      "units": [
+        {
+          "name": "Blood Hags",
+          "unit_size": 10,
+          "points": 150,
+          "points_raw": "150 (+10)",
+          "raw_lines": [
+            "Aelf, Infantry 28.5mm"
+          ],
+          "base_size": "5mm",
+          "options_or_keywords": "Aelf, Infantry 28.",
+          "notes": ""
+        },
+        {
+          "name": "Blood Sisters",
+          "unit_size": 5,
+          "points": 160,
+          "points_raw": "160 (+20)",
+          "raw_lines": [
+            "Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Blood Stalkers",
+          "unit_size": 5,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Doomfire Warlocks",
+          "unit_size": 5,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Aelf, Cavalry",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Aelf, Cavalry",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Khainite Shadowstalkers",
+          "unit_size": 9,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Aelf, Infantry This unit cannot be reinforced. 40mm [1],",
+            "28.5mm [8]"
+          ],
+          "base_size": "5mm [8]",
+          "options_or_keywords": "Aelf, Infantry",
+          "notes": "This unit cannot be reinforced. 40mm [1], 28."
+        },
+        {
+          "name": "Khinerai Heartrenders",
+          "unit_size": 5,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Khinerai Lifetakers",
+          "unit_size": 5,
+          "points": 110,
+          "points_raw": "110 (+10)",
+          "raw_lines": [
+            "Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Sisters of Slaughter",
+          "unit_size": 10,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Aelf, Infantry 25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Aelf, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Witch Aelves",
+          "unit_size": 10,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Aelf, Infantry 25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Aelf, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "The Chosen Axes",
+          "unit_size": 4,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Unique, Duardin, Infantry This unit cannot be reinforced. 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Unique, Duardin, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "The Jaws of Itzl",
+          "unit_size": 3,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Unique, Saurus, Infantry This unit cannot be reinforced.",
+            "40mm [1],",
+            "32mm [2],",
+            "25mm [1]"
+          ],
+          "base_size": "40mm [1], 32mm [2], 25mm [1]",
+          "options_or_keywords": "Unique, Saurus, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "The Starblood Stalkers",
+          "unit_size": 6,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Unique, Skink, Infantry This unit cannot be reinforced. 32mm [1],",
+            "25mm [5]"
+          ],
+          "base_size": "32mm [1], 25mm [5]",
+          "options_or_keywords": "Unique, Skink, Infantry",
+          "notes": "This unit cannot be reinforced."
+        }
+      ],
+      "auxiliary": [
+        {
+          "name": "Battle Formation Cold-hearted Murderers",
+          "points": 0,
+          "notes": "Battletome: Daughters of Khaine"
+        },
+        {
+          "name": "Battle Formation Coven of Blood",
+          "points": 0,
+          "notes": "Battletome: Daughters of Khaine"
+        },
+        {
+          "name": "Battle Formation Fervent Ritualists",
+          "points": 0,
+          "notes": "Battletome: Daughters of Khaine"
+        },
+        {
+          "name": "Battle Formation Frenzied Devotees",
+          "points": 0,
+          "notes": "Battletome: Daughters of Khaine"
+        },
+        {
+          "name": "✹  Heroic Trait Murder Manifested",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Heroic Trait Loyal Unto Death",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Heroic Trait Honoured Among Sects",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Heroic Trait Hand of Khaine",
+          "points": 0,
+          "notes": "Battletome: Daughters of Khaine"
+        },
+        {
+          "name": "Heroic Trait Murderous Duellist",
+          "points": 0,
+          "notes": "Battletome: Daughters of Khaine"
+        },
+        {
+          "name": "Heroic Trait Shadow-blooded",
+          "points": 0,
+          "notes": "Battletome: Daughters of Khaine"
+        },
+        {
+          "name": "Artefact of Power Crimson Draught",
+          "points": 0,
+          "notes": "Battletome: Daughters of Khaine"
+        },
+        {
+          "name": "Artefact of Power Darkling Elixir",
+          "points": 0,
+          "notes": "Battletome: Daughters of Khaine"
+        },
+        {
+          "name": "Artefact of Power Witchbrew",
+          "points": 0,
+          "notes": "Battletome: Daughters of Khaine"
+        },
+        {
+          "name": "Spell Lore Lore of Shadows",
+          "points": 0,
+          "notes": "Battletome: Daughters of Khaine"
+        },
+        {
+          "name": "Prayer Lore Prayers of the Khainite Cult",
+          "points": 0,
+          "notes": "Battletome: Daughters of Khaine"
+        },
+        {
+          "name": "✹  Boon of Shadow Ulguan Reactions",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Boon of Shadow Talismans of Shadow",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Boon of Shadow Tenebrous Aura",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Manifestation Lore Manifestations of Khaine",
+          "points": 0,
+          "notes": "Battletome: Daughters of Khaine"
+        },
+        {
+          "name": "Faction Terrain Shrine of Dark Tribute",
+          "points": 20,
+          "notes": "Battletome: Daughters of Khaine"
+        }
+      ]
+    },
+    "FYRESLAYERS": {
+      "heroes": [
+        {
+          "name": "Auric Flamekeeper",
+          "unit_size": 1,
+          "points": 80,
+          "points_raw": "80",
+          "raw_lines": [
+            "Any Fyreslayers 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Any Fyreslayers",
+          "notes": ""
+        },
+        {
+          "name": "Auric Runefather",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "0-1 Grimnir’s Chosen , Any Fyreslayers 32mm",
+            "✹  Auric Runefather on"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Grimnir’s Chosen , Any Fyreslayers 32mm ✹  Auric Runefather on",
+          "notes": ""
+        },
+        {
+          "name": "Magmadroth",
+          "unit_size": 1,
+          "points": 320,
+          "points_raw": "320 (-10)",
+          "raw_lines": [
+            "0-1 Grimnir’s Chosen ,",
+            "0-1 Vulcatrix’s Chosen ,",
+            "Any Fyreslayers",
+            "This Hero can join an eligible",
+            "regiment as Vulcatrix’s Chosen . 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Grimnir’s Chosen , 0-1 Vulcatrix’s Chosen , Any Fyreslayers",
+          "notes": "This Hero can join an eligible regiment as Vulcatrix’s Chosen ."
+        },
+        {
+          "name": "Auric Runemaster",
+          "unit_size": 1,
+          "points": 160,
+          "points_raw": "160 (-20)",
+          "raw_lines": [
+            "0-1 Grimnir’s Chosen , Any Fyreslayers 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Grimnir’s Chosen , Any Fyreslayers",
+          "notes": ""
+        },
+        {
+          "name": "Auric Runesmiter",
+          "unit_size": 1,
+          "points": 90,
+          "points_raw": "90 (-10)",
+          "raw_lines": [
+            "Any Fyreslayers 32mm",
+            "✹  Auric Runesmiter on"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Any Fyreslayers 32mm ✹  Auric Runesmiter on",
+          "notes": ""
+        },
+        {
+          "name": "Magmadroth",
+          "unit_size": 1,
+          "points": 280,
+          "points_raw": "280 (-20)",
+          "raw_lines": [
+            "Any Fyreslayers 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Any Fyreslayers",
+          "notes": ""
+        },
+        {
+          "name": "Auric Runeson",
+          "unit_size": 1,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "0-1 Grimnir’s Chosen , Any Fyreslayers This Hero can join an eligible",
+            "regiment as Grimnir’s Chosen . 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Grimnir’s Chosen , Any Fyreslayers",
+          "notes": "This Hero can join an eligible regiment as Grimnir’s Chosen ."
+        },
+        {
+          "name": "Auric Runeson on Magmadroth",
+          "unit_size": 1,
+          "points": 240,
+          "points_raw": "240 (-10)",
+          "raw_lines": [
+            "0-1 Grimnir’s Chosen , Any Fyreslayers This Hero can join an eligible",
+            "regiment as Vulcatrix’s Chosen . 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Grimnir’s Chosen , Any Fyreslayers",
+          "notes": "This Hero can join an eligible regiment as Vulcatrix’s Chosen ."
+        },
+        {
+          "name": "Battlesmith",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Any Fyreslayers This Hero can join an eligible",
+            "regiment as Grimnir’s Chosen . 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Any Fyreslayers",
+          "notes": "This Hero can join an eligible regiment as Grimnir’s Chosen ."
+        },
+        {
+          "name": "Doomseeker",
+          "unit_size": 1,
+          "points": 80,
+          "points_raw": "80",
+          "raw_lines": [
+            "Any Fyreslayers This Hero can join an eligible",
+            "regiment as Grimnir’s Chosen . 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Any Fyreslayers",
+          "notes": "This Hero can join an eligible regiment as Grimnir’s Chosen ."
+        },
+        {
+          "name": "Grimhold Exile",
+          "unit_size": 1,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "Any Fyreslayers This Hero can join an eligible",
+            "regiment as Grimnir’s Chosen . 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Any Fyreslayers",
+          "notes": "This Hero can join an eligible regiment as Grimnir’s Chosen ."
+        },
+        {
+          "name": "Grimwrath Berzerker",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Any Fyreslayers This Hero can join an eligible",
+            "regiment as Grimnir’s Chosen . 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Any Fyreslayers",
+          "notes": "This Hero can join an eligible regiment as Grimnir’s Chosen ."
+        }
+      ],
+      "units": [
+        {
+          "name": "Auric Hearthguard",
+          "unit_size": 5,
+          "points": 100,
+          "points_raw": "100 (-10)",
+          "raw_lines": [
+            "Duardin, Infantry 32mm",
+            "✹  Hearthguard Berzerkers with"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Duardin, Infantry 32mm ✹  Hearthguard Berzerkers with",
+          "notes": ""
+        },
+        {
+          "name": "Berzerker Broadaxes",
+          "unit_size": 5,
+          "points": 100,
+          "points_raw": "100 (-10)",
+          "raw_lines": [
+            "Duardin, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Duardin, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Hearthguard Berzerkers with Flamestrike Poleaxes",
+          "unit_size": 5,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Duardin, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Duardin, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Vulkite Berzerkers with Bladed Slingshields",
+          "unit_size": 10,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Duardin, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Duardin, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Vulkite Berzerkers with Fyresteel Weapons",
+          "unit_size": 10,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Duardin, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Duardin, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Vulkyn Flameseekers",
+          "unit_size": 9,
+          "points": 150,
+          "points_raw": "150 (-10)",
+          "raw_lines": [
+            "Duardin, Infantry This unit cannot be reinforced. 32mm [4],",
+            "28.5mm [5]"
+          ],
+          "base_size": "5mm [5]",
+          "options_or_keywords": "Duardin, Infantry",
+          "notes": "This unit cannot be reinforced. 32mm [4], 28."
+        },
+        {
+          "name": "Cyreni’s Razors",
+          "unit_size": 4,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Unique, Aelf, Akhelian, Namarti,",
+            "Infantry This unit cannot be reinforced. 32mm [3],",
+            "40mm [1]"
+          ],
+          "base_size": "32mm [3], 40mm [1]",
+          "options_or_keywords": "Unique, Aelf, Akhelian, Namarti, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "Elathain’s Soulraid",
+          "unit_size": 5,
+          "points": 80,
+          "points_raw": "80",
+          "raw_lines": [
+            "Unique, Aelf, Akhelian, Namarti,",
+            "Infantry This unit cannot be reinforced. 32mm [4],",
+            "25mm [1]"
+          ],
+          "base_size": "32mm [4], 25mm [1]",
+          "options_or_keywords": "Unique, Aelf, Akhelian, Namarti, Infantry",
+          "notes": "This unit cannot be reinforced."
+        }
+      ],
+      "auxiliary": [
+        {
+          "name": "Battle Formation Warrior Kinband",
+          "points": 0,
+          "notes": "Faction Pack: Fyreslayers"
+        },
+        {
+          "name": "Battle Formation Forge Brethren",
+          "points": 0,
+          "notes": "Faction Pack: Fyreslayers"
+        },
+        {
+          "name": "✹ Battle Formation Scales of Vulcatrix",
+          "points": 0,
+          "notes": "(-20) Faction Pack: Fyreslayers"
+        },
+        {
+          "name": "Battle Formation Lords of the Lodge",
+          "points": 0,
+          "notes": "Faction Pack: Fyreslayers"
+        },
+        {
+          "name": "Heroic Trait Blood of the Berzerker",
+          "points": 0,
+          "notes": "Faction Pack: Fyreslayers"
+        },
+        {
+          "name": "✹ Heroic Trait Ash-beard",
+          "points": 0,
+          "notes": "(-20) Faction Pack: Fyreslayers"
+        },
+        {
+          "name": "Heroic Trait Fiercely Competitive",
+          "points": 0,
+          "notes": "Faction Pack: Fyreslayers"
+        },
+        {
+          "name": "✹ Artefact of Power Ash-cloud Rune",
+          "points": 0,
+          "notes": "(-20) Faction Pack: Fyreslayers"
+        },
+        {
+          "name": "Artefact of Power Draught of the Finest Magmalt",
+          "points": 0,
+          "notes": "Faction Pack: Fyreslayers"
+        },
+        {
+          "name": "✹ Artefact of Power Droth-helm",
+          "points": 0,
+          "notes": "(-30) Faction Pack: Fyreslayers"
+        },
+        {
+          "name": "✹  Mark of Vulcatrix Thickened Scales",
+          "points": 20,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Mark of Vulcatrix Intense Fyrestream",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Mark of Vulcatrix Aureate Hide",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Prayer Lore Zharrgrim Blessings",
+          "points": 0,
+          "notes": "Faction Pack: Fyreslayers"
+        },
+        {
+          "name": "✹ Prayer Lore Vulkyn Gifts",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Manifestation Lore Magmic Invocations",
+          "points": 0,
+          "notes": "Faction Pack: Fyreslayers"
+        },
+        {
+          "name": "Faction Terrain Magmic Battleforge",
+          "points": 0,
+          "notes": "Faction Pack: Fyreslayers"
+        }
+      ]
+    },
+    "IDONETH DEEPKIN": {
+      "heroes": [
+        {
+          "name": "Akhelian King",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "0-1 Akhelian Raidmaster  or",
+            "Isharann Emissary ,",
+            "Any Idoneth Deepkin",
+            "60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "0-1 Akhelian Raidmaster  or Isharann Emissary , Any Idoneth Deepkin",
+          "notes": ""
+        },
+        {
+          "name": "Akhelian Thrallmaster",
+          "unit_size": 1,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "Any Idoneth Deepkin",
+            "This Hero can join an",
+            "eligible regiment as an",
+            "Akhelian Raidmaster .",
+            "32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Any Idoneth Deepkin",
+          "notes": "This Hero can join an eligible regiment as an Akhelian Raidmaster ."
+        },
+        {
+          "name": "Eidolon of Mathlann, Aspect of the Sea",
+          "unit_size": 1,
+          "points": 340,
+          "points_raw": "340",
+          "raw_lines": [
+            "0-1 Isharann Emissary ,",
+            "Any Idoneth Deepkin 100mm"
+          ],
+          "base_size": "100mm",
+          "options_or_keywords": "0-1 Isharann Emissary , Any Idoneth Deepkin",
+          "notes": ""
+        },
+        {
+          "name": "Eidolon of Mathlann, Aspect of the Storm",
+          "unit_size": 1,
+          "points": 280,
+          "points_raw": "280",
+          "raw_lines": [
+            "0-1 Isharann Emissary ,",
+            "Any Idoneth Deepkin 100mm"
+          ],
+          "base_size": "100mm",
+          "options_or_keywords": "0-1 Isharann Emissary , Any Idoneth Deepkin",
+          "notes": ""
+        },
+        {
+          "name": "Ikon of the Storm",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Any Idoneth Deepkin",
+            "This Hero can join an",
+            "eligible regiment as an",
+            "Akhelian Raidmaster .",
+            "40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any Idoneth Deepkin",
+          "notes": "This Hero can join an eligible regiment as an Akhelian Raidmaster ."
+        },
+        {
+          "name": "Ikon of the Sea",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Any Idoneth Deepkin",
+            "This Hero can join an",
+            "eligible regiment as an",
+            "Akhelian Raidmaster .",
+            "40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any Idoneth Deepkin",
+          "notes": "This Hero can join an eligible regiment as an Akhelian Raidmaster ."
+        },
+        {
+          "name": "Isharann Soulrender",
+          "unit_size": 1,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "0-1 Isharann Emissary , Any Namarti",
+            "This Hero can join an",
+            "eligible regiment as an",
+            "Isharann Emissary .",
+            "40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Isharann Emissary , Any Namarti",
+          "notes": "This Hero can join an eligible regiment as an Isharann Emissary ."
+        },
+        {
+          "name": "Isharann Soulscryer",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "0-1 Isharann Emissary , Any Namarti",
+            "This Hero can join an",
+            "eligible regiment as an",
+            "Isharann Emissary .",
+            "32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Isharann Emissary , Any Namarti",
+          "notes": "This Hero can join an eligible regiment as an Isharann Emissary ."
+        },
+        {
+          "name": "Isharann Tidecaster",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "0-1 Isharann Emissary , Any Namarti 32mm",
+            "Lotann, Warden of the"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Isharann Emissary , Any Namarti 32mm Lotann, Warden of the",
+          "notes": ""
+        },
+        {
+          "name": "Soul Ledgers",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Any Idoneth Deepkin 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any Idoneth Deepkin",
+          "notes": ""
+        },
+        {
+          "name": "Mathaela, Oracle of the Abyss",
+          "unit_size": 1,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "0-1 Isharann Emissary ,",
+            "Any Idoneth Deepkin 40mm",
+            "✹  Volturnos, High King of"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Isharann Emissary , Any Idoneth Deepkin 40mm ✹  Volturnos, High King of",
+          "notes": ""
+        },
+        {
+          "name": "the Deep",
+          "unit_size": 1,
+          "points": 190,
+          "points_raw": "190 (-20)",
+          "raw_lines": [
+            "0-1 Akhelian Raidmaster  or",
+            "Isharann Emissary ,",
+            "Any Idoneth Deepkin",
+            "60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "0-1 Akhelian Raidmaster  or Isharann Emissary , Any Idoneth Deepkin",
+          "notes": ""
+        }
+      ],
+      "units": [
+        {
+          "name": "Akhelian Allopex",
+          "unit_size": 1,
+          "points": 160,
+          "points_raw": "160 (-10)",
+          "raw_lines": [
+            "Aelf, Akhelian, Cavalry 90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "Aelf, Akhelian, Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Akhelian Ishlaen Guard",
+          "unit_size": 3,
+          "points": 170,
+          "points_raw": "170",
+          "raw_lines": [
+            "Aelf, Akhelian, Cavalry 60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Aelf, Akhelian, Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Akhelian Leviadon",
+          "unit_size": 1,
+          "points": 450,
+          "points_raw": "450",
+          "raw_lines": [
+            "Aelf, Akhelian, Monster 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Aelf, Akhelian, Monster",
+          "notes": ""
+        },
+        {
+          "name": "Akhelian Morrsarr Guard",
+          "unit_size": 3,
+          "points": 160,
+          "points_raw": "160",
+          "raw_lines": [
+            "Aelf, Akhelian, Cavalry 60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Aelf, Akhelian, Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Namarti Reavers",
+          "unit_size": 10,
+          "points": 110,
+          "points_raw": "110 (-10)",
+          "raw_lines": [
+            "Aelf, Namarti, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Aelf, Namarti, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Namarti Thralls",
+          "unit_size": 10,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "Aelf, Namarti, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Aelf, Namarti, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Thundrik’s Profiteers",
+          "unit_size": 5,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Unique, Duardin, Infantry This unit cannot be reinforced. 32mm [3],",
+            "25mm [2]"
+          ],
+          "base_size": "32mm [3], 25mm [2]",
+          "options_or_keywords": "Unique, Duardin, Infantry",
+          "notes": "This unit cannot be reinforced."
+        }
+      ],
+      "auxiliary": [
+        {
+          "name": "Battle Formation Namarti Corps",
+          "points": 0,
+          "notes": "Battletome: Idoneth Deepkin"
+        },
+        {
+          "name": "Battle Formation Akhelian Beastmasters",
+          "points": 20,
+          "notes": "Battletome: Idoneth Deepkin"
+        },
+        {
+          "name": "Battle Formation Isharann Council",
+          "points": 0,
+          "notes": "Battletome: Idoneth Deepkin"
+        },
+        {
+          "name": "Battle Formation Soul-raid Ambushers",
+          "points": 0,
+          "notes": "Battletome: Idoneth Deepkin"
+        },
+        {
+          "name": "✹  Heroic Trait Abyssal Dweller",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Heroic Trait Cursed Lineage",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Heroic Trait Adherent of Kir-Nadarr",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Heroic Trait Form of the Fangmora",
+          "points": 20,
+          "notes": "Battletome: Idoneth Deepkin"
+        },
+        {
+          "name": "Heroic Trait Hunter of Souls",
+          "points": 0,
+          "notes": "Battletome: Idoneth Deepkin"
+        },
+        {
+          "name": "Heroic Trait Nightmare Legacy",
+          "points": 0,
+          "notes": "Battletome: Idoneth Deepkin"
+        },
+        {
+          "name": "✹  Ethersea Companion Ironshell Barnacles",
+          "points": 20,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Ethersea Companion Stonefoot Anemone",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Ethersea Companion Aqshian Sea Nettles",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Artefact of Power Armour of the Cythai",
+          "points": 0,
+          "notes": "Battletome: Idoneth Deepkin"
+        },
+        {
+          "name": "Artefact of Power Lifekelp Pod",
+          "points": 0,
+          "notes": "Battletome: Idoneth Deepkin"
+        },
+        {
+          "name": "Artefact of Power Dritchleech",
+          "points": 0,
+          "notes": "Battletome: Idoneth Deepkin"
+        },
+        {
+          "name": "Spell Lore Lore of the Deeps",
+          "points": 0,
+          "notes": "Battletome: Idoneth Deepkin"
+        },
+        {
+          "name": "Manifestation Lore Lore of the Abyss",
+          "points": 0,
+          "notes": "Battletome: Idoneth Deepkin"
+        },
+        {
+          "name": "Faction Terrain Gloomtide Shipwreck",
+          "points": 0,
+          "notes": "Battletome: Idoneth Deepkin"
+        }
+      ]
+    },
+    "KHARADRON OVERLORDS": {
+      "heroes": [
+        {
+          "name": "Aether-Khemist",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100 (-10)",
+          "raw_lines": [
+            "0-1 Skyvessel , Any Infantry This Hero can join an eligible",
+            "regiment as a Guild Officer. 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Skyvessel , Any Infantry",
+          "notes": "This Hero can join an eligible regiment as a Guild Officer."
+        },
+        {
+          "name": "Aetheric Navigator",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "0-1 Skyvessel , Any Infantry This Hero can join an eligible",
+            "regiment as a Guild Officer. 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Skyvessel , Any Infantry",
+          "notes": "This Hero can join an eligible regiment as a Guild Officer."
+        },
+        {
+          "name": "Arkanaut Admiral",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "0-1 Guild Officer,",
+            "Any Kharadron  Overlords 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Guild Officer, Any Kharadron  Overlords",
+          "notes": ""
+        },
+        {
+          "name": "Brokk Grungsson, Lord- Magnate of Barak-Nar",
+          "unit_size": 1,
+          "points": 260,
+          "points_raw": "260",
+          "raw_lines": [
+            "0-1 Guild Officer,",
+            "Any Kharadron  Overlords 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "0-1 Guild Officer, Any Kharadron  Overlords",
+          "notes": ""
+        },
+        {
+          "name": "Codewright",
+          "unit_size": 1,
+          "points": 80,
+          "points_raw": "80 (-10)",
+          "raw_lines": [
+            "0-1 Skyvessel , Any Infantry This Hero can join an eligible",
+            "regiment as a Guild Officer. 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Skyvessel , Any Infantry",
+          "notes": "This Hero can join an eligible regiment as a Guild Officer."
+        },
+        {
+          "name": "Drekki Flynt",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "0-1 Guild Officer, 0-1 Arkanaut Frigate ,",
+            "Any Infantry 32mm",
+            "✹  Endrinmaster with"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Guild Officer, 0-1 Arkanaut Frigate , Any Infantry 32mm ✹  Endrinmaster with",
+          "notes": ""
+        },
+        {
+          "name": "Dirigible Suit",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140 (-10)",
+          "raw_lines": [
+            "0-1 Skyvessel , Any Infantry This Hero can join an eligible",
+            "regiment as a Guild Officer. 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Skyvessel , Any Infantry",
+          "notes": "This Hero can join an eligible regiment as a Guild Officer."
+        },
+        {
+          "name": "Endrinmaster with Endrinharness",
+          "unit_size": 1,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "0-1 Skyvessel , Any Infantry This Hero can join an eligible",
+            "regiment as a Guild Officer. 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Skyvessel , Any Infantry",
+          "notes": "This Hero can join an eligible regiment as a Guild Officer."
+        },
+        {
+          "name": "Null-Khemist",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "0-1 Guild Officer, 0-1 Skyvessel ,",
+            "Any Infantry",
+            "This Hero can join an eligible",
+            "regiment as a Guild Officer. 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Guild Officer, 0-1 Skyvessel , Any Infantry",
+          "notes": "This Hero can join an eligible regiment as a Guild Officer."
+        },
+        {
+          "name": "NEW Scourge of Aqshy Null-Khemist",
+          "unit_size": 1,
+          "points": 200,
+          "points_raw": "200",
+          "raw_lines": [
+            "0-1 Skyvessel , 0-1 Guild Officer, Any",
+            "Infantry",
+            "This Hero can join an eligible",
+            "regiment as a Guild Officer.",
+            "This unit is legal for Matched",
+            "Play for battles fought using the",
+            "General’s Handbook 2026-27",
+            "battlepack.",
+            "40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Skyvessel , 0-1 Guild Officer, Any Infantry",
+          "notes": "This Hero can join an eligible regiment as a Guild Officer. This unit is legal for Matched Play for battles fought using the General’s Handbook 2026-27 battlepack."
+        }
+      ],
+      "units": [
+        {
+          "name": "Arkanaut Company",
+          "unit_size": 10,
+          "points": 80,
+          "points_raw": "80",
+          "raw_lines": [
+            "Duardin, Infantry 25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Duardin, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Arkanaut Frigate",
+          "unit_size": 1,
+          "points": 300,
+          "points_raw": "300",
+          "raw_lines": [
+            "Duardin, Skyvessel, War Machine 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Duardin, Skyvessel, War Machine",
+          "notes": ""
+        },
+        {
+          "name": "Arkanaut Ironclad",
+          "unit_size": 1,
+          "points": 450,
+          "points_raw": "450",
+          "raw_lines": [
+            "Duardin, Skyvessel, War Machine 170 × 105mm"
+          ],
+          "base_size": "170 × 105mm",
+          "options_or_keywords": "Duardin, Skyvessel, War Machine",
+          "notes": ""
+        },
+        {
+          "name": "Endrinriggers",
+          "unit_size": 3,
+          "points": 100,
+          "points_raw": "100 (-10)",
+          "raw_lines": [
+            "Duardin, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Duardin, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Grundstok Gunhauler",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140 (-10)",
+          "raw_lines": [
+            "Duardin, Skyvessel, War Machine 105 × 70mm"
+          ],
+          "base_size": "105 × 70mm",
+          "options_or_keywords": "Duardin, Skyvessel, War Machine",
+          "notes": ""
+        },
+        {
+          "name": "Grundstok Thunderers",
+          "unit_size": 5,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Duardin, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Duardin, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Skywardens",
+          "unit_size": 3,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Duardin, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Duardin, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Vongrim Harpoon Crew",
+          "unit_size": 5,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Duardin, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Duardin, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Vongrim Salvagers",
+          "unit_size": 5,
+          "points": 110,
+          "points_raw": "110 (-10)",
+          "raw_lines": [
+            "Duardin, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Duardin, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "NEW Scourge of Aqshy Endrinriggers",
+          "unit_size": 3,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Duardin, Infantry",
+            "This unit is legal for Matched",
+            "Play for battles fought using the",
+            "General’s Handbook 2026-27",
+            "battlepack.",
+            "32mm",
+            "UPDATED   NEW",
+            "13"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Duardin, Infantry",
+          "notes": "This unit is legal for Matched Play for battles fought using the General’s Handbook 2026-27 battlepack. 32mm UPDATED   NEW 13"
+        },
+        {
+          "name": "Myari’s Purifiers",
+          "unit_size": 4,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Unique, Aelf, Vanari, Alarith,",
+            "Infantry This unit cannot be reinforced. 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Unique, Aelf, Vanari, Alarith, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "NEW Thyrielle’s Zephyrites",
+          "unit_size": 4,
+          "points": 190,
+          "points_raw": "190",
+          "raw_lines": [
+            "Unique, Aelf, Hurakan, Infantry This unit cannot be reinforced. 28.5mm [4],",
+            "25mm [1]"
+          ],
+          "base_size": "5mm [4], 25mm [1]",
+          "options_or_keywords": "Unique, Aelf, Hurakan, Infantry",
+          "notes": "This unit cannot be reinforced. 28."
+        }
+      ],
+      "auxiliary": [
+        {
+          "name": "Battle Formation Pioneers and Scavengers",
+          "points": 10,
+          "notes": "Battletome: Kharadron Overlords"
+        },
+        {
+          "name": "Battle Formation Rapid Redeployment Squadron",
+          "points": 0,
+          "notes": "Battletome: Kharadron Overlords"
+        },
+        {
+          "name": "Battle Formation Veteran Ground Troops",
+          "points": 0,
+          "notes": "Battletome: Kharadron Overlords"
+        },
+        {
+          "name": "Expeditionary Force",
+          "points": 20,
+          "notes": "Battletome: Kharadron Overlords"
+        },
+        {
+          "name": "Heroic Trait Shrewd Opportunist",
+          "points": 10,
+          "notes": "Battletome: Kharadron Overlords"
+        },
+        {
+          "name": "Heroic Trait Bold as Brass",
+          "points": 0,
+          "notes": "Battletome: Kharadron Overlords"
+        },
+        {
+          "name": "Heroic Trait Combat Grafter",
+          "points": 0,
+          "notes": "Battletome: Kharadron Overlords"
+        },
+        {
+          "name": "Bamboozling Flakgun",
+          "points": 10,
+          "notes": "Battletome: Kharadron Overlords"
+        },
+        {
+          "name": "Artefact of Power Celestium Burst Grenade",
+          "points": 10,
+          "notes": "Battletome: Kharadron Overlords"
+        },
+        {
+          "name": "Artefact of Power Voidstone Orb",
+          "points": 0,
+          "notes": "Battletome: Kharadron Overlords"
+        },
+        {
+          "name": "✹  Artefact of Power Persistent Drillbill",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Ejector Rig",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Artefact of Power Heat-seeking Auto -endrin",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Artycle Reference Artycle 15, Point",
+          "points": 4,
+          "notes": "10 Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Artycle Reference Artycle 20, Amendment",
+          "points": 2,
+          "notes": "10 Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Artycle Reference Artycle 25, Point",
+          "points": 6,
+          "notes": "10 Scourge of Aqshy"
+        },
+        {
+          "name": "Hullplates",
+          "points": 0,
+          "notes": "Battletome: Kharadron Overlords"
+        },
+        {
+          "name": "Great Endrinworks Gruksson Wide-bore Cylinders",
+          "points": 0,
+          "notes": "Battletome: Kharadron Overlords"
+        },
+        {
+          "name": "Great Endrinworks Coalbeard’s Collapsible Bombrack",
+          "points": 0,
+          "notes": "Battletome: Kharadron Overlords"
+        },
+        {
+          "name": "Great Endrinworks Tracer-fire Rounds",
+          "points": 0,
+          "notes": "Battletome: Kharadron Overlords"
+        },
+        {
+          "name": "Great Endrinworks Grandiose Fuselage",
+          "points": 0,
+          "notes": "Battletome: Kharadron Overlords"
+        },
+        {
+          "name": "Great Endrinworks Nullstone Galvanisation",
+          "points": 0,
+          "notes": "Battletome: Kharadron Overlords"
+        },
+        {
+          "name": "Faction Terrain Zontari Endrin Dock",
+          "points": 20,
+          "notes": "Battletome: Kharadron Overlords"
+        }
+      ]
+    },
+    "LUMINETH REALM-LORDS": {
+      "heroes": [
+        {
+          "name": "Alarith Stonemage",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120 (-10)",
+          "raw_lines": [
+            "0-1 Ydrilan Riverblades ,",
+            "Any Vanari Auralan Wardens ,",
+            "Any Alarith",
+            "40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Ydrilan Riverblades , Any Vanari Auralan Wardens , Any Alarith",
+          "notes": ""
+        },
+        {
+          "name": "Archmage Teclis and Celennar, Spirit of Hysh",
+          "unit_size": 1,
+          "points": 640,
+          "points_raw": "640",
+          "raw_lines": [
+            "0-1 Lumineth Paragon,",
+            "Any Lumineth Realm‑lords 160mm"
+          ],
+          "base_size": "160mm",
+          "options_or_keywords": "0-1 Lumineth Paragon, Any Lumineth Realm‑lords",
+          "notes": ""
+        },
+        {
+          "name": "Avalenor, the Stoneheart King",
+          "unit_size": 1,
+          "points": 400,
+          "points_raw": "400 (-20)",
+          "raw_lines": [
+            "0-1 Lumineth Paragon,",
+            "Any Vanari, Any Alarith 100mm",
+            "✹  Ellania and Ellathor,"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Lumineth Paragon, Any Vanari, Any Alarith 100mm ✹  Ellania and Ellathor",
+          "notes": ""
+        },
+        {
+          "name": "Eclipsian Warsages",
+          "unit_size": 1,
+          "points": 310,
+          "points_raw": "310 (+20)",
+          "raw_lines": [
+            "0-1 Lumineth Paragon,",
+            "Any Lumineth Realm‑lords 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Lumineth Paragon, Any Lumineth Realm‑lords",
+          "notes": ""
+        },
+        {
+          "name": "Hurakan Windmage",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "0-1 Ydrilan Riverblades ,",
+            "Any Vanari Auralan Wardens ,",
+            "Any Hurakan",
+            "60 × 35mm",
+            "✹  Lyrior Uthralle,"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Ydrilan Riverblades , Any Vanari Auralan Wardens , Any Hurakan 60 × 35mm ✹  Lyrior Uthralle",
+          "notes": ""
+        },
+        {
+          "name": "Warden of Ymetrica",
+          "unit_size": 1,
+          "points": 260,
+          "points_raw": "260 (+10)",
+          "raw_lines": [
+            "0-1 Lumineth Paragon,",
+            "Any Lumineth Realm‑lords 90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "0-1 Lumineth Paragon, Any Lumineth Realm‑lords",
+          "notes": ""
+        },
+        {
+          "name": "Scinari Calligrave",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "0-1 Ydrilan Riverblades ,",
+            "Any Vanari Auralan Wardens ,",
+            "Any Vanari Bladelords",
+            "32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Ydrilan Riverblades , Any Vanari Auralan Wardens , Any Vanari Bladelords",
+          "notes": ""
+        },
+        {
+          "name": "Scinari Cathallar",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "0-1 Ydrilan Riverblades ,",
+            "Any Vanari Auralan Wardens ,",
+            "Any Vanari Bladelords",
+            "32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Ydrilan Riverblades , Any Vanari Auralan Wardens , Any Vanari Bladelords",
+          "notes": ""
+        },
+        {
+          "name": "Scinari Enlightener",
+          "unit_size": 1,
+          "points": 180,
+          "points_raw": "180",
+          "raw_lines": [
+            "0-1 Ydrilan Riverblades ,",
+            "Any Vanari Auralan Wardens ,",
+            "Any Vanari Bladelords",
+            "32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Ydrilan Riverblades , Any Vanari Auralan Wardens , Any Vanari Bladelords",
+          "notes": ""
+        },
+        {
+          "name": "Scinari Loreseeker",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130 (-10)",
+          "raw_lines": [
+            "0-1 Ydrilan Riverblades ,",
+            "Any Vanari Auralan Wardens ,",
+            "Any Vanari Bladelords",
+            "32mm",
+            "✹  Sevireth, Lord of the"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Ydrilan Riverblades , Any Vanari Auralan Wardens , Any Vanari Bladelords 32mm ✹  Sevireth, Lord of the",
+          "notes": ""
+        },
+        {
+          "name": "Seventh Wind",
+          "unit_size": 1,
+          "points": 350,
+          "points_raw": "350 (+10)",
+          "raw_lines": [
+            "0-1 Lumineth Paragon,",
+            "Any Vanari, Any Hurakan 60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "0-1 Lumineth Paragon, Any Vanari, Any Hurakan",
+          "notes": ""
+        },
+        {
+          "name": "The Light of Eltharion",
+          "unit_size": 1,
+          "points": 300,
+          "points_raw": "300",
+          "raw_lines": [
+            "0-1 Lumineth Paragon,",
+            "Any Lumineth Realm‑lords",
+            "This Hero can join an eligible",
+            "regiment as a Lumineth Paragon. 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "0-1 Lumineth Paragon, Any Lumineth Realm‑lords",
+          "notes": "This Hero can join an eligible regiment as a Lumineth Paragon."
+        },
+        {
+          "name": "Vanari Bannerblade",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130 (-10)",
+          "raw_lines": [
+            "Any Vanari This Hero can join an eligible",
+            "regiment as a Lumineth Paragon. 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any Vanari",
+          "notes": "This Hero can join an eligible regiment as a Lumineth Paragon."
+        },
+        {
+          "name": "Vanari Lord Regent",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "0-1 Ydrilan Riverblades ,",
+            "Any Vanari",
+            "This Hero can join an eligible",
+            "regiment as a Lumineth Paragon. 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Ydrilan Riverblades , Any Vanari",
+          "notes": "This Hero can join an eligible regiment as a Lumineth Paragon."
+        },
+        {
+          "name": "Vanari Lord Regent on Lightcourser",
+          "unit_size": 1,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "0-1 Lumineth Paragon,",
+            "0-1 Ydrilan Riverblades ,",
+            "Any Vanari",
+            "Previously Vanari Lord Regent. 90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "0-1 Lumineth Paragon, 0-1 Ydrilan Riverblades , Any Vanari",
+          "notes": "Previously Vanari Lord Regent."
+        }
+      ],
+      "units": [
+        {
+          "name": "Alarith Spirit of the Mountain",
+          "unit_size": 1,
+          "points": 310,
+          "points_raw": "310 (-30)",
+          "raw_lines": [
+            "Alarith, Monster 100mm"
+          ],
+          "base_size": "100mm",
+          "options_or_keywords": "Alarith, Monster",
+          "notes": ""
+        },
+        {
+          "name": "Alarith Stoneguard",
+          "unit_size": 5,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Aelf, Alarith, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Aelf, Alarith, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Hurakan Spirit of the Wind",
+          "unit_size": 1,
+          "points": 270,
+          "points_raw": "270",
+          "raw_lines": [
+            "Hurakan, Monster 60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "Hurakan, Monster",
+          "notes": ""
+        },
+        {
+          "name": "Hurakan Windchargers",
+          "unit_size": 5,
+          "points": 170,
+          "points_raw": "170 (+10)",
+          "raw_lines": [
+            "Aelf, Hurakan, Cavalry 60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Aelf, Hurakan, Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Vanari Auralan Sentinels",
+          "unit_size": 10,
+          "points": 150,
+          "points_raw": "150 (+10)",
+          "raw_lines": [
+            "Aelf, Vanari, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Aelf, Vanari, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Vanari Auralan Wardens",
+          "unit_size": 10,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Aelf, Vanari, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Aelf, Vanari, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Vanari Bladelords",
+          "unit_size": 5,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Aelf, Vanari, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Aelf, Vanari, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Vanari Dawnriders",
+          "unit_size": 5,
+          "points": 200,
+          "points_raw": "200 (+20)",
+          "raw_lines": [
+            "Aelf, Vanari, Cavalry 60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Aelf, Vanari, Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Vanari Starshard Ballista",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100 (-20)",
+          "raw_lines": [
+            "Vanari, War Machine 80mm"
+          ],
+          "base_size": "80mm",
+          "options_or_keywords": "Vanari, War Machine",
+          "notes": ""
+        },
+        {
+          "name": "Ydrilan Riverblades",
+          "unit_size": 10,
+          "points": 150,
+          "points_raw": "150 (+10)",
+          "raw_lines": [
+            "Aelf, Infantry This unit cannot be reinforced. 32mm [5],",
+            "28.5mm [5]",
+            "UPDATED   NEW",
+            "16"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Aelf, Infantry",
+          "notes": "This unit cannot be reinforced. 32mm [5], 28.5mm [5] UPDATED   NEW 16"
+        },
+        {
+          "name": "Gryselle’s Arenai",
+          "unit_size": 5,
+          "points": 70,
+          "points_raw": "70",
+          "raw_lines": [
+            "Unique, Infantry This unit cannot be reinforced. 32mm [1],",
+            "28.5mm [4]"
+          ],
+          "base_size": "5mm [4]",
+          "options_or_keywords": "Unique, Infantry",
+          "notes": "This unit cannot be reinforced. 32mm [1], 28."
+        },
+        {
+          "name": "The Knives of the Crone",
+          "unit_size": 4,
+          "points": 220,
+          "points_raw": "220",
+          "raw_lines": [
+            "Unique, Aelf, Infantry This unit cannot be reinforced. 32mm [1],",
+            "28.5mm [3]"
+          ],
+          "base_size": "5mm [3]",
+          "options_or_keywords": "Unique, Aelf, Infantry",
+          "notes": "This unit cannot be reinforced. 32mm [1], 28."
+        },
+        {
+          "name": "Morgwaeth’s Blade-coven",
+          "unit_size": 5,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Unique, Infantry This unit cannot be reinforced. 32mm [4],",
+            "40mm [1]"
+          ],
+          "base_size": "32mm [4], 40mm [1]",
+          "options_or_keywords": "Unique, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "The Shadeborn",
+          "unit_size": 4,
+          "points": 80,
+          "points_raw": "80",
+          "raw_lines": [
+            "Unique, Infantry This unit cannot be reinforced. 40mm [1],",
+            "28.5mm [3]"
+          ],
+          "base_size": "5mm [3]",
+          "options_or_keywords": "Unique, Infantry",
+          "notes": "This unit cannot be reinforced. 40mm [1], 28."
+        }
+      ],
+      "auxiliary": [
+        {
+          "name": "✹  Battle Formation Warhost of Duality",
+          "points": 20,
+          "notes": "(+20) Battletome: Lumineth Realm-lords"
+        },
+        {
+          "name": "Battle Formation Aelementor Guardians",
+          "points": 10,
+          "notes": "Battletome: Lumineth Realm-lords"
+        },
+        {
+          "name": "✹  Battle Formation Pilgrims of Haixiah",
+          "points": 0,
+          "notes": "(-20) Battletome: Lumineth Realm-lords"
+        },
+        {
+          "name": "Battle Formation Scinari Council",
+          "points": 0,
+          "notes": "Battletome: Lumineth Realm-lords"
+        },
+        {
+          "name": "Heroic Trait Masterful Tactician",
+          "points": 0,
+          "notes": "Battletome: Lumineth Realm-lords"
+        },
+        {
+          "name": "Heroic Trait Flawless Commander",
+          "points": 0,
+          "notes": "Battletome: Lumineth Realm-lords"
+        },
+        {
+          "name": "Heroic Trait Acolyte of the Runes",
+          "points": 0,
+          "notes": "Battletome: Lumineth Realm-lords"
+        },
+        {
+          "name": "✹  Heroic Trait Scholar of the Sigils",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Heroic Trait Peerless Swordsman",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Heroic Trait Dispassionate Soul",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Artefact of Power Phoenix Stone",
+          "points": 0,
+          "notes": "Battletome: Lumineth Realm-lords"
+        },
+        {
+          "name": "Artefact of Power Silver Wand",
+          "points": 0,
+          "notes": "Battletome: Lumineth Realm-lords"
+        },
+        {
+          "name": "Artefact of Power Waystone",
+          "points": 0,
+          "notes": "Battletome: Lumineth Realm-lords"
+        },
+        {
+          "name": "Spell Lore Lore of Hysh",
+          "points": 0,
+          "notes": "Battletome: Lumineth Realm-lords"
+        },
+        {
+          "name": "Spell Lore Lore of the Awakened Realms",
+          "points": 0,
+          "notes": "Battletome: Lumineth Realm-lords"
+        },
+        {
+          "name": "✹  Flawless Manoeuvre Perfect Footwork",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Flawless Manoeuvre Patient Strike",
+          "points": 20,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Flawless Manoeuvre Dazzling Phalanx",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Manifestation Lore Manifestations of Hysh",
+          "points": 0,
+          "notes": "Battletome: Lumineth Realm-lords"
+        },
+        {
+          "name": "Faction Terrain Shrine Luminor",
+          "points": 0,
+          "notes": "Battletome: Lumineth Realm-lords"
+        }
+      ]
+    },
+    "SERAPHON": {
+      "heroes": [
+        {
+          "name": "Lord Kroak",
+          "unit_size": 1,
+          "points": 410,
+          "points_raw": "410 (-30)",
+          "raw_lines": [
+            "0-1 Skink Starpriest  or",
+            "Favoured Spawning ,",
+            "Any Seraphon",
+            "80mm"
+          ],
+          "base_size": "80mm",
+          "options_or_keywords": "0-1 Skink Starpriest  or Favoured Spawning , Any Seraphon",
+          "notes": ""
+        },
+        {
+          "name": "Ripperdactyl Chief",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "0-1 Monster, 0-1 Beast,",
+            "Any Skink Cavalry 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "0-1 Monster, 0-1 Beast, Any Skink Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Saurus Astrolith Bearer",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100 (-20)",
+          "raw_lines": [
+            "Any Saurus",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Favoured Spawning.",
+            "40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any Saurus",
+          "notes": "This Hero can join an eligible regiment as a Favoured Spawning."
+        },
+        {
+          "name": "Saurus Oldblood",
+          "unit_size": 1,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "0-1 Favoured Spawning , Any Seraphon 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Favoured Spawning , Any Seraphon",
+          "notes": ""
+        },
+        {
+          "name": "Saurus Oldblood on Carnosaur",
+          "unit_size": 1,
+          "points": 220,
+          "points_raw": "220 (-20)",
+          "raw_lines": [
+            "0-1 Favoured Spawning , Any Seraphon 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Favoured Spawning , Any Seraphon",
+          "notes": ""
+        },
+        {
+          "name": "Saurus Scar -Veteran on Aggradon",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "0-1 Favoured Spawning , Any Saurus 90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "0-1 Favoured Spawning , Any Saurus",
+          "notes": ""
+        },
+        {
+          "name": "Saurus Scar-Veteran on Carnosaur",
+          "unit_size": 1,
+          "points": 200,
+          "points_raw": "200",
+          "raw_lines": [
+            "0-1 Favoured Spawning ,",
+            "0-1 Monster, Any Saurus 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Favoured Spawning , 0-1 Monster, Any Saurus",
+          "notes": ""
+        },
+        {
+          "name": "Skink Oracle on Troglodon",
+          "unit_size": 1,
+          "points": 200,
+          "points_raw": "200 (-10)",
+          "raw_lines": [
+            "0-1 Monster, Any Beast, Any",
+            "Kroxigor, Any non-Monster Skink 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Monster, Any Beast, Any Kroxigor, Any non-Monster Skink",
+          "notes": ""
+        },
+        {
+          "name": "Skink Starpriest",
+          "unit_size": 1,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "0-1 Monster, Any Beast, Any",
+            "Kroxigor, Any non-Monster Skink",
+            "This Hero can join",
+            "Lord Kroak ’s or a Slann",
+            "Starmaster ’s regiment.",
+            "25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "0-1 Monster, Any Beast, Any Kroxigor, Any non-Monster Skink",
+          "notes": "This Hero can join Lord Kroak ’s or a Slann Starmaster ’s regiment."
+        },
+        {
+          "name": "Skink Starseer",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140 (-20)",
+          "raw_lines": [
+            "0-1 Monster, Any Beast, Any",
+            "Kroxigor, Any non-Monster Skink 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "0-1 Monster, Any Beast, Any Kroxigor, Any non-Monster Skink",
+          "notes": ""
+        },
+        {
+          "name": "Slann Starmaster",
+          "unit_size": 1,
+          "points": 260,
+          "points_raw": "260",
+          "raw_lines": [
+            "0-1 Skink Starpriest  or",
+            "Favoured Spawning ,",
+            "Any Seraphon",
+            "80mm"
+          ],
+          "base_size": "80mm",
+          "options_or_keywords": "0-1 Skink Starpriest  or Favoured Spawning , Any Seraphon",
+          "notes": ""
+        },
+        {
+          "name": "Stegadon Chief",
+          "unit_size": 1,
+          "points": 160,
+          "points_raw": "160",
+          "raw_lines": [
+            "0-1 Monster, Any Beast, Any",
+            "Kroxigor, Any non-Monster Skink 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Monster, Any Beast, Any Kroxigor, Any non-Monster Skink",
+          "notes": ""
+        },
+        {
+          "name": "Sunblood Pack",
+          "unit_size": 3,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Any Seraphon",
+            "This Hero can join an eligible",
+            "regiment as a Favoured",
+            "Spawning. This unit cannot be",
+            "reinforced",
+            "40mm [1],",
+            "32mm [2],",
+            "25mm [1]"
+          ],
+          "base_size": "40mm [1], 32mm [2], 25mm [1]",
+          "options_or_keywords": "Any Seraphon",
+          "notes": "This Hero can join an eligible regiment as a Favoured Spawning. This unit cannot be reinforced"
+        },
+        {
+          "name": "Terradon Chief",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "0-1 Monster, 0-1 Beast,",
+            "Any Skink Cavalry 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "0-1 Monster, 0-1 Beast, Any Skink Cavalry",
+          "notes": ""
+        }
+      ],
+      "units": [
+        {
+          "name": "Aggradon Lancers",
+          "unit_size": 3,
+          "points": 200,
+          "points_raw": "200",
+          "raw_lines": [
+            "Saurus, Cavalry 75 × 42mm"
+          ],
+          "base_size": "75 × 42mm",
+          "options_or_keywords": "Saurus, Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Bastiladon with Ark of Sotek",
+          "unit_size": 1,
+          "points": 230,
+          "points_raw": "230",
+          "raw_lines": [
+            "Skink, Monster 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Skink, Monster",
+          "notes": ""
+        },
+        {
+          "name": "Bastiladon with Solar Engine",
+          "unit_size": 1,
+          "points": 200,
+          "points_raw": "200",
+          "raw_lines": [
+            "Skink, Monster 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Skink, Monster",
+          "notes": ""
+        },
+        {
+          "name": "Engine of the Gods",
+          "unit_size": 1,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Skink, Monster 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Skink, Monster",
+          "notes": ""
+        },
+        {
+          "name": "Hunters of Huanchi with Dartpipes",
+          "unit_size": 5,
+          "points": 80,
+          "points_raw": "80",
+          "raw_lines": [
+            "Skink, Infantry This unit cannot be reinforced. 28.5mm [1],",
+            "25mm [4]"
+          ],
+          "base_size": "5mm [1], 25mm [4]",
+          "options_or_keywords": "Skink, Infantry",
+          "notes": "This unit cannot be reinforced. 28."
+        },
+        {
+          "name": "Hunters of Huanchi with Starstone Bolas",
+          "unit_size": 5,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "Skink, Infantry This unit cannot be reinforced. 28.5mm [2],",
+            "25mm [3]"
+          ],
+          "base_size": "5mm [2], 25mm [3]",
+          "options_or_keywords": "Skink, Infantry",
+          "notes": "This unit cannot be reinforced. 28."
+        },
+        {
+          "name": "Kroxigor",
+          "unit_size": 3,
+          "points": 200,
+          "points_raw": "200",
+          "raw_lines": [
+            "Kroxigor, Infantry 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "Kroxigor, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Kroxigor Warspawned",
+          "unit_size": 3,
+          "points": 200,
+          "points_raw": "200",
+          "raw_lines": [
+            "Kroxigor, Infantry 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "Kroxigor, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Raptadon Chargers",
+          "unit_size": 5,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Skink, Cavalry 60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Skink, Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Raptadon Hunters",
+          "unit_size": 5,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Skink, Cavalry 60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Skink, Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Ripperdactyl Riders",
+          "unit_size": 3,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Skink, Cavalry 50mm",
+            "Ripperdactyl Riders (2 models) 2 70 Skink, Cavalry",
+            "You can include 1 unit of this",
+            "type for each Ripperdactyl",
+            "Chief in your army.",
+            "This unit cannot be reinforced.",
+            "50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "Skink, Cavalry 50mm Ripperdactyl Riders (2 models) 2 70 Skink, Cavalry",
+          "notes": "You can include 1 unit of this type for each Ripperdactyl Chief in your army. This unit cannot be reinforced."
+        },
+        {
+          "name": "Saurus Guard",
+          "unit_size": 5,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Saurus, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Saurus, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Saurus Warriors",
+          "unit_size": 10,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Saurus, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Saurus, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Skinks",
+          "unit_size": 10,
+          "points": 80,
+          "points_raw": "80",
+          "raw_lines": [
+            "Skink, Infantry 25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Skink, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Spawn of Chotec",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Skink, Beast 90 × 52mm",
+            "[1], 25mm [3]"
+          ],
+          "base_size": "90 × 52mm [1], 25mm [3]",
+          "options_or_keywords": "Skink, Beast",
+          "notes": ""
+        },
+        {
+          "name": "Stegadon",
+          "unit_size": 1,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Skink, Monster 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Skink, Monster",
+          "notes": ""
+        },
+        {
+          "name": "Terradon Riders",
+          "unit_size": 3,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "Skink, Cavalry 50mm",
+            "Terradon Riders (2 models) 2 70 Skink, Cavalry",
+            "You can include 1 unit of this",
+            "type for each Terradon Chief in",
+            "your army.",
+            "This unit cannot be reinforced.",
+            "50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "Skink, Cavalry 50mm Terradon Riders (2 models) 2 70 Skink, Cavalry",
+          "notes": "You can include 1 unit of this type for each Terradon Chief in your army. This unit cannot be reinforced."
+        },
+        {
+          "name": "Terrawings",
+          "unit_size": 3,
+          "points": 70,
+          "points_raw": "70",
+          "raw_lines": [
+            "Beast This unit cannot be reinforced. 32mm",
+            "UPDATED   NEW",
+            "18"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Beast",
+          "notes": "This unit cannot be reinforced. 32mm UPDATED   NEW 18"
+        },
+        {
+          "name": "Kurnoth’s Heralds",
+          "unit_size": 3,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Unique, Cavalry, Kurnothi This unit cannot be reinforced. 60 × 35mm [3]"
+          ],
+          "base_size": "60 × 35mm [3]",
+          "options_or_keywords": "Unique, Cavalry, Kurnothi",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "Skaeth’s Wild Hunt",
+          "unit_size": 5,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "Unique, Infantry, Kurnothi This unit cannot be reinforced.",
+            "50 × 25mm",
+            "[1], 32mm [3],",
+            "25mm [1]"
+          ],
+          "base_size": "50 × 25mm [1], 32mm [3], 25mm [1]",
+          "options_or_keywords": "Unique, Infantry, Kurnothi",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "Ylthari’s Guardians",
+          "unit_size": 4,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Unique, Infantry This unit cannot be reinforced. 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Unique, Infantry",
+          "notes": "This unit cannot be reinforced."
+        }
+      ],
+      "auxiliary": [
+        {
+          "name": "Battle Formation Eternal Starhost",
+          "points": 0,
+          "notes": "Faction Pack: Seraphon"
+        },
+        {
+          "name": "Battle Formation Shadowstrike Starhost",
+          "points": 0,
+          "notes": "Faction Pack: Seraphon"
+        },
+        {
+          "name": "Battle Formation Sunclaw Starhost",
+          "points": 0,
+          "notes": "Faction Pack: Seraphon"
+        },
+        {
+          "name": "Battle Formation Thunderquake Starhost",
+          "points": 0,
+          "notes": "Faction Pack: Seraphon"
+        },
+        {
+          "name": "Heroic Trait Being of the Stars",
+          "points": 0,
+          "notes": "Faction Pack: Seraphon"
+        },
+        {
+          "name": "Heroic Trait Reptilian Cunning",
+          "points": 0,
+          "notes": "Faction Pack: Seraphon"
+        },
+        {
+          "name": "Heroic Trait Beastmaster",
+          "points": 0,
+          "notes": "Faction Pack: Seraphon"
+        },
+        {
+          "name": "✹  Heroic Trait Arcane Determination",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Heroic Trait Calm and Collected",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Heroic Trait Lord of Space and Time",
+          "points": 20,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Artefact of Power Coatl Familiar",
+          "points": 20,
+          "notes": "Faction Pack: Seraphon"
+        },
+        {
+          "name": "Artefact of Power Incandescent Rectrices",
+          "points": 0,
+          "notes": "Faction Pack: Seraphon"
+        },
+        {
+          "name": "Artefact of Power Bloodrage Pendant",
+          "points": 0,
+          "notes": "Faction Pack: Seraphon"
+        },
+        {
+          "name": "✹  Spell Lore Lore of Celestial Manipulation",
+          "points": 0,
+          "notes": "(-20) Faction Pack: Seraphon"
+        },
+        {
+          "name": "Spell Lore Lore of Primal Jungles",
+          "points": 0,
+          "notes": "Faction Pack: Seraphon"
+        },
+        {
+          "name": "✹  Monstrous Trait Titanic Slam",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Monstrous Trait Chameleonic Camouflage",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Monstrous Trait Armour Cruncher",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Faction Terrain Realmshaper Engine",
+          "points": 0,
+          "notes": "Faction Pack: Seraphon"
+        }
+      ]
+    },
+    "STORMCAST ETERNALS": {
+      "heroes": [
+        {
+          "name": "Hammer of Sigmar",
+          "unit_size": 1,
+          "points": 240,
+          "points_raw": "240 (-10)",
+          "raw_lines": [
+            "0-1 Stormcast Exemplar ,",
+            "Any Stormcast Eternals 100mm"
+          ],
+          "base_size": "100mm",
+          "options_or_keywords": "0-1 Stormcast Exemplar , Any Stormcast Eternals",
+          "notes": ""
+        },
+        {
+          "name": "Drakesworn Templar",
+          "unit_size": 1,
+          "points": 390,
+          "points_raw": "390",
+          "raw_lines": [
+            "0-1 Stormcast Exemplar ,",
+            "Any Extremis Chamber ,",
+            "Any Warrior Chamber",
+            "170 × 105mm"
+          ],
+          "base_size": "170 × 105mm",
+          "options_or_keywords": "0-1 Stormcast Exemplar , Any Extremis Chamber , Any Warrior Chamber",
+          "notes": ""
+        },
+        {
+          "name": "Gardus Steel Soul",
+          "unit_size": 1,
+          "points": 160,
+          "points_raw": "160",
+          "raw_lines": [
+            "0-1 Stormcast Exemplar ,",
+            "0-1 Gryph‑hounds ,",
+            "Any Warrior Chamber",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Stormcast Exemplar .",
+            "50mm",
+            "✹  Ionus Cryptborn,"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Stormcast Exemplar , 0-1 Gryph‑hounds , Any Warrior Chamber",
+          "notes": "This Hero can join an eligible regiment as a Stormcast Exemplar . 50mm ✹  Ionus Cryptborn,"
+        },
+        {
+          "name": "Warden of Lost Souls",
+          "unit_size": 1,
+          "points": 340,
+          "points_raw": "340 (-20)",
+          "raw_lines": [
+            "0-1 Stormcast Exemplar ,",
+            "Any Stormcast Eternals  100mm"
+          ],
+          "base_size": "100mm",
+          "options_or_keywords": "0-1 Stormcast Exemplar , Any Stormcast Eternals",
+          "notes": ""
+        },
+        {
+          "name": "Iridan the Witness",
+          "unit_size": 1,
+          "points": 260,
+          "points_raw": "260",
+          "raw_lines": [
+            "Any Stormcast Eternals ,",
+            "0-1 Stormcast Exemplar 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Any Stormcast Eternals , 0-1 Stormcast Exemplar",
+          "notes": ""
+        },
+        {
+          "name": "Karazai the Scarred",
+          "unit_size": 1,
+          "points": 420,
+          "points_raw": "420 (-20)",
+          "raw_lines": [
+            "0-1 Stormcast Exemplar ,",
+            "Any Stormcast Eternals 160mm"
+          ],
+          "base_size": "160mm",
+          "options_or_keywords": "0-1 Stormcast Exemplar , Any Stormcast Eternals",
+          "notes": ""
+        },
+        {
+          "name": "Knight-Arcanum",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "0-1 Gryph‑hounds ,",
+            "Any Warrior Chamber 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Gryph‑hounds , Any Warrior Chamber",
+          "notes": ""
+        },
+        {
+          "name": "Knight-Azyros",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110 (-10)",
+          "raw_lines": [
+            "0-1 Warrior Chamber,",
+            "Any Ruination Chamber",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Stormcast Exemplar .",
+            "50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "0-1 Warrior Chamber, Any Ruination Chamber",
+          "notes": "This Hero can join an eligible regiment as a Stormcast Exemplar ."
+        },
+        {
+          "name": "Knight-Draconis",
+          "unit_size": 1,
+          "points": 230,
+          "points_raw": "230",
+          "raw_lines": [
+            "Any Extremis Chamber 105 × 70mm"
+          ],
+          "base_size": "105 × 70mm",
+          "options_or_keywords": "Any Extremis Chamber",
+          "notes": ""
+        },
+        {
+          "name": "Knight-Judicator with Gryph-hounds",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Any Gryph‑hounds ,",
+            "Any Warrior Chamber",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Stormcast Exemplar .",
+            "90 × 52mm",
+            "[1], 40mm [2]"
+          ],
+          "base_size": "90 × 52mm [1], 40mm [2]",
+          "options_or_keywords": "Any Gryph‑hounds , Any Warrior Chamber",
+          "notes": "This Hero can join an eligible regiment as a Stormcast Exemplar ."
+        },
+        {
+          "name": "Knight-Questor",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "0-1 Questor Soulsworn ,",
+            "0-1 Gryph‑hounds ,",
+            "Any Ruination Chamber",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Stormcast Exemplar .",
+            "40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Questor Soulsworn , 0-1 Gryph‑hounds , Any Ruination Chamber",
+          "notes": "This Hero can join an eligible regiment as a Stormcast Exemplar ."
+        },
+        {
+          "name": "Knight-Relictor",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "0-1 Gryph‑hounds ,",
+            "Any Warrior Chamber 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Gryph‑hounds , Any Warrior Chamber",
+          "notes": ""
+        },
+        {
+          "name": "Knight-Vexillor",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "0-1 Gryph‑hounds ,",
+            "Any Warrior Chamber",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Stormcast Exemplar .",
+            "40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Gryph‑hounds , Any Warrior Chamber",
+          "notes": "This Hero can join an eligible regiment as a Stormcast Exemplar ."
+        },
+        {
+          "name": "Krondys, Son of Dracothion",
+          "unit_size": 1,
+          "points": 480,
+          "points_raw": "480 (-20)",
+          "raw_lines": [
+            "0-1 Stormcast Exemplar ,",
+            "Any Stormcast Eternals 160mm"
+          ],
+          "base_size": "160mm",
+          "options_or_keywords": "0-1 Stormcast Exemplar , Any Stormcast Eternals",
+          "notes": ""
+        },
+        {
+          "name": "Lorai, Child of the Abyss",
+          "unit_size": 1,
+          "points": 0,
+          "points_raw": "0",
+          "raw_lines": [
+            "None This unit can only be taken in",
+            "Neave Blacktalon ’s regiment. 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "None",
+          "notes": "This unit can only be taken in Neave Blacktalon ’s regiment."
+        },
+        {
+          "name": "Lord-Aquilor",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Any Gryph‑hounds ,",
+            "Any Vanguard Chamber 90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "Any Gryph‑hounds , Any Vanguard Chamber",
+          "notes": ""
+        },
+        {
+          "name": "Lord-Celestant",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "0-1 Stormcast Exemplar ,",
+            "0-1 Gryph‑hounds ,",
+            "Any Warrior Chamber",
+            "40mm",
+            "UPDATED",
+            "19"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Stormcast Exemplar , 0-1 Gryph‑hounds , Any Warrior Chamber 40mm UPDATED 19",
+          "notes": ""
+        },
+        {
+          "name": "Lord-Celestant on Dracoth",
+          "unit_size": 1,
+          "points": 150,
+          "points_raw": "150 (-10)",
+          "raw_lines": [
+            "0-1 Stormcast Exemplar ,",
+            "Any Extremis Chamber ,",
+            "Any Warrior Chamber",
+            "90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "0-1 Stormcast Exemplar , Any Extremis Chamber , Any Warrior Chamber",
+          "notes": ""
+        },
+        {
+          "name": "Lord-Celestant on Stardrake",
+          "unit_size": 1,
+          "points": 490,
+          "points_raw": "490 (+10)",
+          "raw_lines": [
+            "0-1 Stormcast Exemplar ,",
+            "Any Stormcast Eternals 170 × 105mm",
+            "Lord-Commander"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Stormcast Exemplar , Any Stormcast Eternals 170 × 105mm Lord-Commander",
+          "notes": ""
+        },
+        {
+          "name": "Bastian Carthalos",
+          "unit_size": 1,
+          "points": 190,
+          "points_raw": "190",
+          "raw_lines": [
+            "0-1 Stormcast Exemplar ,",
+            "Any Stormcast Eternals 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "0-1 Stormcast Exemplar , Any Stormcast Eternals",
+          "notes": ""
+        },
+        {
+          "name": "Lord-Imperatant",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "0-1 Stormcast Exemplar ,",
+            "0-1 Gryph‑hounds ,",
+            "Any Warrior Chamber",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Stormcast Exemplar .",
+            "40mm [1],",
+            "32mm [1]"
+          ],
+          "base_size": "40mm [1], 32mm [1]",
+          "options_or_keywords": "0-1 Stormcast Exemplar , 0-1 Gryph‑hounds , Any Warrior Chamber",
+          "notes": "This Hero can join an eligible regiment as a Stormcast Exemplar ."
+        },
+        {
+          "name": "Lord-Relictor",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "0-1 Stormcast Exemplar ,",
+            "0-1 Gryph‑hounds ,",
+            "Any Ruination Chamber ,",
+            "Any Warrior Chamber",
+            "40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Stormcast Exemplar , 0-1 Gryph‑hounds , Any Ruination Chamber , Any Warrior Chamber",
+          "notes": ""
+        },
+        {
+          "name": "Lord-Terminos",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "0-1 Stormcast Exemplar ,",
+            "0-1 Gryph‑hounds ,",
+            "Any Ruination Chamber ,",
+            "Any Warrior Chamber",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Stormcast Exemplar .",
+            "40mm [1],",
+            "25mm [1]"
+          ],
+          "base_size": "40mm [1], 25mm [1]",
+          "options_or_keywords": "0-1 Stormcast Exemplar , 0-1 Gryph‑hounds , Any Ruination Chamber , Any Warrior Chamber",
+          "notes": "This Hero can join an eligible regiment as a Stormcast Exemplar ."
+        },
+        {
+          "name": "Lord-Veritant",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "0-1 Stormcast Exemplar ,",
+            "0-1 Gryph‑hounds ,",
+            "Any Ruination Chamber ,",
+            "Any Warrior Chamber",
+            "40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Stormcast Exemplar , 0-1 Gryph‑hounds , Any Ruination Chamber , Any Warrior Chamber",
+          "notes": ""
+        },
+        {
+          "name": "Lord-Vigilant on Gryphstalker",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120 (-20)",
+          "raw_lines": [
+            "0-1 Stormcast Exemplar ,",
+            "0-1 Gryph‑hounds ,",
+            "Any Ruination Chamber ,",
+            "Any Warrior Chamber",
+            "90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "0-1 Stormcast Exemplar , 0-1 Gryph‑hounds , Any Ruination Chamber , Any Warrior Chamber",
+          "notes": ""
+        },
+        {
+          "name": "Lord-Vigilant on Morrgryph",
+          "unit_size": 1,
+          "points": 160,
+          "points_raw": "160 (-20)",
+          "raw_lines": [
+            "Any Ruination Chamber ,",
+            "Any Warrior Chamber 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Any Ruination Chamber , Any Warrior Chamber",
+          "notes": ""
+        },
+        {
+          "name": "Neave Blacktalon",
+          "unit_size": 1,
+          "points": 280,
+          "points_raw": "280",
+          "raw_lines": [
+            "Neave’s Companions (required),",
+            "Lorai (required),",
+            "Any Vanguard Chamber",
+            "40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Neave’s Companions (required), Lorai (required), Any Vanguard Chamber",
+          "notes": ""
+        },
+        {
+          "name": "Tornus the Redeemed",
+          "unit_size": 1,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "0-1 Stormcast Exemplar ,",
+            "Any Stormcast Eternals 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "0-1 Stormcast Exemplar , Any Stormcast Eternals",
+          "notes": ""
+        },
+        {
+          "name": "Vandus Hammerhand",
+          "unit_size": 1,
+          "points": 160,
+          "points_raw": "160",
+          "raw_lines": [
+            "0-1 Stormcast Exemplar ,",
+            "Any Extremis Chamber ,",
+            "Any Warrior Chamber",
+            "90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "0-1 Stormcast Exemplar , Any Extremis Chamber , Any Warrior Chamber",
+          "notes": ""
+        },
+        {
+          "name": "Yndrasta, the Celestial Spear",
+          "unit_size": 1,
+          "points": 270,
+          "points_raw": "270",
+          "raw_lines": [
+            "0-1 Stormcast Exemplar ,",
+            "Any Stormcast Eternals 60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "0-1 Stormcast Exemplar , Any Stormcast Eternals",
+          "notes": ""
+        }
+      ],
+      "units": [
+        {
+          "name": "Aetherwings",
+          "unit_size": 3,
+          "points": 80,
+          "points_raw": "80",
+          "raw_lines": [
+            "Vanguard Chamber, Beast 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Vanguard Chamber, Beast",
+          "notes": ""
+        },
+        {
+          "name": "Annihilators",
+          "unit_size": 3,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Warrior Chamber, Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Warrior Chamber, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Annihilators with Meteoric Grandhammers",
+          "unit_size": 3,
+          "points": 180,
+          "points_raw": "180",
+          "raw_lines": [
+            "Warrior Chamber, Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Warrior Chamber, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Dracothian Guard Concussors",
+          "unit_size": 2,
+          "points": 200,
+          "points_raw": "200 (-10)",
+          "raw_lines": [
+            "Extremis Chamber, Cavalry 90 × 52mm",
+            "Dracothian Guard Concussors",
+            "(1 model) 1 120 Extremis Chamber, Cavalry",
+            "You can include 1 unit of this",
+            "type for each Lord‑Celestant on",
+            "Dracoth in your army.",
+            "90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "Extremis Chamber, Cavalry 90 × 52mm Dracothian Guard Concussors (1 model) 1 120 Extremis Chamber, Cavalry",
+          "notes": "You can include 1 unit of this type for each Lord‑Celestant on Dracoth in your army."
+        },
+        {
+          "name": "Dracothian Guard Desolators",
+          "unit_size": 2,
+          "points": 170,
+          "points_raw": "170",
+          "raw_lines": [
+            "Extremis Chamber, Cavalry 90 × 52mm",
+            "Dracothian Guard Desolators",
+            "(1 model) 1 100 Extremis Chamber, Cavalry",
+            "You can include 1 unit of this",
+            "type for each Lord‑Celestant on",
+            "Dracoth in your army.",
+            "90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "Extremis Chamber, Cavalry 90 × 52mm Dracothian Guard Desolators (1 model) 1 100 Extremis Chamber, Cavalry",
+          "notes": "You can include 1 unit of this type for each Lord‑Celestant on Dracoth in your army."
+        },
+        {
+          "name": "Dracothian Guard Fulminators",
+          "unit_size": 2,
+          "points": 190,
+          "points_raw": "190 (-10)",
+          "raw_lines": [
+            "Extremis Chamber, Cavalry 90 × 52mm",
+            "✹  Dracothian Guard Fulminators",
+            "(1 model) 1 100 (-10) Extremis Chamber, Cavalry",
+            "You can include 1 unit of this",
+            "type for each Lord‑Celestant on",
+            "Dracoth in your army.",
+            "90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "Extremis Chamber, Cavalry 90 × 52mm ✹  Dracothian Guard Fulminators (1 model) 1 100 (-10) Extremis Chamber, Cavalry",
+          "notes": "You can include 1 unit of this type for each Lord‑Celestant on Dracoth in your army."
+        },
+        {
+          "name": "Dracothian Guard Tempestors",
+          "unit_size": 2,
+          "points": 170,
+          "points_raw": "170",
+          "raw_lines": [
+            "Extremis Chamber, Cavalry 90 × 52mm",
+            "Dracothian Guard Tempestors",
+            "(1 model) 1 90 Extremis Chamber, Cavalry",
+            "You can include 1 unit of this",
+            "type for each Lord‑Celestant on",
+            "Dracoth in your army.",
+            "90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "Extremis Chamber, Cavalry 90 × 52mm Dracothian Guard Tempestors (1 model) 1 90 Extremis Chamber, Cavalry",
+          "notes": "You can include 1 unit of this type for each Lord‑Celestant on Dracoth in your army."
+        },
+        {
+          "name": "Gryph-hounds",
+          "unit_size": 6,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "Beast 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Beast",
+          "notes": ""
+        },
+        {
+          "name": "Liberators",
+          "unit_size": 5,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "Warrior Chamber, Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Warrior Chamber, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Neave’s Companions",
+          "unit_size": 3,
+          "points": 0,
+          "points_raw": "0",
+          "raw_lines": [
+            "Unique, Infantry",
+            "This unit can only be taken in",
+            "Neave Blacktalon ’s regiment.",
+            "This unit cannot be reinforced.",
+            "40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Unique, Infantry",
+          "notes": "This unit can only be taken in Neave Blacktalon ’s regiment. This unit cannot be reinforced."
+        },
+        {
+          "name": "Praetors",
+          "unit_size": 3,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Warrior Chamber, Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Warrior Chamber, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Prosecutors",
+          "unit_size": 3,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Ruination Chamber, Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Ruination Chamber, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Questor Soulsworn",
+          "unit_size": 6,
+          "points": 210,
+          "points_raw": "210",
+          "raw_lines": [
+            "Warrior Chamber, Infantry This unit cannot be reinforced. 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Warrior Chamber, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "Reclusians",
+          "unit_size": 3,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Ruination Chamber, Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Ruination Chamber, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Stormcoven",
+          "unit_size": 3,
+          "points": 210,
+          "points_raw": "210",
+          "raw_lines": [
+            "Warrior Chamber, Infantry This unit cannot be reinforced. 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Warrior Chamber, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "Stormdrake Guard",
+          "unit_size": 2,
+          "points": 310,
+          "points_raw": "310",
+          "raw_lines": [
+            "Extremis Chamber, Monster 105 × 70mm",
+            "Stormdrake Guard (1 model) 1 160 Extremis Chamber, Monster",
+            "You can include 1 unit of this",
+            "type for each Knight‑Draconis",
+            "in your army.",
+            "105 × 70mm"
+          ],
+          "base_size": "105 × 70mm",
+          "options_or_keywords": "Extremis Chamber, Monster 105 × 70mm Stormdrake Guard (1 model) 1 160 Extremis Chamber, Monster",
+          "notes": "You can include 1 unit of this type for each Knight‑Draconis in your army."
+        },
+        {
+          "name": "Stormstrike Chariot",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Warrior Chamber, War Machine 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Warrior Chamber, War Machine",
+          "notes": ""
+        },
+        {
+          "name": "Stormstrike Palladors",
+          "unit_size": 3,
+          "points": 180,
+          "points_raw": "180",
+          "raw_lines": [
+            "Warrior Chamber, Cavalry 90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "Warrior Chamber, Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Vanguard-Hunters",
+          "unit_size": 5,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Vanguard Chamber, Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Vanguard Chamber, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Vanguard-Palladors with Shock Handaxes",
+          "unit_size": 3,
+          "points": 250,
+          "points_raw": "250",
+          "raw_lines": [
+            "Vanguard Chamber, Cavalry 75 × 42mm",
+            "✹  Vanguard-Palladors with"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Vanguard Chamber, Cavalry 75 × 42mm ✹  Vanguard-Palladors with",
+          "notes": ""
+        },
+        {
+          "name": "Starstrike Javelins",
+          "unit_size": 3,
+          "points": 260,
+          "points_raw": "260 (+10)",
+          "raw_lines": [
+            "Vanguard Chamber, Cavalry 75 × 42mm"
+          ],
+          "base_size": "75 × 42mm",
+          "options_or_keywords": "Vanguard Chamber, Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Vanguard-Raptors with Hurricane Crossbows",
+          "unit_size": 3,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Vanguard Chamber, Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Vanguard Chamber, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Vanguard-Raptors with Longstrike Crossbows",
+          "unit_size": 3,
+          "points": 200,
+          "points_raw": "200",
+          "raw_lines": [
+            "Vanguard Chamber, Infantry",
+            "60 × 35mm.",
+            "Champion is",
+            "40mm."
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Vanguard Chamber, Infantry 60 × 35mm. Champion is 40mm.",
+          "notes": ""
+        },
+        {
+          "name": "Vanquishers",
+          "unit_size": 5,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "Warrior Chamber, Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Warrior Chamber, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Vigilors",
+          "unit_size": 5,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Warrior Chamber, Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Warrior Chamber, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Vindictors",
+          "unit_size": 5,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "Warrior Chamber, Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Warrior Chamber, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Castigators",
+          "unit_size": 3,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Sacrosanct Chamber, Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Sacrosanct Chamber, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Celestar Ballista",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Sacrosanct Chamber,",
+            "War Machine",
+            "60mm [1],",
+            "40mm [2]"
+          ],
+          "base_size": "60mm [1], 40mm [2]",
+          "options_or_keywords": "Sacrosanct Chamber, War Machine",
+          "notes": ""
+        },
+        {
+          "name": "Decimators",
+          "unit_size": 5,
+          "points": 240,
+          "points_raw": "240",
+          "raw_lines": [
+            "Warrior Chamber, Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Warrior Chamber, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Domitan’s Stormcoven",
+          "unit_size": 3,
+          "points": 210,
+          "points_raw": "210",
+          "raw_lines": [
+            "Unique, Warrior Chamber,",
+            "Infantry This unit cannot be reinforced. 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Unique, Warrior Chamber, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "Evocators",
+          "unit_size": 5,
+          "points": 180,
+          "points_raw": "180",
+          "raw_lines": [
+            "Sacrosanct Chamber, Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Sacrosanct Chamber, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Evocators on Celestial Dracolines",
+          "unit_size": 3,
+          "points": 240,
+          "points_raw": "240",
+          "raw_lines": [
+            "Sacrosanct Chamber, Cavalry 90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "Sacrosanct Chamber, Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Judicators with Boltstorm Crossbows",
+          "unit_size": 5,
+          "points": 160,
+          "points_raw": "160",
+          "raw_lines": [
+            "Warrior Chamber, Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Warrior Chamber, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Judicators with Skybolt Bows",
+          "unit_size": 5,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Warrior Chamber, Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Warrior Chamber, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Protectors",
+          "unit_size": 5,
+          "points": 220,
+          "points_raw": "220",
+          "raw_lines": [
+            "Warrior Chamber, Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Warrior Chamber, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Retributors",
+          "unit_size": 5,
+          "points": 170,
+          "points_raw": "170",
+          "raw_lines": [
+            "Warrior Chamber, Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Warrior Chamber, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Sequitors",
+          "unit_size": 5,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Sacrosanct Chamber, Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Sacrosanct Chamber, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Steelheart’s Champions",
+          "unit_size": 3,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Unique, Warrior Chamber,",
+            "Infantry This unit cannot be reinforced. 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Unique, Warrior Chamber, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "Stormsire’s Cursebreakers",
+          "unit_size": 3,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Unique, Sacrosanct Chamber,",
+            "Infantry This unit cannot be reinforced. 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Unique, Sacrosanct Chamber, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "The Emberwatch",
+          "unit_size": 3,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Unique, Vanguard Chamber,",
+            "Infantry This unit cannot be reinforced. 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Unique, Vanguard Chamber, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "The Farstriders",
+          "unit_size": 3,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Unique, Vanguard Chamber,",
+            "Infantry This unit cannot be reinforced. 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Unique, Vanguard Chamber, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "Xandire’s Truthseekers",
+          "unit_size": 3,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Unique, Warrior Chamber,",
+            "Infantry This unit cannot be reinforced. 40mm [3],",
+            "25mm [1]"
+          ],
+          "base_size": "40mm [3], 25mm [1]",
+          "options_or_keywords": "Unique, Warrior Chamber, Infantry",
+          "notes": "This unit cannot be reinforced."
+        }
+      ],
+      "auxiliary": [
+        {
+          "name": "Battle Formation Sentinels of the Bleak Citadels",
+          "points": 0,
+          "notes": "Battletome: Stormcast Eternals"
+        },
+        {
+          "name": "Battle Formation Thunderhead Host",
+          "points": 0,
+          "notes": "Battletome: Stormcast Eternals"
+        },
+        {
+          "name": "Battle Formation Vanguard Wing",
+          "points": 0,
+          "notes": "Battletome: Stormcast Eternals"
+        },
+        {
+          "name": "Battle Formation Lightning Echelon",
+          "points": 0,
+          "notes": "Battletome: Stormcast Eternals"
+        },
+        {
+          "name": "Heroic Trait Shock and Awe",
+          "points": 0,
+          "notes": "Battletome: Stormcast Eternals"
+        },
+        {
+          "name": "Heroic Trait Envoy of the Heavens",
+          "points": 20,
+          "notes": "Battletome: Stormcast Eternals"
+        },
+        {
+          "name": "Heroic Trait Staunch Defender",
+          "points": 0,
+          "notes": "Battletome: Stormcast Eternals"
+        },
+        {
+          "name": "✹  Scar of War Uncaged Lightning",
+          "points": 20,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Scar of War Veterans of Amberstone Watch",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Scar of War Pyrotechnic Souls",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Artefact of Power Null Pendant",
+          "points": 0,
+          "notes": "Battletome: Stormcast Eternals"
+        },
+        {
+          "name": "Artefact of Power Quicksilver Draught",
+          "points": 0,
+          "notes": "Battletome: Stormcast Eternals"
+        },
+        {
+          "name": "Artefact of Power Mirrorshield",
+          "points": 0,
+          "notes": "Battletome: Stormcast Eternals"
+        },
+        {
+          "name": "✹  Artefact of Power Pennant of Azyrite Majesty",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Artefact of Power Blade of the Six Smiths",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Artefact of Power Fractured Astral Jewel",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Spell Lore Lore of the Storm",
+          "points": 0,
+          "notes": "Battletome: Stormcast Eternals"
+        },
+        {
+          "name": "Prayer Lore Prayers of the Stormhosts",
+          "points": 0,
+          "notes": "Battletome: Stormcast Eternals"
+        },
+        {
+          "name": "Manifestation Lore Manifestations of the Storm",
+          "points": 0,
+          "notes": "Battletome: Stormcast Eternals"
+        },
+        {
+          "name": "Faction Terrain Stormreach Portal",
+          "points": 20,
+          "notes": "Battletome: Stormcast Eternals"
+        },
+        {
+          "name": "Battle Formation Sacrosanct Convocation",
+          "points": 0,
+          "notes": "Battletome Supplement: Stormcast Eternals"
+        }
+      ]
+    },
+    "SYLVANETH": {
+      "heroes": [
+        {
+          "name": "Alarielle the Everqueen",
+          "unit_size": 1,
+          "points": 620,
+          "points_raw": "620 (+20)",
+          "raw_lines": [
+            "0-1 Forest Sentinel , Any Sylvaneth 160mm"
+          ],
+          "base_size": "160mm",
+          "options_or_keywords": "0-1 Forest Sentinel , Any Sylvaneth",
+          "notes": ""
+        },
+        {
+          "name": "Arch-Revenant",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110 (-20)",
+          "raw_lines": [
+            "Any non-Monster Sylvaneth This Hero can join an eligible",
+            "regiment as a Forest Sentinel . 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any non-Monster Sylvaneth",
+          "notes": "This Hero can join an eligible regiment as a Forest Sentinel ."
+        },
+        {
+          "name": "Belthanos, First Thorn of Kurnoth",
+          "unit_size": 1,
+          "points": 290,
+          "points_raw": "290",
+          "raw_lines": [
+            "Any Sylvaneth 150 × 95mm"
+          ],
+          "base_size": "150 × 95mm",
+          "options_or_keywords": "Any Sylvaneth",
+          "notes": ""
+        },
+        {
+          "name": "Branchwych",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Any Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Any Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Drycha Hamadreth",
+          "unit_size": 1,
+          "points": 250,
+          "points_raw": "250",
+          "raw_lines": [
+            "Any Sylvaneth 105 × 70mm"
+          ],
+          "base_size": "105 × 70mm",
+          "options_or_keywords": "Any Sylvaneth",
+          "notes": ""
+        },
+        {
+          "name": "Grove Guardian",
+          "unit_size": 1,
+          "points": 220,
+          "points_raw": "220",
+          "raw_lines": [
+            "Any Sylvaneth 105 × 70mm"
+          ],
+          "base_size": "105 × 70mm",
+          "options_or_keywords": "Any Sylvaneth",
+          "notes": ""
+        },
+        {
+          "name": "Spirit of Durthu",
+          "unit_size": 1,
+          "points": 320,
+          "points_raw": "320",
+          "raw_lines": [
+            "0-1 Forest Sentinel , Any Sylvaneth 105 × 70mm"
+          ],
+          "base_size": "105 × 70mm",
+          "options_or_keywords": "0-1 Forest Sentinel , Any Sylvaneth",
+          "notes": ""
+        },
+        {
+          "name": "The Lady of Vines",
+          "unit_size": 1,
+          "points": 280,
+          "points_raw": "280",
+          "raw_lines": [
+            "Any Sylvaneth 80mm"
+          ],
+          "base_size": "80mm",
+          "options_or_keywords": "Any Sylvaneth",
+          "notes": ""
+        },
+        {
+          "name": "Treelord Ancient",
+          "unit_size": 1,
+          "points": 280,
+          "points_raw": "280",
+          "raw_lines": [
+            "0-1 Forest Sentinel , Any Sylvaneth 105 × 70mm"
+          ],
+          "base_size": "105 × 70mm",
+          "options_or_keywords": "0-1 Forest Sentinel , Any Sylvaneth",
+          "notes": ""
+        },
+        {
+          "name": "Warsong Revenant",
+          "unit_size": 1,
+          "points": 170,
+          "points_raw": "170 (+20)",
+          "raw_lines": [
+            "Any Sylvaneth 105 × 70mm"
+          ],
+          "base_size": "105 × 70mm",
+          "options_or_keywords": "Any Sylvaneth",
+          "notes": ""
+        }
+      ],
+      "units": [
+        {
+          "name": "Dryads",
+          "unit_size": 10,
+          "points": 100,
+          "points_raw": "100 (+10)",
+          "raw_lines": [
+            "Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Gossamid Archers",
+          "unit_size": 5,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Revenant, Infantry 32mm",
+            "✹  Kurnoth Hunters with"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Revenant, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Kurnoth Hunters with Greatbows",
+          "unit_size": 3,
+          "points": 190,
+          "points_raw": "190 (-10)",
+          "raw_lines": [
+            "Kurnothi, Infantry 50mm",
+            "✹  Kurnoth Hunters"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "Kurnothi, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Kurnoth Hunters with Greatswords",
+          "unit_size": 3,
+          "points": 210,
+          "points_raw": "210 (+10)",
+          "raw_lines": [
+            "Kurnothi, Infantry 50mm",
+            "✹  Kurnoth Hunters"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "Kurnothi, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Kurnoth Hunters with Greatscythes",
+          "unit_size": 3,
+          "points": 200,
+          "points_raw": "200 (+10)",
+          "raw_lines": [
+            "Kurnothi, Infantry 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "Kurnothi, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Revenant Seekers",
+          "unit_size": 3,
+          "points": 180,
+          "points_raw": "180",
+          "raw_lines": [
+            "Revenant, Cav alry 60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "Revenant, Cav alry",
+          "notes": ""
+        },
+        {
+          "name": "Spite-Revenants",
+          "unit_size": 5,
+          "points": 100,
+          "points_raw": "100 (+20)",
+          "raw_lines": [
+            "Revenant, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Revenant, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Spiterider Lancers",
+          "unit_size": 3,
+          "points": 230,
+          "points_raw": "230 (+10)",
+          "raw_lines": [
+            "Revenant, Cav alry 60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "Revenant, Cav alry",
+          "notes": ""
+        },
+        {
+          "name": "Tree-Revenants",
+          "unit_size": 5,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Revenant, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Revenant, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Treelord",
+          "unit_size": 1,
+          "points": 240,
+          "points_raw": "240 (-20)",
+          "raw_lines": [
+            "Forest Elder, Monster 105 × 70mm"
+          ],
+          "base_size": "105 × 70mm",
+          "options_or_keywords": "Forest Elder, Monster",
+          "notes": ""
+        },
+        {
+          "name": "The Twistweald",
+          "unit_size": 8,
+          "points": 140,
+          "points_raw": "140 (+20)",
+          "raw_lines": [
+            "Revenant, Infantry This unit cannot be reinforced.",
+            "40mm [2],",
+            "32mm [3],",
+            "28.5mm [3]",
+            "or",
+            "40mm [1],",
+            "32mm [4],",
+            "28.5mm [3]"
+          ],
+          "base_size": "5mm [3]",
+          "options_or_keywords": "Revenant, Infantry",
+          "notes": "This unit cannot be reinforced. 40mm [2], 32mm [3], 28.5mm [3] or 40mm [1], 32mm [4], 28."
+        }
+      ],
+      "auxiliary": [
+        {
+          "name": "Battle Formation Followers of Kurnoth",
+          "points": 0,
+          "notes": "Battletome: Sylvaneth"
+        },
+        {
+          "name": "Battle Formation Glade Defenders",
+          "points": 0,
+          "notes": "Battletome: Sylvaneth"
+        },
+        {
+          "name": "Battle Formation Lords of the Clan",
+          "points": 0,
+          "notes": "Battletome: Sylvaneth"
+        },
+        {
+          "name": "Battle Formation Outcasts",
+          "points": 0,
+          "notes": "Battletome: Sylvaneth"
+        },
+        {
+          "name": "✹  Artefact of Power Dancing Mystiflies",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Artefact of Power Glamourweave",
+          "points": 20,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Artefact of Power Amulet of Resonance",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Heroic Trait Realmroot Guide",
+          "points": 0,
+          "notes": "Battletome: Sylvaneth"
+        },
+        {
+          "name": "Heroic Trait Spellsinger",
+          "points": 0,
+          "notes": "Battletome: Sylvaneth"
+        },
+        {
+          "name": "Heroic Trait Spirit of the Dark Forest",
+          "points": 0,
+          "notes": "Battletome: Sylvaneth"
+        },
+        {
+          "name": "Artefact of Power Amberglade Nectar",
+          "points": 0,
+          "notes": "Battletome: Sylvaneth"
+        },
+        {
+          "name": "Artefact of Power Seed of Rebirth",
+          "points": 0,
+          "notes": "Battletome: Sylvaneth"
+        },
+        {
+          "name": "Artefact of Power Wychwood Glaive",
+          "points": 0,
+          "notes": "Battletome: Sylvaneth"
+        },
+        {
+          "name": "✹  Aspect of the Deepwoods Aspect of Harvestboon",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Aspect of the Deepwoods Aspect of Ironbark",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Aspect of the Deepwoods Aspect of Heartwood",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Spell Lore Lore of the Deepwood",
+          "points": 0,
+          "notes": "Battletome: Sylvaneth"
+        },
+        {
+          "name": "Prayer Lore Lore of the Spirit-song",
+          "points": 0,
+          "notes": "Battletome: Sylvaneth"
+        },
+        {
+          "name": "Manifestation Lore Manifestations of the Deepwood",
+          "points": 0,
+          "notes": "Battletome: Sylvaneth"
+        },
+        {
+          "name": "Faction Terrain Awakened Wyldwood",
+          "points": 0,
+          "notes": "Battletome: Sylvaneth"
+        }
+      ]
+    },
+    "BLADES OF KHORNE": {
+      "heroes": [
+        {
+          "name": "Bloodmaster, Herald of Khorne",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "0-1 Slaughter Seeker ,",
+            "Any Blades of Khorne Daemon 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Slaughter Seeker , Any Blades of Khorne Daemon",
+          "notes": ""
+        },
+        {
+          "name": "Bloodsecrator",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110 (-10)",
+          "raw_lines": [
+            "Any Bloodbound",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Bloodbound Warmonger .",
+            "32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Any Bloodbound",
+          "notes": "This Hero can join an eligible regiment as a Bloodbound Warmonger ."
+        },
+        {
+          "name": "Bloodstoker",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Any Bloodbound",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Bloodbound Warmonger .",
+            "40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any Bloodbound",
+          "notes": "This Hero can join an eligible regiment as a Bloodbound Warmonger ."
+        },
+        {
+          "name": "Bloodthirster of Insensate Rage",
+          "unit_size": 1,
+          "points": 410,
+          "points_raw": "410",
+          "raw_lines": [
+            "0-1 Slaughter Seeker ,",
+            "Any Blades of Khorne Daemon",
+            "This Hero can join an eligible",
+            "regiment as a Baleful Lord . 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Slaughter Seeker , Any Blades of Khorne Daemon",
+          "notes": "This Hero can join an eligible regiment as a Baleful Lord ."
+        },
+        {
+          "name": "Bloodthirster of Unfettered Fury",
+          "unit_size": 1,
+          "points": 390,
+          "points_raw": "390",
+          "raw_lines": [
+            "0-1 Slaughter Seeker ,",
+            "Any Blades of Khorne Daemon",
+            "This Hero can join an eligible",
+            "regiment as a Baleful Lord . 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Slaughter Seeker , Any Blades of Khorne Daemon",
+          "notes": "This Hero can join an eligible regiment as a Baleful Lord ."
+        },
+        {
+          "name": "Deathbringer",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120 (-10)",
+          "raw_lines": [
+            "Any Bloodbound",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Bloodbound Warmonger .",
+            "40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any Bloodbound",
+          "notes": "This Hero can join an eligible regiment as a Bloodbound Warmonger ."
+        },
+        {
+          "name": "Herald of Khorne on Blood Throne",
+          "unit_size": 1,
+          "points": 160,
+          "points_raw": "160",
+          "raw_lines": [
+            "0-1 Slaughter Seeker ,",
+            "Any Blades of Khorne Daemon 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Slaughter Seeker , Any Blades of Khorne Daemon",
+          "notes": ""
+        },
+        {
+          "name": "Karanak",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Any Claws of Karanak ,",
+            "Any Flesh Hounds 75 × 42mm"
+          ],
+          "base_size": "75 × 42mm",
+          "options_or_keywords": "Any Claws of Karanak , Any Flesh Hounds",
+          "notes": ""
+        },
+        {
+          "name": "Mighty Lord of Khorne",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110 (-20)",
+          "raw_lines": [
+            "Any Bloodbound Warmonger ,",
+            "Any Bloodbound 60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "Any Bloodbound Warmonger , Any Bloodbound",
+          "notes": ""
+        },
+        {
+          "name": "Realmgore Ritualist",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110 (-10)",
+          "raw_lines": [
+            "Any Bloodbound 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Any Bloodbound",
+          "notes": ""
+        },
+        {
+          "name": "Skarbrand",
+          "unit_size": 1,
+          "points": 430,
+          "points_raw": "430 (+20)",
+          "raw_lines": [
+            "0-1 Slaughter Seeker ,",
+            "Any Blades of Khorne Daemon 100mm"
+          ],
+          "base_size": "100mm",
+          "options_or_keywords": "0-1 Slaughter Seeker , Any Blades of Khorne Daemon",
+          "notes": ""
+        },
+        {
+          "name": "Skullgrinder",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Any Bloodbound",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Bloodbound Warmonger .",
+            "40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any Bloodbound",
+          "notes": "This Hero can join an eligible regiment as a Bloodbound Warmonger ."
+        },
+        {
+          "name": "Skulltaker",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Any Blades of Khorne Daemon This Hero can join an eligible",
+            "regiment as a Slaughter Seeker . 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any Blades of Khorne Daemon",
+          "notes": "This Hero can join an eligible regiment as a Slaughter Seeker ."
+        },
+        {
+          "name": "Slaughterpriest",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120 (-10)",
+          "raw_lines": [
+            "Any Bloodbound 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any Bloodbound",
+          "notes": ""
+        },
+        {
+          "name": "Wrath of Khorne Bloodthirster",
+          "unit_size": 1,
+          "points": 400,
+          "points_raw": "400",
+          "raw_lines": [
+            "0-1 Slaughter Seeker , 0-1 Baleful Lord ,",
+            "Any Blades of Khorne 120 × 92mm",
+            "The following units no longer have current warscrolls: Aspiring Deathbringer; Exalted Deathbringer. You can use the models in these units to",
+            "represent the following units as appropriate, provided they are on the listed base sizes:",
+            "Aspiring Deathbringer → Deathbringer (40mm)",
+            "Exalted Deathbringer → Deathbringer (40mm)",
+            "UPDATED   NEW",
+            "25"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Slaughter Seeker , 0-1 Baleful Lord , Any Blades of Khorne 120 × 92mm The following units no longer have current warscrolls: Aspiring Deathbringer; Exalted Deathbringer. You can use the models in these units to represent the following units as appropriate, provided they are on the listed base sizes: Aspiring Deathbringer → Deathbringer (40mm) Exalted Deathbringer → Deathbringer (40mm) UPDATED   NEW 25",
+          "notes": ""
+        }
+      ],
+      "units": [
+        {
+          "name": "Blood Warriors",
+          "unit_size": 10,
+          "points": 180,
+          "points_raw": "180",
+          "raw_lines": [
+            "Bloodbound, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Bloodbound, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Bloodcrushers",
+          "unit_size": 3,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Daemon, Cavalry 90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "Daemon, Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Bloodletters",
+          "unit_size": 10,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Daemon, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Daemon, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Bloodreavers",
+          "unit_size": 10,
+          "points": 80,
+          "points_raw": "80",
+          "raw_lines": [
+            "Bloodbound, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Bloodbound, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Claws of Karanak",
+          "unit_size": 8,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Bloodbound, Infantry This unit cannot be reinforced.",
+            "60 × 35mm",
+            "[1], 40mm [1],",
+            "32mm [2],",
+            "28.5mm [4]"
+          ],
+          "base_size": "5mm [4]",
+          "options_or_keywords": "Bloodbound, Infantry",
+          "notes": "This unit cannot be reinforced. 60 × 35mm [1], 40mm [1], 32mm [2], 28."
+        },
+        {
+          "name": "Flesh Hounds",
+          "unit_size": 5,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Daemon, Beast 60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Daemon, Beast",
+          "notes": ""
+        },
+        {
+          "name": "Khorgorath",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Bloodbound, Monster 90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "Bloodbound, Monster",
+          "notes": ""
+        },
+        {
+          "name": "Mighty Skullcrushers",
+          "unit_size": 3,
+          "points": 200,
+          "points_raw": "200",
+          "raw_lines": [
+            "Bloodbound, Cavalry 90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "Bloodbound, Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Skull Cannon",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130 (-20)",
+          "raw_lines": [
+            "Daemon, War Machine 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Daemon, War Machine",
+          "notes": ""
+        },
+        {
+          "name": "Skullreapers",
+          "unit_size": 5,
+          "points": 170,
+          "points_raw": "170",
+          "raw_lines": [
+            "Bloodbound, Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Bloodbound, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Wrathmongers",
+          "unit_size": 5,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Bloodbound, Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Bloodbound, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "NEW Scourge of Aqshy Bloodletters",
+          "unit_size": 10,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Daemon, Infantry",
+            "This unit is legal for Matched",
+            "Play for battles fought using the",
+            "General’s Handbook 2026-27",
+            "battlepack.",
+            "32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Daemon, Infantry",
+          "notes": "This unit is legal for Matched Play for battles fought using the General’s Handbook 2026-27 battlepack."
+        },
+        {
+          "name": "Garrek’s Reavers",
+          "unit_size": 5,
+          "points": 70,
+          "points_raw": "70",
+          "raw_lines": [
+            "Unique, Bloodbound, Infantry This unit cannot be reinforced. 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Unique, Bloodbound, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "Gorechosen of Dromm",
+          "unit_size": 3,
+          "points": 190,
+          "points_raw": "190",
+          "raw_lines": [
+            "Unique, Bloodbound, Infantry This unit cannot be reinforced. 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Unique, Bloodbound, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "Magore’s Fiends",
+          "unit_size": 4,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Unique, Bloodbound, Infantry This unit cannot be reinforced. 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Unique, Bloodbound, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "Kamandora’s Blades",
+          "unit_size": 4,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "Unique, Bloodbound, Infantry This unit cannot be reinforced. 32mm [2],",
+            "28.5mm [2]"
+          ],
+          "base_size": "5mm [2]",
+          "options_or_keywords": "Unique, Bloodbound, Infantry",
+          "notes": "This unit cannot be reinforced. 32mm [2], 28."
+        },
+        {
+          "name": "Ephilim’s Pandaemonium",
+          "unit_size": 5,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Unique, Daemon, Infantry This unit cannot be reinforced. 32mm [3],",
+            "25mm [2]"
+          ],
+          "base_size": "32mm [3], 25mm [2]",
+          "options_or_keywords": "Unique, Daemon, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "Eyes of the Nine",
+          "unit_size": 5,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Unique, Arcanite, Infantry This unit cannot be reinforced. 32mm [4],",
+            "25mm [2]",
+            "NEW",
+            "67"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Unique, Arcanite, Infantry",
+          "notes": "This unit cannot be reinforced. 32mm [4], 25mm [2] NEW 67"
+        }
+      ],
+      "auxiliary": [
+        {
+          "name": "Battle Formation Khornate Legion",
+          "points": 0,
+          "notes": "Battletome: Blades of Khorne"
+        },
+        {
+          "name": "Battle Formation Murder Host",
+          "points": 0,
+          "notes": "Battletome: Blades of Khorne"
+        },
+        {
+          "name": "Battle Formation Brass Stampede",
+          "points": 0,
+          "notes": "Battletome: Blades of Khorne"
+        },
+        {
+          "name": "Battle Formation Bloodbound Warhorde",
+          "points": 0,
+          "notes": "Battletome: Blades of Khorne"
+        },
+        {
+          "name": "✹  Brazen Mutation Brass Flesh",
+          "points": 20,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Brazen Mutation Blade-limbs",
+          "points": 20,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Brazen Mutation Scorpion Tails",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Heroic Trait Magical Scorn",
+          "points": 0,
+          "notes": "Battletome: Blades of Khorne"
+        },
+        {
+          "name": "Heroic Trait Skull Collector",
+          "points": 0,
+          "notes": "Battletome: Blades of Khorne"
+        },
+        {
+          "name": "Heroic Trait Frenzied Taskmaster",
+          "points": 0,
+          "notes": "Battletome: Blades of Khorne"
+        },
+        {
+          "name": "Artefact of Power Ar’gath, the King of Blades",
+          "points": 0,
+          "notes": "Battletome: Blades of Khorne"
+        },
+        {
+          "name": "Artefact of Power Collar of Contempt",
+          "points": 0,
+          "notes": "Battletome: Blades of Khorne"
+        },
+        {
+          "name": "Artefact of Power Butcher’s Blade",
+          "points": 0,
+          "notes": "Battletome: Blades of Khorne"
+        },
+        {
+          "name": "Prayer Lore Blood Blessings of Khorne",
+          "points": 0,
+          "notes": "Battletome: Blades of Khorne"
+        },
+        {
+          "name": "✹  Prayer Lore Proclamations of Murder",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Manifestation Lore Judgements of Khorne",
+          "points": 0,
+          "notes": "Battletome: Blades of Khorne"
+        },
+        {
+          "name": "Faction Terrain Skull Altar",
+          "points": 0,
+          "notes": "Battletome: Blades of Khorne"
+        }
+      ]
+    },
+    "DISCIPLES OF TZEENTCH": {
+      "heroes": [
+        {
+          "name": "Herald of Tzeentch",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140 (+10)",
+          "raw_lines": [
+            "Any Daemon",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Tzeentchian Deceiver .",
+            "32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Any Daemon",
+          "notes": "This Hero can join an eligible regiment as a Tzeentchian Deceiver ."
+        },
+        {
+          "name": "Curseling, Eye of Tzeentch",
+          "unit_size": 1,
+          "points": 170,
+          "points_raw": "170 (+20)",
+          "raw_lines": [
+            "0-1 Chaos Spawn of Tzeentch ,",
+            "Any Arcanite",
+            "This Hero can join an",
+            "eligible regiment as an",
+            "Arcanite Cabalist .",
+            "32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Chaos Spawn of Tzeentch , Any Arcanite",
+          "notes": "This Hero can join an eligible regiment as an Arcanite Cabalist ."
+        },
+        {
+          "name": "Fatemaster",
+          "unit_size": 1,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "0-1 Chaos Spawn of Tzeentch ,",
+            "Any Arcanite",
+            "This Hero can join an",
+            "eligible regiment as an",
+            "Arcanite Cabalist .",
+            "40mm",
+            "Fateskimmer, Herald of Tzeentch"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Chaos Spawn of Tzeentch , Any Arcanite",
+          "notes": "This Hero can join an eligible regiment as an Arcanite Cabalist . 40mm Fateskimmer, Herald of Tzeentch"
+        },
+        {
+          "name": "on Burning Chariot",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "0-1 Tzeentchian Deceiver , Any Daemon 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Tzeentchian Deceiver , Any Daemon",
+          "notes": ""
+        },
+        {
+          "name": "Gaunt Summoner",
+          "unit_size": 1,
+          "points": 180,
+          "points_raw": "180",
+          "raw_lines": [
+            "0-1 Tzeentchian Deceiver ,",
+            "Any Disciples of Tzeentch 40mm",
+            "Gaunt Summoner on"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Tzeentchian Deceiver , Any Disciples of Tzeentch 40mm Gaunt Summoner on",
+          "notes": ""
+        },
+        {
+          "name": "Disc of Tzeentch",
+          "unit_size": 1,
+          "points": 210,
+          "points_raw": "210",
+          "raw_lines": [
+            "0-1 Tzeentchian Deceiver ,",
+            "Any Disciples of Tzeentch 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Tzeentchian Deceiver , Any Disciples of Tzeentch",
+          "notes": ""
+        },
+        {
+          "name": "Kairos Fateweaver",
+          "unit_size": 1,
+          "points": 400,
+          "points_raw": "400",
+          "raw_lines": [
+            "0-1 Tzeentchian Deceiver ,",
+            "0-1 Arcanite Cabalist ,",
+            "Any Disciples of Tzeentch",
+            "100mm"
+          ],
+          "base_size": "100mm",
+          "options_or_keywords": "0-1 Tzeentchian Deceiver , 0-1 Arcanite Cabalist , Any Disciples of Tzeentch",
+          "notes": ""
+        },
+        {
+          "name": "Lord of Change",
+          "unit_size": 1,
+          "points": 380,
+          "points_raw": "380",
+          "raw_lines": [
+            "0-1 Tzeentchian Deceiver ,",
+            "0-1 Arcanite Cabalist ,",
+            "Any Disciples of Tzeentch",
+            "100mm"
+          ],
+          "base_size": "100mm",
+          "options_or_keywords": "0-1 Tzeentchian Deceiver , 0-1 Arcanite Cabalist , Any Disciples of Tzeentch",
+          "notes": ""
+        },
+        {
+          "name": "Magister",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Any Arcanite",
+            "This Hero can join an",
+            "eligible regiment as an",
+            "Arcanite Cabalist .",
+            "32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Any Arcanite",
+          "notes": "This Hero can join an eligible regiment as an Arcanite Cabalist ."
+        },
+        {
+          "name": "Magister on Disc of Tzeentch",
+          "unit_size": 1,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "0-1 Arcanite Cabalist , Any Arcanite 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "0-1 Arcanite Cabalist , Any Arcanite",
+          "notes": ""
+        },
+        {
+          "name": "Ogroid Thaumaturge",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110 (-20)",
+          "raw_lines": [
+            "Any Arcanite",
+            "This Hero can join an",
+            "eligible regiment as an",
+            "Arcanite Cabalist .",
+            "50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "Any Arcanite",
+          "notes": "This Hero can join an eligible regiment as an Arcanite Cabalist ."
+        },
+        {
+          "name": "The Changeling",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140 (-30)",
+          "raw_lines": [
+            "Any Daemon",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Tzeentchian Deceiver .",
+            "40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any Daemon",
+          "notes": "This Hero can join an eligible regiment as a Tzeentchian Deceiver ."
+        },
+        {
+          "name": "Tzaangor Shaman",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "0-1 Arcanite Cabalist , Any Arcanite 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Arcanite Cabalist , Any Arcanite",
+          "notes": ""
+        },
+        {
+          "name": "Scyla Anfingrimm",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Any Bloodbound 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any Bloodbound",
+          "notes": ""
+        },
+        {
+          "name": "Valkia the Bloody",
+          "unit_size": 1,
+          "points": 180,
+          "points_raw": "180",
+          "raw_lines": [
+            "0-1 Bloodbound Warmonger ,",
+            "Any Bloodbound 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Bloodbound Warmonger , Any Bloodbound",
+          "notes": ""
+        },
+        {
+          "name": "NEW Lord of Khorne on Juggernaut",
+          "unit_size": 1,
+          "points": 200,
+          "points_raw": "200",
+          "raw_lines": [
+            "Any Bloodbound 90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "Any Bloodbound",
+          "notes": ""
+        },
+        {
+          "name": "NEW Skarr Bloodwrath",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Any Bloodbound 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any Bloodbound",
+          "notes": ""
+        },
+        {
+          "name": "NEW Skullmaster, Herald of Khorne",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Any Daemon Cavalry,",
+            "Any War Machine 90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "Any Daemon Cavalry, Any War Machine",
+          "notes": ""
+        }
+      ],
+      "units": [
+        {
+          "name": "Blue Horrors and Brimstone Horrors",
+          "unit_size": 10,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Daemon, Infantry 25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Daemon, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Burning Chariot of Tzeentch",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Daemon, War Machine 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Daemon, War Machine",
+          "notes": ""
+        },
+        {
+          "name": "Chaos Spawn of Tzeentch",
+          "unit_size": 1,
+          "points": 60,
+          "points_raw": "60",
+          "raw_lines": [
+            "Beast 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "Beast",
+          "notes": ""
+        },
+        {
+          "name": "Exalted Flamer of Tzeentch",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120 (+10)",
+          "raw_lines": [
+            "Daemon, Infantry 75 × 42mm"
+          ],
+          "base_size": "75 × 42mm",
+          "options_or_keywords": "Daemon, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Flamers of Tzeentch",
+          "unit_size": 3,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Daemon, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Daemon, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Jade Obelisk",
+          "unit_size": 9,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Arcanite, Infantry This unit cannot be reinforced. 32mm [5],",
+            "28.5mm [5]"
+          ],
+          "base_size": "5mm [5]",
+          "options_or_keywords": "Arcanite, Infantry",
+          "notes": "This unit cannot be reinforced. 32mm [5], 28."
+        },
+        {
+          "name": "Kairic Acolytes",
+          "unit_size": 10,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "Arcanite, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Arcanite, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Pink Horrors",
+          "unit_size": 10,
+          "points": 170,
+          "points_raw": "170",
+          "raw_lines": [
+            "Daemon, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Daemon, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Screamers of Tzeentch",
+          "unit_size": 3,
+          "points": 80,
+          "points_raw": "80 (-10)",
+          "raw_lines": [
+            "Daemon, Beast 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Daemon, Beast",
+          "notes": ""
+        },
+        {
+          "name": "Tzaangor Enlightened",
+          "unit_size": 3,
+          "points": 200,
+          "points_raw": "200",
+          "raw_lines": [
+            "Arcanite, Cavalry",
+            "Previously Tzaangor",
+            "Enlightened on Discs of",
+            "Tzeentch.",
+            "40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Arcanite, Cavalry",
+          "notes": "Previously Tzaangor Enlightened on Discs of Tzeentch."
+        },
+        {
+          "name": "Tzaangor Enlightened on Foot",
+          "unit_size": 3,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Arcanite, Infantry",
+            "Previously Tzaangor",
+            "Enlightened.",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Arcanite, Infantry",
+          "notes": "Previously Tzaangor Enlightened. This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Tzaangor Skyfires",
+          "unit_size": 3,
+          "points": 160,
+          "points_raw": "160",
+          "raw_lines": [
+            "Arcanite, Cavalry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Arcanite, Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Tzaangors",
+          "unit_size": 10,
+          "points": 170,
+          "points_raw": "170",
+          "raw_lines": [
+            "Arcanite, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Arcanite, Infantry",
+          "notes": ""
+        }
+      ],
+      "auxiliary": [
+        {
+          "name": "Battle Formation Fated Blades",
+          "points": 0,
+          "notes": "Battletome: Disciples of Tzeentch"
+        },
+        {
+          "name": "Battle Formation Malevolent Schemers",
+          "points": 0,
+          "notes": "Battletome: Disciples of Tzeentch"
+        },
+        {
+          "name": "Battle Formation Denizens of the Silver Towers",
+          "points": 0,
+          "notes": "Battletome: Disciples of Tzeentch"
+        },
+        {
+          "name": "Battle Formation Mutants and Mad Things",
+          "points": 0,
+          "notes": "Battletome: Disciples of Tzeentch"
+        },
+        {
+          "name": "✹  Artefact of Power Tome of Scorched Insight",
+          "points": 20,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Artefact of Power The Five Verses of Volarian",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Artefact of Power The Searing Eye",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Heroic Trait Silver Summoner",
+          "points": 0,
+          "notes": "Battletome: Disciples of Tzeentch"
+        },
+        {
+          "name": "Heroic Trait Grand Illusionist",
+          "points": 0,
+          "notes": "Battletome: Disciples of Tzeentch"
+        },
+        {
+          "name": "Heroic Trait Devolving Aura",
+          "points": 0,
+          "notes": "Battletome: Disciples of Tzeentch"
+        },
+        {
+          "name": "Artefact of Power Fate Slicer",
+          "points": 10,
+          "notes": "Battletome: Disciples of Tzeentch"
+        },
+        {
+          "name": "Artefact of Power Cloaked in Wyrdflame",
+          "points": 0,
+          "notes": "Battletome: Disciples of Tzeentch"
+        },
+        {
+          "name": "✹  Artefact of Power Kairic Tome",
+          "points": 20,
+          "notes": "(+20) Battletome: Disciples of Tzeentch"
+        },
+        {
+          "name": "✹  Vision of Fate Vision of Defiant Supremacy",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Vision of Fate Vision of Destined Conquest",
+          "points": 30,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Vision of Fate Vision of Arcane Sacrifice",
+          "points": 20,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Spell Lore Lore of Fate",
+          "points": 0,
+          "notes": "Battletome: Disciples of Tzeentch"
+        },
+        {
+          "name": "Spell Lore Lore of Change",
+          "points": 0,
+          "notes": "Battletome: Disciples of Tzeentch"
+        },
+        {
+          "name": "Manifestation Lore Manifestations of Tzeentch",
+          "points": 0,
+          "notes": "Battletome: Disciples of Tzeentch"
+        },
+        {
+          "name": "Faction Terrain Argent Shards",
+          "points": 0,
+          "notes": "Battletome: Disciples of Tzeentch"
+        }
+      ]
+    },
+    "HEDONITES OF SLAANESH": {
+      "heroes": [
+        {
+          "name": "Bladebringer, Herald on Exalted Chariot",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "0-1 Slaaneshi Beguiler ,",
+            "Any War Machine",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Slaaneshi Beguiler , Any War Machine",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Contorted Epitome",
+          "unit_size": 1,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "0-1 Slaaneshi Beguiler , Any Daemon 75 × 42mm"
+          ],
+          "base_size": "75 × 42mm",
+          "options_or_keywords": "0-1 Slaaneshi Beguiler , Any Daemon",
+          "notes": ""
+        },
+        {
+          "name": "Dexcessa, the Talon of Slaanesh",
+          "unit_size": 1,
+          "points": 280,
+          "points_raw": "280",
+          "raw_lines": [
+            "0-1 Synessa or Slaaneshi Beguiler ,",
+            "Any Hedonites of Slaanesh",
+            "This Hero can join",
+            "Synessa’s regiment. 105 × 70mm"
+          ],
+          "base_size": "105 × 70mm",
+          "options_or_keywords": "0-1 Synessa or Slaaneshi Beguiler , Any Hedonites of Slaanesh",
+          "notes": "This Hero can join Synessa’s regiment."
+        },
+        {
+          "name": "Glutos Orscollion, Lord of Gluttony",
+          "unit_size": 1,
+          "points": 460,
+          "points_raw": "460",
+          "raw_lines": [
+            "0-1 Dark Egotist ,",
+            "Any Hedonites of Slaanesh 170 × 105mm"
+          ],
+          "base_size": "170 × 105mm",
+          "options_or_keywords": "0-1 Dark Egotist , Any Hedonites of Slaanesh",
+          "notes": ""
+        },
+        {
+          "name": "Infernal Enrapturess, Herald of Slaanesh",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Any Daemon This Hero can join an eligible",
+            "regiment as a Slaaneshi Beguiler . 60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Any Daemon",
+          "notes": "This Hero can join an eligible regiment as a Slaaneshi Beguiler ."
+        },
+        {
+          "name": "Keeper of Secrets",
+          "unit_size": 1,
+          "points": 420,
+          "points_raw": "420",
+          "raw_lines": [
+            "0-1 Slaaneshi Beguiler ,",
+            "Any Hedonites of Slaanesh 100mm"
+          ],
+          "base_size": "100mm",
+          "options_or_keywords": "0-1 Slaaneshi Beguiler , Any Hedonites of Slaanesh",
+          "notes": ""
+        },
+        {
+          "name": "Lord of Hubris",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Any Sybarite This Hero can join an eligible",
+            "regiment as a Dark Egotist . 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any Sybarite",
+          "notes": "This Hero can join an eligible regiment as a Dark Egotist ."
+        },
+        {
+          "name": "Lord of Hysteria",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Any Sybarite This Hero can join an eligible",
+            "regiment as a Dark Egotist . 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any Sybarite",
+          "notes": "This Hero can join an eligible regiment as a Dark Egotist ."
+        },
+        {
+          "name": "Lord of Pain",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Any Sybarite This Hero can join an eligible",
+            "regiment as a Dark Egotist . 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any Sybarite",
+          "notes": "This Hero can join an eligible regiment as a Dark Egotist ."
+        },
+        {
+          "name": "Shalaxi Helbane",
+          "unit_size": 1,
+          "points": 410,
+          "points_raw": "410",
+          "raw_lines": [
+            "0-1 Slaaneshi Beguiler ,",
+            "Any Hedonites of Slaanesh 100mm"
+          ],
+          "base_size": "100mm",
+          "options_or_keywords": "0-1 Slaaneshi Beguiler , Any Hedonites of Slaanesh",
+          "notes": ""
+        },
+        {
+          "name": "Shardspeaker of Slaanesh",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "0-1 Dark Egotist , Any Sybarite 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Dark Egotist , Any Sybarite",
+          "notes": ""
+        },
+        {
+          "name": "Sigvald, Prince of Slaanesh",
+          "unit_size": 1,
+          "points": 240,
+          "points_raw": "240",
+          "raw_lines": [
+            "0-1 Dark Egotist ,",
+            "Any Hedonites of Slaanesh",
+            "This Hero can join an eligible",
+            "regiment as a Dark Egotist . 60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "0-1 Dark Egotist , Any Hedonites of Slaanesh",
+          "notes": "This Hero can join an eligible regiment as a Dark Egotist ."
+        },
+        {
+          "name": "Syll’Esske, the Vengeful Allegiance",
+          "unit_size": 1,
+          "points": 250,
+          "points_raw": "250",
+          "raw_lines": [
+            "0-1 Slaaneshi Beguiler  or Dark Egotist ,",
+            "Any Hedonites of Slaanesh 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "0-1 Slaaneshi Beguiler  or Dark Egotist , Any Hedonites of Slaanesh",
+          "notes": ""
+        },
+        {
+          "name": "Synessa, the Voice of Slaanesh",
+          "unit_size": 1,
+          "points": 250,
+          "points_raw": "250",
+          "raw_lines": [
+            "0-1 Dexcessa or Slaaneshi Beguiler ,",
+            "Any Hedonites of Slaanesh",
+            "This Hero can join",
+            "Dexcessa’s regiment. 105 × 70mm"
+          ],
+          "base_size": "105 × 70mm",
+          "options_or_keywords": "0-1 Dexcessa or Slaaneshi Beguiler , Any Hedonites of Slaanesh",
+          "notes": "This Hero can join Dexcessa’s regiment."
+        },
+        {
+          "name": "The Masque",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Any Daemon This Hero can join an eligible",
+            "regiment as a Slaaneshi Beguiler . 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Any Daemon",
+          "notes": "This Hero can join an eligible regiment as a Slaaneshi Beguiler ."
+        },
+        {
+          "name": "Thricefold Discord",
+          "unit_size": 3,
+          "points": 180,
+          "points_raw": "180",
+          "raw_lines": [
+            "0-1 Slaaneshi Beguiler ,",
+            "Any Hedonites of Slaanesh This unit cannot be reinforced. 40mm [1],",
+            "28.5mm [2]"
+          ],
+          "base_size": "5mm [2]",
+          "options_or_keywords": "0-1 Slaaneshi Beguiler , Any Hedonites of Slaanesh",
+          "notes": "This unit cannot be reinforced. 40mm [1], 28."
+        }
+      ],
+      "units": [
+        {
+          "name": "Blissbarb Archers",
+          "unit_size": 10,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Sybarite, Infantry 28.5mm [10],",
+            "25mm [1]"
+          ],
+          "base_size": "5mm [10], 25mm [1]",
+          "options_or_keywords": "Sybarite, Infantry 28.",
+          "notes": ""
+        },
+        {
+          "name": "Blissbarb Seekers",
+          "unit_size": 5,
+          "points": 160,
+          "points_raw": "160",
+          "raw_lines": [
+            "Sybarite, Cavalry 75 × 42mm"
+          ],
+          "base_size": "75 × 42mm",
+          "options_or_keywords": "Sybarite, Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Daemonettes",
+          "unit_size": 10,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Daemon, Infantry 25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Daemon, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Fiends",
+          "unit_size": 3,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Daemon, Beast 75 × 42mm"
+          ],
+          "base_size": "75 × 42mm",
+          "options_or_keywords": "Daemon, Beast",
+          "notes": ""
+        },
+        {
+          "name": "Hellflayer",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Daemon, War Machine",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Daemon, War Machine",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Hellstriders",
+          "unit_size": 5,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Sybarite, Cavalry",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Sybarite, Cavalry",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Myrmidesh Painbringers",
+          "unit_size": 5,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Sybarite, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Sybarite, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Seeker Chariot",
+          "unit_size": 1,
+          "points": 80,
+          "points_raw": "80",
+          "raw_lines": [
+            "Daemon, War Machine",
+            "This unit will move to",
+            "Warhammer Legends on",
+            "1 June 2027.",
+            "120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Daemon, War Machine",
+          "notes": "This unit will move to Warhammer Legends on 1 June 2027."
+        },
+        {
+          "name": "Seekers",
+          "unit_size": 5,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Daemon, Cavalry 60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Daemon, Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Slaangor Fiendbloods",
+          "unit_size": 3,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Sybarite, Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Sybarite, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Slickblade Seekers",
+          "unit_size": 5,
+          "points": 170,
+          "points_raw": "170",
+          "raw_lines": [
+            "Sybarite, Cavalry 75 × 42mm"
+          ],
+          "base_size": "75 × 42mm",
+          "options_or_keywords": "Sybarite, Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Symbaresh Twinsouls",
+          "unit_size": 5,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Sybarite, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Sybarite, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "The Blood of the Bull",
+          "unit_size": 5,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Unique, Duardin, Infantry This unit cannot be reinforced.",
+            "32mm [1],",
+            "28.5mm [3],",
+            "25mm [1]"
+          ],
+          "base_size": "5mm [3], 25mm [1]",
+          "options_or_keywords": "Unique, Duardin, Infantry",
+          "notes": "This unit cannot be reinforced. 32mm [1], 28."
+        }
+      ],
+      "auxiliary": [
+        {
+          "name": "Battle Formation Depraved Carnival",
+          "points": 0,
+          "notes": "Battletome: Hedonites of Slaanesh"
+        },
+        {
+          "name": "Battle Formation Godseeker Cavalcade",
+          "points": 0,
+          "notes": "Battletome: Hedonites of Slaanesh"
+        },
+        {
+          "name": "Battle Formation Artisans of Torment",
+          "points": 0,
+          "notes": "Battletome: Hedonites of Slaanesh"
+        },
+        {
+          "name": "Battle Formation Lurid Dreamers",
+          "points": 0,
+          "notes": "Battletome: Hedonites of Slaanesh"
+        },
+        {
+          "name": "✹  All-consuming Obsession Obsession with Control",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  All-consuming Obsession Obsession with Form",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  All-consuming Obsession Obsession with Pain",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Heroic Trait Centre of Attention",
+          "points": 0,
+          "notes": "Battletome: Hedonites of Slaanesh"
+        },
+        {
+          "name": "Heroic Trait Dilettante",
+          "points": 0,
+          "notes": "Battletome: Hedonites of Slaanesh"
+        },
+        {
+          "name": "Heroic Trait Unseemly Vitality",
+          "points": 0,
+          "notes": "Battletome: Hedonites of Slaanesh"
+        },
+        {
+          "name": "✹  Heroic Trait Agonisingly Elusive",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Heroic Trait Incensed",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Heroic Trait Arcane Magnetism",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Artefact of Power Bashful Visage",
+          "points": 0,
+          "notes": "Battletome: Hedonites of Slaanesh"
+        },
+        {
+          "name": "Artefact of Power Crown of the Ur-Slaanesh",
+          "points": 20,
+          "notes": "Battletome: Hedonites of Slaanesh"
+        },
+        {
+          "name": "Artefact of Power The Rod of Misrule",
+          "points": 10,
+          "notes": "Battletome: Hedonites of Slaanesh"
+        },
+        {
+          "name": "Spell Lore Lore of Extravagance",
+          "points": 0,
+          "notes": "Battletome: Hedonites of Slaanesh"
+        },
+        {
+          "name": "Manifestation Lore Manifestations of Depravity",
+          "points": 0,
+          "notes": "Battletome: Hedonites of Slaanesh"
+        },
+        {
+          "name": "Faction Terrain Fane of Slaanesh",
+          "points": 0,
+          "notes": "Battletome: Hedonites of Slaanesh"
+        }
+      ]
+    },
+    "HELSMITHS OF HASHUT": {
+      "heroes": [
+        {
+          "name": "Ashen Elder",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "0-1 Hashutite Commander,",
+            "Any Helsmiths of Hashut 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Hashutite Commander, Any Helsmiths of Hashut",
+          "notes": ""
+        },
+        {
+          "name": "Daemonsmith",
+          "unit_size": 1,
+          "points": 80,
+          "points_raw": "80 (-20)",
+          "raw_lines": [
+            "0-1 Hashutite Commander ,",
+            "Any Helsmiths of Hashut 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Hashutite Commander , Any Helsmiths of Hashut",
+          "notes": ""
+        },
+        {
+          "name": "Daemonsmith on Infernal Taurus",
+          "unit_size": 1,
+          "points": 290,
+          "points_raw": "290",
+          "raw_lines": [
+            "0-1 Hashutite Commander ,",
+            "Any Helsmiths of Hashut 130mm"
+          ],
+          "base_size": "130mm",
+          "options_or_keywords": "0-1 Hashutite Commander , Any Helsmiths of Hashut",
+          "notes": ""
+        },
+        {
+          "name": "Urak Taar, the First Daemonsmith",
+          "unit_size": 1,
+          "points": 340,
+          "points_raw": "340",
+          "raw_lines": [
+            "Any Hashutite Commander ,",
+            "Any Helsmiths of Hashut 130mm"
+          ],
+          "base_size": "130mm",
+          "options_or_keywords": "Any Hashutite Commander , Any Helsmiths of Hashut",
+          "notes": ""
+        },
+        {
+          "name": "War Despot",
+          "unit_size": 1,
+          "points": 80,
+          "points_raw": "80 (-10)",
+          "raw_lines": [
+            "Any Helsmiths of Hashut",
+            "This Hero can join an eligible",
+            "regiment as a Hashutite",
+            "Commander.",
+            "32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Any Helsmiths of Hashut",
+          "notes": "This Hero can join an eligible regiment as a Hashutite Commander."
+        }
+      ],
+      "units": [
+        {
+          "name": "Anointed Sentinels",
+          "unit_size": 3,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Duar din, Cavalry 75 × 42mm"
+          ],
+          "base_size": "75 × 42mm",
+          "options_or_keywords": "Duar din, Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Bull Centaurs",
+          "unit_size": 3,
+          "points": 190,
+          "points_raw": "190",
+          "raw_lines": [
+            "Duar din, Cavalry 75 × 42mm"
+          ],
+          "base_size": "75 × 42mm",
+          "options_or_keywords": "Duar din, Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Deathshrieker Rocket Battery",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "War Machine 100mm",
+            "✹  Dominator Engine with"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "War Machine 100mm ✹  Dominator Engine with",
+          "notes": ""
+        },
+        {
+          "name": "Bane Maces",
+          "unit_size": 1,
+          "points": 150,
+          "points_raw": "150 (-10)",
+          "raw_lines": [
+            "War Machine 80mm",
+            "✹  Dominator Engine with"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "War Machine 80mm ✹  Dominator Engine with",
+          "notes": ""
+        },
+        {
+          "name": "Immolation Cannons",
+          "unit_size": 1,
+          "points": 160,
+          "points_raw": "160 (-10)",
+          "raw_lines": [
+            "War Machine 80mm"
+          ],
+          "base_size": "80mm",
+          "options_or_keywords": "War Machine",
+          "notes": ""
+        },
+        {
+          "name": "Hobgrot Vandalz",
+          "unit_size": 10,
+          "points": 70,
+          "points_raw": "70",
+          "raw_lines": [
+            "Infantry 25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Infernal Cohort with Hashutite Blades",
+          "unit_size": 10,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "Duardin, Infantry 28.5mm",
+            "✹  Infernal Cohort with"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Duardin, Infantry 28.5mm ✹  Infernal Cohort with",
+          "notes": ""
+        },
+        {
+          "name": "Hashutite Spears",
+          "unit_size": 10,
+          "points": 90,
+          "points_raw": "90 (-10)",
+          "raw_lines": [
+            "Duardin, Infantry 28.5mm"
+          ],
+          "base_size": "5mm",
+          "options_or_keywords": "Duardin, Infantry 28.",
+          "notes": ""
+        },
+        {
+          "name": "Infernal Razers with Blunderbusses",
+          "unit_size": 5,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Duardin, Infantry 28.5mm"
+          ],
+          "base_size": "5mm",
+          "options_or_keywords": "Duardin, Infantry 28.",
+          "notes": ""
+        },
+        {
+          "name": "Infernal Razers with Flamehurlers",
+          "unit_size": 5,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "Duardin, Infantry 28.5mm"
+          ],
+          "base_size": "5mm",
+          "options_or_keywords": "Duardin, Infantry 28.",
+          "notes": ""
+        },
+        {
+          "name": "Tormentor Bombard",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "War Machine 100mm"
+          ],
+          "base_size": "100mm",
+          "options_or_keywords": "War Machine",
+          "notes": ""
+        },
+        {
+          "name": "Exalted Chariot",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Daemon, War Machine 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Daemon, War Machine",
+          "notes": ""
+        },
+        {
+          "name": "The Dread Pageant",
+          "unit_size": 4,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Unique, Sybarite, Infantry This unit cannot be reinforced.",
+            "32mm [1],",
+            "40mm [1],",
+            "25mm [2]"
+          ],
+          "base_size": "32mm [1], 40mm [1], 25mm [2]",
+          "options_or_keywords": "Unique, Sybarite, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "The Thricefold Discord",
+          "unit_size": 3,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Unique, Daemon, Infantry This unit cannot be reinforced. 40mm [1],",
+            "28.5mm [2]"
+          ],
+          "base_size": "5mm [2]",
+          "options_or_keywords": "Unique, Daemon, Infantry",
+          "notes": "This unit cannot be reinforced. 40mm [1], 28."
+        },
+        {
+          "name": "Grandfather’s Gardeners",
+          "unit_size": 5,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Unique, Daemon, Infantry This unit cannot be reinforced.",
+            "40mm [1],",
+            "32mm [3],",
+            "25mm [1]"
+          ],
+          "base_size": "40mm [1], 32mm [3], 25mm [1]",
+          "options_or_keywords": "Unique, Daemon, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "The Wurmspat",
+          "unit_size": 3,
+          "points": 160,
+          "points_raw": "160",
+          "raw_lines": [
+            "Unique, Rotbringers, Infantry This unit cannot be reinforced. 40mm",
+            "68"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Unique, Rotbringers, Infantry",
+          "notes": "This unit cannot be reinforced. 40mm 68"
+        }
+      ],
+      "auxiliary": [
+        {
+          "name": "Battle Formation Hashutite Host",
+          "points": 0,
+          "notes": "Battletome: Helsmiths of Hashut"
+        },
+        {
+          "name": "Battle Formation Castigation Battery",
+          "points": 0,
+          "notes": "Battletome: Helsmiths of Hashut"
+        },
+        {
+          "name": "Battle Formation The Bullfather’s Horns",
+          "points": 0,
+          "notes": "Battletome: Helsmiths of Hashut"
+        },
+        {
+          "name": "Battle Formation Daemonsmith Cabal",
+          "points": 0,
+          "notes": "Battletome: Helsmiths of Hashut"
+        },
+        {
+          "name": "Heroic Trait Servile Automaton",
+          "points": 0,
+          "notes": "Battletome: Helsmiths of Hashut"
+        },
+        {
+          "name": "Heroic Trait ‘Fire, You Worms!’",
+          "points": 0,
+          "notes": "Battletome: Helsmiths of Hashut"
+        },
+        {
+          "name": "Heroic Trait An Eye for Weakness",
+          "points": 0,
+          "notes": "Battletome: Helsmiths of Hashut"
+        },
+        {
+          "name": "Artefact of Power Scroll of Petrification",
+          "points": 0,
+          "notes": "Battletome: Helsmiths of Hashut"
+        },
+        {
+          "name": "Artefact of Power Gauntlets of Punishment",
+          "points": 0,
+          "notes": "Battletome: Helsmiths of Hashut"
+        },
+        {
+          "name": "Artefact of Power Crucible of Spite",
+          "points": 0,
+          "notes": "Battletome: Helsmiths of Hashut"
+        },
+        {
+          "name": "✹  Artefact of Power Gem of Utorak",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Artefact of Power Casque of Belittlement",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Artefact of Power Horn of the Bullfather",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Accursed Device Infernal Motivators",
+          "points": 20,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Accursed Device Earthwrack Stabilisers",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Accursed Device Bullfather’s Scorn",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Spell Lore Lore of Infernal Power",
+          "points": 0,
+          "notes": "Battletome: Helsmiths of Hashut"
+        },
+        {
+          "name": "Prayer Lore Prayers of the Scorched Sect",
+          "points": 0,
+          "notes": "Battletome: Helsmiths of Hashut"
+        }
+      ]
+    },
+    "MAGGOTKIN OF NURGLE": {
+      "heroes": [
+        {
+          "name": "Belga the Cystwitch",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "0-1 Plaguebearers , 0-1 Cankerborn ,",
+            "0-1 Rotbringer Lord , Any Rotbringers 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Plaguebearers , 0-1 Cankerborn , 0-1 Rotbringer Lord , Any Rotbringers",
+          "notes": ""
+        },
+        {
+          "name": "Bloab Rotspawned",
+          "unit_size": 1,
+          "points": 260,
+          "points_raw": "260",
+          "raw_lines": [
+            "0-1 Rotbringer Lord ,",
+            "Any Maggotkin of Nurgle 100mm"
+          ],
+          "base_size": "100mm",
+          "options_or_keywords": "0-1 Rotbringer Lord , Any Maggotkin of Nurgle",
+          "notes": ""
+        },
+        {
+          "name": "Cankerborn",
+          "unit_size": 2,
+          "points": 180,
+          "points_raw": "180 (-20)",
+          "raw_lines": [
+            "Any Daemon This Hero can join an eligible",
+            "regiment as a Plague Scion . 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any Daemon",
+          "notes": "This Hero can join an eligible regiment as a Plague Scion ."
+        },
+        {
+          "name": "Festus the Leechlord",
+          "unit_size": 1,
+          "points": 290,
+          "points_raw": "290",
+          "raw_lines": [
+            "0-1 Plague Scion ,",
+            "Any Maggotkin of Nurgle 150 × 95mm"
+          ],
+          "base_size": "150 × 95mm",
+          "options_or_keywords": "0-1 Plague Scion , Any Maggotkin of Nurgle",
+          "notes": ""
+        },
+        {
+          "name": "Gelgus Pust, the Prince of Sores",
+          "unit_size": 1,
+          "points": 200,
+          "points_raw": "200 (-20)",
+          "raw_lines": [
+            "0-1 Plague Scion ,",
+            "Any Maggotkin of Nurgle 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "0-1 Plague Scion , Any Maggotkin of Nurgle",
+          "notes": ""
+        },
+        {
+          "name": "Great Unclean One",
+          "unit_size": 1,
+          "points": 380,
+          "points_raw": "380 (-20)",
+          "raw_lines": [
+            "0-1 Plague Scion ,",
+            "Any Maggotkin of Nurgle 130mm"
+          ],
+          "base_size": "130mm",
+          "options_or_keywords": "0-1 Plague Scion , Any Maggotkin of Nurgle",
+          "notes": ""
+        },
+        {
+          "name": "Gutrot Spume",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100 (-20)",
+          "raw_lines": [
+            "0-1 Rotbringer Lord , Any Rotbringers 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Rotbringer Lord , Any Rotbringers",
+          "notes": ""
+        },
+        {
+          "name": "Harbinger of Decay",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "0-1 Rotbringer Lord , Any Rotbringers 90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "0-1 Rotbringer Lord , Any Rotbringers",
+          "notes": ""
+        },
+        {
+          "name": "Horticulous Slimux",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Any Daemon 105 × 70mm"
+          ],
+          "base_size": "105 × 70mm",
+          "options_or_keywords": "Any Daemon",
+          "notes": ""
+        },
+        {
+          "name": "Lord of Afflictions",
+          "unit_size": 1,
+          "points": 170,
+          "points_raw": "170",
+          "raw_lines": [
+            "Any Rotbringers 60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "Any Rotbringers",
+          "notes": ""
+        },
+        {
+          "name": "Lord of Blights",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Any Rotbringers This Hero can join an eligible",
+            "regiment as a Rotbringer Lord . 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any Rotbringers",
+          "notes": "This Hero can join an eligible regiment as a Rotbringer Lord ."
+        },
+        {
+          "name": "Lord of Plagues",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120 (+20)",
+          "raw_lines": [
+            "Any Rotbringers This Hero can join an eligible",
+            "regiment as a Rotbringer Lord . 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any Rotbringers",
+          "notes": "This Hero can join an eligible regiment as a Rotbringer Lord ."
+        },
+        {
+          "name": "Morbidex Twiceborn",
+          "unit_size": 1,
+          "points": 250,
+          "points_raw": "250",
+          "raw_lines": [
+            "0-1 Rotbringer Lord ,",
+            "Any Maggotkin of Nurgle 100mm"
+          ],
+          "base_size": "100mm",
+          "options_or_keywords": "0-1 Rotbringer Lord , Any Maggotkin of Nurgle",
+          "notes": ""
+        },
+        {
+          "name": "Orghotts Daemonspew",
+          "unit_size": 1,
+          "points": 260,
+          "points_raw": "260",
+          "raw_lines": [
+            "0-1 Rotbringer Lord ,",
+            "Any Maggotkin of Nurgle 100mm"
+          ],
+          "base_size": "100mm",
+          "options_or_keywords": "0-1 Rotbringer Lord , Any Maggotkin of Nurgle",
+          "notes": ""
+        },
+        {
+          "name": "Poxbringer, Herald of Nurgle",
+          "unit_size": 1,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "Any Daemon This Hero can join an eligible",
+            "regiment as a Plague Scion . 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Any Daemon",
+          "notes": "This Hero can join an eligible regiment as a Plague Scion ."
+        },
+        {
+          "name": "Rotbringer Sorcerer",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "0-1 Rotbringer Lord , Any Rotbringers 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Rotbringer Lord , Any Rotbringers",
+          "notes": ""
+        },
+        {
+          "name": "Rotigus",
+          "unit_size": 1,
+          "points": 420,
+          "points_raw": "420",
+          "raw_lines": [
+            "0-1 Plague Scion ,",
+            "Any Maggotkin of Nurgle 130mm"
+          ],
+          "base_size": "130mm",
+          "options_or_keywords": "0-1 Plague Scion , Any Maggotkin of Nurgle",
+          "notes": ""
+        },
+        {
+          "name": "Shaman Foulhoof",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "0-1 Rotbringer Lord , Any Rotbringers 32mm",
+            "✹  Sloppity Bilepiper,"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Rotbringer Lord , Any Rotbringers 32mm ✹  Sloppity Bilepiper",
+          "notes": ""
+        },
+        {
+          "name": "Herald of Nurgle",
+          "unit_size": 1,
+          "points": 90,
+          "points_raw": "90 (-10)",
+          "raw_lines": [
+            "Any Daemon This Hero can join an eligible",
+            "regiment as a Plague Scion . 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Any Daemon",
+          "notes": "This Hero can join an eligible regiment as a Plague Scion ."
+        },
+        {
+          "name": "Spoilpox Scrivener, Herald of Nurgle",
+          "unit_size": 1,
+          "points": 80,
+          "points_raw": "80",
+          "raw_lines": [
+            "Any Daemon This Hero can join an eligible",
+            "regiment as a Plague Scion . 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any Daemon",
+          "notes": "This Hero can join an eligible regiment as a Plague Scion ."
+        },
+        {
+          "name": "The Glottkin",
+          "unit_size": 1,
+          "points": 470,
+          "points_raw": "470",
+          "raw_lines": [
+            "0-1 Rotbringer Lord ,",
+            "Any Maggotkin of Nurgle 130mm",
+            "UPDATED   NEW",
+            "33"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Rotbringer Lord , Any Maggotkin of Nurgle 130mm UPDATED   NEW 33",
+          "notes": ""
+        },
+        {
+          "name": "Bladebringer, Herald on Hellflayer",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "0-1 Slaaneshi Beguilers ,",
+            "Any War Machine 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Slaaneshi Beguilers , Any War Machine",
+          "notes": ""
+        },
+        {
+          "name": "Bladebringer, Herald on Seeker Chariot",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "0-1 Slaaneshi Beguilers ,",
+            "Any War Machine 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Slaaneshi Beguilers , Any War Machine",
+          "notes": ""
+        },
+        {
+          "name": "Viceleader, Herald of Slaanesh",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Any Daemon This Hero can join an eligible",
+            "regiment as a Slaaneshi Beguiler 25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Any Daemon",
+          "notes": "This Hero can join an eligible regiment as a Slaaneshi Beguiler"
+        }
+      ],
+      "units": [
+        {
+          "name": "Beast of Nurgle",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100 (-10)",
+          "raw_lines": [
+            "Daemon, Beast 60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "Daemon, Beast",
+          "notes": ""
+        },
+        {
+          "name": "Nurglings",
+          "unit_size": 3,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Daemon, Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Daemon, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Pestigors",
+          "unit_size": 10,
+          "points": 140,
+          "points_raw": "140 (+10)",
+          "raw_lines": [
+            "Rotbringers, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Rotbringers, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Plague Drones",
+          "unit_size": 3,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Daemon, Cavalry 60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "Daemon, Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Plaguebearers",
+          "unit_size": 10,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Daemon, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Daemon, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Pox-Wretches",
+          "unit_size": 14,
+          "points": 110,
+          "points_raw": "110 (+10)",
+          "raw_lines": [
+            "Rotbringers, Infantry 25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Rotbringers, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Pusgoyle Blightlords",
+          "unit_size": 2,
+          "points": 190,
+          "points_raw": "190 (-10)",
+          "raw_lines": [
+            "Rotbringers, Cavalry 60mm",
+            "Pusgoyle Blightlords (1 model) 1 110 Rotbringers, Cavalry",
+            "You can include 1 unit of this",
+            "type for each Lord of Afflictions",
+            "in your army.",
+            "60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "Rotbringers, Cavalry 60mm Pusgoyle Blightlords (1 model) 1 110 Rotbringers, Cavalry",
+          "notes": "You can include 1 unit of this type for each Lord of Afflictions in your army."
+        },
+        {
+          "name": "Putrid Blightkings",
+          "unit_size": 5,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Rotbringers, Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Rotbringers, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Rotmire Creed",
+          "unit_size": 10,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Rotbringers, Infantry This unit cannot be reinforced.",
+            "32mm [2],",
+            "28.5mm [2],",
+            "25mm [6]"
+          ],
+          "base_size": "5mm [2], 25mm [6]",
+          "options_or_keywords": "Rotbringers, Infantry",
+          "notes": "This unit cannot be reinforced. 32mm [2], 28."
+        },
+        {
+          "name": "Rotswords",
+          "unit_size": 10,
+          "points": 210,
+          "points_raw": "210 (+10)",
+          "raw_lines": [
+            "Rotbringers, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Rotbringers, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Sloven Knights",
+          "unit_size": 3,
+          "points": 180,
+          "points_raw": "180",
+          "raw_lines": [
+            "Rotbringers, Cavalry 75 × 42mm"
+          ],
+          "base_size": "75 × 42mm",
+          "options_or_keywords": "Rotbringers, Cavalry",
+          "notes": ""
+        }
+      ],
+      "auxiliary": [
+        {
+          "name": "Battle Formation Tallyband of Nurgle",
+          "points": 0,
+          "notes": "Battletome: Maggotkin of Nurgle"
+        },
+        {
+          "name": "Battle Formation Nurgle’s Menagerie",
+          "points": 0,
+          "notes": "Battletome: Maggotkin of Nurgle"
+        },
+        {
+          "name": "Battle Formation Plague Cyst",
+          "points": 0,
+          "notes": "Battletome: Maggotkin of Nurgle"
+        },
+        {
+          "name": "Battle Formation Affliction Cyst",
+          "points": 0,
+          "notes": "Battletome: Maggotkin of Nurgle"
+        },
+        {
+          "name": "Heroic Trait Gift of Febrile Frenzy",
+          "points": 0,
+          "notes": "Battletome: Maggotkin of Nurgle"
+        },
+        {
+          "name": "Heroic Trait Grandfather’s Blessing",
+          "points": 0,
+          "notes": "Battletome: Maggotkin of Nurgle"
+        },
+        {
+          "name": "Heroic Trait Overpowering Stench",
+          "points": 0,
+          "notes": "Battletome: Maggotkin of Nurgle"
+        },
+        {
+          "name": "✹  Plaguefather’s Pox Snuggling Sickness",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Plaguefather’s Pox Chuckling Murrain",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Plaguefather’s Pox The Weeping Flux",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Artefact of Power The Witherstave",
+          "points": 0,
+          "notes": "Battletome: Maggotkin of Nurgle"
+        },
+        {
+          "name": "Artefact of Power Rustfang",
+          "points": 0,
+          "notes": "Battletome: Maggotkin of Nurgle"
+        },
+        {
+          "name": "Artefact of Power The Carrion Dirge",
+          "points": 0,
+          "notes": "Battletome: Maggotkin of Nurgle"
+        },
+        {
+          "name": "Spell Lore Lore of Malignance",
+          "points": 0,
+          "notes": "Battletome: Maggotkin of Nurgle"
+        },
+        {
+          "name": "Prayer Lore Lore of Virulence",
+          "points": 0,
+          "notes": "Battletome: Maggotkin of Nurgle"
+        },
+        {
+          "name": "✹  Prayer Lore Benedictions of Sickness",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Faction Terrain Feculent Gnarlmaw",
+          "points": 0,
+          "notes": "Battletome: Maggotkin of Nurgle"
+        }
+      ]
+    },
+    "SKAVEN": {
+      "heroes": [
+        {
+          "name": "Arch-Warlock",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "0-1 Clanrats , Any Skryre 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Clanrats , Any Skryre",
+          "notes": ""
+        },
+        {
+          "name": "Clawlord",
+          "unit_size": 1,
+          "points": 70,
+          "points_raw": "70",
+          "raw_lines": [
+            "Any Verminus This Hero can join an eligible",
+            "regiment as a Skaven Overclaw. 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Any Verminus",
+          "notes": "This Hero can join an eligible regiment as a Skaven Overclaw."
+        },
+        {
+          "name": "Clawlord on Gnaw-beast",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Any Verminus This Hero can join an eligible",
+            "regiment as a Skaven Overclaw. 75 × 42mm"
+          ],
+          "base_size": "75 × 42mm",
+          "options_or_keywords": "Any Verminus",
+          "notes": "This Hero can join an eligible regiment as a Skaven Overclaw."
+        },
+        {
+          "name": "Deathmaster",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120 (-10)",
+          "raw_lines": [
+            "0-1 Clanrats , Any Eshin This Hero can join an eligible",
+            "regiment as a Skaven Overclaw. 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Clanrats , Any Eshin",
+          "notes": "This Hero can join an eligible regiment as a Skaven Overclaw."
+        },
+        {
+          "name": "Deathmaster Crixxit",
+          "unit_size": 1,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Any Eshin This Hero can join an eligible",
+            "regiment as a Skaven Overclaw. 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any Eshin",
+          "notes": "This Hero can join an eligible regiment as a Skaven Overclaw."
+        },
+        {
+          "name": "Grey Seer",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "0-1 Skaven Overclaw , Any Sk aven 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Skaven Overclaw , Any Sk aven",
+          "notes": ""
+        },
+        {
+          "name": "Grey Seer on Screaming Bell",
+          "unit_size": 1,
+          "points": 310,
+          "points_raw": "310",
+          "raw_lines": [
+            "0-1 Skaven Overclaw , Any Sk aven 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Skaven Overclaw , Any Sk aven",
+          "notes": ""
+        },
+        {
+          "name": "Krittok Foulblade",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "0-1 Skaven Overclaw , Any Sk aven 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Skaven Overclaw , Any Sk aven",
+          "notes": ""
+        },
+        {
+          "name": "Lord Skreech Verminking",
+          "unit_size": 1,
+          "points": 380,
+          "points_raw": "380",
+          "raw_lines": [
+            "0-1 Skaven Overclaw , Any Sk aven 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Skaven Overclaw , Any Sk aven",
+          "notes": ""
+        },
+        {
+          "name": "Master Moulder",
+          "unit_size": 1,
+          "points": 80,
+          "points_raw": "80",
+          "raw_lines": [
+            "0-1 Clanrats , Any Moulder This Hero can join an eligible",
+            "regiment as a Skaven Overclaw. 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Clanrats , Any Moulder",
+          "notes": "This Hero can join an eligible regiment as a Skaven Overclaw."
+        },
+        {
+          "name": "Plague Priest on Plague Furnace",
+          "unit_size": 1,
+          "points": 350,
+          "points_raw": "350",
+          "raw_lines": [
+            "0-1 Clanrats , Any Pestilens 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Clanrats , Any Pestilens",
+          "notes": ""
+        },
+        {
+          "name": "Thanquol on Boneripper",
+          "unit_size": 1,
+          "points": 310,
+          "points_raw": "310 (-20)",
+          "raw_lines": [
+            "0-1 Skaven Overclaw , Any Sk aven 105 × 70mm"
+          ],
+          "base_size": "105 × 70mm",
+          "options_or_keywords": "0-1 Skaven Overclaw , Any Sk aven",
+          "notes": ""
+        },
+        {
+          "name": "Verminlord Corruptor",
+          "unit_size": 1,
+          "points": 260,
+          "points_raw": "260 (-20)",
+          "raw_lines": [
+            "0-1 Skaven Overclaw , Any Sk aven 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Skaven Overclaw , Any Sk aven",
+          "notes": ""
+        },
+        {
+          "name": "Verminlord Deceiver",
+          "unit_size": 1,
+          "points": 390,
+          "points_raw": "390",
+          "raw_lines": [
+            "0-1 Skaven Overclaw , Any Sk aven 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Skaven Overclaw , Any Sk aven",
+          "notes": ""
+        },
+        {
+          "name": "Verminlord Warbringer",
+          "unit_size": 1,
+          "points": 260,
+          "points_raw": "260 (-20)",
+          "raw_lines": [
+            "0-1 Skaven Overclaw , Any Sk aven 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Skaven Overclaw , Any Sk aven",
+          "notes": ""
+        },
+        {
+          "name": "Verminlord Warpseer",
+          "unit_size": 1,
+          "points": 300,
+          "points_raw": "300",
+          "raw_lines": [
+            "0-1 Skaven Overclaw , Any Sk aven 120 × 92mm",
+            "Vizzik Skour, Prophet of the"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Skaven Overclaw , Any Sk aven 120 × 92mm Vizzik Skour, Prophet of the",
+          "notes": ""
+        },
+        {
+          "name": "Horned Rat",
+          "unit_size": 1,
+          "points": 340,
+          "points_raw": "340",
+          "raw_lines": [
+            "0-1 Skaven Overclaw , Any Sk aven 130mm"
+          ],
+          "base_size": "130mm",
+          "options_or_keywords": "0-1 Skaven Overclaw , Any Sk aven",
+          "notes": ""
+        },
+        {
+          "name": "Warlock Bombardier",
+          "unit_size": 1,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "0-1 Clanrats , Any Skryre This Hero can join an eligible",
+            "regiment as a Skaven Overclaw. 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Clanrats , Any Skryre",
+          "notes": "This Hero can join an eligible regiment as a Skaven Overclaw."
+        },
+        {
+          "name": "Warlock Engineer",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "0-1 Clanrats , Any Skryre This Hero can join an eligible",
+            "regiment as a Skaven Overclaw. 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Clanrats , Any Skryre",
+          "notes": "This Hero can join an eligible regiment as a Skaven Overclaw."
+        },
+        {
+          "name": "Warlock Galvaneer",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "0-1 Clanrats , Any Skryre This Hero can join an eligible",
+            "regiment as a Skaven Overclaw. 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Clanrats , Any Skryre",
+          "notes": "This Hero can join an eligible regiment as a Skaven Overclaw."
+        },
+        {
+          "name": "Plague Priest",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "0-1 Clanrats , Any Pestilens 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Clanrats , Any Pestilens",
+          "notes": ""
+        }
+      ],
+      "units": [
+        {
+          "name": "Acolyte Globadiers",
+          "unit_size": 5,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "Skryre, Infantry, Weapon Team",
+            "You cannot include more than",
+            "1 Skryre Weapon Team",
+            "in a regiment led by a",
+            "non-Skryre Hero.",
+            "28.5mm"
+          ],
+          "base_size": "5mm",
+          "options_or_keywords": "Skryre, Infantry, Weapon Team",
+          "notes": "You cannot include more than 1 Skryre Weapon Team in a regiment led by a non-Skryre Hero. 28."
+        },
+        {
+          "name": "Brood Terror",
+          "unit_size": 1,
+          "points": 220,
+          "points_raw": "220 (-10)",
+          "raw_lines": [
+            "Moulder, Monster 90mm"
+          ],
+          "base_size": "90mm",
+          "options_or_keywords": "Moulder, Monster",
+          "notes": ""
+        },
+        {
+          "name": "Clanrats",
+          "unit_size": 20,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Verminus, Infantry 25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Verminus, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Doom-Flayers",
+          "unit_size": 2,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Skryre, War Machine",
+            "You cannot include more than",
+            "1 Skryre War Machine",
+            "in a regiment led by a",
+            "non-Skryre Hero.",
+            "50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "Skryre, War Machine",
+          "notes": "You cannot include more than 1 Skryre War Machine in a regiment led by a non-Skryre Hero."
+        },
+        {
+          "name": "Doomwheel",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Skryre, War Machine",
+            "You cannot include more than",
+            "1 Skryre War Machine",
+            "in a regiment led by a",
+            "non-Skryre Hero.",
+            "105 × 70mm"
+          ],
+          "base_size": "105 × 70mm",
+          "options_or_keywords": "Skryre, War Machine",
+          "notes": "You cannot include more than 1 Skryre War Machine in a regiment led by a non-Skryre Hero."
+        },
+        {
+          "name": "Gutter Runners",
+          "unit_size": 10,
+          "points": 150,
+          "points_raw": "150 (-10)",
+          "raw_lines": [
+            "Eshin, Infantry This unit cannot be reinforced. 32mm [1],",
+            "28.5mm [11]"
+          ],
+          "base_size": "5mm [11]",
+          "options_or_keywords": "Eshin, Infantry",
+          "notes": "This unit cannot be reinforced. 32mm [1], 28."
+        },
+        {
+          "name": "Hell Pit Abomination",
+          "unit_size": 1,
+          "points": 200,
+          "points_raw": "200",
+          "raw_lines": [
+            "Moulder, Monster 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Moulder, Monster",
+          "notes": ""
+        },
+        {
+          "name": "Night Runners",
+          "unit_size": 10,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Eshin, Infantry This unit cannot be reinforced. 28.5mm [10]"
+          ],
+          "base_size": "5mm [10]",
+          "options_or_keywords": "Eshin, Infantry",
+          "notes": "This unit cannot be reinforced. 28."
+        },
+        {
+          "name": "Plague Monks",
+          "unit_size": 20,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Pestilens, Infantry 25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Pestilens, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Plagueclaw",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Pestilens, War Machine 120 × 92mm",
+            "UPDATED   NEW",
+            "35"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Pestilens, War Machine 120 × 92mm UPDATED   NEW 35",
+          "notes": ""
+        },
+        {
+          "name": "Plaguepack",
+          "unit_size": 5,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Pestilens, Infantry This unit cannot be reinforced.",
+            "32mm [1],",
+            "28.5mm [1],",
+            "25mm [4]"
+          ],
+          "base_size": "5mm [1], 25mm [4]",
+          "options_or_keywords": "Pestilens, Infantry",
+          "notes": "This unit cannot be reinforced. 32mm [1], 28."
+        },
+        {
+          "name": "Rat Ogors",
+          "unit_size": 3,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Moulder, Infantry 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "Moulder, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Ratling Guns",
+          "unit_size": 3,
+          "points": 170,
+          "points_raw": "170",
+          "raw_lines": [
+            "Skryre, Infantry, Weapon Team",
+            "You cannot include more than",
+            "1 Skryre Weapon Team",
+            "in a regiment led by a",
+            "non-Skryre Hero.",
+            "60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Skryre, Infantry, Weapon Team",
+          "notes": "You cannot include more than 1 Skryre Weapon Team in a regiment led by a non-Skryre Hero."
+        },
+        {
+          "name": "Ratling Warpblaster",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Skryre, War Machine",
+            "You cannot include more than",
+            "1 Skryre War Machine",
+            "in a regiment led by a",
+            "non-Skryre Hero.",
+            "105 × 70mm"
+          ],
+          "base_size": "105 × 70mm",
+          "options_or_keywords": "Skryre, War Machine",
+          "notes": "You cannot include more than 1 Skryre War Machine in a regiment led by a non-Skryre Hero."
+        },
+        {
+          "name": "Stormfiends",
+          "unit_size": 3,
+          "points": 230,
+          "points_raw": "230 (-10)",
+          "raw_lines": [
+            "Skryre, Moulder, Infantry 60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "Skryre, Moulder, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Stormvermin",
+          "unit_size": 10,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Verminus, Infantry 28.5mm"
+          ],
+          "base_size": "5mm",
+          "options_or_keywords": "Verminus, Infantry 28.",
+          "notes": ""
+        },
+        {
+          "name": "Warp-Grinder",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100 (-20)",
+          "raw_lines": [
+            "Skryre, War Machine",
+            "You cannot include more than",
+            "1 Skryre War Machine",
+            "in a regiment led by a",
+            "non-Skryre Hero.",
+            "90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "Skryre, War Machine",
+          "notes": "You cannot include more than 1 Skryre War Machine in a regiment led by a non-Skryre Hero."
+        },
+        {
+          "name": "Warp Lightning Cannon",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Skryre, War Machine",
+            "You cannot include more than",
+            "1 Skryre War Machine",
+            "in a regiment led by a",
+            "non-Skryre Hero.",
+            "120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Skryre, War Machine",
+          "notes": "You cannot include more than 1 Skryre War Machine in a regiment led by a non-Skryre Hero."
+        },
+        {
+          "name": "Warpfire Throwers",
+          "unit_size": 3,
+          "points": 120,
+          "points_raw": "120 (-10)",
+          "raw_lines": [
+            "Skryre, Infantry, Weapon Team",
+            "You cannot include more than",
+            "1 Skryre Weapon Team",
+            "in a regiment led by a",
+            "non-Skryre Hero.",
+            "60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Skryre, Infantry, Weapon Team",
+          "notes": "You cannot include more than 1 Skryre Weapon Team in a regiment led by a non-Skryre Hero."
+        },
+        {
+          "name": "Warplock Jezzails",
+          "unit_size": 3,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Skryre, Infantry 60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Skryre, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Warpvolt Scourgers",
+          "unit_size": 3,
+          "points": 170,
+          "points_raw": "170",
+          "raw_lines": [
+            "Skryre, Infantry, Weapon Team",
+            "You cannot include more than",
+            "1 Skryre Weapon Team",
+            "in a regiment led by a",
+            "non-Skryre Hero.",
+            "60 × 35mm",
+            "UPDATED   NEW",
+            "36"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Skryre, Infantry, Weapon Team",
+          "notes": "You cannot include more than 1 Skryre Weapon Team in a regiment led by a non-Skryre Hero. 60 × 35mm UPDATED   NEW 36"
+        }
+      ],
+      "auxiliary": [
+        {
+          "name": "Battle Formation Warpcog Convocation",
+          "points": 0,
+          "notes": "Battletome: Skaven"
+        },
+        {
+          "name": "Battle Formation Fleshmeld Menagerie",
+          "points": 0,
+          "notes": "Battletome: Skaven"
+        },
+        {
+          "name": "Battle Formation Virulent Procession",
+          "points": 0,
+          "notes": "Battletome: Skaven"
+        },
+        {
+          "name": "Battle Formation Claw-horde",
+          "points": 0,
+          "notes": "Battletome: Skaven"
+        },
+        {
+          "name": "✹  Heroic Trait Masterclan Connections",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Heroic Trait Master of the Swarm",
+          "points": 20,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Heroic Trait Essence of the Gnaw",
+          "points": 20,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Heroic Trait Scurry Away",
+          "points": 0,
+          "notes": "Battletome: Skaven"
+        },
+        {
+          "name": "Heroic Trait Short-tempered",
+          "points": 0,
+          "notes": "Battletome: Skaven"
+        },
+        {
+          "name": "Heroic Trait Skilled Manipulator",
+          "points": 0,
+          "notes": "Battletome: Skaven"
+        },
+        {
+          "name": "✹  Moulder Mutation Transplanted Brains",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Moulder Mutation Anabolic Accelerators",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Moulder Mutation Serrated Bone Protrusions",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Artefact of Power Foulhide",
+          "points": 0,
+          "notes": "Battletome: Skaven"
+        },
+        {
+          "name": "Artefact of Power Warpstone Charm",
+          "points": 0,
+          "notes": "Battletome: Skaven"
+        },
+        {
+          "name": "Artefact of Power Skavenbrew",
+          "points": 0,
+          "notes": "Battletome: Skaven"
+        },
+        {
+          "name": "Spell Lore Lore of Ruin",
+          "points": 0,
+          "notes": "Battletome: Skaven"
+        },
+        {
+          "name": "Prayer Lore Noxious Prayers",
+          "points": 0,
+          "notes": "Battletome: Skaven"
+        },
+        {
+          "name": "Manifestation Lore Manifestations of Doom",
+          "points": 0,
+          "notes": "Battletome: Skaven"
+        },
+        {
+          "name": "Faction Terrain Gnawhole",
+          "points": 0,
+          "notes": "Battletome: Skaven"
+        }
+      ]
+    },
+    "SLAVES TO DARKNESS": {
+      "heroes": [
+        {
+          "name": "Abraxia, Spear of the Everchosen",
+          "unit_size": 1,
+          "points": 250,
+          "points_raw": "250",
+          "raw_lines": [
+            "0-1 Ruinous Champion ,",
+            "Any Slaves to Darkness 100mm"
+          ],
+          "base_size": "100mm",
+          "options_or_keywords": "0-1 Ruinous Champion , Any Slaves to Darkness",
+          "notes": ""
+        },
+        {
+          "name": "Archaon, the Everchosen",
+          "unit_size": 1,
+          "points": 810,
+          "points_raw": "810",
+          "raw_lines": [
+            "0-1 Ruinous Champion ,",
+            "Any Slaves to Darkness 160mm"
+          ],
+          "base_size": "160mm",
+          "options_or_keywords": "0-1 Ruinous Champion , Any Slaves to Darkness",
+          "notes": ""
+        },
+        {
+          "name": "Be’lakor, the Dark Master",
+          "unit_size": 1,
+          "points": 450,
+          "points_raw": "450",
+          "raw_lines": [
+            "0-1 Eternus or Ruinous Champion ,",
+            "Any Slaves to Darkness 100mm"
+          ],
+          "base_size": "100mm",
+          "options_or_keywords": "0-1 Eternus or Ruinous Champion , Any Slaves to Darkness",
+          "notes": ""
+        },
+        {
+          "name": "Centaurion Marshal",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "0-1 Monster, Any Chaos Legionnaires ,",
+            "Any Daemon",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Ruinous Champion .",
+            "80mm"
+          ],
+          "base_size": "80mm",
+          "options_or_keywords": "0-1 Monster, Any Chaos Legionnaires , Any Daemon",
+          "notes": "This Hero can join an eligible regiment as a Ruinous Champion ."
+        },
+        {
+          "name": "Chaos Lord",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "0-1 Ruinous Champion ,",
+            "Any Slaves to Darkness",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Ruinous Champion .",
+            "40mm",
+            "✹  Chaos Lord on"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Ruinous Champion , Any Slaves to Darkness",
+          "notes": "This Hero can join an eligible regiment as a Ruinous Champion . 40mm ✹  Chaos Lord on"
+        },
+        {
+          "name": "Daemonic Mount",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130 (-10)",
+          "raw_lines": [
+            "0-1 Ruinous Champion ,",
+            "Any Slaves to Darkness",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Ruinous Champion .",
+            "90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "0-1 Ruinous Champion , Any Slaves to Darkness",
+          "notes": "This Hero can join an eligible regiment as a Ruinous Champion ."
+        },
+        {
+          "name": "Chaos Lord on Karkadrak",
+          "unit_size": 1,
+          "points": 190,
+          "points_raw": "190",
+          "raw_lines": [
+            "0-1 Ruinous Champion ,",
+            "Any Slaves to Darkness",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Ruinous Champion .",
+            "90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "0-1 Ruinous Champion , Any Slaves to Darkness",
+          "notes": "This Hero can join an eligible regiment as a Ruinous Champion ."
+        },
+        {
+          "name": "Chaos Sorcerer Lord",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "0-1 Ruinous Champion , 0-1 Monster,",
+            "Any Warriors of Chaos 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Ruinous Champion , 0-1 Monster, Any Warriors of Chaos",
+          "notes": ""
+        },
+        {
+          "name": "Daemon Prince",
+          "unit_size": 1,
+          "points": 230,
+          "points_raw": "230 (-20)",
+          "raw_lines": [
+            "0-1 Ruinous Champion ,",
+            "Any Slaves to Darkness 60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "0-1 Ruinous Champion , Any Slaves to Darkness",
+          "notes": ""
+        },
+        {
+          "name": "Darkoath Chieftain",
+          "unit_size": 1,
+          "points": 80,
+          "points_raw": "80",
+          "raw_lines": [
+            "0-1 Monster, Any Darkoath This Hero can join an eligible",
+            "regiment as an Oathsworn . 32mm",
+            "✹  Darkoath Chieftain"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Monster, Any Darkoath",
+          "notes": "This Hero can join an eligible regiment as an Oathsworn . 32mm ✹  Darkoath Chieftain"
+        },
+        {
+          "name": "on Warsteed",
+          "unit_size": 1,
+          "points": 90,
+          "points_raw": "90 (-10)",
+          "raw_lines": [
+            "0-1 Oathsworn , 0-1 Monster,",
+            "Any Darkoath",
+            "This Hero can join an eligible",
+            "regiment as an Oathsworn . 75 × 42mm"
+          ],
+          "base_size": "75 × 42mm",
+          "options_or_keywords": "0-1 Oathsworn , 0-1 Monster, Any Darkoath",
+          "notes": "This Hero can join an eligible regiment as an Oathsworn ."
+        },
+        {
+          "name": "Darkoath Warqueen",
+          "unit_size": 1,
+          "points": 80,
+          "points_raw": "80",
+          "raw_lines": [
+            "0-1 Oathsworn , 0-1 Monster,",
+            "Any Darkoath 32mm",
+            "✹  Eternus, Blade of the"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Oathsworn , 0-1 Monster, Any Darkoath 32mm ✹  Eternus, Blade of the",
+          "notes": ""
+        },
+        {
+          "name": "First Prince",
+          "unit_size": 1,
+          "points": 160,
+          "points_raw": "160 (-20)",
+          "raw_lines": [
+            "0-1 Ruinous Champion ,",
+            "Any Slaves to Darkness",
+            "This Hero can join",
+            "Be’lakor’s regiment. 90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "0-1 Ruinous Champion , Any Slaves to Darkness",
+          "notes": "This Hero can join Be’lakor’s regiment."
+        },
+        {
+          "name": "Exalted Hero of Chaos",
+          "unit_size": 1,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "0-1 Monster,",
+            "Any Warriors of Chaos",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Ruinous Champion .",
+            "40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Monster, Any Warriors of Chaos",
+          "notes": "This Hero can join an eligible regiment as a Ruinous Champion ."
+        },
+        {
+          "name": "Gaunt Summoner",
+          "unit_size": 1,
+          "points": 160,
+          "points_raw": "160",
+          "raw_lines": [
+            "Any Slaves to Darkness 40mm",
+            "Gaunt Summoner on"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Any Slaves to Darkness 40mm Gaunt Summoner on",
+          "notes": ""
+        },
+        {
+          "name": "Disc of Tzeentch",
+          "unit_size": 1,
+          "points": 190,
+          "points_raw": "190",
+          "raw_lines": [
+            "Any Slaves to Darkness 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any Slaves to Darkness",
+          "notes": ""
+        },
+        {
+          "name": "Gunnar Brand",
+          "unit_size": 1,
+          "points": 180,
+          "points_raw": "180",
+          "raw_lines": [
+            "Singri Brand  (required),",
+            "The Oathsworn Kin  (required),",
+            "Any Darkoath",
+            "32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Singri Brand  (required), The Oathsworn Kin  (required), Any Darkoath",
+          "notes": ""
+        },
+        {
+          "name": "Singri Brand",
+          "unit_size": 1,
+          "points": 0,
+          "points_raw": "0",
+          "raw_lines": [
+            "None This unit can only be taken in",
+            "Gunnar Brand ’s regiment. 60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "None",
+          "notes": "This unit can only be taken in Gunnar Brand ’s regiment."
+        },
+        {
+          "name": "Ogroid Myrmidon",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Any Ogroid Theridons ,",
+            "Any Monster, Any Daemon",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Ruinous Champion .",
+            "50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "Any Ogroid Theridons , Any Monster, Any Daemon",
+          "notes": "This Hero can join an eligible regiment as a Ruinous Champion ."
+        },
+        {
+          "name": "Chaos Lord on Manticore",
+          "unit_size": 1,
+          "points": 260,
+          "points_raw": "260",
+          "raw_lines": [
+            "0-1 Ruinous Champion , 0-1 Monster,",
+            "Any Slaves to Darkness 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Ruinous Champion , 0-1 Monster, Any Slaves to Darkness",
+          "notes": ""
+        },
+        {
+          "name": "Chaos Sorcerer Lord on Manticore",
+          "unit_size": 1,
+          "points": 280,
+          "points_raw": "280",
+          "raw_lines": [
+            "0-1 Ruinous Champion , 0-1 Monster,",
+            "Any Warriors of Chaos 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Ruinous Champion , 0-1 Monster, Any Warriors of Chaos",
+          "notes": ""
+        },
+        {
+          "name": "Chaos Warshrine",
+          "unit_size": 1,
+          "points": 250,
+          "points_raw": "250",
+          "raw_lines": [
+            "0-1 Ruinous Champion ,",
+            "Any Warriors of Chaos 120 × 92mm",
+            "69"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Ruinous Champion , Any Warriors of Chaos 120 × 92mm 69",
+          "notes": ""
+        }
+      ],
+      "units": [
+        {
+          "name": "Chaos Chariot",
+          "unit_size": 1,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "Warriors of Chaos, War Machine 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Warriors of Chaos, War Machine",
+          "notes": ""
+        },
+        {
+          "name": "Chaos Chosen",
+          "unit_size": 5,
+          "points": 250,
+          "points_raw": "250 (-20)",
+          "raw_lines": [
+            "Warriors of Chaos, Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Warriors of Chaos, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Chaos Furies",
+          "unit_size": 6,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Daemon, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Daemon, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Chaos Knights",
+          "unit_size": 5,
+          "points": 240,
+          "points_raw": "240 (-10)",
+          "raw_lines": [
+            "Warriors of Chaos, Cavalry 75 × 42mm"
+          ],
+          "base_size": "75 × 42mm",
+          "options_or_keywords": "Warriors of Chaos, Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Chaos Legionnaires",
+          "unit_size": 8,
+          "points": 80,
+          "points_raw": "80",
+          "raw_lines": [
+            "Infantry This unit cannot be reinforced. 32mm [5],",
+            "28.5mm [3]"
+          ],
+          "base_size": "5mm [3]",
+          "options_or_keywords": "Infantry",
+          "notes": "This unit cannot be reinforced. 32mm [5], 28."
+        },
+        {
+          "name": "Chaos Spawn",
+          "unit_size": 1,
+          "points": 60,
+          "points_raw": "60",
+          "raw_lines": [
+            "Beast 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "Beast",
+          "notes": ""
+        },
+        {
+          "name": "Chaos Warriors",
+          "unit_size": 10,
+          "points": 180,
+          "points_raw": "180",
+          "raw_lines": [
+            "Warriors of Chaos, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Warriors of Chaos, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Darkoath Fellriders",
+          "unit_size": 5,
+          "points": 130,
+          "points_raw": "130 (-10)",
+          "raw_lines": [
+            "Darkoath, Cavalry 60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Darkoath, Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Darkoath Marauders",
+          "unit_size": 10,
+          "points": 80,
+          "points_raw": "80",
+          "raw_lines": [
+            "Darkoath, Infantry 28.5mm"
+          ],
+          "base_size": "5mm",
+          "options_or_keywords": "Darkoath, Infantry 28.",
+          "notes": ""
+        },
+        {
+          "name": "Darkoath Savagers",
+          "unit_size": 10,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "Darkoath, Infantry This unit cannot be reinforced. 32mm [3],",
+            "28.5mm [7]"
+          ],
+          "base_size": "5mm [7]",
+          "options_or_keywords": "Darkoath, Infantry",
+          "notes": "This unit cannot be reinforced. 32mm [3], 28."
+        },
+        {
+          "name": "Darkoath Wilderfiend",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120 (-10)",
+          "raw_lines": [
+            "Darkoath, Beast 60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "Darkoath, Beast",
+          "notes": ""
+        },
+        {
+          "name": "Fomoroid Crusher",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Monster 60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "Monster",
+          "notes": ""
+        },
+        {
+          "name": "Gorebeast Chariot",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Warriors of Chaos, War Machine 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Warriors of Chaos, War Machine",
+          "notes": ""
+        },
+        {
+          "name": "Legion of the First Prince Beasts of Nurgle",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Legion of the First Prince,",
+            "Daemon, Beast",
+            "This unit can only be taken in a",
+            "Legion of the First Prince Army",
+            "of Renown.",
+            "60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "Legion of the First Prince, Daemon, Beast",
+          "notes": "This unit can only be taken in a Legion of the First Prince Army of Renown."
+        },
+        {
+          "name": "Legion of the First Prince Bloodcrushers",
+          "unit_size": 3,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Legion of the First Prince,",
+            "Daemon, Cavalry",
+            "This unit can only be taken in a",
+            "Legion of the First Prince Army",
+            "of Renown.",
+            "90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "Legion of the First Prince, Daemon, Cavalry",
+          "notes": "This unit can only be taken in a Legion of the First Prince Army of Renown."
+        },
+        {
+          "name": "Legion of the First Prince Bloodletters",
+          "unit_size": 10,
+          "points": 170,
+          "points_raw": "170",
+          "raw_lines": [
+            "Legion of the First Prince,",
+            "Daemon, Infantry",
+            "This unit can only be taken in a",
+            "Legion of the First Prince Army",
+            "of Renown.",
+            "32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Legion of the First Prince, Daemon, Infantry",
+          "notes": "This unit can only be taken in a Legion of the First Prince Army of Renown."
+        },
+        {
+          "name": "Legion of the First Prince Fiends",
+          "unit_size": 3,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Legion of the First Prince,",
+            "Daemon, Beast",
+            "This unit can only be taken in a",
+            "Legion of the First Prince Army",
+            "of Renown.",
+            "75 × 42mm"
+          ],
+          "base_size": "75 × 42mm",
+          "options_or_keywords": "Legion of the First Prince, Daemon, Beast",
+          "notes": "This unit can only be taken in a Legion of the First Prince Army of Renown."
+        },
+        {
+          "name": "Legion of the First Prince Flamers of Tzeentch",
+          "unit_size": 3,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Legion of the First Prince,",
+            "Daemon, Infantry",
+            "This unit can only be taken in a",
+            "Legion of the First Prince Army",
+            "of Renown.",
+            "32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Legion of the First Prince, Daemon, Infantry",
+          "notes": "This unit can only be taken in a Legion of the First Prince Army of Renown."
+        },
+        {
+          "name": "Legion of the First Prince Hellflayer",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Legion of the First Prince,",
+            "Daemon, War Machine",
+            "This unit can only be taken in a",
+            "Legion of the First Prince Army",
+            "of Renown.",
+            "120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Legion of the First Prince, Daemon, War Machine",
+          "notes": "This unit can only be taken in a Legion of the First Prince Army of Renown."
+        },
+        {
+          "name": "Legion of the First Prince Plaguebearers",
+          "unit_size": 10,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Legion of the First Prince,",
+            "Daemon, Infantry",
+            "This unit can only be taken in a",
+            "Legion of the First Prince Army",
+            "of Renown.",
+            "32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Legion of the First Prince, Daemon, Infantry",
+          "notes": "This unit can only be taken in a Legion of the First Prince Army of Renown."
+        },
+        {
+          "name": "Legion of the First Prince Screamers of Tzeentch",
+          "unit_size": 3,
+          "points": 80,
+          "points_raw": "80",
+          "raw_lines": [
+            "Legion of the First Prince,",
+            "Daemon, Beast",
+            "This unit can only be taken in a",
+            "Legion of the First Prince Army",
+            "of Renown.",
+            "32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Legion of the First Prince, Daemon, Beast",
+          "notes": "This unit can only be taken in a Legion of the First Prince Army of Renown."
+        },
+        {
+          "name": "Mindstealer Sphiranx",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Monster 90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "Monster",
+          "notes": ""
+        },
+        {
+          "name": "Mutalith Vortex Beast",
+          "unit_size": 1,
+          "points": 160,
+          "points_raw": "160",
+          "raw_lines": [
+            "Daemon, Monster 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Daemon, Monster",
+          "notes": ""
+        },
+        {
+          "name": "Ogroid Theridons",
+          "unit_size": 3,
+          "points": 150,
+          "points_raw": "150 (-10)",
+          "raw_lines": [
+            "Infantry 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Raptoryx",
+          "unit_size": 6,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Beast 60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Beast",
+          "notes": ""
+        },
+        {
+          "name": "Slaughterbrute",
+          "unit_size": 1,
+          "points": 200,
+          "points_raw": "200",
+          "raw_lines": [
+            "Daemon, Monster 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Daemon, Monster",
+          "notes": ""
+        },
+        {
+          "name": "The Oathsworn Kin",
+          "unit_size": 3,
+          "points": 0,
+          "points_raw": "0",
+          "raw_lines": [
+            "Unique, Darkoath, Infantry",
+            "This unit can only be taken in",
+            "Gunnar Brand ’s regiment.",
+            "This unit cannot be reinforced.",
+            "32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Unique, Darkoath, Infantry",
+          "notes": "This unit can only be taken in Gunnar Brand ’s regiment. This unit cannot be reinforced."
+        },
+        {
+          "name": "Varanguard",
+          "unit_size": 3,
+          "points": 300,
+          "points_raw": "300 (-10)",
+          "raw_lines": [
+            "Warriors of Chaos, Cavalry 75 × 42mm",
+            "UPDATED   NEW",
+            "38"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Warriors of Chaos, Cavalry 75 × 42mm UPDATED   NEW 38",
+          "notes": ""
+        }
+      ],
+      "auxiliary": [
+        {
+          "name": "Battle Formation Legion of Chaos",
+          "points": 0,
+          "notes": "Battletome: Slaves to Darkness"
+        },
+        {
+          "name": "Battle Formation Godswrath Warband",
+          "points": 0,
+          "notes": "Battletome: Slaves to Darkness"
+        },
+        {
+          "name": "Battle Formation Despoilers",
+          "points": 0,
+          "notes": "Battletome: Slaves to Darkness"
+        },
+        {
+          "name": "Battle Formation Darkoath Horde",
+          "points": 0,
+          "notes": "Battletome: Slaves to Darkness"
+        },
+        {
+          "name": "✹  Artefact of Power Aelfskin Scroll",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Artefact of Power Darkflame Pendant",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Artefact of Power Rune of Murder",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Heroic Trait Favoured of the Pantheon",
+          "points": 0,
+          "notes": "Battletome: Slaves to Darkness"
+        },
+        {
+          "name": "Heroic Trait Deathmonger",
+          "points": 0,
+          "notes": "Battletome: Slaves to Darkness"
+        },
+        {
+          "name": "Heroic Trait Radiance of Dark Glory",
+          "points": 20,
+          "notes": "Battletome: Slaves to Darkness"
+        },
+        {
+          "name": "Artefact of Power Infernal Puppet",
+          "points": 0,
+          "notes": "Battletome: Slaves to Darkness"
+        },
+        {
+          "name": "Artefact of Power The Conqueror’s Crown",
+          "points": 0,
+          "notes": "Battletome: Slaves to Darkness"
+        },
+        {
+          "name": "Artefact of Power Realmwarper’s Twist-rune",
+          "points": 0,
+          "notes": "Battletome: Slaves to Darkness"
+        },
+        {
+          "name": "✹  Brand of the Dark Gods Brand of Unbreakable Bonds",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Brand of the Dark Gods Brand of Apoplexy",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Brand of the Dark Gods Brand of the Unaligned",
+          "points": 20,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Spell Lore Lore of the Damned",
+          "points": 0,
+          "notes": "Battletome: Slaves to Darkness"
+        },
+        {
+          "name": "Manifestation Lore Manifestations of Malevolence",
+          "points": 0,
+          "notes": "Battletome: Slaves to Darkness"
+        },
+        {
+          "name": "Ensorcelled Banner The Dread Banner",
+          "points": 0,
+          "notes": "Battletome: Slaves to Darkness"
+        },
+        {
+          "name": "Ensorcelled Banner The Banner of Rage",
+          "points": 0,
+          "notes": "Battletome: Slaves to Darkness"
+        },
+        {
+          "name": "Ensorcelled Banner The Blasted Standard",
+          "points": 0,
+          "notes": "Battletome: Slaves to Darkness"
+        },
+        {
+          "name": "Ensorcelled Banner The Eroding Icon",
+          "points": 0,
+          "notes": "Battletome: Slaves to Darkness"
+        },
+        {
+          "name": "Ensorcelled Banner The Banner of Screaming Flesh",
+          "points": 0,
+          "notes": "Battletome: Slaves to Darkness"
+        },
+        {
+          "name": "Faction Terrain Nexus Chaotica",
+          "points": 0,
+          "notes": "Battletome: Slaves to Darkness"
+        }
+      ]
+    },
+    "FLESH-EATER COURTS": {
+      "heroes": [
+        {
+          "name": "Abhorrant Archregent",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "0-1 Royal Attendant ,",
+            "Any Flesh‑eater Courts 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Royal Attendant , Any Flesh‑eater Courts",
+          "notes": ""
+        },
+        {
+          "name": "Abhorrant Cardinal",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "0-1 Royal Attendant , 0-1 Beast,",
+            "0-1 Knights, Any Serfs 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Royal Attendant , 0-1 Beast, 0-1 Knights, Any Serfs",
+          "notes": ""
+        },
+        {
+          "name": "Abhorrant Ghoul King",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110 (-10)",
+          "raw_lines": [
+            "0-1 Royal Attendant ,",
+            "Any Flesh‑eater Courts 32mm",
+            "✹  Abhorrant Ghoul King on"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Royal Attendant , Any Flesh‑eater Courts 32mm ✹  Abhorrant Ghoul King on",
+          "notes": ""
+        },
+        {
+          "name": "Royal Terrorgheist",
+          "unit_size": 1,
+          "points": 400,
+          "points_raw": "400 (+20)",
+          "raw_lines": [
+            "0-1 Royal Attendant ,",
+            "Any Flesh‑eater Courts 130mm",
+            "✹  Abhorrant Ghoul King on"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Royal Attendant , Any Flesh‑eater Courts 130mm ✹  Abhorrant Ghoul King on",
+          "notes": ""
+        },
+        {
+          "name": "Royal Zombie Dragon",
+          "unit_size": 1,
+          "points": 400,
+          "points_raw": "400 (+20)",
+          "raw_lines": [
+            "0-1 Royal Attendant ,",
+            "Any Flesh‑eater Courts 130mm"
+          ],
+          "base_size": "130mm",
+          "options_or_keywords": "0-1 Royal Attendant , Any Flesh‑eater Courts",
+          "notes": ""
+        },
+        {
+          "name": "Abhorrant Gorewarden",
+          "unit_size": 1,
+          "points": 150,
+          "points_raw": "150 (-20)",
+          "raw_lines": [
+            "0-1 Royal Attendant , 0-1 Beast,",
+            "0-1 Serfs, Any Knights 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Royal Attendant , 0-1 Beast, 0-1 Serfs, Any Knights",
+          "notes": ""
+        },
+        {
+          "name": "Crypt Haunter Courtier",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "0-1 Beast, 0-1 Serfs,",
+            "Any Crypt Horrors",
+            "This Hero can join an eligible",
+            "regiment as a Royal Attendant . 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "0-1 Beast, 0-1 Serfs, Any Crypt Horrors",
+          "notes": "This Hero can join an eligible regiment as a Royal Attendant ."
+        },
+        {
+          "name": "Crypt Infernal Courtier",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "0-1 Beast, 0-1 Serfs,",
+            "Any Crypt Flayers",
+            "This Hero can join an eligible",
+            "regiment as a Royal Attendant . 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "0-1 Beast, 0-1 Serfs, Any Crypt Flayers",
+          "notes": "This Hero can join an eligible regiment as a Royal Attendant ."
+        },
+        {
+          "name": "Grand Justice Gormayne",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130 (-20)",
+          "raw_lines": [
+            "0-1 Beast, 0-1 Knights, Any Serfs This Hero can join an eligible",
+            "regiment as a Royal Attendant . 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Beast, 0-1 Knights, Any Serfs",
+          "notes": "This Hero can join an eligible regiment as a Royal Attendant ."
+        },
+        {
+          "name": "High Falconer Felgryn",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "0-1 Monster, Any Beast, Any Serfs This Hero can join an eligible",
+            "regiment as a Royal Attendant .",
+            "32mm [1],",
+            "28.5mm [1]"
+          ],
+          "base_size": "5mm [1]",
+          "options_or_keywords": "0-1 Monster, Any Beast, Any Serfs",
+          "notes": "This Hero can join an eligible regiment as a Royal Attendant . 32mm [1], 28."
+        },
+        {
+          "name": "Marrowscroll Herald",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "0-1 Beast, Any Serfs This Hero can join an eligible",
+            "regiment as a Royal Attendant . 32mm",
+            "✹  Nagash, Supreme Lord"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Beast, Any Serfs",
+          "notes": "This Hero can join an eligible regiment as a Royal Attendant . 32mm ✹  Nagash, Supreme Lord"
+        },
+        {
+          "name": "of the Undead",
+          "unit_size": 1,
+          "points": 750,
+          "points_raw": "750 (-80)",
+          "raw_lines": [
+            "0-1 Royal Attendant ,",
+            "Any Flesh‑eater Courts 130mm"
+          ],
+          "base_size": "130mm",
+          "options_or_keywords": "0-1 Royal Attendant , Any Flesh‑eater Courts",
+          "notes": ""
+        },
+        {
+          "name": "Royal Decapitator",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "0-1 Beast, Any Serfs This Hero can join an eligible",
+            "regiment as a Royal Attendant . 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Beast, Any Serfs",
+          "notes": "This Hero can join an eligible regiment as a Royal Attendant ."
+        },
+        {
+          "name": "Ushoran, Mortarch of Delusion",
+          "unit_size": 1,
+          "points": 450,
+          "points_raw": "450",
+          "raw_lines": [
+            "Any Royal Attendant ,",
+            "Any Flesh‑eater Courts 130mm"
+          ],
+          "base_size": "130mm",
+          "options_or_keywords": "Any Royal Attendant , Any Flesh‑eater Courts",
+          "notes": ""
+        },
+        {
+          "name": "Crypt Ghast Courtier",
+          "unit_size": 1,
+          "points": 80,
+          "points_raw": "80",
+          "raw_lines": [
+            "Any Serfs This Hero can join an eligible",
+            "regiment as a Flesh-eater Noble . 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Any Serfs",
+          "notes": "This Hero can join an eligible regiment as a Flesh-eater Noble ."
+        },
+        {
+          "name": "NEW Cairn Wraith",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "0-1 Black Coach , Any Infantry This Hero can join an eligible",
+            "regiment as a Cursed Soul . 25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "0-1 Black Coach , Any Infantry",
+          "notes": "This Hero can join an eligible regiment as a Cursed Soul ."
+        },
+        {
+          "name": "NEW Tomb Banshee",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "0-1 Black Coach , Any Infantry This Hero can join an eligible",
+            "regiment as a Cursed Soul . 25mm",
+            "NEW",
+            "70"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Black Coach , Any Infantry",
+          "notes": "This Hero can join an eligible regiment as a Cursed Soul . 25mm NEW 70"
+        }
+      ],
+      "units": [
+        {
+          "name": "Crypt Flayers",
+          "unit_size": 3,
+          "points": 160,
+          "points_raw": "160",
+          "raw_lines": [
+            "Knights, Infantry 50mm",
+            "Crypt Flayers (2 models) 2 90 Knights, Infantry",
+            "You can include 1 unit of this",
+            "type for each Crypt Infernal",
+            "Courtier  in your army.",
+            "This unit cannot be reinforced.",
+            "50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "Knights, Infantry 50mm Crypt Flayers (2 models) 2 90 Knights, Infantry",
+          "notes": "You can include 1 unit of this type for each Crypt Infernal Courtier  in your army. This unit cannot be reinforced."
+        },
+        {
+          "name": "Crypt Ghouls",
+          "unit_size": 20,
+          "points": 140,
+          "points_raw": "140 (-10)",
+          "raw_lines": [
+            "Serfs, Infantry 25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Serfs, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Crypt Horrors",
+          "unit_size": 3,
+          "points": 160,
+          "points_raw": "160",
+          "raw_lines": [
+            "Knights, Infantry 50mm",
+            "Crypt Horrors (2 models) 2 100 Knights, Infantry",
+            "You can include 1 unit of this",
+            "type for each  Crypt Haunter",
+            "Courtier in your army.",
+            "This unit cannot be reinforced.",
+            "50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "Knights, Infantry 50mm Crypt Horrors (2 models) 2 100 Knights, Infantry",
+          "notes": "You can include 1 unit of this type for each  Crypt Haunter Courtier in your army. This unit cannot be reinforced."
+        },
+        {
+          "name": "Cryptguard",
+          "unit_size": 10,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Serfs, Infantry 25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Serfs, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Morbheg Knights",
+          "unit_size": 3,
+          "points": 170,
+          "points_raw": "170 (-10)",
+          "raw_lines": [
+            "Knights, Cavalry 75 × 42mm"
+          ],
+          "base_size": "75 × 42mm",
+          "options_or_keywords": "Knights, Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Royal Beastflayers",
+          "unit_size": 10,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Serfs, Infantry This unit cannot be reinforced.",
+            "40mm [2],",
+            "32mm [2],",
+            "28.5mm [3],",
+            "25mm [3]"
+          ],
+          "base_size": "5mm [3], 25mm [3]",
+          "options_or_keywords": "Serfs, Infantry",
+          "notes": "This unit cannot be reinforced. 40mm [2], 32mm [2], 28."
+        },
+        {
+          "name": "Royal Terrorgheist",
+          "unit_size": 1,
+          "points": 240,
+          "points_raw": "240 (+10)",
+          "raw_lines": [
+            "Monster 130mm"
+          ],
+          "base_size": "130mm",
+          "options_or_keywords": "Monster",
+          "notes": ""
+        },
+        {
+          "name": "Royal Zombie Dragon",
+          "unit_size": 1,
+          "points": 260,
+          "points_raw": "260 (+10)",
+          "raw_lines": [
+            "Monster 130mm"
+          ],
+          "base_size": "130mm",
+          "options_or_keywords": "Monster",
+          "notes": ""
+        },
+        {
+          "name": "Varghulf Courtier",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Beast 90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "Beast",
+          "notes": ""
+        }
+      ],
+      "auxiliary": [
+        {
+          "name": "Battle Formation Knightly Echelon",
+          "points": 0,
+          "notes": "Battletome: Flesh-eater Courts"
+        },
+        {
+          "name": "Battle Formation Lords of the Manor",
+          "points": 0,
+          "notes": "Battletome: Flesh-eater Courts"
+        },
+        {
+          "name": "Battle Formation The Royal Hunt",
+          "points": 0,
+          "notes": "Battletome: Flesh-eater Courts"
+        },
+        {
+          "name": "Battle Formation Royal Menagerie",
+          "points": 0,
+          "notes": "Battletome: Flesh-eater Courts"
+        },
+        {
+          "name": "✹  Artefact of Power Fool’s Cap",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Artefact of Power Flayed Flags",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Artefact of Power Ring of Nightmarish Visions",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Heroic Trait Cruel Taskmaster",
+          "points": 0,
+          "notes": "Battletome: Flesh-eater Courts"
+        },
+        {
+          "name": "Heroic Trait Savage Beyond Reason",
+          "points": 40,
+          "notes": "Battletome: Flesh-eater Courts"
+        },
+        {
+          "name": "Heroic Trait Stronger in Madness",
+          "points": 10,
+          "notes": "Battletome: Flesh-eater Courts"
+        },
+        {
+          "name": "Artefact of Power Charnel Vestments",
+          "points": 20,
+          "notes": "(-10) Battletome: Flesh-eater Courts"
+        },
+        {
+          "name": "Artefact of Power The Grisly Pennant",
+          "points": 10,
+          "notes": "(-10) Battletome: Flesh-eater Courts"
+        },
+        {
+          "name": "Artefact of Power The Splintered Femur",
+          "points": 0,
+          "notes": "(-10) Battletome: Flesh-eater Courts"
+        },
+        {
+          "name": "✹  Noble Pursuit Homage and Fealty",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Noble Pursuit Defenders of Chivalry",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Noble Pursuit Loyal Squires",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Spell Lore Lore of Madness",
+          "points": 0,
+          "notes": "Battletome: Flesh-eater Courts"
+        },
+        {
+          "name": "Prayer Lore Rites of Delusion",
+          "points": 0,
+          "notes": "Battletome: Flesh-eater Courts"
+        },
+        {
+          "name": "Manifestation Lore Manifested Insanity",
+          "points": 0,
+          "notes": "Battletome: Flesh-eater Courts"
+        },
+        {
+          "name": "Faction Terrain Charnel Throne",
+          "points": 10,
+          "notes": "Battletome: Flesh-eater Courts"
+        }
+      ]
+    },
+    "NIGHTHAUNT": {
+      "heroes": [
+        {
+          "name": "Awlrach the Drowner",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110 (-20)",
+          "raw_lines": [
+            "0-1 Cursed Soul , Any Nighthaunt 80mm"
+          ],
+          "base_size": "80mm",
+          "options_or_keywords": "0-1 Cursed Soul , Any Nighthaunt",
+          "notes": ""
+        },
+        {
+          "name": "Guardian of Souls",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100 (-10)",
+          "raw_lines": [
+            "0-1 Black Coach , Any Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Black Coach , Any Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Knight of Shrouds",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "0-1 Cursed Soul , Any Nighthaunt 32mm",
+            "Knight of Shrouds on"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Cursed Soul , Any Nighthaunt 32mm Knight of Shrouds on",
+          "notes": ""
+        },
+        {
+          "name": "Ethereal Steed",
+          "unit_size": 1,
+          "points": 160,
+          "points_raw": "160",
+          "raw_lines": [
+            "0-1 Cursed Soul , Any Nighthaunt 75 × 42mm"
+          ],
+          "base_size": "75 × 42mm",
+          "options_or_keywords": "0-1 Cursed Soul , Any Nighthaunt",
+          "notes": ""
+        },
+        {
+          "name": "Krulghast Cruciator",
+          "unit_size": 1,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "0-1 Black Coach , Any Infantry 40mm",
+            "Kurdoss Valentian, the"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Black Coach , Any Infantry 40mm Kurdoss Valentian, the",
+          "notes": ""
+        },
+        {
+          "name": "Craven King",
+          "unit_size": 1,
+          "points": 160,
+          "points_raw": "160",
+          "raw_lines": [
+            "0-1 Cursed Soul , Any Nighthaunt 60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "0-1 Cursed Soul , Any Nighthaunt",
+          "notes": ""
+        },
+        {
+          "name": "Lady Olynder, Mortarch of Grief",
+          "unit_size": 1,
+          "points": 320,
+          "points_raw": "320",
+          "raw_lines": [
+            "0-1 Cursed Soul , Any Nighthaunt 60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "0-1 Cursed Soul , Any Nighthaunt",
+          "notes": ""
+        },
+        {
+          "name": "Lord Executioner",
+          "unit_size": 1,
+          "points": 160,
+          "points_raw": "160 (-10)",
+          "raw_lines": [
+            "0-1 Black Coach , Any Infantry This Hero can join an eligible",
+            "regiment as a Cursed Soul . 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Black Coach , Any Infantry",
+          "notes": "This Hero can join an eligible regiment as a Cursed Soul ."
+        },
+        {
+          "name": "Lord Vitriolic",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "0-1 Black Coach , Any Infantry This Hero can join an eligible",
+            "regiment as a Cursed Soul . 40mm",
+            "✹  Nagash, Supreme Lord of"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Black Coach , Any Infantry",
+          "notes": "This Hero can join an eligible regiment as a Cursed Soul . 40mm ✹  Nagash, Supreme Lord of"
+        },
+        {
+          "name": "the Undead",
+          "unit_size": 1,
+          "points": 750,
+          "points_raw": "750 (-90)",
+          "raw_lines": [
+            "0-1 Cursed Soul , Any Nighthaunt 130mm"
+          ],
+          "base_size": "130mm",
+          "options_or_keywords": "0-1 Cursed Soul , Any Nighthaunt",
+          "notes": ""
+        },
+        {
+          "name": "Reikenor the Grimhailer",
+          "unit_size": 1,
+          "points": 200,
+          "points_raw": "200",
+          "raw_lines": [
+            "0-1 Cursed Soul , Any Nighthaunt 75 × 42mm"
+          ],
+          "base_size": "75 × 42mm",
+          "options_or_keywords": "0-1 Cursed Soul , Any Nighthaunt",
+          "notes": ""
+        },
+        {
+          "name": "Scriptor Mortis",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110 (-10)",
+          "raw_lines": [
+            "0-1 Black Coach , Any Infantry This Hero can join an eligible",
+            "regiment as a Cursed Soul . 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Black Coach , Any Infantry",
+          "notes": "This Hero can join an eligible regiment as a Cursed Soul ."
+        },
+        {
+          "name": "Spirit Torment",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "0-1 Black Coach , Any Infantry This Hero can join an eligible",
+            "regiment as a Cursed Soul . 40mm",
+            "UPDATED",
+            "42"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Black Coach , Any Infantry",
+          "notes": "This Hero can join an eligible regiment as a Cursed Soul . 40mm UPDATED 42"
+        }
+      ],
+      "units": [
+        {
+          "name": "Black Coach",
+          "unit_size": 1,
+          "points": 200,
+          "points_raw": "200 (-20)",
+          "raw_lines": [
+            "War Machine 170 × 105mm"
+          ],
+          "base_size": "170 × 105mm",
+          "options_or_keywords": "War Machine",
+          "notes": ""
+        },
+        {
+          "name": "Bladegheist Revenants",
+          "unit_size": 10,
+          "points": 200,
+          "points_raw": "200 (-10)",
+          "raw_lines": [
+            "Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Chainghasts",
+          "unit_size": 2,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "Infantry This unit cannot be reinforced. 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "Chainrasps",
+          "unit_size": 10,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Infantry 25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Craventhrone Guard",
+          "unit_size": 5,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Dreadblade Harrows",
+          "unit_size": 2,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Cavalry 60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Dreadscythe Harridans",
+          "unit_size": 10,
+          "points": 190,
+          "points_raw": "190 (-10)",
+          "raw_lines": [
+            "Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Grimghast Reapers",
+          "unit_size": 10,
+          "points": 190,
+          "points_raw": "190 (-10)",
+          "raw_lines": [
+            "Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Hexwraiths",
+          "unit_size": 5,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Cavalry 60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Myrmourn Banshees",
+          "unit_size": 4,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Pyregheists",
+          "unit_size": 8,
+          "points": 180,
+          "points_raw": "180",
+          "raw_lines": [
+            "Infantry This unit cannot be reinforced.",
+            "40mm [1],",
+            "32mm [4],",
+            "28.5mm [3]"
+          ],
+          "base_size": "5mm [3]",
+          "options_or_keywords": "Infantry",
+          "notes": "This unit cannot be reinforced. 40mm [1], 32mm [4], 28."
+        },
+        {
+          "name": "Spirit Hosts",
+          "unit_size": 3,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Infantry 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "NEW Scourge of Aqshy Spirit Host",
+          "unit_size": 3,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Infantry",
+            "This unit is legal for Matched",
+            "Play for battles fought using the",
+            "General’s Handbook 2026-27",
+            "battlepack.",
+            "50mm",
+            "UPDATED   NEW",
+            "43"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Infantry",
+          "notes": "This unit is legal for Matched Play for battles fought using the General’s Handbook 2026-27 battlepack. 50mm UPDATED   NEW 43"
+        },
+        {
+          "name": "Kainan’s Reapers",
+          "unit_size": 6,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Unique, Infantry This unit cannot be reinforced. 40mm [1],",
+            "25mm [5]"
+          ],
+          "base_size": "40mm [1], 25mm [5]",
+          "options_or_keywords": "Unique, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "Thanatek’s Tithe",
+          "unit_size": 5,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "Unique, Infantry This unit cannot be reinforced.",
+            "32mm [1],",
+            "28.5mm [2],",
+            "25mm [2]"
+          ],
+          "base_size": "5mm [2], 25mm [2]",
+          "options_or_keywords": "Unique, Infantry",
+          "notes": "This unit cannot be reinforced. 32mm [1], 28."
+        }
+      ],
+      "auxiliary": [
+        {
+          "name": "Battle Formation Death Stalkers",
+          "points": 0,
+          "notes": "Battletome: Nighthaunt"
+        },
+        {
+          "name": "Battle Formation Quicksilver Gheists",
+          "points": 40,
+          "notes": "Battletome: Nighthaunt"
+        },
+        {
+          "name": "Battle Formation Royal Procession",
+          "points": 0,
+          "notes": "Battletome: Nighthaunt"
+        },
+        {
+          "name": "Battle Formation Shrieker Host",
+          "points": 0,
+          "notes": "Battletome: Nighthaunt"
+        },
+        {
+          "name": "✹  Artefact of Power Tome of the Restless Crypts",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Artefact of Power Ethereal Fetters",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Artefact of Power Urn of Despondency",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Heroic Trait Deathly Possessor",
+          "points": 0,
+          "notes": "Battletome: Nighthaunt"
+        },
+        {
+          "name": "Heroic Trait Ruler of the Spectral Hosts",
+          "points": 20,
+          "notes": "Battletome: Nighthaunt"
+        },
+        {
+          "name": "Heroic Trait Shadowy Aura",
+          "points": 0,
+          "notes": "Battletome: Nighthaunt"
+        },
+        {
+          "name": "Artefact of Power Brazier of Nagashizzar",
+          "points": 0,
+          "notes": "Battletome: Nighthaunt"
+        },
+        {
+          "name": "Artefact of Power Lightshard of the Harvest Moon",
+          "points": 20,
+          "notes": "Battletome: Nighthaunt"
+        },
+        {
+          "name": "Artefact of Power Mirror of Echoing Failures",
+          "points": 0,
+          "notes": "Battletome: Nighthaunt"
+        },
+        {
+          "name": "✹  Crime of the Condemned Vociferous Defamers",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Crime of the Condemned Backstabbing Betrayers",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Crime of the Condemned Cowards and Deserters",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Spell Lore Lore of the Underworlds",
+          "points": 0,
+          "notes": "Battletome: Nighthaunt"
+        },
+        {
+          "name": "Manifestation Lore Infernal Sorceries",
+          "points": 0,
+          "notes": "Battletome: Nighthaunt"
+        },
+        {
+          "name": "Faction Terrain Nexus of Grief",
+          "points": 0,
+          "notes": "Battletome: Nighthaunt"
+        }
+      ]
+    },
+    "OSSIARCH BONEREAPERS": {
+      "heroes": [
+        {
+          "name": "Arch-Kavalos Zandtos",
+          "unit_size": 1,
+          "points": 220,
+          "points_raw": "220",
+          "raw_lines": [
+            "Any Ossiarch Bonereapers",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Legion Subcommander .",
+            "80mm"
+          ],
+          "base_size": "80mm",
+          "options_or_keywords": "Any Ossiarch Bonereapers",
+          "notes": "This Hero can join an eligible regiment as a Legion Subcommander ."
+        },
+        {
+          "name": "Arkhan the Black, Mortarch of Sacrament",
+          "unit_size": 1,
+          "points": 440,
+          "points_raw": "440",
+          "raw_lines": [
+            "0-1 Legion Subcommander ,",
+            "Any Ossiarch Bonereapers 120 × 92mm",
+            "✹  Katakros, Mortarch of"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Legion Subcommander , Any Ossiarch Bonereapers 120 × 92mm ✹  Katakros, Mortarch of",
+          "notes": ""
+        },
+        {
+          "name": "the Necropolis",
+          "unit_size": 1,
+          "points": 470,
+          "points_raw": "470 (-30)",
+          "raw_lines": [
+            "0-1 Legion Subcommander ,",
+            "Any Ossiarch Bonereapers 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Legion Subcommander , Any Ossiarch Bonereapers",
+          "notes": ""
+        },
+        {
+          "name": "Liege-Kavalos",
+          "unit_size": 1,
+          "points": 180,
+          "points_raw": "180",
+          "raw_lines": [
+            "Any Ossiarch Bonereapers",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Legion Subcommander .",
+            "80mm"
+          ],
+          "base_size": "80mm",
+          "options_or_keywords": "Any Ossiarch Bonereapers",
+          "notes": "This Hero can join an eligible regiment as a Legion Subcommander ."
+        },
+        {
+          "name": "Liege-Kavalos on War Chariot",
+          "unit_size": 1,
+          "points": 210,
+          "points_raw": "210 (-20)",
+          "raw_lines": [
+            "Any Ossiarch Bonereapers",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Legion Subcommander .",
+            "120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Any Ossiarch Bonereapers",
+          "notes": "This Hero can join an eligible regiment as a Legion Subcommander ."
+        },
+        {
+          "name": "Liege-Mortek",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "0-1 Mortek Crawler, Any Infantry",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Legion Subcommander .",
+            "32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Mortek Crawler, Any Infantry",
+          "notes": "This Hero can join an eligible regiment as a Legion Subcommander ."
+        },
+        {
+          "name": "Mortisan Boneshaper",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "0-1 Gothizzar Harvester , Any Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Gothizzar Harvester , Any Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Mortisan Ossifector",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "0-1 Gothizzar Harvester ,",
+            "0-1 Mortek Crawler, Any Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Gothizzar Harvester , 0-1 Mortek Crawler, Any Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Mortisan Soulmason",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140 (-10)",
+          "raw_lines": [
+            "0-1 Gothizzar Harvester , Any Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Gothizzar Harvester , Any Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Mortisan Soulreaper",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120 (-10)",
+          "raw_lines": [
+            "0-1 Gothizzar Harvester , Any Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Gothizzar Harvester , Any Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Nagash, Supreme Lord of the Undead",
+          "unit_size": 1,
+          "points": 830,
+          "points_raw": "830",
+          "raw_lines": [
+            "0-1 Legion Subcommander ,",
+            "Any Ossiarch Bonereapers 130mm"
+          ],
+          "base_size": "130mm",
+          "options_or_keywords": "0-1 Legion Subcommander , Any Ossiarch Bonereapers",
+          "notes": ""
+        },
+        {
+          "name": "Vokmortian, Master of the Bone-tithe",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "0-1 Legion Subcommander ,",
+            "Any Ossiarch Bonereapers 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Legion Subcommander , Any Ossiarch Bonereapers",
+          "notes": ""
+        }
+      ],
+      "units": [
+        {
+          "name": "Gothizzar Harvester",
+          "unit_size": 1,
+          "points": 200,
+          "points_raw": "200",
+          "raw_lines": [
+            "War Machine 105 × 70mm"
+          ],
+          "base_size": "105 × 70mm",
+          "options_or_keywords": "War Machine",
+          "notes": ""
+        },
+        {
+          "name": "Immortis Guard",
+          "unit_size": 3,
+          "points": 170,
+          "points_raw": "170",
+          "raw_lines": [
+            "Infantry 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Kavalos Deathriders",
+          "unit_size": 5,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Cavalry 60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Kavalos War Chariot",
+          "unit_size": 1,
+          "points": 150,
+          "points_raw": "150 (-20)",
+          "raw_lines": [
+            "War Machine 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "War Machine",
+          "notes": ""
+        },
+        {
+          "name": "Morghast Archai",
+          "unit_size": 2,
+          "points": 250,
+          "points_raw": "250 (-10)",
+          "raw_lines": [
+            "Infantry 60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Morghast Harbingers",
+          "unit_size": 2,
+          "points": 240,
+          "points_raw": "240 (-10)",
+          "raw_lines": [
+            "Infantry 60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Mortek Crawler",
+          "unit_size": 1,
+          "points": 250,
+          "points_raw": "250",
+          "raw_lines": [
+            "War Machine 170 × 105mm"
+          ],
+          "base_size": "170 × 105mm",
+          "options_or_keywords": "War Machine",
+          "notes": ""
+        },
+        {
+          "name": "Mortek Guard",
+          "unit_size": 10,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Infantry 25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Mortis Reapers",
+          "unit_size": 5,
+          "points": 110,
+          "points_raw": "110 (+20)",
+          "raw_lines": [
+            "Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Mortek Triaxes",
+          "unit_size": 10,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Infantry 25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Necropolis Stalkers",
+          "unit_size": 3,
+          "points": 130,
+          "points_raw": "130 (-10)",
+          "raw_lines": [
+            "Infantry 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Teratic Cohort",
+          "unit_size": 8,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "Beast This unit cannot be reinforced.",
+            "60 × 35mm",
+            "[1], 32mm [2],",
+            "28.5mm [5]"
+          ],
+          "base_size": "5mm [5]",
+          "options_or_keywords": "Beast",
+          "notes": "This unit cannot be reinforced. 60 × 35mm [1], 32mm [2], 28."
+        }
+      ],
+      "auxiliary": [
+        {
+          "name": "Battle Formation Border Guards",
+          "points": 0,
+          "notes": "Battletome: Ossiarch Bonereapers"
+        },
+        {
+          "name": "Battle Formation Ruthless Legion",
+          "points": 0,
+          "notes": "Battletome: Ossiarch Bonereapers"
+        },
+        {
+          "name": "Battle Formation The Inevitable Empire",
+          "points": 0,
+          "notes": "Battletome: Ossiarch Bonereapers"
+        },
+        {
+          "name": "Battle Formation Remorseless Conquerors",
+          "points": 0,
+          "notes": "Battletome: Ossiarch Bonereapers"
+        },
+        {
+          "name": "✹  Artefact of Power Banner of Old Ossia",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Artefact of Power Scarabaean Cloak",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Artefact of Power Soulweb Gem",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Heroic Trait Manufactured Mind",
+          "points": 0,
+          "notes": "Battletome: Ossiarch Bonereapers"
+        },
+        {
+          "name": "Heroic Trait Immaculate Defender",
+          "points": 0,
+          "notes": "Battletome: Ossiarch Bonereapers"
+        },
+        {
+          "name": "✹  Heroic Trait Imperious Will",
+          "points": 20,
+          "notes": "(+20) Battletome: Ossiarch Bonereapers"
+        },
+        {
+          "name": "Artefact of Power Shard of the Necris",
+          "points": 0,
+          "notes": "Battletome: Ossiarch Bonereapers"
+        },
+        {
+          "name": "Artefact of Power Blade of the Nadir",
+          "points": 0,
+          "notes": "Battletome: Ossiarch Bonereapers"
+        },
+        {
+          "name": "Artefact of Power Amulet of Gnosis",
+          "points": 0,
+          "notes": "Battletome: Ossiarch Bonereapers"
+        },
+        {
+          "name": "Spell Lore Lore of Ossian Sorcery",
+          "points": 0,
+          "notes": "Battletome: Ossiarch Bonereapers"
+        },
+        {
+          "name": "✹  Mortisan Refinement Perpetually Empowered Weapons",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Mortisan Refinement Elongated Tibias",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Mortisan Refinement Utterly Unquestioning",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Manifestation Lore Horrors of the Necropolis",
+          "points": 0,
+          "notes": "Battletome: Ossiarch Bonereapers"
+        },
+        {
+          "name": "Faction Terrain Bone-tithe Nexus",
+          "points": 0,
+          "notes": "Battletome: Ossiarch Bonereapers"
+        }
+      ]
+    },
+    "SOULBLIGHT GRAVELORDS": {
+      "heroes": [
+        {
+          "name": "First of the Vyrkos",
+          "unit_size": 1,
+          "points": 200,
+          "points_raw": "200 (-20)",
+          "raw_lines": [
+            "Any Vyrkos Retainer,",
+            "Any Soulblight Gravelords 60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "Any Vyrkos Retainer, Any Soulblight Gravelords",
+          "notes": ""
+        },
+        {
+          "name": "Blades of the Hollow King",
+          "unit_size": 3,
+          "points": 270,
+          "points_raw": "270 (-20)",
+          "raw_lines": [
+            "Any Soulblight Gravelords",
+            "You cannot include this",
+            "unit and Cado Ezechiar,",
+            "the Hollow King  in the",
+            "same army.",
+            "50mm [1],",
+            "40mm [2]"
+          ],
+          "base_size": "50mm [1], 40mm [2]",
+          "options_or_keywords": "Any Soulblight Gravelords",
+          "notes": "You cannot include this unit and Cado Ezechiar, the Hollow King  in the same army."
+        },
+        {
+          "name": "Coven Throne",
+          "unit_size": 1,
+          "points": 230,
+          "points_raw": "230",
+          "raw_lines": [
+            "Any Soulblight Gravelords 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Any Soulblight Gravelords",
+          "notes": ""
+        },
+        {
+          "name": "Ivya Volga, the Outcast",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Any Soulblight Gravelords This Hero can join an eligible",
+            "regiment as a Vyrkos Retainer. 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Any Soulblight Gravelords",
+          "notes": "This Hero can join an eligible regiment as a Vyrkos Retainer."
+        },
+        {
+          "name": "Kritza, the Rat Prince",
+          "unit_size": 1,
+          "points": 70,
+          "points_raw": "70",
+          "raw_lines": [
+            "Any Soulblight Gravelords This Hero can join an eligible",
+            "regiment as a Vyrkos Retainer. 60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Any Soulblight Gravelords",
+          "notes": "This Hero can join an eligible regiment as a Vyrkos Retainer."
+        },
+        {
+          "name": "Lady Annika, the Thirsting Blade",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Any Soulblight Gravelords This Hero can join an eligible",
+            "regiment as a Vyrkos Retainer. 60 × 35mm",
+            "✹  Lauka Vai, Mother of"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Any Soulblight Gravelords",
+          "notes": "This Hero can join an eligible regiment as a Vyrkos Retainer. 60 × 35mm ✹  Lauka Vai, Mother of"
+        },
+        {
+          "name": "Nightmares",
+          "unit_size": 1,
+          "points": 200,
+          "points_raw": "200 (-20)",
+          "raw_lines": [
+            "0-1 Deathrattle Overseer ,",
+            "Any Soulblight Gravelords 80mm",
+            "✹  Mannfred von Carstein,"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Deathrattle Overseer , Any Soulblight Gravelords 80mm ✹  Mannfred von Carstein",
+          "notes": ""
+        },
+        {
+          "name": "Mortarch of Night",
+          "unit_size": 1,
+          "points": 410,
+          "points_raw": "410 (-20)",
+          "raw_lines": [
+            "0-1 Deathrattle Overseer ,",
+            "Any Soulblight Gravelords 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Deathrattle Overseer , Any Soulblight Gravelords",
+          "notes": ""
+        },
+        {
+          "name": "Mortis Engine",
+          "unit_size": 1,
+          "points": 230,
+          "points_raw": "230",
+          "raw_lines": [
+            "Any Soulblight Gravelords 120 × 92mm",
+            "✹  Nagash, Supreme Lord of"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Any Soulblight Gravelords 120 × 92mm ✹  Nagash, Supreme Lord of",
+          "notes": ""
+        },
+        {
+          "name": "the Undead",
+          "unit_size": 1,
+          "points": 750,
+          "points_raw": "750 (-30)",
+          "raw_lines": [
+            "0-1 Deathrattle Overseer ,",
+            "Any Soulblight Gravelords 130mm"
+          ],
+          "base_size": "130mm",
+          "options_or_keywords": "0-1 Deathrattle Overseer , Any Soulblight Gravelords",
+          "notes": ""
+        },
+        {
+          "name": "Necromancer",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110 (-10)",
+          "raw_lines": [
+            "0-1 Deathrattle Overseer ,",
+            "Any Soulblight Gravelords 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Deathrattle Overseer , Any Soulblight Gravelords",
+          "notes": ""
+        },
+        {
+          "name": "Neferata, Mortarch of Blood",
+          "unit_size": 1,
+          "points": 450,
+          "points_raw": "450",
+          "raw_lines": [
+            "0-1 Deathrattle Overseer ,",
+            "Any Soulblight Gravelords 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Deathrattle Overseer , Any Soulblight Gravelords",
+          "notes": ""
+        },
+        {
+          "name": "Prince Vhordrai",
+          "unit_size": 1,
+          "points": 470,
+          "points_raw": "470",
+          "raw_lines": [
+            "0-1 Deathrattle Overseer ,",
+            "Any Soulblight Gravelords 160mm"
+          ],
+          "base_size": "160mm",
+          "options_or_keywords": "0-1 Deathrattle Overseer , Any Soulblight Gravelords",
+          "notes": ""
+        },
+        {
+          "name": "Radukar the Beast",
+          "unit_size": 1,
+          "points": 250,
+          "points_raw": "250",
+          "raw_lines": [
+            "0-1 Vyrkos Retainer,",
+            "Any Soulblight Gravelords",
+            "You cannot include this unit",
+            "and Radukar the Wolf  in the",
+            "same army.",
+            "60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "0-1 Vyrkos Retainer, Any Soulblight Gravelords",
+          "notes": "You cannot include this unit and Radukar the Wolf  in the same army."
+        },
+        {
+          "name": "Radukar the Wolf",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "0-1 Vyrkos Retainer,",
+            "Any Soulblight Gravelords",
+            "You cannot include this unit",
+            "and Radukar the Beast  in the",
+            "same army.",
+            "40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Vyrkos Retainer, Any Soulblight Gravelords",
+          "notes": "You cannot include this unit and Radukar the Beast  in the same army."
+        },
+        {
+          "name": "Sekhar, Fang of Nulahmia",
+          "unit_size": 1,
+          "points": 160,
+          "points_raw": "160",
+          "raw_lines": [
+            "Any Soulblight Gravelords 60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Any Soulblight Gravelords",
+          "notes": ""
+        },
+        {
+          "name": "Vampire Lord",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Any Soulblight Gravelords 40mm",
+            "✹  Vampire Lord on"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Any Soulblight Gravelords 40mm ✹  Vampire Lord on",
+          "notes": ""
+        },
+        {
+          "name": "Nightmare Steed",
+          "unit_size": 1,
+          "points": 180,
+          "points_raw": "180 (-10)",
+          "raw_lines": [
+            "Any Soulblight Gravelords 80mm"
+          ],
+          "base_size": "80mm",
+          "options_or_keywords": "Any Soulblight Gravelords",
+          "notes": ""
+        },
+        {
+          "name": "Vengorian Lord",
+          "unit_size": 1,
+          "points": 200,
+          "points_raw": "200 (-20)",
+          "raw_lines": [
+            "0-1 Deathrattle Overseer ,",
+            "Any Soulblight Gravelords 80mm"
+          ],
+          "base_size": "80mm",
+          "options_or_keywords": "0-1 Deathrattle Overseer , Any Soulblight Gravelords",
+          "notes": ""
+        },
+        {
+          "name": "Wight King",
+          "unit_size": 1,
+          "points": 80,
+          "points_raw": "80",
+          "raw_lines": [
+            "Any Soulblight Gravelords",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Deathrattle Overseer .",
+            "32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Any Soulblight Gravelords",
+          "notes": "This Hero can join an eligible regiment as a Deathrattle Overseer ."
+        },
+        {
+          "name": "Wight King on Skeletal Steed",
+          "unit_size": 1,
+          "points": 180,
+          "points_raw": "180",
+          "raw_lines": [
+            "0-1 Deathrattle Overseer ,",
+            "Any Soulblight Gravelords",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Deathrattle Overseer .",
+            "80mm"
+          ],
+          "base_size": "80mm",
+          "options_or_keywords": "0-1 Deathrattle Overseer , Any Soulblight Gravelords",
+          "notes": "This Hero can join an eligible regiment as a Deathrattle Overseer ."
+        },
+        {
+          "name": "Wight Lord on Skeletal Steed",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Any Deathrattle",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Deathrattle Overseer .",
+            "80mm",
+            "UPDATED"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Any Deathrattle",
+          "notes": "This Hero can join an eligible regiment as a Deathrattle Overseer . 80mm UPDATED"
+        },
+        {
+          "name": "Bloodseeker Palanquin",
+          "unit_size": 1,
+          "points": 220,
+          "points_raw": "220",
+          "raw_lines": [
+            "Any Soulblight Gravelords 120 × 92mm",
+            "NEW"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Any Soulblight Gravelords 120 × 92mm NEW",
+          "notes": ""
+        },
+        {
+          "name": "Cado Ezechiar, the Hollow King",
+          "unit_size": 1,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Any Soulblight Gravelords",
+            "You cannot include this unit",
+            "and the Blades of the Hollow",
+            "King in the same army.",
+            "40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any Soulblight Gravelords",
+          "notes": "You cannot include this unit and the Blades of the Hollow King in the same army."
+        },
+        {
+          "name": "NEW Gorslav the Gravekeeper",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Any Deadwalkers This Hero can join an eligible",
+            "regiment as a Vyrkos Retainer. 40mm",
+            "NEW"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Any Deadwalkers",
+          "notes": "This Hero can join an eligible regiment as a Vyrkos Retainer. 40mm NEW"
+        },
+        {
+          "name": "Torgillius the Chamberlain",
+          "unit_size": 1,
+          "points": 180,
+          "points_raw": "180",
+          "raw_lines": [
+            "Any Soulblight Gravelords This Hero can join an eligible",
+            "regiment as a Vyrkos Retainer. 40mm",
+            "NEW",
+            "✹  Vampire Lord on",
+            "Zombie Dragon",
+            "1 400 Any Soulblight Gravelords 130mm"
+          ],
+          "base_size": "130mm",
+          "options_or_keywords": "Any Soulblight Gravelords",
+          "notes": "This Hero can join an eligible regiment as a Vyrkos Retainer. 40mm NEW ✹  Vampire Lord on Zombie Dragon 1 400 Any Soulblight Gravelords"
+        },
+        {
+          "name": "NEW Watch Captain Halgrim",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Any Deathrattle This Hero can join an eligible",
+            "regiment as a Vyrkos Retainer. 32mm",
+            "NEW"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Any Deathrattle",
+          "notes": "This Hero can join an eligible regiment as a Vyrkos Retainer. 32mm NEW"
+        },
+        {
+          "name": "Kragnos, the End of Empires",
+          "unit_size": 1,
+          "points": 580,
+          "points_raw": "580",
+          "raw_lines": [
+            "Any Bonesplitterz 130mm"
+          ],
+          "base_size": "130mm",
+          "options_or_keywords": "Any Bonesplitterz",
+          "notes": ""
+        },
+        {
+          "name": "Maniak Weirdnob",
+          "unit_size": 1,
+          "points": 160,
+          "points_raw": "160",
+          "raw_lines": [
+            "Any Bonesplitterz 60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Any Bonesplitterz",
+          "notes": ""
+        },
+        {
+          "name": "Savage Big Boss",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Any Bonesplitterz This Hero can join a",
+            "Wurrgog Prophet’s regiment. 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Any Bonesplitterz",
+          "notes": "This Hero can join a Wurrgog Prophet’s regiment."
+        },
+        {
+          "name": "Wardokk",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Any Bonesplitterz 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Any Bonesplitterz",
+          "notes": ""
+        },
+        {
+          "name": "Wurrgog Prophet",
+          "unit_size": 1,
+          "points": 160,
+          "points_raw": "160",
+          "raw_lines": [
+            "0-1 Savage Big Boss ,",
+            "Any Bonesplitterz 32mm",
+            "BONESPLITTERZ",
+            "72",
+            "WARHAMMER LEGENDS – DESTRUCTION"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "0-1 Savage Big Boss , Any Bonesplitterz 32mm BONESPLITTERZ 72 WARHAMMER LEGENDS – DESTRUCTION",
+          "notes": ""
+        },
+        {
+          "name": "Loonboss with Giant Cave Squig",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "0-1 Moonclan Agitator, Any Moonclan This Hero can join an eligible",
+            "regiment as a Moonclan Agitator 75 × 42mm"
+          ],
+          "base_size": "75 × 42mm",
+          "options_or_keywords": "0-1 Moonclan Agitator, Any Moonclan",
+          "notes": "This Hero can join an eligible regiment as a Moonclan Agitator"
+        },
+        {
+          "name": "Madcap Shaman",
+          "unit_size": 1,
+          "points": 80,
+          "points_raw": "80",
+          "raw_lines": [
+            "Any Moonclan 25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Any Moonclan",
+          "notes": ""
+        },
+        {
+          "name": "Mollog",
+          "unit_size": 1,
+          "points": 210,
+          "points_raw": "210",
+          "raw_lines": [
+            "Any Troggoth This Hero can join",
+            "Trugg’s regiment.",
+            "50mm [1],",
+            "25mm [3]"
+          ],
+          "base_size": "50mm [1], 25mm [3]",
+          "options_or_keywords": "Any Troggoth",
+          "notes": "This Hero can join Trugg’s regiment."
+        },
+        {
+          "name": "Scuttleboss on Gigantic Spider",
+          "unit_size": 1,
+          "points": 160,
+          "points_raw": "160",
+          "raw_lines": [
+            "Any Spiderfang 60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "Any Spiderfang",
+          "notes": ""
+        }
+      ],
+      "units": [
+        {
+          "name": "Askurgan Trueblades",
+          "unit_size": 8,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Infantry This unit cannot be reinforced.",
+            "40mm [1],",
+            "32mm [4],",
+            "28.5mm [3]"
+          ],
+          "base_size": "5mm [3]",
+          "options_or_keywords": "Infantry",
+          "notes": "This unit cannot be reinforced. 40mm [1], 32mm [4], 28."
+        },
+        {
+          "name": "Barrow Guard",
+          "unit_size": 10,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Deathrattle, Infantry 28.5mm"
+          ],
+          "base_size": "5mm",
+          "options_or_keywords": "Deathrattle, Infantry 28.",
+          "notes": ""
+        },
+        {
+          "name": "Barrow Knights",
+          "unit_size": 5,
+          "points": 190,
+          "points_raw": "190 (-10)",
+          "raw_lines": [
+            "Deathrattle, Cavalry 60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Deathrattle, Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Blood Knights",
+          "unit_size": 5,
+          "points": 220,
+          "points_raw": "220",
+          "raw_lines": [
+            "Cavalry 75 × 42mm"
+          ],
+          "base_size": "75 × 42mm",
+          "options_or_keywords": "Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Corpse Cart",
+          "unit_size": 1,
+          "points": 70,
+          "points_raw": "70",
+          "raw_lines": [
+            "Deadwalkers, War Machine 105 × 70mm"
+          ],
+          "base_size": "105 × 70mm",
+          "options_or_keywords": "Deadwalkers, War Machine",
+          "notes": ""
+        },
+        {
+          "name": "Deadwalker Zombies",
+          "unit_size": 20,
+          "points": 120,
+          "points_raw": "120 (-10)",
+          "raw_lines": [
+            "Deadwalkers, Infantry 25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Deadwalkers, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Deathrattle Skeletons",
+          "unit_size": 10,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "Deathrattle, Infantry 25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Deathrattle, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Dire Wolves",
+          "unit_size": 10,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Deadwalkers, Beast 60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Deadwalkers, Beast",
+          "notes": ""
+        },
+        {
+          "name": "Fell Bats",
+          "unit_size": 3,
+          "points": 80,
+          "points_raw": "80",
+          "raw_lines": [
+            "Deadwalkers, Beast 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Deadwalkers, Beast",
+          "notes": ""
+        },
+        {
+          "name": "Revenant Draconith",
+          "unit_size": 1,
+          "points": 180,
+          "points_raw": "180 (-10)",
+          "raw_lines": [
+            "Monster 160mm"
+          ],
+          "base_size": "160mm",
+          "options_or_keywords": "Monster",
+          "notes": ""
+        },
+        {
+          "name": "Vargheists",
+          "unit_size": 3,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Infantry 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Hedkrakka’s Madmob",
+          "unit_size": 4,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Unique, Infantry This unit cannot be reinforced. 32mm [3],",
+            "40mm [1]"
+          ],
+          "base_size": "32mm [3], 40mm [1]",
+          "options_or_keywords": "Unique, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "Savage Big Stabbas",
+          "unit_size": 2,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Infantry 60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Savage Boarboy Maniaks",
+          "unit_size": 5,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Cavalry 60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Savage Boarboys",
+          "unit_size": 5,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Cavalry 60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Savage Orruk Arrowboys",
+          "unit_size": 10,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Savage Orruk Morboys",
+          "unit_size": 10,
+          "points": 160,
+          "points_raw": "160",
+          "raw_lines": [
+            "Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Savage Orruks",
+          "unit_size": 10,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        }
+      ],
+      "auxiliary": [
+        {
+          "name": "Battle Formation Legion of Shyish",
+          "points": 0,
+          "notes": "Battletome: Soulblight Gravelords"
+        },
+        {
+          "name": "Battle Formation Bacchanal of Blood",
+          "points": 0,
+          "notes": "Battletome: Soulblight Gravelords"
+        },
+        {
+          "name": "Battle Formation Deathstench Drove",
+          "points": 0,
+          "notes": "Battletome: Soulblight Gravelords"
+        },
+        {
+          "name": "Battle Formation Deathmarch",
+          "points": 0,
+          "notes": "Battletome: Soulblight Gravelords"
+        },
+        {
+          "name": "✹  Heroic Trait Immortal Ego",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Heroic Trait Furious Endings",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Heroic Trait Eternal Thrall",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Heroic Trait Lash of the Sire",
+          "points": 20,
+          "notes": "Battletome: Soulblight Gravelords"
+        },
+        {
+          "name": "Heroic Trait Unbending Will",
+          "points": 0,
+          "notes": "Battletome: Soulblight Gravelords"
+        },
+        {
+          "name": "Heroic Trait Unhinged Rampager",
+          "points": 0,
+          "notes": "Battletome: Soulblight Gravelords"
+        },
+        {
+          "name": "✹  Origin of Terrifying Folk Tales The Empty Graveyard",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Origin of Terrifying Folk Tales The Never-Dead",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Origin of Terrifying Folk Tales The Incarnadine Killers",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Artefact of Power Terminus Clock",
+          "points": 0,
+          "notes": "Battletome: Soulblight Gravelords"
+        },
+        {
+          "name": "Artefact of Power Shard of Night",
+          "points": 0,
+          "notes": "Battletome: Soulblight Gravelords"
+        },
+        {
+          "name": "Artefact of Power Amulet of Graves",
+          "points": 0,
+          "notes": "Battletome: Soulblight Gravelords"
+        },
+        {
+          "name": "Spell Lore Lore of Undeath",
+          "points": 0,
+          "notes": "Battletome: Soulblight Gravelords"
+        },
+        {
+          "name": "Manifestation Lore Manifestations of the Grave",
+          "points": 0,
+          "notes": "Battletome: Soulblight Gravelords"
+        },
+        {
+          "name": "Faction Terrain Cursed Sepulchre",
+          "points": 0,
+          "notes": "Battletome: Soulblight Gravelords"
+        },
+        {
+          "name": "✹  Battle Formation Legions of Ulfenkarn",
+          "points": 0,
+          "notes": "Battletome Supplement: Soulblight Gravelords"
+        },
+        {
+          "name": "Battle Formation Kunnin’ Rukk",
+          "points": 0,
+          "notes": "Battletome: Bonesplitterz"
+        },
+        {
+          "name": "Battle Formation Snaga Rukk",
+          "points": 0,
+          "notes": "Battletome: Bonesplitterz"
+        },
+        {
+          "name": "Battle Formation Kop Rukk",
+          "points": 0,
+          "notes": "Battletome: Bonesplitterz"
+        },
+        {
+          "name": "Battle Formation Brutal Rukk",
+          "points": 0,
+          "notes": "Battletome: Bonesplitterz"
+        },
+        {
+          "name": "Heroic Trait ’Orrible Leer",
+          "points": 0,
+          "notes": "Battletome: Bonesplitterz"
+        },
+        {
+          "name": "Heroic Trait One Wiv Da Beast",
+          "points": 0,
+          "notes": "Battletome: Bonesplitterz"
+        },
+        {
+          "name": "Heroic Trait Killa Instinkt",
+          "points": 0,
+          "notes": "Battletome: Bonesplitterz"
+        },
+        {
+          "name": "Artefact of Power Dokk Juice",
+          "points": 0,
+          "notes": "Battletome: Bonesplitterz"
+        },
+        {
+          "name": "Artefact of Power Glowin’ Tattooz",
+          "points": 0,
+          "notes": "Battletome: Bonesplitterz"
+        },
+        {
+          "name": "Artefact of Power Monsta-killa Chompa",
+          "points": 0,
+          "notes": "Battletome: Bonesplitterz"
+        },
+        {
+          "name": "Spell Lore Lore of the Savage Beast",
+          "points": 0,
+          "notes": "Battletome: Bonesplitterz"
+        },
+        {
+          "name": "Prayer Lore Prayers of the Living Wilds",
+          "points": 0,
+          "notes": "Battletome: Bonesplitterz"
+        }
+      ]
+    },
+    "GLOOMSPITE GITZ": {
+      "heroes": [
+        {
+          "name": "Dankhold Troggboss",
+          "unit_size": 1,
+          "points": 200,
+          "points_raw": "200 (-20)",
+          "raw_lines": [
+            "Any Troggoth This Hero can join",
+            "Trugg’s regiment. 60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "Any Troggoth",
+          "notes": "This Hero can join Trugg’s regiment."
+        },
+        {
+          "name": "Droggz Da Sunchompa",
+          "unit_size": 1,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Any Gloomspite Gitz , 0-1 Top Dog 60mm",
+            "✹  Frazzlegit Shaman on"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Any Gloomspite Gitz , 0-1 Top Dog 60mm ✹  Frazzlegit Shaman on",
+          "notes": ""
+        },
+        {
+          "name": "War-Wheela",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130 (-10)",
+          "raw_lines": [
+            "Any Gitmob 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Any Gitmob",
+          "notes": ""
+        },
+        {
+          "name": "Fungoid Cave-Shaman",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "0-1 Moonclan Agitator, Any Moonclan 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Moonclan Agitator, Any Moonclan",
+          "notes": ""
+        },
+        {
+          "name": "Kragnos, the End of Empires",
+          "unit_size": 1,
+          "points": 580,
+          "points_raw": "580",
+          "raw_lines": [
+            "0-1 Top Dog, 0-1 Moonclan Agitator,",
+            "Any Gloomspite Gitz 130mm"
+          ],
+          "base_size": "130mm",
+          "options_or_keywords": "0-1 Top Dog, 0-1 Moonclan Agitator, Any Gloomspite Gitz",
+          "notes": ""
+        },
+        {
+          "name": "Loonboss",
+          "unit_size": 1,
+          "points": 70,
+          "points_raw": "70 (-10)",
+          "raw_lines": [
+            "0-1 Doom Diver Catapult ,",
+            "Any Moonclan",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Moonclan Agitator.",
+            "32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Doom Diver Catapult , Any Moonclan",
+          "notes": "This Hero can join an eligible regiment as a Moonclan Agitator."
+        },
+        {
+          "name": "Loonboss on Giant Cave Squig",
+          "unit_size": 1,
+          "points": 80,
+          "points_raw": "80",
+          "raw_lines": [
+            "0-1 Moonclan Agitator, Any Moonclan",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Moonclan Agitator.",
+            "40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Moonclan Agitator, Any Moonclan",
+          "notes": "This Hero can join an eligible regiment as a Moonclan Agitator."
+        },
+        {
+          "name": "Loonboss on Mangler Squigs",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140 (-10)",
+          "raw_lines": [
+            "0-1 Moonclan Agitator, Any Moonclan 80mm"
+          ],
+          "base_size": "80mm",
+          "options_or_keywords": "0-1 Moonclan Agitator, Any Moonclan",
+          "notes": ""
+        },
+        {
+          "name": "Rabble-Rowza",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "0-1 Monster,",
+            "Any Moonclan Infantry",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Moonclan Agitator.",
+            "32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Monster, Any Moonclan Infantry",
+          "notes": "This Hero can join an eligible regiment as a Moonclan Agitator."
+        },
+        {
+          "name": "Skragrott, the Loonking",
+          "unit_size": 1,
+          "points": 200,
+          "points_raw": "200",
+          "raw_lines": [
+            "0-1 Top Dog, 0-1 Moonclan Agitator,",
+            "Any Gloomspite Gitz 60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "0-1 Top Dog, 0-1 Moonclan Agitator, Any Gloomspite Gitz",
+          "notes": ""
+        },
+        {
+          "name": "Snarlboss",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Any Gitmob This Hero can join an eligible",
+            "regiment as a Top Dog. Use model"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Any Gitmob",
+          "notes": "This Hero can join an eligible regiment as a Top Dog. Use model"
+        },
+        {
+          "name": "Snarlboss on War-Wheela",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Any Gitmob This Hero can join an eligible",
+            "regiment as a Top Dog. 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Any Gitmob",
+          "notes": "This Hero can join an eligible regiment as a Top Dog."
+        },
+        {
+          "name": "Squigboss with Gnasha-squig",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "0-1 Moonclan Agitator, Any Moonclan",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Moonclan Agitator.",
+            "32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Moonclan Agitator, Any Moonclan",
+          "notes": "This Hero can join an eligible regiment as a Moonclan Agitator."
+        },
+        {
+          "name": "Trugg, the Troggoth King",
+          "unit_size": 1,
+          "points": 340,
+          "points_raw": "340 (-20)",
+          "raw_lines": [
+            "0-1 Dankhold Troggboss ,",
+            "Any Gloomspite Gitz 100mm"
+          ],
+          "base_size": "100mm",
+          "options_or_keywords": "0-1 Dankhold Troggboss , Any Gloomspite Gitz",
+          "notes": ""
+        },
+        {
+          "name": "Webspinner Shaman",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Any Spiderfang, Any Moonclan 25mm",
+            "✹  Webspinner Shaman on"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Any Spiderfang, Any Moonclan 25mm ✹  Webspinner Shaman on",
+          "notes": ""
+        },
+        {
+          "name": "Arachnarok Spider",
+          "unit_size": 1,
+          "points": 230,
+          "points_raw": "230 (-20)",
+          "raw_lines": [
+            "Any Spiderfang, Any Moonclan 160mm",
+            "UPDATED",
+            "48"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Any Spiderfang, Any Moonclan 160mm UPDATED 48",
+          "notes": ""
+        }
+      ],
+      "units": [
+        {
+          "name": "Arachnarok Spider with Flinger",
+          "unit_size": 1,
+          "points": 210,
+          "points_raw": "210 (-20)",
+          "raw_lines": [
+            "Spiderfang, Monster 160mm",
+            "✹  Arachnarok Spider with"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Spiderfang, Monster 160mm ✹  Arachnarok Spider with",
+          "notes": ""
+        },
+        {
+          "name": "Spiderfang Warparty",
+          "unit_size": 1,
+          "points": 200,
+          "points_raw": "200 (-20)",
+          "raw_lines": [
+            "Spiderfang, Monster 160mm"
+          ],
+          "base_size": "160mm",
+          "options_or_keywords": "Spiderfang, Monster",
+          "notes": ""
+        },
+        {
+          "name": "Boingrot Bounderz",
+          "unit_size": 5,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Moonclan, Cavalry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Moonclan, Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Dankhold Troggoth",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Troggoth, Monster 60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "Troggoth, Monster",
+          "notes": ""
+        },
+        {
+          "name": "Doom Diver Catapult",
+          "unit_size": 1,
+          "points": 150,
+          "points_raw": "150 (-10)",
+          "raw_lines": [
+            "Gitmob, War Machine 170 × 105mm"
+          ],
+          "base_size": "170 × 105mm",
+          "options_or_keywords": "Gitmob, War Machine",
+          "notes": ""
+        },
+        {
+          "name": "Fellwater Troggoths",
+          "unit_size": 3,
+          "points": 160,
+          "points_raw": "160",
+          "raw_lines": [
+            "Troggoth, Infantry 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "Troggoth, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Gobbapalooza",
+          "unit_size": 5,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Moonclan, Infantry This unit cannot be reinforced. 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Moonclan, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "Loonsmasha Fanatics",
+          "unit_size": 5,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Moonclan, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Moonclan, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Mangler Squigs",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Moonclan, Monster 80mm"
+          ],
+          "base_size": "80mm",
+          "options_or_keywords": "Moonclan, Monster",
+          "notes": ""
+        },
+        {
+          "name": "Moonclan Shootas",
+          "unit_size": 20,
+          "points": 110,
+          "points_raw": "110 (-10)",
+          "raw_lines": [
+            "Moonclan, Infantry 25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Moonclan, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Moonclan Stabbas",
+          "unit_size": 20,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Moonclan, Infantry 25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Moonclan, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Rockgut Troggoths",
+          "unit_size": 3,
+          "points": 170,
+          "points_raw": "170 (-10)",
+          "raw_lines": [
+            "Troggoth, Infantry 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "Troggoth, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Skitterstrand Arachnarok",
+          "unit_size": 1,
+          "points": 180,
+          "points_raw": "180 (-10)",
+          "raw_lines": [
+            "Spiderfang, Monster 160mm"
+          ],
+          "base_size": "160mm",
+          "options_or_keywords": "Spiderfang, Monster",
+          "notes": ""
+        },
+        {
+          "name": "Snarlfang Riders",
+          "unit_size": 5,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Gitmob, Cavalry 60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Gitmob, Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Snarlpack Cavalry",
+          "unit_size": 3,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Gitmob, Cavalry 75 × 42mm"
+          ],
+          "base_size": "75 × 42mm",
+          "options_or_keywords": "Gitmob, Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Sneaky Snufflers",
+          "unit_size": 6,
+          "points": 80,
+          "points_raw": "80 (-10)",
+          "raw_lines": [
+            "Moonclan, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Moonclan, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Spider Riders",
+          "unit_size": 5,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Spiderfang, Cavalry 60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Spiderfang, Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Sporesplatta Fanatics",
+          "unit_size": 5,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "Moonclan, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Moonclan, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Squig Herd",
+          "unit_size": 12,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Moonclan, Beast 25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Moonclan, Beast",
+          "notes": ""
+        },
+        {
+          "name": "Squig Hoppers",
+          "unit_size": 10,
+          "points": 150,
+          "points_raw": "150 (-10)",
+          "raw_lines": [
+            "Moonclan, Cavalry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Moonclan, Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Sunsteala Wheelas",
+          "unit_size": 2,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Gitmob, War Machine 105 × 70mm"
+          ],
+          "base_size": "105 × 70mm",
+          "options_or_keywords": "Gitmob, War Machine",
+          "notes": ""
+        },
+        {
+          "name": "Wolfgit Retinue",
+          "unit_size": 2,
+          "points": 70,
+          "points_raw": "70",
+          "raw_lines": [
+            "Gitmob, Cavalry",
+            "You can include 1 unit of this",
+            "type for each Snarlboss in",
+            "your army.",
+            "This unit cannot be reinforced.",
+            "Use model"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Gitmob, Cavalry",
+          "notes": "You can include 1 unit of this type for each Snarlboss in your army. This unit cannot be reinforced. Use model"
+        },
+        {
+          "name": "Ironskull’s Boyz",
+          "unit_size": 4,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Unique, Infantry This unit cannot be reinforced. 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Unique, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "Morgok’s Krushas",
+          "unit_size": 3,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Unique, Infantry This unit cannot be reinforced. 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Unique, Infantry",
+          "notes": "This unit cannot be reinforced."
+        }
+      ],
+      "auxiliary": [
+        {
+          "name": "Battle Formation Gloomspite Horde",
+          "points": 0,
+          "notes": "Battletome: Gloomspite Gitz"
+        },
+        {
+          "name": "Battle Formation Gitmob Pack",
+          "points": 0,
+          "notes": "Battletome: Gloomspite Gitz"
+        },
+        {
+          "name": "Battle Formation Squigalanche",
+          "points": 0,
+          "notes": "Battletome: Gloomspite Gitz"
+        },
+        {
+          "name": "Battle Formation Troggherd",
+          "points": 0,
+          "notes": "Battletome: Gloomspite Gitz"
+        },
+        {
+          "name": "✹  Special Knick-Knack Fizzcap",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Special Knick-Knack Spoofshrooms",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Special Knick-Knack Glitzy Bitz Rolla",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Heroic Trait The Clammy Hand",
+          "points": 0,
+          "notes": "Battletome: Gloomspite Gitz"
+        },
+        {
+          "name": "Heroic Trait Loontouched",
+          "points": 20,
+          "notes": "Battletome: Gloomspite Gitz"
+        },
+        {
+          "name": "Heroic Trait Fight Another Day",
+          "points": 0,
+          "notes": "Battletome: Gloomspite Gitz"
+        },
+        {
+          "name": "Artefact of Power The Clammy Cowl",
+          "points": 20,
+          "notes": "Battletome: Gloomspite Gitz"
+        },
+        {
+          "name": "Artefact of Power Backstabber’s Blade",
+          "points": 0,
+          "notes": "Battletome: Gloomspite Gitz"
+        },
+        {
+          "name": "Artefact of Power Leering Gitshield",
+          "points": 0,
+          "notes": "Battletome: Gloomspite Gitz"
+        },
+        {
+          "name": "Spell Lore Lore of the Clammy Dank",
+          "points": 0,
+          "notes": "Battletome: Gloomspite Gitz"
+        },
+        {
+          "name": "✹  Spell Lore Lore of the Little Waaagh!",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Manifestation Lore Dank Manifestations",
+          "points": 0,
+          "notes": "Battletome: Gloomspite Gitz"
+        },
+        {
+          "name": "Faction Terrain Loonshrine",
+          "points": 0,
+          "notes": "Battletome: Gloomspite Gitz"
+        }
+      ]
+    },
+    "IRONJAWZ": {
+      "heroes": [
+        {
+          "name": "Ardboy Big Boss",
+          "unit_size": 1,
+          "points": 90,
+          "points_raw": "90 (-10)",
+          "raw_lines": [
+            "Any Infantry This Hero can join an eligible",
+            "regiment as a Headstompa . 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any Infantry",
+          "notes": "This Hero can join an eligible regiment as a Headstompa ."
+        },
+        {
+          "name": "Gordrakk, the Fist of Gork",
+          "unit_size": 1,
+          "points": 340,
+          "points_raw": "340",
+          "raw_lines": [
+            "0-1 Headstompa , 0-1 Tusk Wrangler,",
+            "Any Ironjawz 160mm"
+          ],
+          "base_size": "160mm",
+          "options_or_keywords": "0-1 Headstompa , 0-1 Tusk Wrangler, Any Ironjawz",
+          "notes": ""
+        },
+        {
+          "name": "Kragnos, the End of Empires",
+          "unit_size": 1,
+          "points": 580,
+          "points_raw": "580",
+          "raw_lines": [
+            "0-1 Headstompa , 0-1 Tusk Wrangler,",
+            "Any Ironjawz 130mm"
+          ],
+          "base_size": "130mm",
+          "options_or_keywords": "0-1 Headstompa , 0-1 Tusk Wrangler, Any Ironjawz",
+          "notes": ""
+        },
+        {
+          "name": "Megaboss",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130 (-10)",
+          "raw_lines": [
+            "0-1 Headstompa , Any Ironjawz This Hero can join an eligible",
+            "regiment as a Headstompa . 60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "0-1 Headstompa , Any Ironjawz",
+          "notes": "This Hero can join an eligible regiment as a Headstompa ."
+        },
+        {
+          "name": "Megaboss on Maw-krusha",
+          "unit_size": 1,
+          "points": 330,
+          "points_raw": "330",
+          "raw_lines": [
+            "0-1 Headstompa , 0-1 Tusk Wrangler,",
+            "Any Ironjawz 160mm"
+          ],
+          "base_size": "160mm",
+          "options_or_keywords": "0-1 Headstompa , 0-1 Tusk Wrangler, Any Ironjawz",
+          "notes": ""
+        },
+        {
+          "name": "Tuskboss on Maw-grunta",
+          "unit_size": 1,
+          "points": 270,
+          "points_raw": "270 (+20)",
+          "raw_lines": [
+            "0-1 Headstompa , Any Ironjawz This Hero can join an eligible",
+            "regiment as a Tusk Wrangler. 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Headstompa , Any Ironjawz",
+          "notes": "This Hero can join an eligible regiment as a Tusk Wrangler."
+        },
+        {
+          "name": "Warchanter",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Any Ironjawz 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any Ironjawz",
+          "notes": ""
+        },
+        {
+          "name": "Weirdnob Shaman",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Any Ironjawz 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any Ironjawz",
+          "notes": ""
+        },
+        {
+          "name": "Zoggrok Anvilsmasha",
+          "unit_size": 1,
+          "points": 160,
+          "points_raw": "160",
+          "raw_lines": [
+            "Any Ironjawz This Hero can join an eligible",
+            "regiment as a Headstompa .",
+            "50mm [1],",
+            "25mm [1]"
+          ],
+          "base_size": "50mm [1], 25mm [1]",
+          "options_or_keywords": "Any Ironjawz",
+          "notes": "This Hero can join an eligible regiment as a Headstompa ."
+        },
+        {
+          "name": "Scourge of Aqshy Megaboss",
+          "unit_size": 1,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "0-1 Headstompa , Any Ironjawz",
+            "This Hero can join an eligible",
+            "regiment as a Headstompa .",
+            "This unit is legal for Matched",
+            "Play for battles fought using the",
+            "General’s Handbook 2026-27",
+            "battlepack.",
+            "60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "0-1 Headstompa , Any Ironjawz",
+          "notes": "This Hero can join an eligible regiment as a Headstompa . This unit is legal for Matched Play for battles fought using the General’s Handbook 2026-27 battlepack."
+        }
+      ],
+      "units": [
+        {
+          "name": "Ardboyz",
+          "unit_size": 10,
+          "points": 160,
+          "points_raw": "160",
+          "raw_lines": [
+            "Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Brute Ragerz",
+          "unit_size": 3,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Brutes",
+          "unit_size": 5,
+          "points": 160,
+          "points_raw": "160",
+          "raw_lines": [
+            "Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Gore-gruntas",
+          "unit_size": 3,
+          "points": 160,
+          "points_raw": "160 (-10)",
+          "raw_lines": [
+            "Cavalry 90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Maw-grunta Gougers",
+          "unit_size": 1,
+          "points": 200,
+          "points_raw": "200",
+          "raw_lines": [
+            "Monster 120 × 92mm",
+            "✹  Maw-grunta with"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Monster 120 × 92mm ✹  Maw-grunta with",
+          "notes": ""
+        },
+        {
+          "name": "Hakkin’ Krew",
+          "unit_size": 1,
+          "points": 250,
+          "points_raw": "250 (+10)",
+          "raw_lines": [
+            "Monster 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Monster",
+          "notes": ""
+        },
+        {
+          "name": "Weirdbrute Wrekkaz",
+          "unit_size": 3,
+          "points": 90,
+          "points_raw": "90 (-10)",
+          "raw_lines": [
+            "Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "NEW Scourge of Aqshy Brutes",
+          "unit_size": 5,
+          "points": 160,
+          "points_raw": "160",
+          "raw_lines": [
+            "Infantry",
+            "This unit is legal for Matched",
+            "Play for battles fought using the",
+            "General’s Handbook 2026-27",
+            "battlepack.",
+            "40mm",
+            "UPDATED   NEW",
+            "50"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Infantry",
+          "notes": "This unit is legal for Matched Play for battles fought using the General’s Handbook 2026-27 battlepack. 40mm UPDATED   NEW 50"
+        },
+        {
+          "name": "Da Kunnin’ Krew",
+          "unit_size": 5,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Unique, Infantry This unit cannot be reinforced.",
+            "40mm [1],",
+            "32mm [1],",
+            "25mm [3]"
+          ],
+          "base_size": "40mm [1], 32mm [1], 25mm [3]",
+          "options_or_keywords": "Unique, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "Daggok’s Stab-ladz",
+          "unit_size": 4,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Unique, Infantry This unit cannot be reinforced. 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Unique, Infantry",
+          "notes": "This unit cannot be reinforced."
+        }
+      ],
+      "auxiliary": [
+        {
+          "name": "Battle Formation Ironjawz Brawl",
+          "points": 0,
+          "notes": "Battletome: Orruk Warclans"
+        },
+        {
+          "name": "Battle Formation Ironfist",
+          "points": 0,
+          "notes": "Battletome: Orruk Warclans"
+        },
+        {
+          "name": "Battle Formation Weirdfist",
+          "points": 0,
+          "notes": "Battletome: Orruk Warclans"
+        },
+        {
+          "name": "Battle Formation Grunta Stampede",
+          "points": 0,
+          "notes": "Battletome: Orruk Warclans"
+        },
+        {
+          "name": "✹  Artefact of Power Chimeric Mantle",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Artefact of Power Horn of Shattatusk",
+          "points": 20,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Artefact of Power Weird Skullz",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Heroic Trait An Eye for Da Fight",
+          "points": 0,
+          "notes": "Battletome: Orruk Warclans"
+        },
+        {
+          "name": "Heroic Trait Mega Bossy",
+          "points": 0,
+          "notes": "Battletome: Orruk Warclans"
+        },
+        {
+          "name": "Heroic Trait Hulking Brute",
+          "points": 0,
+          "notes": "Battletome: Orruk Warclans"
+        },
+        {
+          "name": "Artefact of Power Trophy Skulls",
+          "points": 0,
+          "notes": "Battletome: Orruk Warclans"
+        },
+        {
+          "name": "Artefact of Power Armour of Gork",
+          "points": 0,
+          "notes": "Battletome: Orruk Warclans"
+        },
+        {
+          "name": "Artefact of Power Amberbone Whetstone",
+          "points": 0,
+          "notes": "Battletome: Orruk Warclans"
+        },
+        {
+          "name": "✹  Monstrous Trait Big ’Un",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Monstrous Trait Angry ’Un",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Monstrous Trait Fast ’Un",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Spell Lore Lore of the Weird",
+          "points": 0,
+          "notes": "Battletome: Orruk Warclans"
+        },
+        {
+          "name": "Prayer Lore Warbeats",
+          "points": 0,
+          "notes": "Battletome: Orruk Warclans"
+        },
+        {
+          "name": "Manifestation Lore Manifestations of Gorkamorka",
+          "points": 0,
+          "notes": "Battletome: Orruk Warclans"
+        },
+        {
+          "name": "Faction Terrain Bossrokk Tower",
+          "points": 0,
+          "notes": "Battletome: Orruk Warclans"
+        }
+      ]
+    },
+    "KRULEBOYZ": {
+      "heroes": [
+        {
+          "name": "Mirebrute Troggoth",
+          "unit_size": 1,
+          "points": 180,
+          "points_raw": "180",
+          "raw_lines": [
+            "0-1 Mob Wrangler, Any Kruleboyz This Hero can join an eligible",
+            "regiment as a Swamp Beast . 80mm"
+          ],
+          "base_size": "80mm",
+          "options_or_keywords": "0-1 Mob Wrangler, Any Kruleboyz",
+          "notes": "This Hero can join an eligible regiment as a Swamp Beast ."
+        },
+        {
+          "name": "Gobsprakk, the Mouth of Mork",
+          "unit_size": 1,
+          "points": 240,
+          "points_raw": "240",
+          "raw_lines": [
+            "0-1 Mob Wrangler, 0-1 Swamp Beast ,",
+            "Any Kruleboyz 130mm"
+          ],
+          "base_size": "130mm",
+          "options_or_keywords": "0-1 Mob Wrangler, 0-1 Swamp Beast , Any Kruleboyz",
+          "notes": ""
+        },
+        {
+          "name": "Hobgrot Slittaboss",
+          "unit_size": 1,
+          "points": 70,
+          "points_raw": "70",
+          "raw_lines": [
+            "Any Infantry, 0-1 Monster,",
+            "0-1 War Machine",
+            "This Hero can join an eligible",
+            "regiment as a Mob Wrangler. 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Any Infantry, 0-1 Monster, 0-1 War Machine",
+          "notes": "This Hero can join an eligible regiment as a Mob Wrangler."
+        },
+        {
+          "name": "Killaboss on Corpse-rippa Vulcha",
+          "unit_size": 1,
+          "points": 240,
+          "points_raw": "240",
+          "raw_lines": [
+            "0-1 Mob Wrangler, Any Kruleboyz This Hero can join an eligible",
+            "regiment as a Swamp Beast . 130mm"
+          ],
+          "base_size": "130mm",
+          "options_or_keywords": "0-1 Mob Wrangler, Any Kruleboyz",
+          "notes": "This Hero can join an eligible regiment as a Swamp Beast ."
+        },
+        {
+          "name": "Killaboss on Great Gnashtoof",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130 (-10)",
+          "raw_lines": [
+            "0-1 Mob Wrangler, Any Kruleboyz This Hero can join an eligible",
+            "regiment as a Swamp Beast . 105 × 70mm"
+          ],
+          "base_size": "105 × 70mm",
+          "options_or_keywords": "0-1 Mob Wrangler, Any Kruleboyz",
+          "notes": "This Hero can join an eligible regiment as a Swamp Beast ."
+        },
+        {
+          "name": "Killaboss with Stab-grot",
+          "unit_size": 1,
+          "points": 80,
+          "points_raw": "80",
+          "raw_lines": [
+            "Any Kruleboyz This Hero can join an eligible",
+            "regiment as a Mob Wrangler.",
+            "40mm [1],",
+            "25mm [1]"
+          ],
+          "base_size": "40mm [1], 25mm [1]",
+          "options_or_keywords": "Any Kruleboyz",
+          "notes": "This Hero can join an eligible regiment as a Mob Wrangler."
+        },
+        {
+          "name": "Kragnos, the End of Empires",
+          "unit_size": 1,
+          "points": 580,
+          "points_raw": "580",
+          "raw_lines": [
+            "0-1 Mob Wrangler, 0-1 Swamp Beast ,",
+            "Any Kruleboyz 130mm"
+          ],
+          "base_size": "130mm",
+          "options_or_keywords": "0-1 Mob Wrangler, 0-1 Swamp Beast , Any Kruleboyz",
+          "notes": ""
+        },
+        {
+          "name": "Murknob with Belcha-banna",
+          "unit_size": 1,
+          "points": 80,
+          "points_raw": "80 (-10)",
+          "raw_lines": [
+            "Any Kruleboyz This Hero can join an eligible",
+            "regiment as a Mob Wrangler. 40mm",
+            "✹  Snatchaboss on"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Any Kruleboyz",
+          "notes": "This Hero can join an eligible regiment as a Mob Wrangler. 40mm ✹  Snatchaboss on"
+        },
+        {
+          "name": "Sludgeraker Beast",
+          "unit_size": 1,
+          "points": 180,
+          "points_raw": "180 (-20)",
+          "raw_lines": [
+            "0-1 Mob Wrangler, Any Kruleboyz This Hero can join an eligible",
+            "regiment as a Swamp Beast . 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Mob Wrangler, Any Kruleboyz",
+          "notes": "This Hero can join an eligible regiment as a Swamp Beast ."
+        },
+        {
+          "name": "Swampboss Skumdrekk",
+          "unit_size": 1,
+          "points": 150,
+          "points_raw": "150 (-30)",
+          "raw_lines": [
+            "0-1 Mob Wrangler, 0-1 Swamp Beast ,",
+            "Any Kruleboyz 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Mob Wrangler, 0-1 Swamp Beast , Any Kruleboyz",
+          "notes": ""
+        },
+        {
+          "name": "Swampcalla Shaman with Pot -grot",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Any Kruleboyz 40mm [1],",
+            "25mm [1]"
+          ],
+          "base_size": "40mm [1], 25mm [1]",
+          "options_or_keywords": "Any Kruleboyz",
+          "notes": ""
+        },
+        {
+          "name": "Gorlok Blackpowder",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "None 50mm [1],",
+            "25mm [4]"
+          ],
+          "base_size": "50mm [1], 25mm [4]",
+          "options_or_keywords": "None",
+          "notes": ""
+        },
+        {
+          "name": "Hrothgorn Mantrapper",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "None",
+            "40mm [1],",
+            "50 × 25mm",
+            "[1], 25mm [3]"
+          ],
+          "base_size": "40mm [1], 50 × 25mm [1], 25mm [3]",
+          "options_or_keywords": "None",
+          "notes": ""
+        }
+      ],
+      "units": [
+        {
+          "name": "Beast-skewer Killbow",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130 (-10)",
+          "raw_lines": [
+            "War Machine 90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "War Machine",
+          "notes": ""
+        },
+        {
+          "name": "Gutrippaz",
+          "unit_size": 10,
+          "points": 150,
+          "points_raw": "150 (-10)",
+          "raw_lines": [
+            "Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Hobgrot Slittaz",
+          "unit_size": 10,
+          "points": 70,
+          "points_raw": "70",
+          "raw_lines": [
+            "Infantry 25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Man-skewer Boltboyz",
+          "unit_size": 3,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Marshcrawla Sloggoth",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "War Machine 105 × 70mm"
+          ],
+          "base_size": "105 × 70mm",
+          "options_or_keywords": "War Machine",
+          "notes": ""
+        }
+      ],
+      "auxiliary": [
+        {
+          "name": "Battle Formation Kruleboyz Klaw",
+          "points": 0,
+          "notes": "Battletome: Orruk Warclans"
+        },
+        {
+          "name": "Battle Formation Middul Finga",
+          "points": 0,
+          "notes": "Battletome: Orruk Warclans"
+        },
+        {
+          "name": "Battle Formation Light Finga",
+          "points": 0,
+          "notes": "Battletome: Orruk Warclans"
+        },
+        {
+          "name": "Battle Formation Trophy Finga",
+          "points": 0,
+          "notes": "Battletome: Orruk Warclans"
+        },
+        {
+          "name": "✹  Artefact of Power Tattermask",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Artefact of Power Spell in a Rattle",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Artefact of Power Woggly Bogstikk",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Heroic Trait Backstabba",
+          "points": 0,
+          "notes": "Battletome: Orruk Warclans"
+        },
+        {
+          "name": "Heroic Trait Slippery Skumbag",
+          "points": 0,
+          "notes": "Battletome: Orruk Warclans"
+        },
+        {
+          "name": "Heroic Trait Egomaniak",
+          "points": 10,
+          "notes": "Battletome: Orruk Warclans"
+        },
+        {
+          "name": "Artefact of Power Mork’s Eye Pebble",
+          "points": 0,
+          "notes": "Battletome: Orruk Warclans"
+        },
+        {
+          "name": "Artefact of Power Swamp Staff",
+          "points": 0,
+          "notes": "Battletome: Orruk Warclans"
+        },
+        {
+          "name": "Artefact of Power Eye-biter Ash",
+          "points": 0,
+          "notes": "Battletome: Orruk Warclans"
+        },
+        {
+          "name": "✹  Monstrous Trait Spittin’ ’Un",
+          "points": 20,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Monstrous Trait Sly ’Un",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Monstrous Trait Quick ’Un",
+          "points": 20,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Spell Lore Lore of the Swamp",
+          "points": 0,
+          "notes": "Battletome: Orruk Warclans"
+        },
+        {
+          "name": "Manifestation Lore Manifestations of Gorkamorka",
+          "points": 0,
+          "notes": "Battletome: Orruk Warclans"
+        },
+        {
+          "name": "Faction Terrain Skaregob Totem",
+          "points": 0,
+          "notes": "Battletome: Orruk Warclans"
+        }
+      ]
+    },
+    "OGOR MAWTRIBES": {
+      "heroes": [
+        {
+          "name": "Bloodpelt Hunter",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Any Gutbusters This Hero can join a",
+            "Tyrant’s regiment. 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any Gutbusters",
+          "notes": "This Hero can join a Tyrant’s regiment."
+        },
+        {
+          "name": "Butcher",
+          "unit_size": 1,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "0-1 Gnoblar Scraplauncher ,",
+            "Any Gutbusters , Any Gnoblars,",
+            "Any Gorger Mawpack",
+            "50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "0-1 Gnoblar Scraplauncher , Any Gutbusters , Any Gnoblars, Any Gorger Mawpack",
+          "notes": ""
+        },
+        {
+          "name": "Firebelly",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "0-1 Gnoblar Scraplauncher ,",
+            "Any Gutbusters , Any Gnoblars,",
+            "Any Gorger Mawpack",
+            "50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "0-1 Gnoblar Scraplauncher , Any Gutbusters , Any Gnoblars, Any Gorger Mawpack",
+          "notes": ""
+        },
+        {
+          "name": "Frostlord on Stonehorn",
+          "unit_size": 1,
+          "points": 320,
+          "points_raw": "320",
+          "raw_lines": [
+            "0-1 Voice of the Everwinter,",
+            "Any Ogor Mawtribes 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Voice of the Everwinter, Any Ogor Mawtribes",
+          "notes": ""
+        },
+        {
+          "name": "Frostlord on Thundertusk",
+          "unit_size": 1,
+          "points": 230,
+          "points_raw": "230",
+          "raw_lines": [
+            "0-1 Voice of the Everwinter,",
+            "Any Ogor Mawtribes 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "0-1 Voice of the Everwinter, Any Ogor Mawtribes",
+          "notes": ""
+        },
+        {
+          "name": "Huskard on Stonehorn",
+          "unit_size": 1,
+          "points": 290,
+          "points_raw": "290",
+          "raw_lines": [
+            "Any Beastclaw Raiders",
+            "This Hero can join an eligible",
+            "regiment as a Voice of the",
+            "Everwinter.",
+            "120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Any Beastclaw Raiders",
+          "notes": "This Hero can join an eligible regiment as a Voice of the Everwinter."
+        },
+        {
+          "name": "Huskard on Thundertusk",
+          "unit_size": 1,
+          "points": 220,
+          "points_raw": "220",
+          "raw_lines": [
+            "Any Beastclaw Raiders",
+            "This Hero can join an",
+            "eligible regiment as a Voice of",
+            "the Everwinter.",
+            "120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Any Beastclaw Raiders",
+          "notes": "This Hero can join an eligible regiment as a Voice of the Everwinter."
+        },
+        {
+          "name": "Icebrow Hunter",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Any Beastclaw Raiders",
+            "This Hero can join an",
+            "eligible regiment as a Voice of",
+            "the Everwinter.",
+            "50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "Any Beastclaw Raiders",
+          "notes": "This Hero can join an eligible regiment as a Voice of the Everwinter."
+        },
+        {
+          "name": "Kragnos, the End of Empires",
+          "unit_size": 1,
+          "points": 580,
+          "points_raw": "580",
+          "raw_lines": [
+            "Any Ogor Mawtribes 130mm"
+          ],
+          "base_size": "130mm",
+          "options_or_keywords": "Any Ogor Mawtribes",
+          "notes": ""
+        },
+        {
+          "name": "Mantrapper",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Any Beastclaw Raiders",
+            "This Hero can join an",
+            "eligible regiment as a Voice of",
+            "the Everwinter.",
+            "40mm [1],",
+            "50 × 25mm",
+            "[1], 25mm [3]"
+          ],
+          "base_size": "40mm [1], 50 × 25mm [1], 25mm [3]",
+          "options_or_keywords": "Any Beastclaw Raiders",
+          "notes": "This Hero can join an eligible regiment as a Voice of the Everwinter."
+        },
+        {
+          "name": "Slaughtermaster",
+          "unit_size": 1,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "0-1 Gnoblar Scraplauncher ,",
+            "Any Gutbusters , Any Gnoblars,",
+            "Any Gorger Mawpack",
+            "105 × 70mm"
+          ],
+          "base_size": "105 × 70mm",
+          "options_or_keywords": "0-1 Gnoblar Scraplauncher , Any Gutbusters , Any Gnoblars, Any Gorger Mawpack",
+          "notes": ""
+        },
+        {
+          "name": "Ty rant",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "0-1 Bloodpelt Hunter,",
+            "Any Ogor Mawtribes 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "0-1 Bloodpelt Hunter, Any Ogor Mawtribes",
+          "notes": ""
+        }
+      ],
+      "units": [
+        {
+          "name": "Frost Sabres",
+          "unit_size": 2,
+          "points": 70,
+          "points_raw": "70",
+          "raw_lines": [
+            "Beastclaw Raiders, Beast 60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Beastclaw Raiders, Beast",
+          "notes": ""
+        },
+        {
+          "name": "Gnoblar Scraplauncher",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "War Machine 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "War Machine",
+          "notes": ""
+        },
+        {
+          "name": "Gnoblars",
+          "unit_size": 20,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Infantry 25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Gorger Mawpack",
+          "unit_size": 5,
+          "points": 240,
+          "points_raw": "240",
+          "raw_lines": [
+            "Infantry This unit cannot be reinforced. 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "Icefall Yhetees",
+          "unit_size": 3,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Beastclaw Raiders, Infantry 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "Beastclaw Raiders, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Ironblaster",
+          "unit_size": 1,
+          "points": 160,
+          "points_raw": "160",
+          "raw_lines": [
+            "Gutbusters, War Machine 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Gutbusters, War Machine",
+          "notes": ""
+        },
+        {
+          "name": "Ironguts",
+          "unit_size": 4,
+          "points": 210,
+          "points_raw": "210",
+          "raw_lines": [
+            "Gutbusters, Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Gutbusters, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Leadbelchers",
+          "unit_size": 4,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Gutbusters, Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Gutbusters, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Maneaters",
+          "unit_size": 3,
+          "points": 160,
+          "points_raw": "160",
+          "raw_lines": [
+            "Infantry 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Mournfang Pack",
+          "unit_size": 2,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Beastclaw Raiders, Cavalry 90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "Beastclaw Raiders, Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Ogor Gluttons",
+          "unit_size": 6,
+          "points": 220,
+          "points_raw": "220",
+          "raw_lines": [
+            "Gutbusters, Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Gutbusters, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Stonehorn Beastriders",
+          "unit_size": 1,
+          "points": 260,
+          "points_raw": "260",
+          "raw_lines": [
+            "Beastclaw Raiders, Monster 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Beastclaw Raiders, Monster",
+          "notes": ""
+        },
+        {
+          "name": "Thundertusk Beastriders",
+          "unit_size": 1,
+          "points": 180,
+          "points_raw": "180",
+          "raw_lines": [
+            "Beastclaw Raiders, Monster 120 × 92mm",
+            "NEW",
+            "54"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Beastclaw Raiders, Monster 120 × 92mm NEW 54",
+          "notes": ""
+        },
+        {
+          "name": "Aleguzzler Gargant",
+          "unit_size": 1,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Monster 90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "Monster",
+          "notes": ""
+        },
+        {
+          "name": "Borgit’s Beastgrabbaz",
+          "unit_size": 5,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "Unique, Moonclan, Infantry This unit cannot be reinforced.",
+            "32mm [1],",
+            "28.5mm [2],",
+            "25mm [2]"
+          ],
+          "base_size": "5mm [2], 25mm [2]",
+          "options_or_keywords": "Unique, Moonclan, Infantry",
+          "notes": "This unit cannot be reinforced. 32mm [1], 28."
+        },
+        {
+          "name": "Grinkrak’s Looncourt",
+          "unit_size": 7,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Unique, Moonclan, Infantry This unit cannot be reinforced. 32mm [3],",
+            "25mm [4]"
+          ],
+          "base_size": "32mm [3], 25mm [4]",
+          "options_or_keywords": "Unique, Moonclan, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "Rippa’s Snarlfangs",
+          "unit_size": 3,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Unique, Gitmob, Cavalry This unit cannot be reinforced. Use model"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Unique, Gitmob, Cavalry",
+          "notes": "This unit cannot be reinforced. Use model"
+        },
+        {
+          "name": "Zarbag’s Gitz",
+          "unit_size": 9,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Unique, Moonclan, Infantry This unit cannot be reinforced. 25mm",
+            "73"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Unique, Moonclan, Infantry",
+          "notes": "This unit cannot be reinforced. 25mm 73"
+        }
+      ],
+      "auxiliary": [
+        {
+          "name": "Battle Formation Prophets of the Gulping God",
+          "points": 0,
+          "notes": "Faction Pack: Ogor Mawtribes"
+        },
+        {
+          "name": "Battle Formation Beast Handlers",
+          "points": 0,
+          "notes": "Faction Pack: Ogor Mawtribes"
+        },
+        {
+          "name": "Battle Formation Heralds of the Everwinter",
+          "points": 0,
+          "notes": "Faction Pack: Ogor Mawtribes"
+        },
+        {
+          "name": "Battle Formation Blackpowder Fanatics",
+          "points": 0,
+          "notes": "Faction Pack: Ogor Mawtribes"
+        },
+        {
+          "name": "✹  Artefact of Power A Choice Cut",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Artefact of Power Rusty Grater",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Artefact of Power Key to the Larder",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Heroic Trait Great Gutlord",
+          "points": 0,
+          "notes": "Faction Pack: Ogor Mawtribes"
+        },
+        {
+          "name": "Heroic Trait Booming Roar",
+          "points": 0,
+          "notes": "Faction Pack: Ogor Mawtribes"
+        },
+        {
+          "name": "Heroic Trait Touched by the Everwinter",
+          "points": 20,
+          "notes": "Faction Pack: Ogor Mawtribes"
+        },
+        {
+          "name": "Artefact of Power Gruesome Trophies",
+          "points": 0,
+          "notes": "Faction Pack: Ogor Mawtribes"
+        },
+        {
+          "name": "Artefact of Power The Fang of Ghur",
+          "points": 0,
+          "notes": "Faction Pack: Ogor Mawtribes"
+        },
+        {
+          "name": "Artefact of Power Elixir of the Frostwyrm",
+          "points": 0,
+          "notes": "Faction Pack: Ogor Mawtribes"
+        },
+        {
+          "name": "✹  Monstrous Trait Extremely Obstinate",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Monstrous Trait Horn Toss",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Monstrous Trait Grumpy Alpha",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Spell Lore Lore of Maw-magic",
+          "points": 0,
+          "notes": "Faction Pack: Ogor Mawtribes"
+        },
+        {
+          "name": "Prayer Lore Everwinter Prayers",
+          "points": 0,
+          "notes": "Faction Pack: Ogor Mawtribes"
+        },
+        {
+          "name": "Faction Terrain Great Mawpot",
+          "points": 0,
+          "notes": "Faction Pack: Ogor Mawtribes"
+        },
+        {
+          "name": "Faction Terrain Mawpit",
+          "points": 0,
+          "notes": "Faction Pack: Ogor Mawtribes"
+        }
+      ]
+    },
+    "SONS OF BEHEMAT": {
+      "heroes": [
+        {
+          "name": "Beast-smasher Mega-Gargant",
+          "unit_size": 1,
+          "points": 470,
+          "points_raw": "470",
+          "raw_lines": [
+            "0-1 Eager Lout , Any Sons of Behemat This Hero can join an eligible",
+            "regiment as an Eager Lout . 130mm"
+          ],
+          "base_size": "130mm",
+          "options_or_keywords": "0-1 Eager Lout , Any Sons of Behemat",
+          "notes": "This Hero can join an eligible regiment as an Eager Lout ."
+        },
+        {
+          "name": "Gatebreaker Mega-Gargant",
+          "unit_size": 1,
+          "points": 490,
+          "points_raw": "490",
+          "raw_lines": [
+            "0-1 Eager Lout , Any Sons of Behemat This Hero can join an eligible",
+            "regiment as an Eager Lout . 130mm"
+          ],
+          "base_size": "130mm",
+          "options_or_keywords": "0-1 Eager Lout , Any Sons of Behemat",
+          "notes": "This Hero can join an eligible regiment as an Eager Lout ."
+        },
+        {
+          "name": "King Brodd",
+          "unit_size": 1,
+          "points": 520,
+          "points_raw": "520",
+          "raw_lines": [
+            "0-1 Eager Lout , Any Sons of Behemat 130mm"
+          ],
+          "base_size": "130mm",
+          "options_or_keywords": "0-1 Eager Lout , Any Sons of Behemat",
+          "notes": ""
+        },
+        {
+          "name": "Kragnos, the End of Empires",
+          "unit_size": 1,
+          "points": 590,
+          "points_raw": "590",
+          "raw_lines": [
+            "0-1 Eager Lout , Any Sons of Behemat 130mm"
+          ],
+          "base_size": "130mm",
+          "options_or_keywords": "0-1 Eager Lout , Any Sons of Behemat",
+          "notes": ""
+        },
+        {
+          "name": "Kraken-eater Mega-Gargant",
+          "unit_size": 1,
+          "points": 410,
+          "points_raw": "410 (-20)",
+          "raw_lines": [
+            "0-1 Eager Lout , Any Sons of Behemat This Hero can join an eligible",
+            "regiment as an Eager Lout . 130mm"
+          ],
+          "base_size": "130mm",
+          "options_or_keywords": "0-1 Eager Lout , Any Sons of Behemat",
+          "notes": "This Hero can join an eligible regiment as an Eager Lout ."
+        },
+        {
+          "name": "Warstomper Mega-Gargant",
+          "unit_size": 1,
+          "points": 450,
+          "points_raw": "450",
+          "raw_lines": [
+            "0-1 Eager Lout , Any Sons of Behemat This Hero can join an eligible",
+            "regiment as an Eager Lout . 130mm"
+          ],
+          "base_size": "130mm",
+          "options_or_keywords": "0-1 Eager Lout , Any Sons of Behemat",
+          "notes": "This Hero can join an eligible regiment as an Eager Lout ."
+        }
+      ],
+      "units": [
+        {
+          "name": "Mancrusher Gargant",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Monster 90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "Monster",
+          "notes": ""
+        },
+        {
+          "name": "Mancrusher Mob",
+          "unit_size": 3,
+          "points": 350,
+          "points_raw": "350",
+          "raw_lines": [
+            "Monster This unit cannot be reinforced. 90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "Monster",
+          "notes": "This unit cannot be reinforced."
+        }
+      ],
+      "auxiliary": [
+        {
+          "name": "Battle Formation Taker Tribe",
+          "points": 0,
+          "notes": "Faction Pack: Sons of Behemat"
+        },
+        {
+          "name": "Battle Formation Boss tribe",
+          "points": 0,
+          "notes": "Faction Pack: Sons of Behemat"
+        },
+        {
+          "name": "Battle Formation Breaker Tribe",
+          "points": 0,
+          "notes": "Faction Pack: Sons of Behemat"
+        },
+        {
+          "name": "Battle Formation Stomper Tribe",
+          "points": 0,
+          "notes": "Faction Pack: Sons of Behemat"
+        },
+        {
+          "name": "✹  Cracked Heel That Boy’s Not Right",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Cracked Heel Up For It",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "✹  Cracked Heel Always on Guard",
+          "points": 10,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Heroic Trait Furious Temper",
+          "points": 0,
+          "notes": "Faction Pack: Sons of Behemat"
+        },
+        {
+          "name": "Heroic Trait Monstrously Tough",
+          "points": 0,
+          "notes": "Faction Pack: Sons of Behemat"
+        },
+        {
+          "name": "Heroic Trait Rabble Rouser",
+          "points": 0,
+          "notes": "Faction Pack: Sons of Behemat"
+        },
+        {
+          "name": "✹  Prayer Lore Brodd’s Bellows",
+          "points": 0,
+          "notes": "Scourge of Aqshy"
+        },
+        {
+          "name": "Artefact of Power Amberbone Totem",
+          "points": 0,
+          "notes": "Faction Pack: Sons of Behemat"
+        },
+        {
+          "name": "Artefact of Power Glowy Lantern",
+          "points": 0,
+          "notes": "Faction Pack: Sons of Behemat"
+        },
+        {
+          "name": "Artefact of Power Mantle of Tusk and Horns",
+          "points": 10,
+          "notes": "Faction Pack: Sons of Behemat"
+        },
+        {
+          "name": "Artefact of Power Extra-calloused Feet",
+          "points": 10,
+          "notes": "Faction Pack: Sons of Behemat"
+        },
+        {
+          "name": "Artefact of Power Glowy Shield of Protectiness",
+          "points": 0,
+          "notes": "Faction Pack: Sons of Behemat"
+        },
+        {
+          "name": "Artefact of Power Kingslaughter Cowl",
+          "points": 0,
+          "notes": "Faction Pack: Sons of Behemat"
+        }
+      ]
+    }
+  },
+  "regiments_of_renown": [],
+  "manifestations": [],
+  "legends": {
+    "OTHER": {
+      "heroes": [
+        {
+          "name": "Astreia Solbright",
+          "unit_size": 1,
+          "points": 220,
+          "points_raw": "220",
+          "raw_lines": [
+            "Any Stormcast Eternals 90 × 52mm",
+            "Aventis Firestrike,"
+          ],
+          "base_size": "Unknown",
+          "options_or_keywords": "Any Stormcast Eternals 90 × 52mm Aventis Firestrike",
+          "notes": ""
+        },
+        {
+          "name": "Magister of Hammerhal",
+          "unit_size": 1,
+          "points": 310,
+          "points_raw": "310",
+          "raw_lines": [
+            "Any Stormcast Eternals 100mm"
+          ],
+          "base_size": "100mm",
+          "options_or_keywords": "Any Stormcast Eternals",
+          "notes": ""
+        },
+        {
+          "name": "Gavriel Sureheart",
+          "unit_size": 1,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "0-1 Gryph‑hounds , Any Infantry",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Stormcast Exemplar .",
+            "40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Gryph‑hounds , Any Infantry",
+          "notes": "This Hero can join an eligible regiment as a Stormcast Exemplar ."
+        },
+        {
+          "name": "Knight-Heraldor",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "0-1 Gryph‑hounds ,",
+            "Any Warrior Chamber 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Gryph‑hounds , Any Warrior Chamber",
+          "notes": ""
+        },
+        {
+          "name": "Knight-Incantor",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "0-1 Gryph‑hounds ,",
+            "Any Sacrosanct Chamber Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Gryph‑hounds , Any Sacrosanct Chamber Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Knight-Venator",
+          "unit_size": 1,
+          "points": 170,
+          "points_raw": "170",
+          "raw_lines": [
+            "0-1 Gryph‑hounds ,",
+            "Any Warrior Chamber Infantry",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Stormcast Exemplar .",
+            "50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "0-1 Gryph‑hounds , Any Warrior Chamber Infantry",
+          "notes": "This Hero can join an eligible regiment as a Stormcast Exemplar ."
+        },
+        {
+          "name": "Knight-Zephyros",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "0-1 Gryph‑hounds ,",
+            "Any Vanguard Chamber",
+            "This Hero can join an",
+            "eligible regiment as a",
+            "Stormcast Exemplar .",
+            "40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Gryph‑hounds , Any Vanguard Chamber",
+          "notes": "This Hero can join an eligible regiment as a Stormcast Exemplar ."
+        },
+        {
+          "name": "Lord-Arcanum",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Any Sacrosanct Chamber Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any Sacrosanct Chamber Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Lord-Arcanum on Celestial Dracoline",
+          "unit_size": 1,
+          "points": 210,
+          "points_raw": "210",
+          "raw_lines": [
+            "Any Sacrosanct Chamber Cavalry 90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "Any Sacrosanct Chamber Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Lord-Arcanum on Gryph-charger",
+          "unit_size": 1,
+          "points": 220,
+          "points_raw": "220",
+          "raw_lines": [
+            "Any Sacrosanct Chamber 90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "Any Sacrosanct Chamber",
+          "notes": ""
+        },
+        {
+          "name": "Lord-Arcanum on Tauralon",
+          "unit_size": 1,
+          "points": 280,
+          "points_raw": "280",
+          "raw_lines": [
+            "Any Sacrosanct Chamber 100mm"
+          ],
+          "base_size": "100mm",
+          "options_or_keywords": "Any Sacrosanct Chamber",
+          "notes": ""
+        },
+        {
+          "name": "Lord-Castellant",
+          "unit_size": 1,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Any Warrior Chamber Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any Warrior Chamber Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Lord-Exorcist",
+          "unit_size": 1,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Any Sacrosanct Chamber Infantry 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any Sacrosanct Chamber Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Lord-Ordinator",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Any Sacrosanct Chamber Infantry ,",
+            "Any Sacrosanct Chamber",
+            "War Machine",
+            "40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Any Sacrosanct Chamber Infantry , Any Sacrosanct Chamber War Machine",
+          "notes": ""
+        },
+        {
+          "name": "Beastlord",
+          "unit_size": 1,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "0-1 Herd Alpha, Any Beasts of Chaos This Hero can join an eligible",
+            "regiment as a Herd Alpha. 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "0-1 Herd Alpha, Any Beasts of Chaos",
+          "notes": "This Hero can join an eligible regiment as a Herd Alpha."
+        },
+        {
+          "name": "Doombull",
+          "unit_size": 1,
+          "points": 170,
+          "points_raw": "170",
+          "raw_lines": [
+            "0-1 Herd Alpha, Any Beasts of Chaos This Hero can join an eligible",
+            "regiment as a Herd Alpha. 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "0-1 Herd Alpha, Any Beasts of Chaos",
+          "notes": "This Hero can join an eligible regiment as a Herd Alpha."
+        },
+        {
+          "name": "Dragon Ogor Shaggoth",
+          "unit_size": 1,
+          "points": 220,
+          "points_raw": "220",
+          "raw_lines": [
+            "0-1 Herd Alpha, Any Beasts of Chaos 90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "0-1 Herd Alpha, Any Beasts of Chaos",
+          "notes": ""
+        },
+        {
+          "name": "Great Bray-Shaman",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "0-1 Herd Alpha, 0-1 Beast,",
+            "Any Brayherd 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Herd Alpha, 0-1 Beast, Any Brayherd",
+          "notes": ""
+        },
+        {
+          "name": "Fatemaster on Disc of Tzeentch",
+          "unit_size": 1,
+          "points": 160,
+          "points_raw": "160",
+          "raw_lines": [
+            "0-1 Chaos Spawn of Tzeentch ,",
+            "0-1 Arcanite Cabalist , Any Arcanite 60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "0-1 Chaos Spawn of Tzeentch , 0-1 Arcanite Cabalist , Any Arcanite",
+          "notes": ""
+        },
+        {
+          "name": "Fluxmaster, Herald of Tzeentch on Disc",
+          "unit_size": 1,
+          "points": 180,
+          "points_raw": "180",
+          "raw_lines": [
+            "Any Daemon 60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "Any Daemon",
+          "notes": ""
+        },
+        {
+          "name": "The Blue Scribes",
+          "unit_size": 1,
+          "points": 180,
+          "points_raw": "180",
+          "raw_lines": [
+            "0-1 Tzeentchian Deceiver , Any Daemon 60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "0-1 Tzeentchian Deceiver , Any Daemon",
+          "notes": ""
+        },
+        {
+          "name": "Epidemius, Tallyman of Nurgle",
+          "unit_size": 1,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "0-1 Plague Scion , Any Daemon 60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "0-1 Plague Scion , Any Daemon",
+          "notes": ""
+        },
+        {
+          "name": "Doktor Festus",
+          "unit_size": 1,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "0-1 Rotbringer Lord , Any Rotbringers",
+            "You cannot include this unit",
+            "and Festus the Leechlord in the",
+            "same army",
+            "32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "0-1 Rotbringer Lord , Any Rotbringers",
+          "notes": "You cannot include this unit and Festus the Leechlord in the same army"
+        }
+      ],
+      "units": [
+        {
+          "name": "Brethren of the Bolt",
+          "unit_size": 5,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Unique, Human, Infantry This unit cannot be reinforced.",
+            "40mm [1],",
+            "32mm [1],",
+            "25mm [3]"
+          ],
+          "base_size": "40mm [1], 32mm [1], 25mm [3]",
+          "options_or_keywords": "Unique, Human, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "Hexbane’s Hunters",
+          "unit_size": 6,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Unique, Human, Infantry This unit cannot be reinforced.",
+            "32mm [1],",
+            "28.5mm [3],",
+            "25mm [2]"
+          ],
+          "base_size": "5mm [3], 25mm [2]",
+          "options_or_keywords": "Unique, Human, Infantry",
+          "notes": "This unit cannot be reinforced. 32mm [1], 28."
+        },
+        {
+          "name": "Beasts of Chaos Chaos Spawn",
+          "unit_size": 1,
+          "points": 70,
+          "points_raw": "70",
+          "raw_lines": [
+            "Beast 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "Beast",
+          "notes": ""
+        },
+        {
+          "name": "Bestigors",
+          "unit_size": 10,
+          "points": 220,
+          "points_raw": "220",
+          "raw_lines": [
+            "Brayherd, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Brayherd, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Bullgors",
+          "unit_size": 3,
+          "points": 170,
+          "points_raw": "170",
+          "raw_lines": [
+            "Infantry 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Centigors",
+          "unit_size": 5,
+          "points": 170,
+          "points_raw": "170",
+          "raw_lines": [
+            "Brayherd, Cavalry 60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Brayherd, Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Chaos Gargant",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Monster 90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "Monster",
+          "notes": ""
+        },
+        {
+          "name": "Chaos Warhounds",
+          "unit_size": 10,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Beast 60 × 35mm"
+          ],
+          "base_size": "60 × 35mm",
+          "options_or_keywords": "Beast",
+          "notes": ""
+        },
+        {
+          "name": "Chimera",
+          "unit_size": 1,
+          "points": 200,
+          "points_raw": "200",
+          "raw_lines": [
+            "Monster 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Monster",
+          "notes": ""
+        },
+        {
+          "name": "Cockatrice",
+          "unit_size": 1,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Beast 60mm"
+          ],
+          "base_size": "60mm",
+          "options_or_keywords": "Beast",
+          "notes": ""
+        },
+        {
+          "name": "Cygor",
+          "unit_size": 1,
+          "points": 170,
+          "points_raw": "170",
+          "raw_lines": [
+            "Monster 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Monster",
+          "notes": ""
+        },
+        {
+          "name": "Dragon Ogors",
+          "unit_size": 3,
+          "points": 200,
+          "points_raw": "200",
+          "raw_lines": [
+            "Cavalry 90 × 52mm"
+          ],
+          "base_size": "90 × 52mm",
+          "options_or_keywords": "Cavalry",
+          "notes": ""
+        },
+        {
+          "name": "Ghorgon",
+          "unit_size": 1,
+          "points": 180,
+          "points_raw": "180",
+          "raw_lines": [
+            "Monster 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Monster",
+          "notes": ""
+        },
+        {
+          "name": "Gors",
+          "unit_size": 10,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Brayherd, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Brayherd, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Grashrak’s Despoilers",
+          "unit_size": 6,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Unique, Brayherd, Infantry This unit cannot be reinforced. 32mm [2],",
+            "25mm [4]"
+          ],
+          "base_size": "32mm [2], 25mm [4]",
+          "options_or_keywords": "Unique, Brayherd, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "Jabberslythe",
+          "unit_size": 1,
+          "points": 190,
+          "points_raw": "190",
+          "raw_lines": [
+            "Monster 120 × 92mm"
+          ],
+          "base_size": "120 × 92mm",
+          "options_or_keywords": "Monster",
+          "notes": ""
+        },
+        {
+          "name": "Razorgor",
+          "unit_size": 1,
+          "points": 70,
+          "points_raw": "70",
+          "raw_lines": [
+            "Beast 75 × 42mm"
+          ],
+          "base_size": "75 × 42mm",
+          "options_or_keywords": "Beast",
+          "notes": ""
+        },
+        {
+          "name": "Tuskgor Chariots",
+          "unit_size": 1,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Brayherd, War Machine 105 × 70mm"
+          ],
+          "base_size": "105 × 70mm",
+          "options_or_keywords": "Brayherd, War Machine",
+          "notes": ""
+        },
+        {
+          "name": "Ungor Raiders",
+          "unit_size": 10,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "Brayherd, Infantry 25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Brayherd, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Ungors",
+          "unit_size": 10,
+          "points": 90,
+          "points_raw": "90",
+          "raw_lines": [
+            "Brayherd, Infantry 25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Brayherd, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Corvus Cabal",
+          "unit_size": 9,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Infantry This unit cannot be reinforced.",
+            "40mm [1],",
+            "28.5mm [3],",
+            "25mm [5]"
+          ],
+          "base_size": "5mm [3], 25mm [5]",
+          "options_or_keywords": "Infantry",
+          "notes": "This unit cannot be reinforced. 40mm [1], 28."
+        },
+        {
+          "name": "Cypher Lords",
+          "unit_size": 8,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Infantry This unit cannot be reinforced.",
+            "32mm [1],",
+            "28.5mm [4],",
+            "25mm [3]"
+          ],
+          "base_size": "5mm [4], 25mm [3]",
+          "options_or_keywords": "Infantry",
+          "notes": "This unit cannot be reinforced. 32mm [1], 28."
+        },
+        {
+          "name": "Godsworn Hunt",
+          "unit_size": 6,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Unique, Darkoath, Infantry This unit cannot be reinforced. 32mm [5],",
+            "25mm [1]"
+          ],
+          "base_size": "32mm [5], 25mm [1]",
+          "options_or_keywords": "Unique, Darkoath, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "Horns of Hashut",
+          "unit_size": 10,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Infantry This unit cannot be reinforced.",
+            "32mm [3],",
+            "28.5mm [4],",
+            "25mm [3]"
+          ],
+          "base_size": "5mm [4], 25mm [3]",
+          "options_or_keywords": "Infantry",
+          "notes": "This unit cannot be reinforced. 32mm [3], 28."
+        },
+        {
+          "name": "Iron Golem",
+          "unit_size": 8,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Infantry This unit cannot be reinforced.",
+            "40mm [1],",
+            "32mm [3],",
+            "28.5mm [4]"
+          ],
+          "base_size": "5mm [4]",
+          "options_or_keywords": "Infantry",
+          "notes": "This unit cannot be reinforced. 40mm [1], 32mm [3], 28."
+        },
+        {
+          "name": "Khagra’s Ravagers",
+          "unit_size": 4,
+          "points": 170,
+          "points_raw": "170",
+          "raw_lines": [
+            "Unique, Warriors of Chaos,",
+            "Infantry This unit cannot be reinforced. 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Unique, Warriors of Chaos, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "Scions of the Flame",
+          "unit_size": 8,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Infantry This unit cannot be reinforced.",
+            "32mm [3],",
+            "28.5mm [3],",
+            "25mm [2]"
+          ],
+          "base_size": "5mm [3], 25mm [2]",
+          "options_or_keywords": "Infantry",
+          "notes": "This unit cannot be reinforced. 32mm [3], 28."
+        },
+        {
+          "name": "Soul Grinder",
+          "unit_size": 1,
+          "points": 330,
+          "points_raw": "330",
+          "raw_lines": [
+            "Daemon, Monster 160mm"
+          ],
+          "base_size": "160mm",
+          "options_or_keywords": "Daemon, Monster",
+          "notes": ""
+        },
+        {
+          "name": "Spire Ty rants",
+          "unit_size": 9,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Infantry This unit cannot be reinforced.",
+            "32mm [3],",
+            "28.5mm [4],",
+            "25mm [2]"
+          ],
+          "base_size": "5mm [4], 25mm [2]",
+          "options_or_keywords": "Infantry",
+          "notes": "This unit cannot be reinforced. 32mm [3], 28."
+        },
+        {
+          "name": "Splintered Fang",
+          "unit_size": 9,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Infantry This unit cannot be reinforced.",
+            "32mm [3],",
+            "28.5mm [2],",
+            "25mm [5]"
+          ],
+          "base_size": "5mm [2], 25mm [5]",
+          "options_or_keywords": "Infantry",
+          "notes": "This unit cannot be reinforced. 32mm [3], 28."
+        },
+        {
+          "name": "Tarantulos Brood",
+          "unit_size": 13,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Infantry This unit cannot be reinforced.",
+            "32mm [1],",
+            "28.5mm [2],",
+            "25mm [10]"
+          ],
+          "base_size": "5mm [2], 25mm [10]",
+          "options_or_keywords": "Infantry",
+          "notes": "This unit cannot be reinforced. 32mm [1], 28."
+        },
+        {
+          "name": "The Gnarlspirit Pack",
+          "unit_size": 4,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Unique, Darkoath, Infantry This unit cannot be reinforced. 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Unique, Darkoath, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "The Unmade",
+          "unit_size": 9,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Infantry This unit cannot be reinforced.",
+            "40mm [1],",
+            "32mm [1],",
+            "28.5mm [3],",
+            "25mm [4]"
+          ],
+          "base_size": "5mm [3], 25mm [4]",
+          "options_or_keywords": "Infantry",
+          "notes": "This unit cannot be reinforced. 40mm [1], 32mm [1], 28."
+        },
+        {
+          "name": "Untamed Beasts",
+          "unit_size": 9,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Infantry This unit cannot be reinforced.",
+            "40mm [1],",
+            "32mm [3],",
+            "28.5mm [2],",
+            "25mm [3]"
+          ],
+          "base_size": "5mm [2], 25mm [3]",
+          "options_or_keywords": "Infantry",
+          "notes": "This unit cannot be reinforced. 40mm [1], 32mm [3], 28."
+        },
+        {
+          "name": "Plague Censer Bearers",
+          "unit_size": 5,
+          "points": 160,
+          "points_raw": "160",
+          "raw_lines": [
+            "Pestilens, Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Pestilens, Infantry",
+          "notes": ""
+        },
+        {
+          "name": "Skabbik’s Plaguepack",
+          "unit_size": 5,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Unique, Pestilens, Infantry This unit cannot be reinforced.",
+            "32mm [1],",
+            "28.5mm [1],",
+            "25mm [4]"
+          ],
+          "base_size": "5mm [1], 25mm [4]",
+          "options_or_keywords": "Unique, Pestilens, Infantry",
+          "notes": "This unit cannot be reinforced. 32mm [1], 28."
+        },
+        {
+          "name": "Skittershank’s Clawpack",
+          "unit_size": 5,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Unique, Eshin, Infantry This unit cannot be reinforced. 32mm [2],",
+            "25mm [3]"
+          ],
+          "base_size": "32mm [2], 25mm [3]",
+          "options_or_keywords": "Unique, Eshin, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "Spiteclaw’s Swarm",
+          "unit_size": 5,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Unique, Verminus, Infantry This unit cannot be reinforced. 32mm [1],",
+            "25mm [4]"
+          ],
+          "base_size": "32mm [1], 25mm [4]",
+          "options_or_keywords": "Unique, Verminus, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "Zikkit’s Tunnelpack",
+          "unit_size": 4,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Unique, Skryre, Infantry This unit cannot be reinforced. 32mm [2],",
+            "25mm [3]"
+          ],
+          "base_size": "32mm [2], 25mm [3]",
+          "options_or_keywords": "Unique, Skryre, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "The Grymwatch",
+          "unit_size": 7,
+          "points": 80,
+          "points_raw": "80",
+          "raw_lines": [
+            "Unique, Serfs, Infantry This unit cannot be reinforced. 32mm [2],",
+            "25mm [5]"
+          ],
+          "base_size": "32mm [2], 25mm [5]",
+          "options_or_keywords": "Unique, Serfs, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "The Skinnerkin",
+          "unit_size": 5,
+          "points": 80,
+          "points_raw": "80",
+          "raw_lines": [
+            "Unique, Serfs, Infantry This unit cannot be reinforced. 32mm [1],",
+            "25mm [4]"
+          ],
+          "base_size": "32mm [1], 25mm [4]",
+          "options_or_keywords": "Unique, Serfs, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "NEW Glaivewraith Stalkers",
+          "unit_size": 4,
+          "points": 100,
+          "points_raw": "100",
+          "raw_lines": [
+            "Infantry 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Infantry",
+          "notes": ""
+        },
+        {
+          "name": "The Headsmen’s Curse",
+          "unit_size": 4,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Unique, Infantry This unit cannot be reinforced.",
+            "40mm [1],",
+            "32mm [2],",
+            "25mm [1]"
+          ],
+          "base_size": "40mm [1], 32mm [2], 25mm [1]",
+          "options_or_keywords": "Unique, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "Thorns of the Briar Queen",
+          "unit_size": 7,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Unique, Infantry This unit cannot be reinforced. 32mm [1],",
+            "25mm [6]"
+          ],
+          "base_size": "32mm [1], 25mm [6]",
+          "options_or_keywords": "Unique, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "The Crimson Court",
+          "unit_size": 4,
+          "points": 210,
+          "points_raw": "210",
+          "raw_lines": [
+            "Unique, Infantry This unit cannot be reinforced. 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Unique, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "The Exiled Dead",
+          "unit_size": 7,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Unique, Deadwalkers, Infantry This unit cannot be reinforced. 28.5mm [1],",
+            "25mm [6]"
+          ],
+          "base_size": "5mm [1], 25mm [6]",
+          "options_or_keywords": "Unique, Deadwalkers, Infantry",
+          "notes": "This unit cannot be reinforced. 28."
+        },
+        {
+          "name": "The Sepulchral Guard",
+          "unit_size": 7,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Unique, Deathrattle, Infantry This unit cannot be reinforced. 25mm"
+          ],
+          "base_size": "25mm",
+          "options_or_keywords": "Unique, Deathrattle, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "The Sons of Velmorn",
+          "unit_size": 5,
+          "points": 130,
+          "points_raw": "130",
+          "raw_lines": [
+            "Unique, Deathrattle, Infantry This unit cannot be reinforced.",
+            "40mm [1],",
+            "32mm [1],",
+            "25mm [3]"
+          ],
+          "base_size": "40mm [1], 32mm [1], 25mm [3]",
+          "options_or_keywords": "Unique, Deathrattle, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "Zondara’s Gravebreakers",
+          "unit_size": 5,
+          "points": 120,
+          "points_raw": "120",
+          "raw_lines": [
+            "Unique, Deadwalkers, Infantry This unit cannot be reinforced.",
+            "32mm [1],",
+            "40mm [1],",
+            "25mm [3]"
+          ],
+          "base_size": "32mm [1], 40mm [1], 25mm [3]",
+          "options_or_keywords": "Unique, Deadwalkers, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "NEW Kosargi Nightguard",
+          "unit_size": 2,
+          "points": 110,
+          "points_raw": "110",
+          "raw_lines": [
+            "Deadwalkers, Infantry This unit cannot be reinforced. 40mm"
+          ],
+          "base_size": "40mm",
+          "options_or_keywords": "Deadwalkers, Infantry",
+          "notes": "This unit cannot be reinforced."
+        },
+        {
+          "name": "NEW Terrorgheist",
+          "unit_size": 1,
+          "points": 220,
+          "points_raw": "220",
+          "raw_lines": [
+            "Monster 130mm"
+          ],
+          "base_size": "130mm",
+          "options_or_keywords": "Monster",
+          "notes": ""
+        },
+        {
+          "name": "NEW Vargskyr",
+          "unit_size": 1,
+          "points": 140,
+          "points_raw": "140",
+          "raw_lines": [
+            "Beast 50mm"
+          ],
+          "base_size": "50mm",
+          "options_or_keywords": "Beast",
+          "notes": ""
+        },
+        {
+          "name": "NEW Vyrkos Blood-born",
+          "unit_size": 3,
+          "points": 150,
+          "points_raw": "150",
+          "raw_lines": [
+            "Infantry This unit cannot be reinforced. 32mm"
+          ],
+          "base_size": "32mm",
+          "options_or_keywords": "Infantry",
+          "notes": "This unit cannot be reinforced."
+        }
+      ]
+    }
+  }
+};
