@@ -715,6 +715,14 @@ input[type="text"]:focus, select:focus {
         overflow: hidden;
     }
     
+    .app-container.collapsed .sidebar {
+        display: none !important;
+    }
+    
+    .app-container.collapsed .main-content {
+        height: 100vh !important;
+    }
+    
     .sidebar {
         position: fixed;
         bottom: 0;
