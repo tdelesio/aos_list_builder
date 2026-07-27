@@ -182,7 +182,7 @@
                         <!-- Top State Card: Round and Phase Tracker -->
                         <div class="card glass-card tracker-round-card" style="margin-bottom: 24px; padding: 20px;">
                             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 16px;">
-                                <div style="display: flex; align-items: center; gap: 12px;">
+                                <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
                                     <span style="font-weight: 600; color: var(--color-gold); font-size: 1rem; letter-spacing: 0.05em; text-transform: uppercase;">BATTLE ROUND:</span>
                                     <div class="round-pills" style="display: flex; gap: 8px;">
                                         <button class="round-pill-btn active" data-round="1">1</button>
@@ -191,6 +191,9 @@
                                         <button class="round-pill-btn" data-round="4">4</button>
                                         <button class="round-pill-btn" data-round="5">5</button>
                                     </div>
+                                    <button class="btn btn-outline btn-sm" id="btnToggleTrackerHeader" style="display: flex; align-items: center; gap: 6px; border-color: rgba(255,255,255,0.15); color: #aaa; padding: 4px 10px; font-size: 0.75rem; border-radius: 6px; margin-left: 8px; height: 28px; min-height: unset; cursor: pointer;">
+                                        <i data-lucide="eye-off" style="width: 12px; height: 12px;" id="headerToggleIcon"></i> <span id="headerToggleText">Hide Header</span>
+                                    </button>
                                 </div>
                                 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
                                     <div style="display: flex; align-items: center; gap: 12px;">
