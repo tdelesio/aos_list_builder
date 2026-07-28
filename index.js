@@ -3294,24 +3294,17 @@ function populateTacticSelectForRound(selectEl, playerKey, roundNum) {
 
 // Render game tracker interface elements
 function renderTracker() {
-    // 1a. Hide or show the tracker header row
+    // 1a. Hide or show the tracker header row and toggle the show button next to round pills
     const trackerHeaderRow = document.querySelector(".tracker-header-row");
-    const headerToggleIcon = document.getElementById("headerToggleIcon");
-    const headerToggleText = document.getElementById("headerToggleText");
+    const btnShowHeader = document.getElementById("btnShowHeader");
     
     if (trackerHeaderRow) {
         if (trackerState.hideHeader) {
             trackerHeaderRow.style.display = "none";
-            if (headerToggleText) headerToggleText.textContent = "Show Header";
-            if (headerToggleIcon) {
-                headerToggleIcon.setAttribute("data-lucide", "eye");
-            }
+            if (btnShowHeader) btnShowHeader.style.display = "flex";
         } else {
             trackerHeaderRow.style.display = "flex";
-            if (headerToggleText) headerToggleText.textContent = "Hide Header";
-            if (headerToggleIcon) {
-                headerToggleIcon.setAttribute("data-lucide", "eye-off");
-            }
+            if (btnShowHeader) btnShowHeader.style.display = "none";
         }
     }
 
@@ -3864,11 +3857,20 @@ function setupTrackerListeners() {
         });
     }
 
-    // 13. Toggle Tracker Header visibility
-    const btnToggleTrackerHeader = document.getElementById("btnToggleTrackerHeader");
-    if (btnToggleTrackerHeader) {
-        btnToggleTrackerHeader.addEventListener("click", () => {
-            trackerState.hideHeader = !trackerState.hideHeader;
+    // 13. Hide / Show Tracker Header handlers
+    const btnHideHeader = document.getElementById("btnHideHeader");
+    if (btnHideHeader) {
+        btnHideHeader.addEventListener("click", () => {
+            trackerState.hideHeader = true;
+            saveTrackerState();
+            renderTracker();
+        });
+    }
+    
+    const btnShowHeader = document.getElementById("btnShowHeader");
+    if (btnShowHeader) {
+        btnShowHeader.addEventListener("click", () => {
+            trackerState.hideHeader = false;
             saveTrackerState();
             renderTracker();
         });

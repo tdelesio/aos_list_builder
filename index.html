@@ -167,6 +167,9 @@
                             <h2>AoS 4th Ed. Game Tracker</h2>
                             <p class="subtitle" style="margin-top: 4px; color: var(--color-gold);">Offline-first, active turn, phase, and once-per-game battle tactic tracker.</p>
                         </div>
+                        <button class="btn btn-outline btn-sm" id="btnHideHeader" style="display: flex; align-items: center; gap: 6px; border-color: rgba(255,255,255,0.15); color: #aaa; padding: 4px 10px; font-size: 0.75rem; border-radius: 6px; cursor: pointer; height: 28px; min-height: unset;">
+                            <i data-lucide="eye-off" style="width: 12px; height: 12px;"></i> <span>Hide Header</span>
+                        </button>
                         <div style="display: flex; gap: 12px; align-items: center;">
                             <button class="btn btn-outline" id="btnShowSetupGuide" style="display: flex; align-items: center; gap: 8px; border-color: var(--color-gold); color: var(--color-gold);">
                                 <i data-lucide="book-open"></i> Battle Setup Guide
@@ -191,8 +194,8 @@
                                         <button class="round-pill-btn" data-round="4">4</button>
                                         <button class="round-pill-btn" data-round="5">5</button>
                                     </div>
-                                    <button class="btn btn-outline btn-sm" id="btnToggleTrackerHeader" style="display: flex; align-items: center; gap: 6px; border-color: rgba(255,255,255,0.15); color: #aaa; padding: 4px 10px; font-size: 0.75rem; border-radius: 6px; margin-left: 8px; height: 28px; min-height: unset; cursor: pointer;">
-                                        <i data-lucide="eye-off" style="width: 12px; height: 12px;" id="headerToggleIcon"></i> <span id="headerToggleText">Hide Header</span>
+                                    <button class="btn btn-outline btn-sm" id="btnShowHeader" style="display: none; align-items: center; gap: 6px; border-color: rgba(255,255,255,0.15); color: #aaa; padding: 4px 10px; font-size: 0.75rem; border-radius: 6px; margin-left: 8px; height: 28px; min-height: unset; cursor: pointer;">
+                                        <i data-lucide="eye" style="width: 12px; height: 12px;"></i> <span>Show Header</span>
                                     </button>
                                 </div>
                                 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
