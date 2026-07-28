@@ -3207,6 +3207,9 @@ function loadTrackerState() {
             if (trackerState.underdog === undefined) {
                 trackerState.underdog = "";
             }
+            if (trackerState.hideHeader === undefined) {
+                trackerState.hideHeader = false;
+            }
             if (trackerState.roundHistory === undefined) {
                 trackerState.roundHistory = { 1: "p1", 2: "", 3: "", 4: "", 5: "" };
             }
@@ -3243,6 +3246,7 @@ function resetTrackerState(shouldSave = true) {
         phase: "start",
         attacker: "p1",
         underdog: "",
+        hideHeader: false,
         roundHistory: { 1: "p1", 2: "", 3: "", 4: "", 5: "" },
         p1: {
             name: (activeArmy && activeArmy.faction && CORE_FACTIONS.includes(activeArmy.faction.toUpperCase())) ? activeArmy.faction.toUpperCase() : "STORMCAST ETERNALS",
@@ -3290,19 +3294,24 @@ function populateTacticSelectForRound(selectEl, playerKey, roundNum) {
 
 // Render game tracker interface elements
 function renderTracker() {
-    // 1a. Sync Side Nav toggle button text and icon inside Round card based on active container class
-    const container = document.querySelector(".app-container");
-    const sideNavToggleIcon = document.getElementById("sideNavToggleIcon");
-    const sideNavToggleText = document.getElementById("sideNavToggleText");
+    // 1a. Hide or show the tracker header row
+    const trackerHeaderRow = document.querySelector(".tracker-header-row");
+    const headerToggleIcon = document.getElementById("headerToggleIcon");
+    const headerToggleText = document.getElementById("headerToggleText");
     
-    if (container && sideNavToggleIcon && sideNavToggleText) {
-        const isCollapsed = container.classList.contains("collapsed");
-        if (isCollapsed) {
-            sideNavToggleText.textContent = "Show Menu";
-            sideNavToggleIcon.setAttribute("data-lucide", "layout-sidebar");
+    if (trackerHeaderRow) {
+        if (trackerState.hideHeader) {
+            trackerHeaderRow.style.display = "none";
+            if (headerToggleText) headerToggleText.textContent = "Show Header";
+            if (headerToggleIcon) {
+                headerToggleIcon.setAttribute("data-lucide", "eye");
+            }
         } else {
-            sideNavToggleText.textContent = "Hide Menu";
-            sideNavToggleIcon.setAttribute("data-lucide", "layout-sidebar-off");
+            trackerHeaderRow.style.display = "flex";
+            if (headerToggleText) headerToggleText.textContent = "Hide Header";
+            if (headerToggleIcon) {
+                headerToggleIcon.setAttribute("data-lucide", "eye-off");
+            }
         }
     }
 
@@ -3855,15 +3864,13 @@ function setupTrackerListeners() {
         });
     }
 
-    // 13. Toggle Side Nav (Main Menu) visibility
-    const btnToggleSideNav = document.getElementById("btnToggleSideNav");
-    if (btnToggleSideNav) {
-        btnToggleSideNav.addEventListener("click", () => {
-            const btnToggleSidebar = document.getElementById("btnToggleSidebar");
-            if (btnToggleSidebar) {
-                btnToggleSidebar.click(); // Triggers standard collapsible sidebar logic
-            }
-            renderTracker(); // Rerender button state
+    // 13. Toggle Tracker Header visibility
+    const btnToggleTrackerHeader = document.getElementById("btnToggleTrackerHeader");
+    if (btnToggleTrackerHeader) {
+        btnToggleTrackerHeader.addEventListener("click", () => {
+            trackerState.hideHeader = !trackerState.hideHeader;
+            saveTrackerState();
+            renderTracker();
         });
     }
 }

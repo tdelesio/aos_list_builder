@@ -178,7 +178,7 @@
                     </div>
 
                     <!-- Main Tracker Control Panel -->
-                    <div class="tracker-dashboard" style="display: flex; flex-direction: column; height: calc(100vh - 180px); overflow-y: auto; padding-right: 8px;" class="scroller">
+                    <div class="tracker-dashboard scroller">
                         <!-- Top State Card: Round and Phase Tracker -->
                         <div class="card glass-card tracker-round-card" style="margin-bottom: 24px; padding: 20px;">
                             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 16px;">
@@ -191,8 +191,8 @@
                                         <button class="round-pill-btn" data-round="4">4</button>
                                         <button class="round-pill-btn" data-round="5">5</button>
                                     </div>
-                                    <button class="btn btn-outline btn-sm" id="btnToggleSideNav" style="display: flex; align-items: center; gap: 6px; border-color: rgba(255,255,255,0.15); color: #aaa; padding: 4px 10px; font-size: 0.75rem; border-radius: 6px; margin-left: 8px; height: 28px; min-height: unset; cursor: pointer;">
-                                        <i data-lucide="layout-sidebar-off" style="width: 12px; height: 12px;" id="sideNavToggleIcon"></i> <span id="sideNavToggleText">Hide Menu</span>
+                                    <button class="btn btn-outline btn-sm" id="btnToggleTrackerHeader" style="display: flex; align-items: center; gap: 6px; border-color: rgba(255,255,255,0.15); color: #aaa; padding: 4px 10px; font-size: 0.75rem; border-radius: 6px; margin-left: 8px; height: 28px; min-height: unset; cursor: pointer;">
+                                        <i data-lucide="eye-off" style="width: 12px; height: 12px;" id="headerToggleIcon"></i> <span id="headerToggleText">Hide Header</span>
                                     </button>
                                 </div>
                                 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
@@ -236,7 +236,7 @@
                         </div>
 
                         <!-- Split Columns for Player 1 & Player 2 -->
-                        <div class="tracker-columns" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;">
+                        <div class="tracker-columns">
                             <!-- Player 1 Panel -->
                             <div class="card glass-card player-tracker-panel" id="player1TrackerCard" style="border-top: 3px solid var(--color-gold); padding: 20px;">
                                 <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
