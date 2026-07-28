@@ -90,6 +90,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initialize Game Tracker
     loadTrackerState();
     setupTrackerListeners();
+
+    // Initialize Backup & Cloud Sync
+    initializeSyncEngine();
+    setupSyncListeners();
 });
 
 // Setup SPA Tab Navigation
@@ -193,6 +197,8 @@ function switchTab(targetTab) {
         renderBuilder();
     } else if (targetTab === "tracker") {
         renderTracker();
+    } else if (targetTab === "sync") {
+        renderSyncDashboard();
     }
 }
 window.switchTab = switchTab;
@@ -613,6 +619,7 @@ function renderCollection() {
                 }
                 qtyDisp.textContent = newQty;
                 localStorage.setItem("aos_collection", JSON.stringify(aosCollection));
+                triggerCloudSync();
                 
                 // Recalculate and update the accordion header badge
                 let updatedCount = 0;
@@ -797,6 +804,7 @@ function renderSavedArmies() {
             if (confirm(`Are you sure you want to delete ${army.name}?`)) {
                 aosArmies = aosArmies.filter(a => a.id !== army.id);
                 localStorage.setItem("aos_armies", JSON.stringify(aosArmies));
+                triggerCloudSync();
                 renderSavedArmies();
             }
         });
@@ -2269,6 +2277,7 @@ function renderSmartRecommendations() {
             const key = `${activeArmy.faction}:${reco.unit.name}`;
             aosCollection[key] = (aosCollection[key] || 0) + 1;
             localStorage.setItem("aos_collection", JSON.stringify(aosCollection));
+            triggerCloudSync();
             
             // Add to army
             reg.units.push({
@@ -2298,6 +2307,7 @@ function saveActiveArmyQuietly() {
         aosArmies.push(JSON.parse(JSON.stringify(activeArmy)));
     }
     localStorage.setItem("aos_armies", JSON.stringify(aosArmies));
+    triggerCloudSync();
     renderSavedArmies(); // Keep dashboard cards updated!
 }
 
@@ -3868,5 +3878,387 @@ function setupTrackerListeners() {
         });
     }
 
+}
+
+// ==========================================================================
+// 💾 AETERNUM BACKUP, RESTORE & CLOUD SYNC ENGINE
+// ==========================================================================
+
+const SYNC_ADJECTIVES = ["Golden", "Iron", "Vengeful", "Celestial", "Silent", "Crimson", "Shadowy", "Noble", "Ruinous", "Ancient", "Ghoulish", "Hallowed", "Raging", "Ageless", "Undying"];
+const SYNC_NOUNS = ["Stormcast", "Skaven", "Slayer", "Gargant", "Spectre", "Dragon", "Crusader", "Seraphon", "Liberator", "Vampire", "Paladin", "Reaver", "Glade-Guard", "Necromancer", "Arkanaut"];
+
+// Generate a readable, memorable sync key (e.g., Celestial-Dragon-493)
+function generateMemorableSyncKey() {
+    const adj = SYNC_ADJECTIVES[Math.floor(Math.random() * SYNC_ADJECTIVES.length)];
+    const noun = SYNC_NOUNS[Math.floor(Math.random() * SYNC_NOUNS.length)];
+    const num = Math.floor(Math.random() * 900) + 100; // 100 to 999
+    return `${adj}-${noun}-${num}`;
+}
+
+// Initialize the sync engine on page load
+async function initializeSyncEngine() {
+    let profileId = localStorage.getItem("aos_sync_profile_id");
+    let isNew = false;
+    
+    if (!profileId) {
+        profileId = generateMemorableSyncKey();
+        localStorage.setItem("aos_sync_profile_id", profileId);
+        isNew = true;
+    }
+
+    const keyInput = document.getElementById("txtSyncKeyDisplay");
+    if (keyInput) {
+        keyInput.value = profileId;
+    }
+
+    updateSyncBadge("disconnected", "Offline");
+
+    if (isNew) {
+        // New profile: Seed PostgreSQL database with current local storage variables
+        await pushToCloud();
+    } else {
+        // Existing profile: pull the latest from PostgreSQL database
+        await pullFromCloud(false); // false keeps pull silent on success
+    }
+}
+
+// Update the sync status badge visual state
+function updateSyncBadge(status, text) {
+    const badge = document.getElementById("syncStatusBadge");
+    const statusText = document.getElementById("syncStatusText");
+    if (!badge || !statusText) return;
+
+    badge.className = `sync-badge ${status}`;
+    statusText.textContent = text;
+}
+
+// Push local state (collection and armies) to PostgreSQL Cloud DB
+async function pushToCloud() {
+    const profileId = localStorage.getItem("aos_sync_profile_id");
+    if (!profileId) return;
+
+    updateSyncBadge("syncing", "Syncing...");
+    try {
+        const response = await fetch(`/api/sync/${profileId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                collection: aosCollection,
+                armies: aosArmies
+            })
+        });
+        const result = await response.json();
+        if (result && result.success) {
+            updateSyncBadge("connected", "Connected");
+        } else {
+            updateSyncBadge("error", "Sync Error");
+        }
+    } catch (err) {
+        console.error("Cloud push failed:", err);
+        updateSyncBadge("error", "Offline / Error");
+    }
+}
+
+// Pull latest state from PostgreSQL Cloud DB and overwrite local variables
+async function pullFromCloud(showFeedback = true) {
+    const profileId = localStorage.getItem("aos_sync_profile_id");
+    if (!profileId) return;
+
+    updateSyncBadge("syncing", "Pulling...");
+    try {
+        const response = await fetch(`/api/sync/${profileId}`);
+        const result = await response.json();
+        if (result && result.found) {
+            aosCollection = result.collection || {};
+            aosArmies = result.armies || [];
+
+            // Save to local storage
+            localStorage.setItem("aos_collection", JSON.stringify(aosCollection));
+            localStorage.setItem("aos_armies", JSON.stringify(aosArmies));
+
+            // Force update UI
+            renderSavedArmies();
+            if (document.getElementById("tab-collection") && document.getElementById("tab-collection").classList.contains("active")) {
+                renderCollection();
+            }
+
+            updateSyncBadge("connected", "Connected");
+            if (showFeedback) {
+                alert("Roster & collection synced successfully from Aeternum Cloud!");
+            }
+        } else {
+            // Key is not in database yet (e.g. fresh database reset)
+            updateSyncBadge("disconnected", "Not Sync'd");
+            if (showFeedback) {
+                alert("Remote profile not found. Pushing current device state to establish cloud session...");
+            }
+            await pushToCloud();
+        }
+    } catch (err) {
+        console.error("Cloud pull failed:", err);
+        updateSyncBadge("error", "Offline / Error");
+        if (showFeedback) {
+            alert("Unable to connect to the cloud: " + err.message);
+        }
+    }
+}
+
+// Debounce helper to prevent database thrashing on high-frequency collection/list updates
+let cloudSyncTimeout = null;
+function triggerCloudSync() {
+    if (cloudSyncTimeout) {
+        clearTimeout(cloudSyncTimeout);
+    }
+    updateSyncBadge("syncing", "Syncing...");
+    cloudSyncTimeout = setTimeout(() => {
+        pushToCloud();
+    }, 1500); // 1.5 second debounce delay
+}
+
+// Connect browser to a different existing Sync Key
+async function connectToSyncKey() {
+    const inputKey = document.getElementById("txtTargetSyncKey");
+    if (!inputKey) return;
+    const targetKey = inputKey.value.trim();
+    
+    if (!targetKey) {
+        alert("Please enter a valid Sync Key!");
+        return;
+    }
+
+    if (targetKey === localStorage.getItem("aos_sync_profile_id")) {
+        alert("This is already your active Cloud Sync Key!");
+        return;
+    }
+
+    const confirmMsg = `Are you sure you want to connect to Sync Key "${targetKey}"?\n\nThis will download all custom armies and model collection data from that key, completely replacing your current browser storage.`;
+    if (!confirm(confirmMsg)) {
+        return;
+    }
+
+    updateSyncBadge("syncing", "Connecting...");
+    try {
+        const response = await fetch(`/api/sync/${targetKey}`);
+        const result = await response.json();
+        
+        if (result && result.found) {
+            // Update active Sync Key
+            localStorage.setItem("aos_sync_profile_id", targetKey);
+            
+            const keyInput = document.getElementById("txtSyncKeyDisplay");
+            if (keyInput) keyInput.value = targetKey;
+
+            aosCollection = result.collection || {};
+            aosArmies = result.armies || [];
+
+            localStorage.setItem("aos_collection", JSON.stringify(aosCollection));
+            localStorage.setItem("aos_armies", JSON.stringify(aosArmies));
+
+            renderSavedArmies();
+            if (document.getElementById("tab-collection") && document.getElementById("tab-collection").classList.contains("active")) {
+                renderCollection();
+            }
+
+            updateSyncBadge("connected", "Connected");
+            inputKey.value = "";
+            alert(`Connected successfully to "${targetKey}"! Roster data imported.`);
+        } else {
+            alert(`Sync Key "${targetKey}" was not found on the server.\nVerify spelling and try again.`);
+            updateSyncBadge("connected", "Connected");
+        }
+    } catch (err) {
+        console.error("Failed to connect to sync key:", err);
+        alert("Error connecting to cloud: " + err.message);
+        updateSyncBadge("error", "Error");
+    }
+}
+
+// Export state to a single unified JSON backup file
+function exportLocalBackup() {
+    try {
+        const backupData = {
+            version: 1,
+            timestamp: new Date().toISOString(),
+            collection: aosCollection,
+            armies: aosArmies
+        };
+        const blob = new Blob([JSON.stringify(backupData, null, 2)], { type: "application/json" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        const datestr = new Date().toISOString().slice(0, 10);
+        a.download = `aeternum_backup_${datestr}.json`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    } catch (err) {
+        alert("Failed to export backup file: " + err.message);
+    }
+}
+
+// Ingest a backup JSON and merge or overwrite local data
+function importLocalBackup(file, strategy) {
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(evt) {
+        try {
+            const data = JSON.parse(evt.target.result);
+            if (!data || typeof data !== "object") {
+                throw new Error("Invalid backup file layout.");
+            }
+            
+            const importedCollection = data.collection || {};
+            const importedArmies = data.armies || [];
+
+            if (strategy === "overwrite") {
+                aosCollection = importedCollection;
+                aosArmies = importedArmies;
+                alert("Backup restored! Local state has been completely replaced with backup data.");
+            } else {
+                // Merge strategy:
+                // 1. Merge collections
+                for (const key in importedCollection) {
+                    const qty = parseInt(importedCollection[key]) || 0;
+                    if (qty > 0) {
+                        aosCollection[key] = Math.max(aosCollection[key] || 0, qty);
+                    }
+                }
+                // 2. Merge armies (append armies with unique IDs)
+                importedArmies.forEach(importedArmy => {
+                    if (importedArmy && importedArmy.id) {
+                        const exists = aosArmies.some(a => a.id === importedArmy.id);
+                        if (!exists) {
+                            aosArmies.push(importedArmy);
+                        } else {
+                            // Already exists: copy and generate new unique ID to avoid overwriting
+                            const copiedArmy = JSON.parse(JSON.stringify(importedArmy));
+                            copiedArmy.id = 'army_' + Math.random().toString(36).substr(2, 9);
+                            copiedArmy.name = (copiedArmy.name || "Unnamed Army") + " (Imported)";
+                            aosArmies.push(copiedArmy);
+                        }
+                    }
+                });
+                alert("Backup merged! Model collection counts and non-duplicate armies have been combined.");
+            }
+
+            // Write to LocalStorage
+            localStorage.setItem("aos_collection", JSON.stringify(aosCollection));
+            localStorage.setItem("aos_armies", JSON.stringify(aosArmies));
+
+            // Sync to PostgreSQL cloud database
+            triggerCloudSync();
+
+            // Re-render views
+            renderSavedArmies();
+            if (document.getElementById("tab-collection") && document.getElementById("tab-collection").classList.contains("active")) {
+                renderCollection();
+            }
+        } catch (err) {
+            alert("Error parsing backup file: " + err.message);
+        }
+    };
+    reader.readAsText(file);
+}
+
+// Render the sync dashboard
+function renderSyncDashboard() {
+    const profileId = localStorage.getItem("aos_sync_profile_id");
+    const keyInput = document.getElementById("txtSyncKeyDisplay");
+    if (keyInput && profileId) {
+        keyInput.value = profileId;
+    }
+    lucide.createIcons();
+}
+
+// Register Backup & Sync click and drag listeners
+function setupSyncListeners() {
+    // Export Backup click
+    const btnExport = document.getElementById("btnExportBackup");
+    if (btnExport) {
+        btnExport.addEventListener("click", () => {
+            exportLocalBackup();
+        });
+    }
+
+    // Import DropZone & File Input triggers
+    const dropZone = document.getElementById("backupDropZone");
+    const fileInput = document.getElementById("backupFileInput");
+
+    if (dropZone && fileInput) {
+        dropZone.addEventListener("click", () => {
+            fileInput.click();
+        });
+
+        fileInput.addEventListener("change", (e) => {
+            const file = e.target.files[0];
+            const strategy = document.querySelector('input[name="importStrategy"]:checked').value;
+            importLocalBackup(file, strategy);
+        });
+
+        dropZone.addEventListener("dragover", (e) => {
+            e.preventDefault();
+            dropZone.classList.add("dragover");
+        });
+
+        dropZone.addEventListener("dragleave", () => {
+            dropZone.classList.remove("dragover");
+        });
+
+        dropZone.addEventListener("drop", (e) => {
+            e.preventDefault();
+            dropZone.classList.remove("dragover");
+            const file = e.dataTransfer.files[0];
+            const strategy = document.querySelector('input[name="importStrategy"]:checked').value;
+            importLocalBackup(file, strategy);
+        });
+    }
+
+    // Copy Sync Key click
+    const btnCopy = document.getElementById("btnCopySyncKey");
+    if (btnCopy) {
+        btnCopy.addEventListener("click", () => {
+            const profileId = localStorage.getItem("aos_sync_profile_id");
+            if (profileId) {
+                navigator.clipboard.writeText(profileId).then(() => {
+                    const span = btnCopy.querySelector("span");
+                    if (span) span.textContent = "Copied!";
+                    setTimeout(() => {
+                        if (span) span.textContent = "Copy";
+                    }, 2000);
+                }).catch(err => {
+                    alert("Failed to copy key: " + err.message);
+                });
+            }
+        });
+    }
+
+    // Connect Sync Key click
+    const btnConnect = document.getElementById("btnConnectSyncKey");
+    if (btnConnect) {
+        btnConnect.addEventListener("click", () => {
+            connectToSyncKey();
+        });
+    }
+
+    // Force Cloud Pull click
+    const btnPull = document.getElementById("btnForceCloudPull");
+    if (btnPull) {
+        btnPull.addEventListener("click", () => {
+            pullFromCloud(true);
+        });
+    }
+
+    // Force Cloud Push click
+    const btnPush = document.getElementById("btnForceCloudPush");
+    if (btnPush) {
+        btnPush.addEventListener("click", () => {
+            pushToCloud().then(() => {
+                alert("Roster state successfully pushed to Aeternum PostgreSQL cloud!");
+            });
+        });
+    }
 }
 

@@ -214,6 +214,58 @@ app.post('/api/database', async (req, res) => {
     }
 });
 
+// GET user sync backup: retrieves synchronized collection and armies for a unique profile ID
+app.get('/api/sync/:profile_id', async (req, res) => {
+    const { profile_id } = req.params;
+    if (!profile_id) {
+        return res.status(400).json({ error: 'Missing profile ID' });
+    }
+    try {
+        const result = await pool.query('SELECT collection, armies FROM user_sync WHERE profile_id = $1', [profile_id]);
+        if (result.rows.length > 0) {
+            res.json({
+                found: true,
+                collection: result.rows[0].collection,
+                armies: result.rows[0].armies
+            });
+        } else {
+            res.json({ found: false });
+        }
+    } catch (err) {
+        console.error('Error fetching sync data:', err);
+        res.status(500).json({ error: err.message });
+    }
+});
+
+// POST user sync backup: saves/updates synchronized collection and armies for a unique profile ID
+app.post('/api/sync/:profile_id', async (req, res) => {
+    const { profile_id } = req.params;
+    if (!profile_id) {
+        return res.status(400).json({ error: 'Missing profile ID' });
+    }
+    const { collection, armies } = req.body;
+    try {
+        const upsertQuery = `
+            INSERT INTO user_sync (profile_id, collection, armies, updated_at)
+            VALUES ($1, $2, $3, CURRENT_TIMESTAMP)
+            ON CONFLICT (profile_id)
+            DO UPDATE SET 
+                collection = EXCLUDED.collection,
+                armies = EXCLUDED.armies,
+                updated_at = CURRENT_TIMESTAMP;
+        `;
+        await pool.query(upsertQuery, [
+            profile_id,
+            JSON.stringify(collection || {}),
+            JSON.stringify(armies || [])
+        ]);
+        res.json({ success: true, message: 'Sync data saved successfully.' });
+    } catch (err) {
+        console.error('Error saving sync data:', err);
+        res.status(500).json({ error: err.message });
+    }
+});
+
 // Core Migration and Database Setup routine
 async function initDatabaseSchema() {
     try {
@@ -237,6 +289,13 @@ async function initDatabaseSchema() {
             
             CREATE INDEX IF NOT EXISTS idx_profiles_faction ON battle_profiles(faction);
             CREATE INDEX IF NOT EXISTS idx_profiles_category ON battle_profiles(category);
+
+            CREATE TABLE IF NOT EXISTS user_sync (
+                profile_id VARCHAR(100) PRIMARY KEY,
+                collection JSONB DEFAULT '{}',
+                armies JSONB DEFAULT '[]',
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            );
         `);
         console.log('PostgreSQL schema verified successfully.');
         

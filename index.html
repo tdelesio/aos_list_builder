@@ -12,7 +12,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <!-- PDF.js library for client-side PDF ingestion & diffing -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
-    <link rel="stylesheet" href="index.css?v=15">
+    <link rel="stylesheet" href="index.css?v=16">
 </head>
 <body>
     <div class="app-container">
@@ -42,6 +42,10 @@
                 <button class="nav-btn" data-tab="updater">
                     <i data-lucide="refresh-cw"></i>
                     <span>Rules Updater</span>
+                </button>
+                <button class="nav-btn" data-tab="sync">
+                    <i data-lucide="cloud-lightning"></i>
+                    <span>Backup & Sync</span>
                 </button>
             </nav>
             <div class="sidebar-footer">
@@ -591,6 +595,109 @@
                         </div>
                     </div>
                 </section>
+
+                <!-- Backup, Restore, and Cloud Sync Tab -->
+                <section id="tab-sync" class="tab-panel">
+                    <div class="section-header">
+                        <h2>Backup & Sync Manager</h2>
+                        <p class="subtitle">Securely snapshot your model inventory and army lists locally, or connect to the Aeternum Cloud to automatically sync your roster across all of your browsers and devices.</p>
+                    </div>
+
+                    <div class="sync-grid">
+                        <!-- Left Panel: Local File Backup/Restore -->
+                        <div class="card glass-card sync-card">
+                            <div class="sync-card-header">
+                                <i data-lucide="hard-drive" class="gold-icon"></i>
+                                <h3>Local File Backup (JSON)</h3>
+                            </div>
+                            <p class="card-desc">Download or restore a complete local snapshot of your entire list collection and model inventory in a single file.</p>
+                            
+                            <div class="sync-sub-section">
+                                <h4>1. Export Snapshot</h4>
+                                <p class="section-sub-desc">Saves all active armies and your "My Collection" counts as a single JSON file to your device.</p>
+                                <button class="btn btn-gold w-100" id="btnExportBackup" style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+                                    <i data-lucide="download"></i> Export Unified JSON Backup
+                                </button>
+                            </div>
+
+                            <div class="sync-sub-section" style="margin-top: 24px; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 20px;">
+                                <h4>2. Import & Restore Snapshot</h4>
+                                <p class="section-sub-desc">Restore your state from an existing JSON backup file.</p>
+                                
+                                <div class="import-strategy" style="margin-bottom: 16px;">
+                                    <span style="font-size: 0.8rem; font-weight: 600; color: var(--color-gold); display: block; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;">Restore Strategy:</span>
+                                    <div style="display: flex; gap: 20px; align-items: center;">
+                                        <label class="radio-container" style="font-size: 0.85rem; color: #ccc; cursor: pointer; display: flex; align-items: center; gap: 6px;">
+                                            <input type="radio" name="importStrategy" value="merge" checked style="accent-color: var(--color-gold);">
+                                            <span>Merge (Add counts, append missing armies)</span>
+                                        </label>
+                                        <label class="radio-container" style="font-size: 0.85rem; color: #ccc; cursor: pointer; display: flex; align-items: center; gap: 6px;">
+                                            <input type="radio" name="importStrategy" value="overwrite" style="accent-color: var(--color-gold);">
+                                            <span>Overwrite (Wipe local state & replace)</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="file-drop-area" id="backupDropZone" style="border: 2px dashed rgba(212, 175, 55, 0.2); background: rgba(255, 255, 255, 0.02); padding: 24px; border-radius: 8px; text-align: center; cursor: pointer; transition: all 0.2s; position: relative;">
+                                    <i data-lucide="file-json" style="width: 28px; height: 28px; color: var(--color-gold); margin-bottom: 8px; opacity: 0.85;"></i>
+                                    <h5 style="margin: 0 0 4px 0; font-size: 0.9rem; color: #fff;">Click to upload or Drag & Drop Backup</h5>
+                                    <p style="margin: 0; font-size: 0.75rem; color: #aaa;">Only valid Aeternum .json backup files are supported</p>
+                                    <input type="file" id="backupFileInput" accept=".json" style="display: none;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Panel: PostgreSQL Cloud Sync -->
+                        <div class="card glass-card sync-card">
+                            <div class="sync-card-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <i data-lucide="cloud-lightning" class="gold-icon"></i>
+                                    <h3>Aeternum Cloud Sync</h3>
+                                </div>
+                                <div class="sync-badge connected" id="syncStatusBadge">
+                                    <span class="pulse-dot"></span>
+                                    <span id="syncStatusText">Connected</span>
+                                </div>
+                            </div>
+                            <p class="card-desc">Automatically synchronize your entire roster and model inventory to PostgreSQL to keep your sessions alive across multiple browsers or devices.</p>
+
+                            <div class="sync-sub-section">
+                                <h4>Your Active Sync Key</h4>
+                                <p class="section-sub-desc">This is your unique, passwordless identification token. Copy and enter this key on your other browsers/devices to merge or load your data.</p>
+                                
+                                <div class="key-display-box" style="display: flex; gap: 8px; align-items: center; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 6px;">
+                                    <input type="text" id="txtSyncKeyDisplay" readonly value="Generating Key..." style="background: transparent; border: none; color: var(--color-gold); font-family: monospace; font-size: 1rem; width: 100%; font-weight: 700; text-align: center; pointer-events: none;">
+                                    <button class="btn btn-outline btn-sm" id="btnCopySyncKey" style="display: flex; align-items: center; gap: 6px; padding: 6px 12px; height: 32px; font-size: 0.75rem; border-color: rgba(255,255,255,0.15); color: #ccc;" title="Copy key to clipboard">
+                                        <i data-lucide="copy" style="width: 14px; height: 14px;"></i> <span>Copy</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="sync-sub-section" style="margin-top: 24px; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 20px;">
+                                <h4>Sync Another Browser or Device</h4>
+                                <p class="section-sub-desc">Paste an existing Aeternum Sync Key below to download that device's cloud data and link your browsers.</p>
+                                
+                                <div style="display: flex; flex-direction: column; gap: 12px;">
+                                    <div style="display: flex; gap: 8px;">
+                                        <input type="text" id="txtTargetSyncKey" placeholder="e.g. Iron-Stormcast-384" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: #fff; padding: 8px 12px; font-size: 0.9rem; font-family: monospace; width: 100%;">
+                                        <button class="btn btn-gold" id="btnConnectSyncKey" style="display: flex; align-items: center; gap: 8px; font-size: 0.85rem; padding: 0 16px; white-space: nowrap; height: 38px;">
+                                            <i data-lucide="link"></i> Connect Key
+                                        </button>
+                                    </div>
+                                    
+                                    <div style="display: flex; gap: 12px; margin-top: 4px;">
+                                        <button class="btn btn-outline w-100" id="btnForceCloudPull" style="display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 0.8rem; border-color: rgba(255,255,255,0.15); color: #ccc; height: 36px;">
+                                            <i data-lucide="arrow-down-to-line"></i> Force Cloud Pull
+                                        </button>
+                                        <button class="btn btn-outline w-100" id="btnForceCloudPush" style="display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 0.8rem; border-color: rgba(255,255,255,0.15); color: #ccc; height: 36px;">
+                                            <i data-lucide="arrow-up-from-line"></i> Force Cloud Push
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </main>
     </div>
@@ -758,6 +865,6 @@
     <!-- Preloaded offline rules database -->
     <script src="database.js?v=5"></script>
     <!-- Core App logic -->
-    <script src="index.js?v=22"></script>
+    <script src="index.js?v=23"></script>
 </body>
 </html>
