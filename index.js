@@ -3857,23 +3857,23 @@ function setupTrackerListeners() {
         });
     }
 
-    // 13. Hide / Show Tracker Header handlers
-    const btnHideHeader = document.getElementById("btnHideHeader");
-    if (btnHideHeader) {
-        btnHideHeader.addEventListener("click", () => {
+    // 13. Hide / Show Tracker Header handlers via Event Delegation (safest for toggling elements dynamically!)
+    document.addEventListener("click", (e) => {
+        const hideBtn = e.target.closest("#btnHideHeader");
+        if (hideBtn) {
             trackerState.hideHeader = true;
             saveTrackerState();
             renderTracker();
-        });
-    }
-    
-    const btnShowHeader = document.getElementById("btnShowHeader");
-    if (btnShowHeader) {
-        btnShowHeader.addEventListener("click", () => {
+            return;
+        }
+        
+        const showBtn = e.target.closest("#btnShowHeader");
+        if (showBtn) {
             trackerState.hideHeader = false;
             saveTrackerState();
             renderTracker();
-        });
-    }
+            return;
+        }
+    });
 }
 

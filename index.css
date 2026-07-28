@@ -2434,13 +2434,17 @@ dialog h2 {
 /* ==========================================================================
    📱 RESPONSIVE GAME TRACKER LAYOUT ADJUSTMENTS
    ========================================================================== */
+/* Ensure the tracker tab scrolls as a single unified pane, placing the scrollbar on the screen edge */
+#tab-tracker {
+    overflow-y: auto !important;
+}
+
 .tracker-dashboard {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 180px);
-    overflow-y: auto;
-    padding-right: 8px;
-    transition: height 0.3s ease;
+    height: auto;
+    overflow-y: visible;
+    padding-right: 0;
 }
 
 .tracker-columns {
