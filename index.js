@@ -197,6 +197,14 @@ function switchTab(targetTab) {
 }
 window.switchTab = switchTab;
 
+// Toggle tracker header visibility globally
+function toggleTrackerHeader(hide) {
+    trackerState.hideHeader = hide;
+    saveTrackerState();
+    renderTracker();
+}
+window.toggleTrackerHeader = toggleTrackerHeader;
+
 // Load Rules Database (preloaded JSON or localStorage custom rules or PostgreSQL backend)
 async function loadAppDatabase() {
     try {
