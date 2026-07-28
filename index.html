@@ -12,7 +12,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <!-- PDF.js library for client-side PDF ingestion & diffing -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
-    <link rel="stylesheet" href="index.css?v=14">
+    <link rel="stylesheet" href="index.css?v=15">
 </head>
 <body>
     <div class="app-container">
@@ -178,6 +178,13 @@
                                 <i data-lucide="rotate-ccw"></i> Reset Game
                             </button>
                         </div>
+                    </div>
+                    
+                    <!-- Elegant top-of-screen placeholder to restore the header when hidden -->
+                    <div id="trackerHiddenHeaderPlaceholder" style="display: none; justify-content: flex-end; margin-bottom: 12px;">
+                        <button class="btn btn-outline btn-sm" onclick="toggleTrackerHeader(false)" style="display: flex; align-items: center; gap: 6px; border-color: var(--color-gold); color: var(--color-gold); padding: 4px 12px; font-size: 0.75rem; border-radius: 6px; cursor: pointer; height: 28px; min-height: unset;">
+                            <i data-lucide="eye" style="width: 12px; height: 12px;"></i> <span>Show Header</span>
+                        </button>
                     </div>
 
                     <!-- Main Tracker Control Panel -->
@@ -751,6 +758,6 @@
     <!-- Preloaded offline rules database -->
     <script src="database.js?v=5"></script>
     <!-- Core App logic -->
-    <script src="index.js?v=21"></script>
+    <script src="index.js?v=22"></script>
 </body>
 </html>

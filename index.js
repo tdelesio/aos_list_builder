@@ -3305,14 +3305,17 @@ function renderTracker() {
     // 1a. Hide or show the tracker header row and toggle the show button next to round pills
     const trackerHeaderRow = document.querySelector(".tracker-header-row");
     const btnShowHeader = document.getElementById("btnShowHeader");
+    const trackerHiddenHeaderPlaceholder = document.getElementById("trackerHiddenHeaderPlaceholder");
     
     if (trackerHeaderRow) {
         if (trackerState.hideHeader) {
             trackerHeaderRow.style.display = "none";
             if (btnShowHeader) btnShowHeader.style.display = "flex";
+            if (trackerHiddenHeaderPlaceholder) trackerHiddenHeaderPlaceholder.style.display = "flex";
         } else {
             trackerHeaderRow.style.display = "flex";
             if (btnShowHeader) btnShowHeader.style.display = "none";
+            if (trackerHiddenHeaderPlaceholder) trackerHiddenHeaderPlaceholder.style.display = "none";
         }
     }
 
@@ -3865,23 +3868,5 @@ function setupTrackerListeners() {
         });
     }
 
-    // 13. Hide / Show Tracker Header handlers via Event Delegation (safest for toggling elements dynamically!)
-    document.addEventListener("click", (e) => {
-        const hideBtn = e.target.closest("#btnHideHeader");
-        if (hideBtn) {
-            trackerState.hideHeader = true;
-            saveTrackerState();
-            renderTracker();
-            return;
-        }
-        
-        const showBtn = e.target.closest("#btnShowHeader");
-        if (showBtn) {
-            trackerState.hideHeader = false;
-            saveTrackerState();
-            renderTracker();
-            return;
-        }
-    });
 }
 
